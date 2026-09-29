@@ -1,0 +1,72 @@
+# Printer definitions.
+#
+# machine_name : exact name of the Bambu Studio machine profile. {n} is
+#                replaced by the nozzle diameter.
+# extruders    : number of active extruders. Determines the array length of
+#                extruder-dependent filament values (second value = "nil").
+# flow_factor  : volumetric flow scaling relative to the X1C baseline.
+
+[h2c]
+label             = "Bambu Lab H2C"
+machine_name      = "Bambu Lab H2C {n} nozzle"
+tag               = "H2C"
+extruders         = 2
+extruder_variants = ["Direct Drive Standard", "Direct Drive High Flow"]
+flow_factor       = 1.15
+max_hotend        = 350
+build_volume      = "350 × 320 × 325 mm"
+chamber           = "aktiv beheizt"
+note              = "Vortek-Werkzeugwechsler, zwei gleichzeitig aktive Düsen"
+nozzles           = ["0.2", "0.4", "0.6"]
+
+[x1c]
+label             = "Bambu Lab X1 Carbon"
+machine_name      = "Bambu Lab X1 Carbon {n} nozzle"
+tag               = "X1C"
+extruders         = 1
+extruder_variants = ["Direct Drive Standard", "Direct Drive High Flow"]
+flow_factor       = 1.00
+max_hotend        = 300
+build_volume      = "256 × 256 × 256 mm"
+chamber           = "geschlossen, passiv"
+note              = "Lidar-Flusskalibrierung, Hardened-Steel-Düse ab Werk"
+nozzles           = ["0.2", "0.4", "0.6"]
+
+[p1s]
+label             = "Bambu Lab P1S"
+machine_name      = "Bambu Lab P1S {n} nozzle"
+tag               = "P1S"
+extruders         = 1
+extruder_variants = ["Direct Drive Standard", "Direct Drive High Flow"]
+flow_factor       = 0.95
+max_hotend        = 300
+build_volume      = "256 × 256 × 256 mm"
+chamber           = "geschlossen, passiv"
+note              = "kein Lidar, Flusskalibrierung muss manuell erfolgen"
+nozzles           = ["0.2", "0.4", "0.6"]
+
+[a1]
+label             = "Bambu Lab A1"
+machine_name      = "Bambu Lab A1 {n} nozzle"
+tag               = "A1"
+extruders         = 1
+extruder_variants = ["Direct Drive Standard"]
+flow_factor       = 0.90
+max_hotend        = 300
+build_volume      = "256 × 256 × 256 mm"
+chamber           = "offen"
+note              = "Bettschubser, offener Aufbau — PETG unkritisch, Zugluft meiden"
+nozzles           = ["0.2", "0.4", "0.6"]
+
+[a1mini]
+label             = "Bambu Lab A1 mini"
+machine_name      = "Bambu Lab A1 mini {n} nozzle"
+tag               = "A1M"
+extruders         = 1
+extruder_variants = ["Direct Drive Standard"]
+flow_factor       = 0.85
+max_hotend        = 300
+build_volume      = "180 × 180 × 180 mm"
+chamber           = "offen"
+note              = "kleinster Bauraum, schwächstes Hotend — niedrigster Volumenstrom"
+nozzles           = ["0.2", "0.4", "0.6"]

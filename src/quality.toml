@@ -1,0 +1,91 @@
+# Quality levels.
+#
+# "layer_height" is the target value per nozzle diameter. The generator picks
+# the Bambu base profile whose layer height is closest to it and that is
+# released for the given machine, then adopts that profile's layer height.
+# Printers with a narrower offering (H2C) therefore get the next valid value
+# instead of an invalid setting. "base_hint" breaks ties and gives each level
+# its characteristic.
+#
+# "parameters" are scalar values written straight into the profile.
+#
+# "speed" holds factors, not absolute speeds. Bambu stores speeds as an array
+# with one entry per extruder variant (A1/A1 mini: 1, X1C/P1S: 2, H2C: 4). The
+# factors are applied element-wise to the base profile's values. That keeps
+# Bambu's balance between standard and high-flow extruder intact, and defines
+# the level relative to each printer's stock values.
+
+[quality]
+label     = "Qualität"
+suffix    = "Qualitaet"
+order     = 1
+purpose   = "Sichtteile, feine Details, Miniaturen — Oberfläche vor Zeit"
+base_hint = ["High Quality", "Fine", "Balanced Quality", "Optimal", "Standard"]
+[quality.layer_height]
+"0.2" = 0.08
+"0.4" = 0.12
+"0.6" = 0.18
+[quality.parameters]
+wall_loops            = "3"
+top_shell_layers      = "5"
+bottom_shell_layers   = "4"
+sparse_infill_density = "20%"
+sparse_infill_pattern = "grid"
+seam_position         = "aligned"
+enable_arc_fitting    = "1"
+[quality.speed]
+outer_wall_speed    = 0.60
+inner_wall_speed    = 0.70
+top_surface_speed   = 0.75
+sparse_infill_speed = 0.80
+gap_infill_speed    = 0.60
+
+[normal]
+label     = "Normal"
+suffix    = "Normal"
+order     = 2
+purpose   = "Allzweck — ausgewogen zwischen Oberfläche, Festigkeit und Zeit"
+base_hint = ["Standard", "Optimal", "Balanced Quality", "High Quality", "Fine"]
+[normal.layer_height]
+"0.2" = 0.12
+"0.4" = 0.20
+"0.6" = 0.30
+[normal.parameters]
+wall_loops            = "2"
+top_shell_layers      = "4"
+bottom_shell_layers   = "3"
+sparse_infill_density = "15%"
+sparse_infill_pattern = "grid"
+seam_position         = "aligned"
+enable_arc_fitting    = "1"
+[normal.speed]
+outer_wall_speed    = 1.00
+inner_wall_speed    = 1.00
+top_surface_speed   = 1.00
+sparse_infill_speed = 1.00
+gap_infill_speed    = 1.00
+
+[fast]
+label     = "Schnell"
+suffix    = "Schnell"
+order     = 3
+purpose   = "Prototypen, Passtests, Funktionsteile ohne Sichtanspruch"
+base_hint = ["Draft", "Extra Draft", "Standard", "Balanced Strength", "Optimal"]
+[fast.layer_height]
+"0.2" = 0.14
+"0.4" = 0.28
+"0.6" = 0.42
+[fast.parameters]
+wall_loops            = "2"
+top_shell_layers      = "3"
+bottom_shell_layers   = "3"
+sparse_infill_density = "10%"
+sparse_infill_pattern = "gyroid"
+seam_position         = "aligned"
+enable_arc_fitting    = "1"
+[fast.speed]
+outer_wall_speed    = 1.15
+inner_wall_speed    = 1.15
+top_surface_speed   = 1.15
+sparse_infill_speed = 1.20
+gap_infill_speed    = 1.10

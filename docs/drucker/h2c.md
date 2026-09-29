@@ -55,7 +55,7 @@ Düsendurchmesser voraus. Gemischte Durchmesser werden nicht abgebildet.
 Array mit einem Eintrag je Extrudervariante — beim H2C sind das vier
 (2 Extruder × Standard/High Flow). Die Profile dieses Repositories arbeiten deshalb
 mit Tempofaktoren statt absoluten Werten, damit Bambus Abstimmung zwischen Standard-
-und High-Flow-Extruder erhalten bleibt. Hintergrund in `src/qualitaet.toml`.
+und High-Flow-Extruder erhalten bleibt. Hintergrund in `src/quality.toml`.
 
 **Filamentwerte werden dedupliziert.** Materialwerte kennen nur zwei Varianten
 (Standard, High Flow), nicht vier. Die erzeugten Presets bilden das so ab.

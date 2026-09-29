@@ -2,7 +2,7 @@
 
 [← Druckerübersicht](README.md) · Kürzel `X1C` · Durchsatzfaktor **1.00**
 
-Der Referenzdrucker dieses Repositories. Alle Volumenströme in `src/filamente/` sind
+Der Referenzdrucker dieses Repositories. Alle Volumenströme in `src/filaments/` sind
 X1C-Werte; die übrigen Geräte werden daraus skaliert. Ab Werk mit gehärteter Düse und
 Lidar-Flusskalibrierung ausgestattet.
 

@@ -17,7 +17,7 @@ den Eigenheiten, die im Alltag zählen.
 
 ## Durchsatzfaktoren
 
-Alle Volumenströme in `src/filamente/` sind **X1C-Werte**. Für jeden anderen Drucker
+Alle Volumenströme in `src/filaments/` sind **X1C-Werte**. Für jeden anderen Drucker
 multipliziert der Generator diesen Basiswert mit dem Faktor der Maschine und deckelt
 das Ergebnis bei 30 mm³/s.
 

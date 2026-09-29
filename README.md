@@ -92,14 +92,14 @@ Den aktuellen Stand je Kombination zeigt die [Profilmatrix](docs/matrix.md).
 
 ```
 src/                 Quelldaten — hier wird bearbeitet
-├── drucker.toml       5 Drucker: Hotend-Leistung, Bauraum, Extruder
-├── qualitaet.toml     3 Stufen: Schichthöhen, Wände, Tempofaktoren
-└── filamente/         4 Materialien: Temperatur, Fluss, Kühlung
+├── printers.toml      5 Drucker: Hotend-Leistung, Bauraum, Extruder
+├── quality.toml       3 Stufen: Schichthöhen, Wände, Tempofaktoren
+└── filaments/         4 Materialien: Temperatur, Fluss, Kühlung
 tools/               Generator und Prüfung
 ├── bambulib.py        liest die Bambu-Studio-Profilbibliothek
 ├── generate.py        src/ → dist/
 ├── validate.py        prüft dist/ gegen die Bibliothek
-└── dokumentation.py   erzeugt docs/matrix.md
+└── build_docs.py      erzeugt docs/matrix.md
 dist/                Ergebnis — hier wird importiert, nicht bearbeitet
 ├── filament/          50 Presets
 ├── process/           45 Presets
@@ -118,7 +118,7 @@ Reine Standardbibliothek, Python 3.11 oder neuer. Keine Installation, kein
 ```bash
 python3 tools/generate.py        # src/ → dist/
 python3 tools/validate.py        # 5423 Prüfungen gegen die Bambu-Bibliothek
-python3 tools/dokumentation.py   # docs/matrix.md neu erzeugen
+python3 tools/build_docs.py      # docs/matrix.md neu erzeugen
 python3 -m unittest discover -s tests
 ```
 
@@ -131,9 +131,9 @@ export BAMBU_PROFILE_DIR=/Pfad/zu/BambuStudio/resources/profiles/BBL
 
 ## Etwas ändern
 
-1. Wert in `src/` anpassen — etwa den Volumenstrom in `src/filamente/sunlu-petg.toml`
+1. Wert in `src/` anpassen — etwa den Volumenstrom in `src/filaments/sunlu-petg.toml`
 2. `python3 tools/generate.py && python3 tools/validate.py`
-3. `python3 tools/dokumentation.py`
+3. `python3 tools/build_docs.py`
 4. Neu importieren (siehe [Installation](docs/install.md))
 
 Der Validator fängt dabei ab, was Bambu Studio sonst stillschweigend verschluckt:

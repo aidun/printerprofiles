@@ -34,8 +34,8 @@ Die erste Schicht löst sich während des Drucks oder haftet gar nicht erst.
 2. **Richtige Platte im Slicer gewählt?** Die Profile setzen Temperaturen für alle
    vier Plattentypen getrennt. Eine Textured PEI mit den Werten der Cool Plate
    haftet schlecht.
-3. **Bett-Temperatur.** In `src/filamente/<material>.toml` unter
-   `[temperatur] bett_initial`. PLA 60 °C, PETG 75 °C sind die Startwerte —
+3. **Bett-Temperatur.** In `src/filaments/<material>.toml` unter
+   `[temperature] bed_initial`. PLA 60 °C, PETG 75 °C sind die Startwerte —
    je 5 °C nach oben ist unkritisch.
 4. **Z-Versatz.** Automatische Bett-Nivellierung neu starten.
 
@@ -52,7 +52,7 @@ Ecken heben sich während des Drucks vom Bett ab, das Teil verzieht sich.
 | Maßnahme | Parameter | Wirkung |
 |---|---|---|
 | Kühlung der ersten Schichten aus | `[kuehlung] close_fan_the_first_x_layers` erhöhen | stark |
-| Bett wärmer | `[temperatur] bett` +5 °C | stark |
+| Bett wärmer | `[temperature] bed` +5 °C | stark |
 | Brim im Slicer aktivieren | — | stark |
 | Kammer geschlossen halten | — | beim H2C, X1C und P1S entscheidend |
 | Lüfter insgesamt drosseln | `[kuehlung] fan_max_speed` senken | mittel |
@@ -66,7 +66,7 @@ Rechnung: PETG startet mit 10 – 30 % Lüfterleistung, PLA mit 60 – 100 %.
 
 Feine Fäden zwischen getrennten Bereichen des Teils.
 
-1. **Temperatur senken.** `[temperatur] nozzle` in 5-°C-Schritten. Wirkt am
+1. **Temperatur senken.** `[temperature] nozzle` in 5-°C-Schritten. Wirkt am
    stärksten und ist der erste Griff.
 2. **Z-Hop erhöhen.** `[retraction] z_hop`. PETG steht bei 0.6 mm, PLA bei 0.4 mm.
 3. **Filament trocknen.** Feuchtes Material fädelt unabhängig von allen
@@ -89,7 +89,7 @@ aufschmelzen, wie der Slicer annimmt, und fördert entsprechend weniger.
 | Prüfen | Wo |
 |---|---|
 | Volumenstrom messen | [Kalibrierung, Schritt 3](calibration.md#schritt-3--volumenstrom) |
-| Temperatur zu niedrig | `[temperatur] nozzle` +5 °C |
+| Temperatur zu niedrig | `[temperature] nozzle` +5 °C |
 | Flussrate zu niedrig | [Kalibrierung, Schritt 2](calibration.md#schritt-2--flussrate) |
 | Düse teilweise verstopft | [Verstopfung](#verstopfung) |
 | Düse verschlissen | bei Glow-Material nach ein bis zwei Spulen normal |
@@ -100,13 +100,13 @@ aufschmelzen, wie der Slicer annimmt, und fördert entsprechend weniger.
 
 Das Teil lässt sich entlang der Schichten trennen, bricht bei geringer Belastung.
 
-1. **Temperatur erhöhen.** `[temperatur] nozzle` in 5-°C-Schritten bis an die
+1. **Temperatur erhöhen.** `[temperature] nozzle` in 5-°C-Schritten bis an die
    Obergrenze des Fensters. Wirkt am stärksten.
 2. **Kühlung drosseln.** `[kuehlung] fan_max_speed` senken. Bei PETG ist die
    Kühlung der häufigere Schuldige als die Temperatur.
 3. **Schichthöhe verringern.** Die Stufe *Qualität* statt *Schnell* wählen —
    dünnere Schichten verschweißen besser.
-4. **Wandzahl erhöhen.** In `src/qualitaet.toml` unter `[<stufe>.parameter]`
+4. **Wandzahl erhöhen.** In `src/quality.toml` unter `[<level>.parameters]`
    `wall_loops`.
 
 ---
@@ -158,7 +158,7 @@ Keine Einstellung gleicht feuchtes Filament aus. Erst trocknen, dann weitersuche
 | Maßnahme | Parameter |
 |---|---|
 | Überhangkühlung erhöhen | `[kuehlung] overhang_fan_speed` |
-| Temperatur senken | `[temperatur] nozzle` −5 °C |
+| Temperatur senken | `[temperature] nozzle` −5 °C |
 | Mindestschichtzeit erhöhen | `[kuehlung] slow_down_layer_time` |
 | Schichthöhe verringern | Stufe *Qualität* wählen |
 | Teil anders ausrichten | im Slicer |

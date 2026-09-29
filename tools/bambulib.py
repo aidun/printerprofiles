@@ -1,8 +1,8 @@
-"""Zugriff auf die mitgelieferte Bambu-Studio-Profilbibliothek.
+"""Access to the installed Bambu Studio profile library.
 
-Die Bibliothek ist die einzige Quelle der Wahrheit für Basisprofilnamen,
-Vererbungsketten und Maschinengrenzen. Alle Werte werden zur Laufzeit von
-dort gelesen — nichts ist im Generator fest verdrahtet.
+The library is the single source of truth for base profile names, inheritance
+chains and machine limits. Every value is read from there at runtime — nothing
+is hard-coded in the generator.
 """
 
 from __future__ import annotations
@@ -11,8 +11,8 @@ import json
 import os
 from pathlib import Path
 
-# Mögliche Installationsorte, in Prüfreihenfolge.
-KANDIDATEN = [
+# Possible installation locations, in probe order.
+CANDIDATES = [
     "/Applications/BambuStudio.app/Contents/Resources/profiles/BBL",
     os.path.expanduser("~/Applications/BambuStudio.app/Contents/Resources/profiles/BBL"),
     "C:/Program Files/Bambu Studio/resources/profiles/BBL",
@@ -20,141 +20,141 @@ KANDIDATEN = [
 ]
 
 
-class BibliothekFehlt(RuntimeError):
+class LibraryMissing(RuntimeError):
     pass
 
 
-def finde_bibliothek() -> Path:
-    umgebung = os.environ.get("BAMBU_PROFILE_DIR")
-    if umgebung:
-        pfad = Path(umgebung)
-        if pfad.is_dir():
-            return pfad
-        raise BibliothekFehlt(f"BAMBU_PROFILE_DIR zeigt auf {pfad!s}, das existiert nicht.")
-    for kandidat in KANDIDATEN:
-        pfad = Path(kandidat)
-        if pfad.is_dir():
-            return pfad
-    raise BibliothekFehlt(
-        "Bambu-Studio-Profilbibliothek nicht gefunden. Bambu Studio installieren "
-        "oder BAMBU_PROFILE_DIR auf den Ordner .../profiles/BBL setzen."
+def find_library() -> Path:
+    override = os.environ.get("BAMBU_PROFILE_DIR")
+    if override:
+        path = Path(override)
+        if path.is_dir():
+            return path
+        raise LibraryMissing(f"BAMBU_PROFILE_DIR points at {path!s}, which does not exist.")
+    for candidate in CANDIDATES:
+        path = Path(candidate)
+        if path.is_dir():
+            return path
+    raise LibraryMissing(
+        "Bambu Studio profile library not found. Install Bambu Studio or point "
+        "BAMBU_PROFILE_DIR at the .../profiles/BBL directory."
     )
 
 
-class Bibliothek:
-    """Lädt Maschinen-, Filament- und Prozessprofile und löst Vererbung auf."""
+class Library:
+    """Loads machine, filament and process profiles and resolves inheritance."""
 
-    def __init__(self, wurzel: Path | None = None):
-        self.wurzel = wurzel or finde_bibliothek()
-        self.maschinen = self._lade("machine")
-        self.filamente = self._lade("filament")
-        self.prozesse = self._lade("process")
+    def __init__(self, root: Path | None = None):
+        self.root = root or find_library()
+        self.machines = self._load("machine")
+        self.filaments = self._load("filament")
+        self.processes = self._load("process")
 
-    def _lade(self, unterordner: str) -> dict[str, dict]:
-        treffer: dict[str, dict] = {}
-        for datei in sorted((self.wurzel / unterordner).rglob("*.json")):
+    def _load(self, subdir: str) -> dict[str, dict]:
+        found: dict[str, dict] = {}
+        for file in sorted((self.root / subdir).rglob("*.json")):
             try:
-                daten = json.loads(datei.read_text(encoding="utf-8"))
+                data = json.loads(file.read_text(encoding="utf-8"))
             except (json.JSONDecodeError, UnicodeDecodeError):
                 continue
-            name = daten.get("name")
+            name = data.get("name")
             if name:
-                treffer[name] = daten
-        return treffer
+                found[name] = data
+        return found
 
-    # -- Vererbung -------------------------------------------------------
+    # -- Inheritance -----------------------------------------------------
 
-    def aufgeloest(self, sammlung: dict[str, dict], name: str) -> dict:
-        """Führt die komplette inherits-Kette zu einem flachen Dict zusammen."""
-        kette: list[dict] = []
-        gesehen: set[str] = set()
-        aktuell = name
-        while aktuell and aktuell in sammlung and aktuell not in gesehen:
-            gesehen.add(aktuell)
-            knoten = sammlung[aktuell]
-            kette.append(knoten)
-            aktuell = knoten.get("inherits")
-        zusammen: dict = {}
-        for knoten in reversed(kette):
-            zusammen.update(knoten)
-        return zusammen
+    def resolved(self, collection: dict[str, dict], name: str) -> dict:
+        """Flattens the complete inherits chain into a single dict."""
+        chain: list[dict] = []
+        seen: set[str] = set()
+        current = name
+        while current and current in collection and current not in seen:
+            seen.add(current)
+            node = collection[current]
+            chain.append(node)
+            current = node.get("inherits")
+        merged: dict = {}
+        for node in reversed(chain):
+            merged.update(node)
+        return merged
 
-    def wert(self, sammlung: dict[str, dict], name: str, schluessel: str):
-        return self.aufgeloest(sammlung, name).get(schluessel)
+    def value(self, collection: dict[str, dict], name: str, key: str):
+        return self.resolved(collection, name).get(key)
 
-    # -- Abfragen --------------------------------------------------------
+    # -- Queries ---------------------------------------------------------
 
-    def maschine(self, name: str) -> dict:
-        if name not in self.maschinen:
-            raise KeyError(f"Maschinenprofil '{name}' fehlt in der Bibliothek.")
-        return self.aufgeloest(self.maschinen, name)
+    def machine(self, name: str) -> dict:
+        if name not in self.machines:
+            raise KeyError(f"Machine profile '{name}' is missing from the library.")
+        return self.resolved(self.machines, name)
 
-    def schichthoehen_grenzen(self, maschinenname: str) -> tuple[float, float]:
-        m = self.maschine(maschinenname)
-        return _zahl(m.get("min_layer_height")), _zahl(m.get("max_layer_height"))
+    def layer_height_limits(self, machine_name: str) -> tuple[float, float]:
+        m = self.machine(machine_name)
+        return _number(m.get("min_layer_height")), _number(m.get("max_layer_height"))
 
-    def kompatible(self, sammlung: dict[str, dict], maschinenname: str) -> list[str]:
-        """Alle Profilnamen, die für diese Maschine freigegeben sind."""
-        treffer = []
-        for name in sammlung:
-            voll = self.aufgeloest(sammlung, name)
-            drucker = voll.get("compatible_printers")
-            if isinstance(drucker, list) and maschinenname in drucker:
-                treffer.append(name)
-        return sorted(treffer)
+    def compatible(self, collection: dict[str, dict], machine_name: str) -> list[str]:
+        """All profile names released for this machine."""
+        found = []
+        for name in collection:
+            full = self.resolved(collection, name)
+            printers = full.get("compatible_printers")
+            if isinstance(printers, list) and machine_name in printers:
+                found.append(name)
+        return sorted(found)
 
-    def filament_basis(self, praefix: str, maschinenname: str) -> str:
-        """Das für diese Maschine gültige 'Generic PLA'/'Generic PETG'-Profil."""
-        kandidaten = [
-            n for n in self.kompatible(self.filamente, maschinenname)
-            if n == praefix or n.startswith(praefix + " @")
+    def filament_base(self, prefix: str, machine_name: str) -> str:
+        """The 'Generic PLA'/'Generic PETG' profile valid for this machine."""
+        candidates = [
+            n for n in self.compatible(self.filaments, machine_name)
+            if n == prefix or n.startswith(prefix + " @")
         ]
-        if not kandidaten:
-            raise KeyError(f"Kein Basisfilament '{praefix}' für '{maschinenname}'.")
-        # Spezifischster Treffer zuerst: längerer Name = engerer Geltungsbereich.
-        kandidaten.sort(key=lambda n: (-len(n), n))
-        return kandidaten[0]
+        if not candidates:
+            raise KeyError(f"No base filament '{prefix}' for '{machine_name}'.")
+        # Most specific match first: a longer name means a narrower scope.
+        candidates.sort(key=lambda n: (-len(n), n))
+        return candidates[0]
 
-    def prozess_basis(self, maschinenname: str, ziel: float, hinweise: list[str]) -> tuple[str, float]:
-        """Basisprozess mit der Schichthöhe, die 'ziel' am nächsten liegt.
+    def process_base(self, machine_name: str, target: float, hints: list[str]) -> tuple[str, float]:
+        """Base process whose layer height is closest to 'target'.
 
-        Bei gleichem Abstand entscheidet die Reihenfolge in 'hinweise'; die
-        Stufe bekommt so die zu ihr passende Charakteristik (High Quality,
-        Draft, ...) statt eines beliebigen Profils.
+        On a tie the order in 'hints' decides, so the level gets a base with a
+        matching characteristic (High Quality, Draft, ...) instead of an
+        arbitrary profile.
         """
-        untergrenze, obergrenze = self.schichthoehen_grenzen(maschinenname)
-        kandidaten = []
-        for name in self.kompatible(self.prozesse, maschinenname):
-            hoehe = _zahl(self.wert(self.prozesse, name, "layer_height"))
-            if hoehe is None:
+        lower, upper = self.layer_height_limits(machine_name)
+        candidates = []
+        for name in self.compatible(self.processes, machine_name):
+            height = _number(self.value(self.processes, name, "layer_height"))
+            if height is None:
                 continue
-            if untergrenze is not None and hoehe < untergrenze - 1e-9:
+            if lower is not None and height < lower - 1e-9:
                 continue
-            if obergrenze is not None and hoehe > obergrenze + 1e-9:
+            if upper is not None and height > upper + 1e-9:
                 continue
-            kandidaten.append((name, hoehe))
-        if not kandidaten:
-            raise KeyError(f"Keine Prozessprofile für '{maschinenname}'.")
+            candidates.append((name, height))
+        if not candidates:
+            raise KeyError(f"No process profiles for '{machine_name}'.")
 
-        def rang(eintrag):
-            name, hoehe = eintrag
-            for index, hinweis in enumerate(hinweise):
-                if hinweis in name:
+        def rank(entry):
+            name, _height = entry
+            for index, hint in enumerate(hints):
+                if hint in name:
                     return index
-            return len(hinweise)
+            return len(hints)
 
-        kandidaten.sort(key=lambda e: (round(abs(e[1] - ziel), 6), rang(e), e[0]))
-        return kandidaten[0]
+        candidates.sort(key=lambda e: (round(abs(e[1] - target), 6), rank(e), e[0]))
+        return candidates[0]
 
 
-def _zahl(wert):
-    if wert is None:
+def _number(value):
+    if value is None:
         return None
-    if isinstance(wert, list):
-        wert = wert[0] if wert else None
-    if wert in (None, "", "nil"):
+    if isinstance(value, list):
+        value = value[0] if value else None
+    if value in (None, "", "nil"):
         return None
     try:
-        return float(wert)
+        return float(value)
     except (TypeError, ValueError):
         return None

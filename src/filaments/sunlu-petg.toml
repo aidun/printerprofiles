@@ -1,0 +1,41 @@
+id                           = "sunlu-petg"
+label                        = "SUNLU PETG"
+order                        = 3
+short                        = "PETG"
+material                     = "PETG"
+base                         = "Generic PETG"
+abrasive                     = false
+hardened                     = false
+status                       = "baseline"
+drying                       = "65 °C / 8 h — PETG ist stark hygroskopisch"
+storage                      = "zwingend trocken; feuchtes PETG fädelt und knackt beim Druck"
+nozzles                      = ["0.2", "0.4", "0.6"]
+description                  = "Zähes, temperaturbeständiges PETG. Braucht reduzierte Kühlung für Schichthaftung, höheren Z-Hop gegen Fädenbildung und eine kühlere erste Schicht gegen zu starke Betthaftung."
+
+[temperature]
+nozzle                       = 245
+nozzle_initial               = 250
+range_low                    = 230
+range_high                   = 260
+vitrification                = 71
+bed                          = 70
+bed_initial                  = 75
+
+[flow]
+ratio                        = 0.96
+
+[volumetric_flow]
+"0.2" = 3.0
+"0.4" = 13.5
+"0.6" = 18.0
+
+[cooling]
+fan_min_speed                = 20
+fan_max_speed                = 50
+overhang_fan_speed           = 60
+slow_down_layer_time         = 6
+fan_cooling_layer_time       = 20
+close_fan_the_first_x_layers = 2
+
+[retraction]
+z_hop                        = 0.6

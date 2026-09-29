@@ -60,7 +60,7 @@ Festigkeit.
 | Matte Oberfläche, rauhe Kanten | zu kalt |
 | Schichten fest verbunden, Kanten scharf, keine Fäden | **Treffer** |
 
-Den gefundenen Wert in `src/filamente/<material>.toml` unter `[temperatur] nozzle`
+Den gefundenen Wert in `src/filaments/<material>.toml` unter `[temperature] nozzle`
 eintragen. Die erste Schicht liegt üblicherweise 5 °C darüber.
 
 ---
@@ -96,7 +96,7 @@ bisherige Flussrate 0.98:
 | 0.90 – 0.94 | auffällig, aber möglich — Filamentdurchmesser prüfen |
 | unter 0.90 oder über 1.05 | Messfehler oder mechanisches Problem. Nicht übernehmen. |
 
-Der Wert gehört in `src/filamente/<material>.toml` unter `[fluss] ratio`.
+Der Wert gehört in `src/filaments/<material>.toml` unter `[flow] ratio`.
 
 > Bambu Studio bringt unter *Kalibrierung → Durchflussdynamik* eine eigene,
 > automatische Messung mit. Sie kalibriert allerdings den Druckvorschub, nicht die
@@ -131,9 +131,9 @@ Abschnitt 15 mm³/s:
 
 ### Gemessenen Wert zurückrechnen
 
-Der Wert gehört in `src/filamente/<material>.toml` unter `[volumenstrom]`. Achtung:
+Der Wert gehört in `src/filaments/<material>.toml` unter `[volumetric_flow]`. Achtung:
 dort steht der **Basiswert bezogen auf den X1 Carbon**, nicht der gemessene Wert.
-Umrechnung über den Leistungsfaktor des Druckers aus `src/drucker.toml`:
+Umrechnung über den Leistungsfaktor des Druckers aus `src/printers.toml`:
 
 ```
 Basiswert = gemessener Wert ÷ flow_factor
@@ -146,11 +146,11 @@ Für den H2C (`flow_factor = 1.15`): `12.8 ÷ 1.15 = 11.1`
 ## Ergebnis übernehmen
 
 ```bash
-# 1. Werte in src/filamente/<material>.toml eintragen
+# 1. Werte in src/filaments/<material>.toml eintragen
 # 2. Neu erzeugen und prüfen
 python3 tools/generate.py
 python3 tools/validate.py
-python3 tools/dokumentation.py
+python3 tools/build_docs.py
 # 3. Status auf verifiziert setzen
 ```
 

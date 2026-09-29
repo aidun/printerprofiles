@@ -1,7 +1,7 @@
 # Profilmatrix
 
 > **Generierte Datei.** Nicht von Hand bearbeiten — sie entsteht aus
-> `dist/_index.json` über `python3 tools/dokumentation.py`.
+> `dist/_index.json` über `python3 tools/build_docs.py`.
 
 Das Repository enthält **50 Filamentprofile** und **45 Prozessprofile**.
 

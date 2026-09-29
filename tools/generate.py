@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Erzeugt aus den TOML-Quellen in src/ die Bambu-Studio-Presets in dist/.
+"""Builds the Bambu Studio presets in dist/ from the TOML sources in src/.
 
-Aufruf:  python3 tools/generate.py
-Keine externen Abhängigkeiten — nur die Python-Standardbibliothek.
+Usage:  python3 tools/generate.py
+No external dependencies — Python standard library only.
 """
 
 from __future__ import annotations
@@ -13,197 +13,197 @@ import tomllib
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from bambulib import Bibliothek  # noqa: E402
+from bambulib import Library  # noqa: E402
 
-WURZEL = Path(__file__).resolve().parent.parent
-QUELLE = WURZEL / "src"
-ZIEL = WURZEL / "dist"
+ROOT = Path(__file__).resolve().parent.parent
+SOURCE = ROOT / "src"
+TARGET = ROOT / "dist"
 VERSION = "2.7.0.8"
 
 
 # --------------------------------------------------------------------------
-# Quellen laden
+# Loading the sources
 # --------------------------------------------------------------------------
 
-def lade_quellen():
-    drucker = tomllib.loads((QUELLE / "drucker.toml").read_text(encoding="utf-8"))
-    stufen = tomllib.loads((QUELLE / "qualitaet.toml").read_text(encoding="utf-8"))
-    filamente = {}
-    for datei in sorted((QUELLE / "filamente").glob("*.toml")):
-        daten = tomllib.loads(datei.read_text(encoding="utf-8"))
-        filamente[daten["id"]] = daten
-    filamente = dict(sorted(filamente.items(), key=lambda e: e[1]["reihenfolge"]))
-    return drucker, filamente, stufen
+def load_sources():
+    printers = tomllib.loads((SOURCE / "printers.toml").read_text(encoding="utf-8"))
+    levels = tomllib.loads((SOURCE / "quality.toml").read_text(encoding="utf-8"))
+    filaments = {}
+    for file in sorted((SOURCE / "filaments").glob("*.toml")):
+        data = tomllib.loads(file.read_text(encoding="utf-8"))
+        filaments[data["id"]] = data
+    filaments = dict(sorted(filaments.items(), key=lambda e: e[1]["order"]))
+    return printers, filaments, levels
 
 
 # --------------------------------------------------------------------------
-# Hilfsfunktionen
+# Helpers
 # --------------------------------------------------------------------------
 
-def maschinenname(drucker: dict, duese: str) -> str:
-    return drucker["machine_name"].format(n=duese)
+def machine_name(printer: dict, nozzle: str) -> str:
+    return printer["machine_name"].format(n=nozzle)
 
 
-def varianten(bib: Bibliothek, maschine: str) -> list[str]:
-    """Extrudervarianten der Maschine, ohne Dopplungen.
+def variants(lib: Library, machine: str) -> list[str]:
+    """The machine's extruder variants, without duplicates.
 
-    Bambu listet die Varianten je Extruder auf; der H2C nennt sie deshalb
-    zweimal. Filamentpresets adressieren aber die Variante, nicht den
-    Extruder — ihre Arrays haben auch beim H2C nur zwei Einträge.
+    Bambu lists the variants per extruder, which is why the H2C names them
+    twice. Filament presets address the variant, not the extruder — their
+    arrays hold only two entries even on the H2C.
     """
-    liste = bib.maschine(maschine).get("extruder_variant_list")
-    if not liste:
+    listed = lib.machine(machine).get("extruder_variant_list")
+    if not listed:
         return ["Direct Drive Standard"]
-    eindeutig: list[str] = []
-    for eintrag in liste:
-        for teil in eintrag.split(","):
-            teil = teil.strip()
-            if teil and teil not in eindeutig:
-                eindeutig.append(teil)
-    return eindeutig
+    unique: list[str] = []
+    for entry in listed:
+        for part in entry.split(","):
+            part = part.strip()
+            if part and part not in unique:
+                unique.append(part)
+    return unique
 
 
-def je_variante(wert, anzahl: int, fuellwert: str = "nil") -> list[str]:
-    """Extruderabhängiger Wert: erster Eintrag echt, Rest Platzhalter.
+def per_variant(value, count: int, filler: str = "nil") -> list[str]:
+    """Extruder-dependent value: first entry real, the rest placeholders.
 
-    Bambu Studio erwartet für extruderabhängige Filamentwerte ein Array mit
-    einem Eintrag je Variante. 'nil' bedeutet "vom Basisprofil übernehmen".
+    Bambu Studio expects an array with one entry per variant for
+    extruder-dependent filament values. 'nil' means "inherit from the base".
     """
-    return [str(wert)] + [fuellwert] * (anzahl - 1)
+    return [str(value)] + [filler] * (count - 1)
 
 
-def rund(wert: float, stellen: int = 1) -> str:
-    gerundet = round(wert, stellen)
-    return str(int(gerundet)) if gerundet == int(gerundet) else str(gerundet)
+def fmt(value: float, digits: int = 1) -> str:
+    rounded = round(value, digits)
+    return str(int(rounded)) if rounded == int(rounded) else str(rounded)
 
 
-def skaliere(basis, faktor: float):
-    """Wendet einen Faktor auf einen Basiswert an und behält dessen Format."""
-    if isinstance(basis, list):
-        return [rund(float(e) * faktor, 0) if _ist_zahl(e) else e for e in basis]
-    if _ist_zahl(basis):
-        return rund(float(basis) * faktor, 0)
-    return basis
+def scale(base, factor: float):
+    """Applies a factor to a base value and preserves its format."""
+    if isinstance(base, list):
+        return [fmt(float(e) * factor, 0) if _is_number(e) else e for e in base]
+    if _is_number(base):
+        return fmt(float(base) * factor, 0)
+    return base
 
 
-def _ist_zahl(wert) -> bool:
+def _is_number(value) -> bool:
     try:
-        float(wert)
+        float(value)
         return True
     except (TypeError, ValueError):
         return False
 
 
-def schreibe(pfad: Path, daten: dict) -> None:
-    pfad.parent.mkdir(parents=True, exist_ok=True)
-    text = json.dumps(daten, indent=4, ensure_ascii=False, sort_keys=True)
-    pfad.write_text(text + "\n", encoding="utf-8")
+def write(path: Path, data: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    text = json.dumps(data, indent=4, ensure_ascii=False, sort_keys=True)
+    path.write_text(text + "\n", encoding="utf-8")
 
 
 # --------------------------------------------------------------------------
-# Filamentpresets
+# Filament presets
 # --------------------------------------------------------------------------
 
-def baue_filament(bib, drucker_id, drucker, filament, duese):
-    maschine = maschinenname(drucker, duese)
-    basis = bib.filament_basis(filament["basis"], maschine)
-    anzahl = len(varianten(bib, maschine))
-    name = f"{filament['label']} {drucker['tag']} {duese}"
+def build_filament(lib, printer_id, printer, filament, nozzle):
+    machine = machine_name(printer, nozzle)
+    base = lib.filament_base(filament["base"], machine)
+    count = len(variants(lib, machine))
+    name = f"{filament['label']} {printer['tag']} {nozzle}"
 
-    temperatur = filament["temperatur"]
-    kuehlung = filament["kuehlung"]
-    volumen = filament["volumenstrom"][duese] * drucker["flow_factor"]
-    # Kein Drucker darf über die Schmelzleistung seines Hotends hinaus gefahren
-    # werden; der Deckel ist konservativ auf das 0.6-mm-Niveau bezogen.
-    volumen = min(volumen, 30.0)
+    temp = filament["temperature"]
+    cooling = filament["cooling"]
+    flow = filament["volumetric_flow"][nozzle] * printer["flow_factor"]
+    # No printer may be pushed beyond its hotend's melting capacity; the cap is
+    # set conservatively at the 0.6 mm level.
+    flow = min(flow, 30.0)
 
     preset = {
         "type": "filament",
         "name": name,
         "from": "User",
-        "inherits": basis,
+        "inherits": base,
         "version": VERSION,
         "filament_settings_id": [name],
-        "compatible_printers": [maschine],
-        "filament_extruder_variant": varianten(bib, maschine),
+        "compatible_printers": [machine],
+        "filament_extruder_variant": variants(lib, machine),
 
-        "nozzle_temperature": [str(temperatur["nozzle"])],
-        "nozzle_temperature_initial_layer": [str(temperatur["nozzle_initial"])],
-        "nozzle_temperature_range_low": [str(temperatur["range_low"])],
-        "nozzle_temperature_range_high": [str(temperatur["range_high"])],
-        "temperature_vitrification": [str(temperatur["vitrification"])],
+        "nozzle_temperature": [str(temp["nozzle"])],
+        "nozzle_temperature_initial_layer": [str(temp["nozzle_initial"])],
+        "nozzle_temperature_range_low": [str(temp["range_low"])],
+        "nozzle_temperature_range_high": [str(temp["range_high"])],
+        "temperature_vitrification": [str(temp["vitrification"])],
 
-        "hot_plate_temp": [str(temperatur["bett"])],
-        "hot_plate_temp_initial_layer": [str(temperatur["bett_initial"])],
-        "eng_plate_temp": [str(temperatur["bett"])],
-        "eng_plate_temp_initial_layer": [str(temperatur["bett_initial"])],
-        "textured_plate_temp": [str(temperatur["bett"])],
-        "textured_plate_temp_initial_layer": [str(temperatur["bett_initial"])],
-        "supertack_plate_temp": [str(temperatur["bett"])],
-        "supertack_plate_temp_initial_layer": [str(temperatur["bett_initial"])],
+        "hot_plate_temp": [str(temp["bed"])],
+        "hot_plate_temp_initial_layer": [str(temp["bed_initial"])],
+        "eng_plate_temp": [str(temp["bed"])],
+        "eng_plate_temp_initial_layer": [str(temp["bed_initial"])],
+        "textured_plate_temp": [str(temp["bed"])],
+        "textured_plate_temp_initial_layer": [str(temp["bed_initial"])],
+        "supertack_plate_temp": [str(temp["bed"])],
+        "supertack_plate_temp_initial_layer": [str(temp["bed_initial"])],
 
-        "fan_min_speed": [str(kuehlung["fan_min_speed"])],
-        "fan_max_speed": [str(kuehlung["fan_max_speed"])],
-        "overhang_fan_speed": [str(kuehlung["overhang_fan_speed"])],
-        "slow_down_layer_time": [str(kuehlung["slow_down_layer_time"])],
-        "fan_cooling_layer_time": [str(kuehlung["fan_cooling_layer_time"])],
-        "close_fan_the_first_x_layers": [str(kuehlung["close_fan_the_first_x_layers"])],
+        "fan_min_speed": [str(cooling["fan_min_speed"])],
+        "fan_max_speed": [str(cooling["fan_max_speed"])],
+        "overhang_fan_speed": [str(cooling["overhang_fan_speed"])],
+        "slow_down_layer_time": [str(cooling["slow_down_layer_time"])],
+        "fan_cooling_layer_time": [str(cooling["fan_cooling_layer_time"])],
+        "close_fan_the_first_x_layers": [str(cooling["close_fan_the_first_x_layers"])],
 
-        "filament_flow_ratio": je_variante(filament["fluss"]["ratio"], anzahl),
-        "filament_max_volumetric_speed": je_variante(rund(volumen), anzahl),
+        "filament_flow_ratio": per_variant(filament["flow"]["ratio"], count),
+        "filament_max_volumetric_speed": per_variant(fmt(flow), count),
         "filament_z_hop": [str(filament["retraction"]["z_hop"])],
     }
     meta = {
-        "datei": f"filament/{name}.json",
+        "file": f"filament/{name}.json",
         "name": name,
-        "art": "filament",
-        "drucker": drucker_id,
+        "kind": "filament",
+        "printer": printer_id,
         "filament": filament["id"],
-        "duese": duese,
-        "inherits": basis,
-        "volumenstrom": rund(volumen),
+        "nozzle": nozzle,
+        "inherits": base,
+        "flow": fmt(flow),
         "status": filament["status"],
-        "abrasiv": filament["abrasiv"],
+        "abrasive": filament["abrasive"],
     }
     return name, preset, meta
 
 
 # --------------------------------------------------------------------------
-# Prozesspresets
+# Process presets
 # --------------------------------------------------------------------------
 
-def baue_prozess(bib, drucker_id, drucker, duese, stufen_id, stufe):
-    maschine = maschinenname(drucker, duese)
-    ziel = stufe["schichthoehe"][duese]
-    basis, hoehe = bib.prozess_basis(maschine, ziel, stufe["basis_hint"])
-    basiswerte = bib.aufgeloest(bib.prozesse, basis)
-    name = f"{stufe['label']} {drucker['tag']} {duese}"
+def build_process(lib, printer_id, printer, nozzle, level_id, level):
+    machine = machine_name(printer, nozzle)
+    target = level["layer_height"][nozzle]
+    base, height = lib.process_base(machine, target, level["base_hint"])
+    base_values = lib.resolved(lib.processes, base)
+    name = f"{level['label']} {printer['tag']} {nozzle}"
 
     preset = {
         "type": "process",
         "name": name,
         "from": "User",
-        "inherits": basis,
+        "inherits": base,
         "version": VERSION,
         "print_settings_id": name,
-        "compatible_printers": [maschine],
-        "layer_height": rund(hoehe, 2),
+        "compatible_printers": [machine],
+        "layer_height": fmt(height, 2),
     }
-    preset.update({k: str(v) for k, v in stufe["parameter"].items()})
-    for schluessel, faktor in stufe["tempo"].items():
-        if schluessel in basiswerte:
-            preset[schluessel] = skaliere(basiswerte[schluessel], faktor)
+    preset.update({k: str(v) for k, v in level["parameters"].items()})
+    for key, factor in level["speed"].items():
+        if key in base_values:
+            preset[key] = scale(base_values[key], factor)
 
     meta = {
-        "datei": f"process/{name}.json",
+        "file": f"process/{name}.json",
         "name": name,
-        "art": "process",
-        "drucker": drucker_id,
-        "duese": duese,
-        "stufe": stufen_id,
-        "inherits": basis,
-        "schichthoehe": rund(hoehe, 2),
-        "ziel_schichthoehe": rund(ziel, 2),
+        "kind": "process",
+        "printer": printer_id,
+        "nozzle": nozzle,
+        "level": level_id,
+        "inherits": base,
+        "layer_height": fmt(height, 2),
+        "target_layer_height": fmt(target, 2),
     }
     return name, preset, meta
 
@@ -211,39 +211,39 @@ def baue_prozess(bib, drucker_id, drucker, duese, stufen_id, stufe):
 # --------------------------------------------------------------------------
 
 def main() -> int:
-    bib = Bibliothek()
-    drucker_alle, filamente, stufen = lade_quellen()
+    lib = Library()
+    printers, filaments, levels = load_sources()
 
-    for unterordner in ("filament", "process"):
-        ordner = ZIEL / unterordner
-        if ordner.is_dir():
-            for alt in ordner.glob("*.json"):
-                alt.unlink()
+    for subdir in ("filament", "process"):
+        folder = TARGET / subdir
+        if folder.is_dir():
+            for stale in folder.glob("*.json"):
+                stale.unlink()
 
     index: list[dict] = []
 
-    for drucker_id, drucker in drucker_alle.items():
-        for duese in drucker["nozzles"]:
-            for filament in filamente.values():
-                if duese not in filament["duesen"]:
+    for printer_id, printer in printers.items():
+        for nozzle in printer["nozzles"]:
+            for filament in filaments.values():
+                if nozzle not in filament["nozzles"]:
                     continue
-                name, preset, meta = baue_filament(bib, drucker_id, drucker, filament, duese)
-                schreibe(ZIEL / "filament" / f"{name}.json", preset)
+                name, preset, meta = build_filament(lib, printer_id, printer, filament, nozzle)
+                write(TARGET / "filament" / f"{name}.json", preset)
                 index.append(meta)
-            for stufen_id, stufe in stufen.items():
-                name, preset, meta = baue_prozess(bib, drucker_id, drucker, duese, stufen_id, stufe)
-                schreibe(ZIEL / "process" / f"{name}.json", preset)
+            for level_id, level in levels.items():
+                name, preset, meta = build_process(lib, printer_id, printer, nozzle, level_id, level)
+                write(TARGET / "process" / f"{name}.json", preset)
                 index.append(meta)
 
-    filament_anzahl = sum(1 for e in index if e["art"] == "filament")
-    prozess_anzahl = sum(1 for e in index if e["art"] == "process")
-    schreibe(ZIEL / "_index.json", {
-        "bibliothek": str(bib.wurzel),
-        "filamentpresets": filament_anzahl,
-        "prozesspresets": prozess_anzahl,
-        "presets": sorted(index, key=lambda e: (e["art"], e["name"])),
+    filament_count = sum(1 for e in index if e["kind"] == "filament")
+    process_count = sum(1 for e in index if e["kind"] == "process")
+    write(TARGET / "_index.json", {
+        "library": str(lib.root),
+        "filament_presets": filament_count,
+        "process_presets": process_count,
+        "presets": sorted(index, key=lambda e: (e["kind"], e["name"])),
     })
-    print(f"{filament_anzahl} Filamentpresets, {prozess_anzahl} Prozesspresets nach {ZIEL} geschrieben.")
+    print(f"Wrote {filament_count} filament presets and {process_count} process presets to {TARGET}.")
     return 0
 
 
