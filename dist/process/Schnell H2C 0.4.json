@@ -1,0 +1,49 @@
+{
+    "bottom_shell_layers": "3",
+    "compatible_printers": [
+        "Bambu Lab H2C 0.4 nozzle"
+    ],
+    "enable_arc_fitting": "1",
+    "from": "User",
+    "gap_infill_speed": [
+        "275",
+        "275",
+        "275",
+        "275"
+    ],
+    "inherits": "0.24mm Standard @BBL H2C",
+    "inner_wall_speed": [
+        "345",
+        "345",
+        "345",
+        "345"
+    ],
+    "layer_height": "0.24",
+    "name": "Schnell H2C 0.4",
+    "outer_wall_speed": [
+        "230",
+        "230",
+        "230",
+        "230"
+    ],
+    "print_settings_id": "Schnell H2C 0.4",
+    "seam_position": "aligned",
+    "sparse_infill_density": "10%",
+    "sparse_infill_pattern": "gyroid",
+    "sparse_infill_speed": [
+        "420",
+        "720",
+        "420",
+        "720"
+    ],
+    "top_shell_layers": "3",
+    "top_surface_speed": [
+        "230",
+        "230",
+        "230",
+        "230"
+    ],
+    "type": "process",
+    "version": "2.7.0.8",
+    "wall_loops": "2"
+}
