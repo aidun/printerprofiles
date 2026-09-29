@@ -3,7 +3,7 @@
 > **Generierte Datei.** Nicht von Hand bearbeiten — sie entsteht aus
 > `dist/_index.json` über `python3 tools/build_docs.py`.
 
-Das Repository enthält **50 Filamentprofile** und **45 Prozessprofile**.
+Das Repository enthält **205 Filamentprofile** und **45 Prozessprofile**.
 
 ---
 
@@ -15,17 +15,21 @@ Volumenstrom. Es ist an Drucker und Düse gebunden, nicht an die Qualitätsstufe
 Die Zahl in der Zelle ist der maximale Volumenstrom in mm³/s — der Wert, der
 bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 
-### SUNLU PLA
+### SUNLU
+
+6 Materialien.
+
+#### SUNLU PLA
 
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
-| Bambu Lab H2C | **4** | **17.2** | **24.1** | 🔵 Startwerte |
-| Bambu Lab X1 Carbon | **3.5** | **15** | **21** | 🔵 Startwerte |
-| Bambu Lab P1S | **3.3** | **14.2** | **19.9** | 🔵 Startwerte |
-| Bambu Lab A1 | **3.1** | **13.5** | **18.9** | 🔵 Startwerte |
-| Bambu Lab A1 mini | **3** | **12.8** | **17.8** | 🔵 Startwerte |
+| Bambu Lab H2C | **1.8** | **17.2** | **24.1** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **1.6** | **15** | **21** | 🔵 Startwerte |
+| Bambu Lab P1S | **1.5** | **14.2** | **19.9** | 🔵 Startwerte |
+| Bambu Lab A1 | **1.4** | **13.5** | **18.9** | 🔵 Startwerte |
+| Bambu Lab A1 mini | **1.4** | **12.8** | **17.8** | 🔵 Startwerte |
 
-### SUNLU PLA Glow
+#### SUNLU PLA Glow
 
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
@@ -37,17 +41,29 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 
 > ⚠️ **Abrasiv.** Gehärtete Düse zwingend erforderlich. Die 0.2-mm-Düse ist für dieses Material gesperrt — siehe [Düsen](nozzles.md).
 
-### SUNLU PETG
+#### SUNLU PLA Transparent
 
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
-| Bambu Lab H2C | **3.4** | **15.5** | **20.7** | 🔵 Startwerte |
-| Bambu Lab X1 Carbon | **3** | **13.5** | **18** | 🔵 Startwerte |
-| Bambu Lab P1S | **2.8** | **12.8** | **17.1** | 🔵 Startwerte |
-| Bambu Lab A1 | **2.7** | **12.2** | **16.2** | 🔵 Startwerte |
-| Bambu Lab A1 mini | **2.5** | **11.5** | **15.3** | 🔵 Startwerte |
+| Bambu Lab H2C | **1.6** | **14.7** | **20.6** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **1.4** | **12.8** | **17.9** | 🔵 Startwerte |
+| Bambu Lab P1S | **1.3** | **12.2** | **17** | 🔵 Startwerte |
+| Bambu Lab A1 | **1.3** | **11.5** | **16.1** | 🔵 Startwerte |
+| Bambu Lab A1 mini | **1.2** | **10.9** | **15.2** | 🔵 Startwerte |
 
-### SUNLU PETG Glow
+> 💧 **Auf Klarheit optimiert.** Höhere Düsentemperatur, bewusst abgesenkter Volumenstrom und stark zurückgenommene Kühlung — Klarheit geht hier vor Druckzeit.
+
+#### SUNLU PETG
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | **1.4** | **15.5** | **20.7** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **1.2** | **13.5** | **18** | 🔵 Startwerte |
+| Bambu Lab P1S | **1.1** | **12.8** | **17.1** | 🔵 Startwerte |
+| Bambu Lab A1 | **1.1** | **12.2** | **16.2** | 🔵 Startwerte |
+| Bambu Lab A1 mini | **1** | **11.5** | **15.3** | 🔵 Startwerte |
+
+#### SUNLU PETG Glow
 
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
@@ -58,6 +74,126 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Bambu Lab A1 mini | — | **9.3** | **12.3** | 🔵 Startwerte |
 
 > ⚠️ **Abrasiv.** Gehärtete Düse zwingend erforderlich. Die 0.2-mm-Düse ist für dieses Material gesperrt — siehe [Düsen](nozzles.md).
+
+#### SUNLU PETG Transparent
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | **1.1** | **13.2** | **17.6** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **1** | **11.5** | **15.3** | 🔵 Startwerte |
+| Bambu Lab P1S | **0.9** | **10.9** | **14.5** | 🔵 Startwerte |
+| Bambu Lab A1 | **0.9** | **10.3** | **13.8** | 🔵 Startwerte |
+| Bambu Lab A1 mini | **0.8** | **9.8** | **13** | 🔵 Startwerte |
+
+> 💧 **Auf Klarheit optimiert.** Höhere Düsentemperatur, bewusst abgesenkter Volumenstrom und stark zurückgenommene Kühlung — Klarheit geht hier vor Druckzeit.
+
+### eSUN
+
+4 Materialien.
+
+#### eSUN PLA+
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | **1.7** | **16.1** | **22.4** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **1.5** | **14** | **19.5** | 🔵 Startwerte |
+| Bambu Lab P1S | **1.4** | **13.3** | **18.5** | 🔵 Startwerte |
+| Bambu Lab A1 | **1.4** | **12.6** | **17.6** | 🔵 Startwerte |
+| Bambu Lab A1 mini | **1.3** | **11.9** | **16.6** | 🔵 Startwerte |
+
+#### eSUN PLA+ Glow
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | — | **11.5** | **16.1** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | — | **10** | **14** | 🔵 Startwerte |
+| Bambu Lab P1S | — | **9.5** | **13.3** | 🔵 Startwerte |
+| Bambu Lab A1 | — | **9** | **12.6** | 🔵 Startwerte |
+| Bambu Lab A1 mini | — | **8.5** | **11.9** | 🔵 Startwerte |
+
+> ⚠️ **Abrasiv.** Gehärtete Düse zwingend erforderlich. Die 0.2-mm-Düse ist für dieses Material gesperrt — siehe [Düsen](nozzles.md).
+
+#### eSUN PETG
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | **1.4** | **14.9** | **20.1** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **1.2** | **13** | **17.5** | 🔵 Startwerte |
+| Bambu Lab P1S | **1.1** | **12.3** | **16.6** | 🔵 Startwerte |
+| Bambu Lab A1 | **1.1** | **11.7** | **15.8** | 🔵 Startwerte |
+| Bambu Lab A1 mini | **1** | **11** | **14.9** | 🔵 Startwerte |
+
+#### eSUN PETG Transparent
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | **1.1** | **12.6** | **17.1** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **1** | **11** | **14.9** | 🔵 Startwerte |
+| Bambu Lab P1S | **0.9** | **10.4** | **14.2** | 🔵 Startwerte |
+| Bambu Lab A1 | **0.9** | **9.9** | **13.4** | 🔵 Startwerte |
+| Bambu Lab A1 mini | **0.8** | **9.3** | **12.7** | 🔵 Startwerte |
+
+> 💧 **Auf Klarheit optimiert.** Höhere Düsentemperatur, bewusst abgesenkter Volumenstrom und stark zurückgenommene Kühlung — Klarheit geht hier vor Druckzeit.
+
+### Bambu Lab
+
+5 Materialien.
+
+#### Bambu PLA Basic
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | **2.3** | **24.1** | **28.7** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **2** | **21** | **25** | 🔵 Startwerte |
+| Bambu Lab P1S | **1.9** | **19.9** | **23.8** | 🔵 Startwerte |
+| Bambu Lab A1 | **1.8** | **18.9** | **22.5** | 🔵 Startwerte |
+| Bambu Lab A1 mini | **1.7** | **17.8** | **21.2** | 🔵 Startwerte |
+
+#### Bambu PLA Glow
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | — | **20.7** | **24.1** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | — | **18** | **21** | 🔵 Startwerte |
+| Bambu Lab P1S | — | **17.1** | **19.9** | 🔵 Startwerte |
+| Bambu Lab A1 | — | **16.2** | **18.9** | 🔵 Startwerte |
+| Bambu Lab A1 mini | — | **15.3** | **17.8** | 🔵 Startwerte |
+
+> ⚠️ **Abrasiv.** Gehärtete Düse zwingend erforderlich. Die 0.2-mm-Düse ist für dieses Material gesperrt — siehe [Düsen](nozzles.md).
+
+#### Bambu PLA Translucent
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | **1.8** | **13.8** | **16.1** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **1.6** | **12** | **14** | 🔵 Startwerte |
+| Bambu Lab P1S | **1.5** | **11.4** | **13.3** | 🔵 Startwerte |
+| Bambu Lab A1 | **1.4** | **10.8** | **12.6** | 🔵 Startwerte |
+| Bambu Lab A1 mini | **1.4** | **10.2** | **11.9** | 🔵 Startwerte |
+
+> 💧 **Auf Klarheit optimiert.** Höhere Düsentemperatur, bewusst abgesenkter Volumenstrom und stark zurückgenommene Kühlung — Klarheit geht hier vor Druckzeit.
+
+#### Bambu PETG HF
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | **1.1** | **24.1** | **28.7** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **1** | **21** | **25** | 🔵 Startwerte |
+| Bambu Lab P1S | **0.9** | **19.9** | **23.8** | 🔵 Startwerte |
+| Bambu Lab A1 | **0.9** | **18.9** | **22.5** | 🔵 Startwerte |
+| Bambu Lab A1 mini | **0.8** | **17.8** | **21.2** | 🔵 Startwerte |
+
+#### Bambu PETG Translucent
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | **1.1** | **6.9** | **9.2** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **1** | **6** | **8** | 🔵 Startwerte |
+| Bambu Lab P1S | **0.9** | **5.7** | **7.6** | 🔵 Startwerte |
+| Bambu Lab A1 | **0.9** | **5.4** | **7.2** | 🔵 Startwerte |
+| Bambu Lab A1 mini | **0.8** | **5.1** | **6.8** | 🔵 Startwerte |
+
+> 💧 **Auf Klarheit optimiert.** Höhere Düsentemperatur, bewusst abgesenkter Volumenstrom und stark zurückgenommene Kühlung — Klarheit geht hier vor Druckzeit.
 
 ---
 
@@ -106,6 +242,76 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 
 | Profil | erbt von |
 |---|---|
+| `Bambu PETG HF A1 0.2` | `Bambu PETG HF @BBL A1 0.2 nozzle` |
+| `Bambu PETG HF A1 0.4` | `Bambu PETG HF @BBL A1` |
+| `Bambu PETG HF A1 0.6` | `Bambu PETG HF @BBL A1 0.8 nozzle` |
+| `Bambu PETG HF A1M 0.2` | `Bambu PETG HF @BBL A1M 0.2 nozzle` |
+| `Bambu PETG HF A1M 0.4` | `Bambu PETG HF @BBL A1M` |
+| `Bambu PETG HF A1M 0.6` | `Bambu PETG HF @BBL A1M 0.8 nozzle` |
+| `Bambu PETG HF H2C 0.2` | `Bambu PETG HF @BBL H2C 0.2 nozzle` |
+| `Bambu PETG HF H2C 0.4` | `Bambu PETG HF @BBL H2C` |
+| `Bambu PETG HF H2C 0.6` | `Bambu PETG HF @BBL H2C 0.6 nozzle` |
+| `Bambu PETG HF P1S 0.2` | `Bambu PETG HF @BBL X1C 0.2 nozzle` |
+| `Bambu PETG HF P1S 0.4` | `Bambu PETG HF @BBL P1S 0.4 nozzle` |
+| `Bambu PETG HF P1S 0.6` | `Bambu PETG HF @BBL X1C 0.8 nozzle` |
+| `Bambu PETG HF X1C 0.2` | `Bambu PETG HF @BBL X1C 0.2 nozzle` |
+| `Bambu PETG HF X1C 0.4` | `Bambu PETG HF @BBL X1C` |
+| `Bambu PETG HF X1C 0.6` | `Bambu PETG HF @BBL X1C 0.6 nozzle` |
+| `Bambu PETG Translucent A1 0.2` | `Bambu PETG Translucent @BBL A1 0.2 nozzle` |
+| `Bambu PETG Translucent A1 0.4` | `Bambu PETG Translucent @BBL A1` |
+| `Bambu PETG Translucent A1 0.6` | `Bambu PETG Translucent @BBL A1 0.8 nozzle` |
+| `Bambu PETG Translucent A1M 0.2` | `Bambu PETG Translucent @BBL A1M 0.2 nozzle` |
+| `Bambu PETG Translucent A1M 0.4` | `Bambu PETG Translucent @BBL A1M` |
+| `Bambu PETG Translucent A1M 0.6` | `Bambu PETG Translucent @BBL A1M 0.8 nozzle` |
+| `Bambu PETG Translucent H2C 0.2` | `Bambu PETG Translucent @BBL H2C 0.2 nozzle` |
+| `Bambu PETG Translucent H2C 0.4` | `Bambu PETG Translucent @BBL H2C 0.4 nozzle` |
+| `Bambu PETG Translucent H2C 0.6` | `Bambu PETG Translucent @BBL H2C` |
+| `Bambu PETG Translucent P1S 0.2` | `Bambu PETG Translucent @BBL X1C 0.2 nozzle` |
+| `Bambu PETG Translucent P1S 0.4` | `Bambu PETG Translucent @BBL X1C` |
+| `Bambu PETG Translucent P1S 0.6` | `Bambu PETG Translucent @BBL X1C 0.6 nozzle` |
+| `Bambu PETG Translucent X1C 0.2` | `Bambu PETG Translucent @BBL X1C 0.2 nozzle` |
+| `Bambu PETG Translucent X1C 0.4` | `Bambu PETG Translucent @BBL X1C` |
+| `Bambu PETG Translucent X1C 0.6` | `Bambu PETG Translucent @BBL X1C 0.6 nozzle` |
+| `Bambu PLA Basic A1 0.2` | `Bambu PLA Basic @BBL A1 0.2 nozzle` |
+| `Bambu PLA Basic A1 0.4` | `Bambu PLA Basic @BBL A1` |
+| `Bambu PLA Basic A1 0.6` | `Bambu PLA Basic @BBL A1` |
+| `Bambu PLA Basic A1M 0.2` | `Bambu PLA Basic @BBL A1M 0.2 nozzle` |
+| `Bambu PLA Basic A1M 0.4` | `Bambu PLA Basic @BBL A1M` |
+| `Bambu PLA Basic A1M 0.6` | `Bambu PLA Basic @BBL A1M` |
+| `Bambu PLA Basic H2C 0.2` | `Bambu PLA Basic @BBL H2C 0.2 nozzle` |
+| `Bambu PLA Basic H2C 0.4` | `Bambu PLA Basic @BBL H2C` |
+| `Bambu PLA Basic H2C 0.6` | `Bambu PLA Basic @BBL H2C 0.6 nozzle` |
+| `Bambu PLA Basic P1S 0.2` | `Bambu PLA Basic @BBL X1C 0.2 nozzle` |
+| `Bambu PLA Basic P1S 0.4` | `Bambu PLA Basic @BBL P1S 0.4 nozzle` |
+| `Bambu PLA Basic P1S 0.6` | `Bambu PLA Basic @BBL P1S 0.6 nozzle` |
+| `Bambu PLA Basic X1C 0.2` | `Bambu PLA Basic @BBL X1C 0.2 nozzle` |
+| `Bambu PLA Basic X1C 0.4` | `Bambu PLA Basic @BBL X1C` |
+| `Bambu PLA Basic X1C 0.6` | `Bambu PLA Basic @BBL X1C 0.6 nozzle` |
+| `Bambu PLA Glow A1 0.4` | `Bambu PLA Glow @BBL A1` |
+| `Bambu PLA Glow A1 0.6` | `Bambu PLA Glow @BBL A1` |
+| `Bambu PLA Glow A1M 0.4` | `Bambu PLA Glow @BBL A1M` |
+| `Bambu PLA Glow A1M 0.6` | `Bambu PLA Glow @BBL A1M` |
+| `Bambu PLA Glow H2C 0.4` | `Bambu PLA Glow @BBL H2C 0.4 nozzle` |
+| `Bambu PLA Glow H2C 0.6` | `Bambu PLA Glow @BBL H2C` |
+| `Bambu PLA Glow P1S 0.4` | `Bambu PLA Glow @BBL X1C` |
+| `Bambu PLA Glow P1S 0.6` | `Bambu PLA Glow @BBL X1C 0.6 nozzle` |
+| `Bambu PLA Glow X1C 0.4` | `Bambu PLA Glow @BBL X1C` |
+| `Bambu PLA Glow X1C 0.6` | `Bambu PLA Glow @BBL X1C 0.6 nozzle` |
+| `Bambu PLA Translucent A1 0.2` | `Bambu PLA Translucent @BBL A1 0.2 nozzle` |
+| `Bambu PLA Translucent A1 0.4` | `Bambu PLA Translucent @BBL A1` |
+| `Bambu PLA Translucent A1 0.6` | `Bambu PLA Translucent @BBL A1 0.8 nozzle` |
+| `Bambu PLA Translucent A1M 0.2` | `Bambu PLA Translucent @BBL A1M 0.2 nozzle` |
+| `Bambu PLA Translucent A1M 0.4` | `Bambu PLA Translucent @BBL A1M` |
+| `Bambu PLA Translucent A1M 0.6` | `Bambu PLA Translucent @BBL A1M 0.8 nozzle` |
+| `Bambu PLA Translucent H2C 0.2` | `Bambu PLA Translucent @BBL H2C 0.2 nozzle` |
+| `Bambu PLA Translucent H2C 0.4` | `Bambu PLA Translucent @BBL H2C` |
+| `Bambu PLA Translucent H2C 0.6` | `Bambu PLA Translucent @BBL H2C` |
+| `Bambu PLA Translucent P1S 0.2` | `Bambu PLA Translucent @BBL X1C 0.2 nozzle` |
+| `Bambu PLA Translucent P1S 0.4` | `Bambu PLA Translucent @BBL X1C` |
+| `Bambu PLA Translucent P1S 0.6` | `Bambu PLA Translucent @BBL X1C 0.8 nozzle` |
+| `Bambu PLA Translucent X1C 0.2` | `Bambu PLA Translucent @BBL X1C 0.2 nozzle` |
+| `Bambu PLA Translucent X1C 0.4` | `Bambu PLA Translucent @BBL X1C` |
+| `Bambu PLA Translucent X1C 0.6` | `Bambu PLA Translucent @BBL X1C 0.8 nozzle` |
 | `SUNLU PETG A1 0.2` | `Generic PETG @BBL A1 0.2 nozzle` |
 | `SUNLU PETG A1 0.4` | `Generic PETG @BBL A1` |
 | `SUNLU PETG A1 0.6` | `Generic PETG @BBL A1` |
@@ -128,6 +334,21 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `SUNLU PETG P1S 0.2` | `Generic PETG @0.2 nozzle` |
 | `SUNLU PETG P1S 0.4` | `Generic PETG` |
 | `SUNLU PETG P1S 0.6` | `Generic PETG` |
+| `SUNLU PETG Transparent A1 0.2` | `Generic PETG @BBL A1 0.2 nozzle` |
+| `SUNLU PETG Transparent A1 0.4` | `Generic PETG @BBL A1` |
+| `SUNLU PETG Transparent A1 0.6` | `Generic PETG @BBL A1` |
+| `SUNLU PETG Transparent A1M 0.2` | `Generic PETG @BBL A1M 0.2 nozzle` |
+| `SUNLU PETG Transparent A1M 0.4` | `Generic PETG @BBL A1M` |
+| `SUNLU PETG Transparent A1M 0.6` | `Generic PETG @BBL A1M` |
+| `SUNLU PETG Transparent H2C 0.2` | `Generic PETG @BBL H2C 0.2 nozzle` |
+| `SUNLU PETG Transparent H2C 0.4` | `Generic PETG @BBL H2C 0.4 nozzle` |
+| `SUNLU PETG Transparent H2C 0.6` | `Generic PETG @BBL H2C` |
+| `SUNLU PETG Transparent P1S 0.2` | `Generic PETG @0.2 nozzle` |
+| `SUNLU PETG Transparent P1S 0.4` | `Generic PETG` |
+| `SUNLU PETG Transparent P1S 0.6` | `Generic PETG` |
+| `SUNLU PETG Transparent X1C 0.2` | `Generic PETG @0.2 nozzle` |
+| `SUNLU PETG Transparent X1C 0.4` | `Generic PETG` |
+| `SUNLU PETG Transparent X1C 0.6` | `Generic PETG` |
 | `SUNLU PETG X1C 0.2` | `Generic PETG @0.2 nozzle` |
 | `SUNLU PETG X1C 0.4` | `Generic PETG` |
 | `SUNLU PETG X1C 0.6` | `Generic PETG` |
@@ -153,9 +374,79 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `SUNLU PLA P1S 0.2` | `Generic PLA @0.2 nozzle` |
 | `SUNLU PLA P1S 0.4` | `Generic PLA` |
 | `SUNLU PLA P1S 0.6` | `Generic PLA` |
+| `SUNLU PLA Transparent A1 0.2` | `Generic PLA @BBL A1 0.2 nozzle` |
+| `SUNLU PLA Transparent A1 0.4` | `Generic PLA @BBL A1` |
+| `SUNLU PLA Transparent A1 0.6` | `Generic PLA @BBL A1` |
+| `SUNLU PLA Transparent A1M 0.2` | `Generic PLA @BBL A1M 0.2 nozzle` |
+| `SUNLU PLA Transparent A1M 0.4` | `Generic PLA @BBL A1M` |
+| `SUNLU PLA Transparent A1M 0.6` | `Generic PLA @BBL A1M` |
+| `SUNLU PLA Transparent H2C 0.2` | `Generic PLA @BBL H2C 0.2 nozzle` |
+| `SUNLU PLA Transparent H2C 0.4` | `Generic PLA @BBL H2C 0.4 nozzle` |
+| `SUNLU PLA Transparent H2C 0.6` | `Generic PLA @BBL H2C` |
+| `SUNLU PLA Transparent P1S 0.2` | `Generic PLA @0.2 nozzle` |
+| `SUNLU PLA Transparent P1S 0.4` | `Generic PLA` |
+| `SUNLU PLA Transparent P1S 0.6` | `Generic PLA` |
+| `SUNLU PLA Transparent X1C 0.2` | `Generic PLA @0.2 nozzle` |
+| `SUNLU PLA Transparent X1C 0.4` | `Generic PLA` |
+| `SUNLU PLA Transparent X1C 0.6` | `Generic PLA` |
 | `SUNLU PLA X1C 0.2` | `Generic PLA @0.2 nozzle` |
 | `SUNLU PLA X1C 0.4` | `Generic PLA` |
 | `SUNLU PLA X1C 0.6` | `Generic PLA` |
+| `eSUN PETG A1 0.2` | `Generic PETG @BBL A1 0.2 nozzle` |
+| `eSUN PETG A1 0.4` | `Generic PETG @BBL A1` |
+| `eSUN PETG A1 0.6` | `Generic PETG @BBL A1` |
+| `eSUN PETG A1M 0.2` | `Generic PETG @BBL A1M 0.2 nozzle` |
+| `eSUN PETG A1M 0.4` | `Generic PETG @BBL A1M` |
+| `eSUN PETG A1M 0.6` | `Generic PETG @BBL A1M` |
+| `eSUN PETG H2C 0.2` | `Generic PETG @BBL H2C 0.2 nozzle` |
+| `eSUN PETG H2C 0.4` | `Generic PETG @BBL H2C 0.4 nozzle` |
+| `eSUN PETG H2C 0.6` | `Generic PETG @BBL H2C` |
+| `eSUN PETG P1S 0.2` | `Generic PETG @0.2 nozzle` |
+| `eSUN PETG P1S 0.4` | `Generic PETG` |
+| `eSUN PETG P1S 0.6` | `Generic PETG` |
+| `eSUN PETG Transparent A1 0.2` | `Generic PETG @BBL A1 0.2 nozzle` |
+| `eSUN PETG Transparent A1 0.4` | `Generic PETG @BBL A1` |
+| `eSUN PETG Transparent A1 0.6` | `Generic PETG @BBL A1` |
+| `eSUN PETG Transparent A1M 0.2` | `Generic PETG @BBL A1M 0.2 nozzle` |
+| `eSUN PETG Transparent A1M 0.4` | `Generic PETG @BBL A1M` |
+| `eSUN PETG Transparent A1M 0.6` | `Generic PETG @BBL A1M` |
+| `eSUN PETG Transparent H2C 0.2` | `Generic PETG @BBL H2C 0.2 nozzle` |
+| `eSUN PETG Transparent H2C 0.4` | `Generic PETG @BBL H2C 0.4 nozzle` |
+| `eSUN PETG Transparent H2C 0.6` | `Generic PETG @BBL H2C` |
+| `eSUN PETG Transparent P1S 0.2` | `Generic PETG @0.2 nozzle` |
+| `eSUN PETG Transparent P1S 0.4` | `Generic PETG` |
+| `eSUN PETG Transparent P1S 0.6` | `Generic PETG` |
+| `eSUN PETG Transparent X1C 0.2` | `Generic PETG @0.2 nozzle` |
+| `eSUN PETG Transparent X1C 0.4` | `Generic PETG` |
+| `eSUN PETG Transparent X1C 0.6` | `Generic PETG` |
+| `eSUN PETG X1C 0.2` | `Generic PETG @0.2 nozzle` |
+| `eSUN PETG X1C 0.4` | `Generic PETG` |
+| `eSUN PETG X1C 0.6` | `Generic PETG` |
+| `eSUN PLA+ A1 0.2` | `Generic PLA @BBL A1 0.2 nozzle` |
+| `eSUN PLA+ A1 0.4` | `Generic PLA @BBL A1` |
+| `eSUN PLA+ A1 0.6` | `Generic PLA @BBL A1` |
+| `eSUN PLA+ A1M 0.2` | `Generic PLA @BBL A1M 0.2 nozzle` |
+| `eSUN PLA+ A1M 0.4` | `Generic PLA @BBL A1M` |
+| `eSUN PLA+ A1M 0.6` | `Generic PLA @BBL A1M` |
+| `eSUN PLA+ Glow A1 0.4` | `Generic PLA @BBL A1` |
+| `eSUN PLA+ Glow A1 0.6` | `Generic PLA @BBL A1` |
+| `eSUN PLA+ Glow A1M 0.4` | `Generic PLA @BBL A1M` |
+| `eSUN PLA+ Glow A1M 0.6` | `Generic PLA @BBL A1M` |
+| `eSUN PLA+ Glow H2C 0.4` | `Generic PLA @BBL H2C 0.4 nozzle` |
+| `eSUN PLA+ Glow H2C 0.6` | `Generic PLA @BBL H2C` |
+| `eSUN PLA+ Glow P1S 0.4` | `Generic PLA` |
+| `eSUN PLA+ Glow P1S 0.6` | `Generic PLA` |
+| `eSUN PLA+ Glow X1C 0.4` | `Generic PLA` |
+| `eSUN PLA+ Glow X1C 0.6` | `Generic PLA` |
+| `eSUN PLA+ H2C 0.2` | `Generic PLA @BBL H2C 0.2 nozzle` |
+| `eSUN PLA+ H2C 0.4` | `Generic PLA @BBL H2C 0.4 nozzle` |
+| `eSUN PLA+ H2C 0.6` | `Generic PLA @BBL H2C` |
+| `eSUN PLA+ P1S 0.2` | `Generic PLA @0.2 nozzle` |
+| `eSUN PLA+ P1S 0.4` | `Generic PLA` |
+| `eSUN PLA+ P1S 0.6` | `Generic PLA` |
+| `eSUN PLA+ X1C 0.2` | `Generic PLA @0.2 nozzle` |
+| `eSUN PLA+ X1C 0.4` | `Generic PLA` |
+| `eSUN PLA+ X1C 0.6` | `Generic PLA` |
 | `Normal A1 0.2` | `0.12mm Draft @BBL A1 0.2 nozzle` |
 | `Normal A1 0.4` | `0.20mm Standard @BBL A1` |
 | `Normal A1 0.6` | `0.30mm Standard @BBL A1 0.6 nozzle` |
@@ -211,4 +502,5 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | 🟢 | Am Gerät gedruckt und bestätigt |
 | 🔵 | Startwert aus der Bambu-Basis abgeleitet, nicht einzeln gedruckt |
 | ⚠️ | Materialbedingte Einschränkung beachten |
+| 💧 | Auf optische Klarheit abgestimmt, nicht auf Geschwindigkeit |
 | — | Kombination bewusst nicht ausgeliefert |

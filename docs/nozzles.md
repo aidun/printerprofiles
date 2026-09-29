@@ -68,10 +68,14 @@ dick, Maße stimmen nicht mehr.
 
 | Material | Düse | Begründung |
 |---|---|---|
-| SUNLU PLA | Messing genügt | ungefüllt |
-| SUNLU PETG | Messing genügt | ungefüllt |
-| SUNLU PLA Glow | **gehärtet zwingend** | Strontiumaluminat |
-| SUNLU PETG Glow | **gehärtet zwingend** | Strontiumaluminat |
+| Alle PLA- und PETG-Varianten ohne Leuchtpigment | Messing genügt | ungefüllt |
+| Alle transparenten Varianten | Messing genügt | ungefüllt |
+| SUNLU PLA Glow · SUNLU PETG Glow | **gehärtet zwingend** | Strontiumaluminat |
+| eSUN PLA+ Glow · Bambu PLA Glow | **gehärtet zwingend** | Strontiumaluminat |
+
+Von den 15 Materialien dieses Repositories brauchen also genau vier eine gehärtete
+Düse. Welches welches ist, steht in der [Materialübersicht](filament/README.md) —
+dort trägt jedes betroffene Datenblatt die Kennzeichnung ⚠️.
 
 Bambu liefert die gehärtete Variante unter der Bezeichnung *Hardened Steel* für alle
 drei Durchmesser. Bei den Profilen dieses Repositories macht die Düsenhärte keinen

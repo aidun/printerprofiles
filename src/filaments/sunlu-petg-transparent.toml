@@ -1,0 +1,43 @@
+id                           = "sunlu-petg-transparent"
+label                        = "SUNLU PETG Transparent"
+order                        = 6
+short                        = "PETG Transparent"
+brand                        = "SUNLU"
+material                     = "PETG"
+base                         = "Generic PETG"
+abrasive                     = false
+hardened                     = false
+transparent                  = true
+status                       = "baseline"
+drying                       = "65 °C / 8 h — Feuchtigkeit zerstört die Klarheit zuerst"
+storage                      = "zwingend trocken; Blasen im Strang bleiben im Bauteil sichtbar"
+nozzles                      = ["0.2", "0.4", "0.6"]
+description                  = "Das klarste Material im Sortiment. PETG streut von Natur aus wenig Licht, verzeiht aber keine Feuchtigkeit: jede Blase bleibt als weißer Punkt im Bauteil stehen. Heiß, langsam und mit minimaler Kühlung gefahren."
+
+[temperature]
+nozzle                       = 252
+nozzle_initial               = 255
+range_low                    = 240
+range_high                   = 262
+vitrification                = 71
+bed                          = 70
+bed_initial                  = 75
+
+[flow]
+ratio                        = 0.96
+
+[volumetric_flow]
+"0.2" = 1.0
+"0.4" = 11.5
+"0.6" = 15.3
+
+[cooling]
+fan_min_speed                = 10
+fan_max_speed                = 25
+overhang_fan_speed           = 40
+slow_down_layer_time         = 8
+fan_cooling_layer_time       = 12
+close_fan_the_first_x_layers = 3
+
+[retraction]
+z_hop                        = 0.6

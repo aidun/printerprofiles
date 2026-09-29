@@ -18,10 +18,20 @@ ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "src"
 TARGET = ROOT / "docs" / "matrix.md"
 
-STATUS_SYMBOL = {
-    "validated-h2c-04": "🟢",
-    "baseline": "🔵",
-}
+STATUS_SYMBOL = {"baseline": "🔵"}
+
+
+def verified(status: str) -> tuple[str, str] | None:
+    """Splits a status id like 'validated-h2c-04' into printer and nozzle.
+
+    Returns None for 'baseline'. Keeping the verified combination in the status
+    field means the matrix needs no special case per material.
+    """
+    parts = status.split("-")
+    if len(parts) != 3 or parts[0] != "validated":
+        return None
+    digits = parts[2]
+    return parts[1], f"{digits[0]}.{digits[1:]}"
 
 
 def main() -> int:
@@ -63,8 +73,16 @@ def main() -> int:
     out("")
 
     nozzles = ["0.2", "0.4", "0.6"]
+    brand = None
     for filament_id, filament in filaments.items():
-        out(f"### {filament['label']}")
+        if filament["brand"] != brand:
+            brand = filament["brand"]
+            count = sum(1 for f in filaments.values() if f["brand"] == brand)
+            out(f"### {brand}")
+            out("")
+            out(f"{count} Materialien.")
+            out("")
+        out(f"#### {filament['label']}")
         out("")
         out("| Drucker | " + " | ".join(f"{n} mm" for n in nozzles) + " | Status |")
         out("|---|" + "---|" * (len(nozzles) + 1))
@@ -80,18 +98,25 @@ def main() -> int:
                 entry = hits[0]
                 cells.append(f"**{entry['flow']}**")
                 status = entry["status"]
-            symbol = STATUS_SYMBOL.get(status, "")
-            mark = f"{symbol} {status}" if status else "—"
-            if filament_id == "sunlu-petg-glow" and printer_id == "h2c":
-                mark = "🟢 0.4 mm am Gerät verifiziert"
-            elif status:
-                mark = "🔵 Startwerte"
+            if not status:
+                mark = "—"
+            else:
+                hit = verified(status)
+                if hit and hit[0] == printer_id:
+                    mark = f"🟢 {hit[1]} mm am Gerät verifiziert"
+                else:
+                    mark = f"{STATUS_SYMBOL.get(status, '🔵')} Startwerte"
             out(f"| {p['label']} | " + " | ".join(cells) + f" | {mark} |")
         out("")
         if filament["abrasive"]:
             out("> ⚠️ **Abrasiv.** Gehärtete Düse zwingend erforderlich. "
                 "Die 0.2-mm-Düse ist für dieses Material gesperrt — "
                 "siehe [Düsen](nozzles.md).")
+            out("")
+        if filament["transparent"]:
+            out("> 💧 **Auf Klarheit optimiert.** Höhere Düsentemperatur, bewusst "
+                "abgesenkter Volumenstrom und stark zurückgenommene Kühlung — "
+                "Klarheit geht hier vor Druckzeit.")
             out("")
 
     out("---")
@@ -158,6 +183,7 @@ def main() -> int:
     out("| 🟢 | Am Gerät gedruckt und bestätigt |")
     out("| 🔵 | Startwert aus der Bambu-Basis abgeleitet, nicht einzeln gedruckt |")
     out("| ⚠️ | Materialbedingte Einschränkung beachten |")
+    out("| 💧 | Auf optische Klarheit abgestimmt, nicht auf Geschwindigkeit |")
     out("| — | Kombination bewusst nicht ausgeliefert |")
     out("")
 

@@ -80,11 +80,54 @@ class TestSources(unittest.TestCase):
         for printer in self.printers.values():
             self.assertEqual(printer["nozzles"], ["0.2", "0.4", "0.6"])
 
+    def test_every_filament_is_complete(self):
+        keys = {"id", "label", "order", "short", "brand", "material", "base",
+                "abrasive", "hardened", "transparent", "status", "drying",
+                "storage", "nozzles", "description"}
+        orders = []
+        for key, filament in self.filaments.items():
+            self.assertTrue(keys <= set(filament), f"{key} is missing keys")
+            self.assertEqual(filament["id"], key)
+            self.assertIn(filament["brand"], {"SUNLU", "eSUN", "Bambu Lab"})
+            self.assertIn(filament["material"], {"PLA", "PETG"})
+            orders.append(filament["order"])
+        self.assertEqual(orders, list(range(1, len(self.filaments) + 1)))
+
     def test_glow_filaments_exclude_the_02_nozzle(self):
         # Strontium aluminate reliably clogs the 0.2 mm nozzle.
-        for key in ("sunlu-pla-glow", "sunlu-petg-glow"):
+        glow = [k for k, f in self.filaments.items() if "Glow" in f["label"]]
+        self.assertEqual(len(glow), 4)
+        for key in glow:
             self.assertNotIn("0.2", self.filaments[key]["nozzles"])
             self.assertTrue(self.filaments[key]["abrasive"])
+            self.assertTrue(self.filaments[key]["hardened"])
+
+    def test_every_other_filament_covers_all_three_nozzles(self):
+        for key, filament in self.filaments.items():
+            if filament["abrasive"]:
+                continue
+            self.assertEqual(filament["nozzles"], ["0.2", "0.4", "0.6"], key)
+
+    def test_transparent_variants_run_hotter_and_slower(self):
+        # Clarity comes from the print, not the pigment: more heat, less flow,
+        # markedly less cooling than the opaque material of the same family.
+        pairs = (
+            ("sunlu-pla", "sunlu-pla-transparent"),
+            ("sunlu-petg", "sunlu-petg-transparent"),
+            ("esun-petg", "esun-petg-transparent"),
+            ("bambu-pla-basic", "bambu-pla-translucent"),
+            ("bambu-petg-hf", "bambu-petg-translucent"),
+        )
+        for opaque_key, clear_key in pairs:
+            opaque, clear = self.filaments[opaque_key], self.filaments[clear_key]
+            self.assertTrue(clear["transparent"])
+            self.assertFalse(opaque["transparent"])
+            self.assertGreaterEqual(clear["temperature"]["nozzle"],
+                                    opaque["temperature"]["nozzle"] + 5, clear_key)
+            self.assertLess(clear["volumetric_flow"]["0.4"],
+                            opaque["volumetric_flow"]["0.4"], clear_key)
+            self.assertLess(clear["cooling"]["fan_max_speed"],
+                            opaque["cooling"]["fan_max_speed"], clear_key)
 
     def test_temperature_windows_are_consistent(self):
         for filament in self.filaments.values():
@@ -111,7 +154,7 @@ class TestGeneratedPresets(unittest.TestCase):
     def test_preset_counts(self):
         filament = sum(len(f["nozzles"]) for f in self.filaments.values()) * len(self.printers)
         process = len(self.printers) * 3 * len(self.levels)
-        self.assertEqual((filament, process), (50, 45))
+        self.assertEqual((filament, process), (205, 45))
 
     def test_verified_reference_preset_is_reproduced(self):
         # Values confirmed on the machine for SUNLU PETG Glow, H2C, 0.4 mm.
@@ -126,6 +169,24 @@ class TestGeneratedPresets(unittest.TestCase):
         self.assertEqual(preset["temperature_vitrification"], ["71"])
         self.assertEqual(preset["fan_min_speed"], ["10"])
         self.assertEqual(preset["fan_max_speed"], ["30"])
+
+    def test_every_base_resolves_for_every_machine(self):
+        # A missing base would only surface at generation time; the one gap the
+        # library really has is Bambu PLA Glow with a 0.2 mm nozzle, and that
+        # combination is excluded by the glow rule anyway.
+        for filament in self.filaments.values():
+            for printer in self.printers.values():
+                for nozzle in filament["nozzles"]:
+                    machine = generate.machine_name(printer, nozzle)
+                    base = self.lib.filament_base(filament["base"], machine)
+                    self.assertTrue(base.startswith(filament["base"]))
+
+    def test_bambu_filaments_inherit_their_own_family(self):
+        for filament in self.filaments.values():
+            if filament["brand"] == "Bambu Lab":
+                self.assertEqual(filament["base"], filament["label"])
+            else:
+                self.assertIn(filament["base"], {"Generic PLA", "Generic PETG"})
 
     def test_volumetric_flow_scales_with_the_printer(self):
         values = {}

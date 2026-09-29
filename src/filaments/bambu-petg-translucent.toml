@@ -1,0 +1,44 @@
+id                           = "bambu-petg-translucent"
+label                        = "Bambu PETG Translucent"
+order                        = 15
+short                        = "PETG Translucent"
+brand                        = "Bambu Lab"
+material                     = "PETG"
+base                         = "Bambu PETG Translucent"
+abrasive                     = false
+hardened                     = false
+transparent                  = true
+status                       = "baseline"
+drying                       = "65 °C / 8 h — vor jedem Klarsichtdruck"
+storage                      = "zwingend trocken"
+nozzles                      = ["0.2", "0.4", "0.6"]
+description                  = "Der Sonderfall im Sortiment: Bambu gibt für dieses Material nur 6 mm³/s frei, ein Viertel des PETG HF. Klarheit vor Zeit, konsequent bis ins Herstellerprofil. Entsprechend lange Druckzeiten sind hier kein Fehler, sondern die Vorgabe."
+
+[temperature]
+nozzle                       = 250
+nozzle_initial               = 255
+range_low                    = 240
+range_high                   = 260
+vitrification                = 70
+bed                          = 70
+bed_initial                  = 75
+
+[flow]
+ratio                        = 0.97
+
+# 0.4 is the Bambu datasheet limit; 0.6 extrapolated one nozzle step up.
+[volumetric_flow]
+"0.2" = 1.0
+"0.4" = 6.0
+"0.6" = 8.0
+
+[cooling]
+fan_min_speed                = 10
+fan_max_speed                = 25
+overhang_fan_speed           = 40
+slow_down_layer_time         = 8
+fan_cooling_layer_time       = 12
+close_fan_the_first_x_layers = 3
+
+[retraction]
+z_hop                        = 0.6

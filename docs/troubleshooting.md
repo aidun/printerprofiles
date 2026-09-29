@@ -136,12 +136,13 @@ Bleibt der Fehler nach der Kalibrierung bestehen:
 im extrudierten Strang, matte statt glänzender Oberfläche, plötzlich starke
 Fädenbildung bei unveränderten Einstellungen.
 
-| Material | Trocknung | Empfindlichkeit |
+| Materialklasse | Trocknung | Empfindlichkeit |
 |---|---|---|
-| SUNLU PLA | 45 °C / 6 h | gering |
-| SUNLU PLA Glow | 45 °C / 6 h | gering |
-| SUNLU PETG | 65 °C / 8 h | **hoch** |
-| SUNLU PETG Glow | 65 °C / 8 h | **hoch** |
+| Alle PLA-Varianten (auch PLA+, Glow, transparent) | 45 °C / 6 h | gering |
+| Alle PETG-Varianten (auch Glow, transparent) | 65 °C / 8 h | **hoch** |
+
+Die Werte gelten herstellerübergreifend für alle 15 Materialien; die
+[Datenblätter](filament/README.md) führen sie je Material einzeln.
 
 PETG zieht innerhalb weniger Tage offener Lagerung so viel Wasser, dass der Druck
 sichtbar leidet. Silikagel im Trockenbehälter ist bei diesem Material keine

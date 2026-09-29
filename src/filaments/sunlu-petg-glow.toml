@@ -1,11 +1,13 @@
 id                           = "sunlu-petg-glow"
 label                        = "SUNLU PETG Glow"
-order                        = 4
+order                        = 5
 short                        = "PETG Glow"
+brand                        = "SUNLU"
 material                     = "PETG"
 base                         = "Generic PETG"
 abrasive                     = true
 hardened                     = true
+transparent                  = false
 status                       = "validated-h2c-04"
 drying                       = "65 °C / 8 h"
 storage                      = "zwingend trocken"

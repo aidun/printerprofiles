@@ -144,7 +144,10 @@ def check_filament(c, lib, short, d, machines, hotend):
             c.check(high <= limit, f"{short}: {high} °C exceeds the hotend limit of {limit} °C")
 
     flow = _number(d.get("filament_max_volumetric_speed"))
-    c.check(flow is not None and 1.0 <= flow <= 40.0,
+    # The lower bound has to admit the slowest combination the library itself
+    # releases: a 0.2 mm nozzle on clarity-optimised PETG (1.0 mm³/s on the
+    # X1C) drops to 0.8 on the A1 mini.
+    c.check(flow is not None and 0.8 <= flow <= 40.0,
             f"{short}: volumetric flow {flow} mm³/s is implausible")
     ratio = _number(d.get("filament_flow_ratio"))
     c.check(ratio is not None and 0.85 <= ratio <= 1.15,

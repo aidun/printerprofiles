@@ -31,11 +31,16 @@ Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
 
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
-| H2C | 4.0 | 17.2 | 24.1 |
-| X1 Carbon | 3.5 | 15.0 | 21.0 |
-| P1S | 3.3 | 14.2 | 19.9 |
-| A1 | 3.1 | 13.5 | 18.9 |
-| A1 mini | 3.0 | 12.8 | 17.8 |
+| H2C | 1.8 | 17.2 | 24.1 |
+| X1 Carbon | 1.6 | 15.0 | 21.0 |
+| P1S | 1.5 | 14.2 | 19.9 |
+| A1 | 1.4 | 13.5 | 18.9 |
+| A1 mini | 1.4 | 12.8 | 17.8 |
+
+> **Zur 0.2-mm-Spalte.** Die Werte liegen deutlich unter dem, was eine lineare
+> Hochrechnung aus der 0.4-mm-Düse ergäbe. Das ist beabsichtigt: Sämtliche
+> Basisprofile von Bambu Studio geben für diese Düse 1.0 – 2.0 mm³/s frei. Der
+> Druckvorschub begrenzt hier, nicht das Hotend.
 
 ## Hinweise
 

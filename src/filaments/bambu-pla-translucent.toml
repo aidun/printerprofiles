@@ -1,0 +1,44 @@
+id                           = "bambu-pla-translucent"
+label                        = "Bambu PLA Translucent"
+order                        = 13
+short                        = "PLA Translucent"
+brand                        = "Bambu Lab"
+material                     = "PLA"
+base                         = "Bambu PLA Translucent"
+abrasive                     = false
+hardened                     = false
+transparent                  = true
+status                       = "baseline"
+drying                       = "45 °C / 6 h"
+storage                      = "trocken, Silikagel"
+nozzles                      = ["0.2", "0.4", "0.6"]
+description                  = "Durchscheinendes PLA. Bambu drosselt den Volumenstrom hier von Haus aus auf knapp die Hälfte des PLA Basic — das ist bereits die Klarheitsanpassung. Dieses Repository nimmt zusätzlich die Kühlung zurück, die im Herstellerprofil auf voller Leistung steht."
+
+[temperature]
+nozzle                       = 228
+nozzle_initial               = 232
+range_low                    = 215
+range_high                   = 235
+vitrification                = 45
+bed                          = 55
+bed_initial                  = 60
+
+[flow]
+ratio                        = 0.99
+
+# Datasheet values; the fan settings deviate from Bambu deliberately (clarity).
+[volumetric_flow]
+"0.2" = 1.6
+"0.4" = 12.0
+"0.6" = 14.0
+
+[cooling]
+fan_min_speed                = 40
+fan_max_speed                = 70
+overhang_fan_speed           = 90
+slow_down_layer_time         = 8
+fan_cooling_layer_time       = 40
+close_fan_the_first_x_layers = 2
+
+[retraction]
+z_hop                        = 0.4

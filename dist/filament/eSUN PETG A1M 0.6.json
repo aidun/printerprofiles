@@ -1,0 +1,82 @@
+{
+    "close_fan_the_first_x_layers": [
+        "2"
+    ],
+    "compatible_printers": [
+        "Bambu Lab A1 mini 0.6 nozzle"
+    ],
+    "eng_plate_temp": [
+        "75"
+    ],
+    "eng_plate_temp_initial_layer": [
+        "80"
+    ],
+    "fan_cooling_layer_time": [
+        "20"
+    ],
+    "fan_max_speed": [
+        "50"
+    ],
+    "fan_min_speed": [
+        "20"
+    ],
+    "filament_extruder_variant": [
+        "Direct Drive Standard"
+    ],
+    "filament_flow_ratio": [
+        "0.95"
+    ],
+    "filament_max_volumetric_speed": [
+        "14.9"
+    ],
+    "filament_settings_id": [
+        "eSUN PETG A1M 0.6"
+    ],
+    "filament_z_hop": [
+        "0.6"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "75"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "80"
+    ],
+    "inherits": "Generic PETG @BBL A1M",
+    "name": "eSUN PETG A1M 0.6",
+    "nozzle_temperature": [
+        "243"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "248"
+    ],
+    "nozzle_temperature_range_high": [
+        "255"
+    ],
+    "nozzle_temperature_range_low": [
+        "230"
+    ],
+    "overhang_fan_speed": [
+        "60"
+    ],
+    "slow_down_layer_time": [
+        "6"
+    ],
+    "supertack_plate_temp": [
+        "75"
+    ],
+    "supertack_plate_temp_initial_layer": [
+        "80"
+    ],
+    "temperature_vitrification": [
+        "71"
+    ],
+    "textured_plate_temp": [
+        "75"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "80"
+    ],
+    "type": "filament",
+    "version": "2.7.0.8"
+}

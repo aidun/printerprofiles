@@ -1,0 +1,43 @@
+id                           = "esun-petg-transparent"
+label                        = "eSUN PETG Transparent"
+order                        = 10
+short                        = "PETG Transparent"
+brand                        = "eSUN"
+material                     = "PETG"
+base                         = "Generic PETG"
+abrasive                     = false
+hardened                     = false
+transparent                  = true
+status                       = "baseline"
+drying                       = "65 °C / 8 h — vor jedem Klarsichtdruck"
+storage                      = "zwingend trocken"
+nozzles                      = ["0.2", "0.4", "0.6"]
+description                  = "Klarsicht-PETG von eSUN. Wie die SUNLU-Variante auf Klarheit getrimmt, durch das heißere Bett aber unempfindlicher gegen Ablösen bei den langen Schichtzeiten, die niedrige Geschwindigkeiten mit sich bringen."
+
+[temperature]
+nozzle                       = 250
+nozzle_initial               = 255
+range_low                    = 240
+range_high                   = 260
+vitrification                = 71
+bed                          = 75
+bed_initial                  = 80
+
+[flow]
+ratio                        = 0.95
+
+[volumetric_flow]
+"0.2" = 1.0
+"0.4" = 11.0
+"0.6" = 14.9
+
+[cooling]
+fan_min_speed                = 10
+fan_max_speed                = 25
+overhang_fan_speed           = 40
+slow_down_layer_time         = 8
+fan_cooling_layer_time       = 12
+close_fan_the_first_x_layers = 3
+
+[retraction]
+z_hop                        = 0.6

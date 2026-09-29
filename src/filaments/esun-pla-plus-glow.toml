@@ -1,0 +1,42 @@
+id                           = "esun-pla-plus-glow"
+label                        = "eSUN PLA+ Glow"
+order                        = 8
+short                        = "PLA+ Glow"
+brand                        = "eSUN"
+material                     = "PLA"
+base                         = "Generic PLA"
+abrasive                     = true
+hardened                     = true
+transparent                  = false
+status                       = "baseline"
+drying                       = "45 °C / 6 h"
+storage                      = "trocken, Silikagel"
+nozzles                      = ["0.4", "0.6"]
+description                  = "Leuchtvariante des PLA+. Zähe Schmelze und Strontiumaluminat treffen zusammen — der niedrigste Volumenstrom aller PLA-Sorten im Sortiment. Gehärtete Düse zwingend, 0.2 mm nicht verwendbar."
+
+[temperature]
+nozzle                       = 228
+nozzle_initial               = 232
+range_low                    = 215
+range_high                   = 240
+vitrification                = 55
+bed                          = 60
+bed_initial                  = 65
+
+[flow]
+ratio                        = 0.95
+
+[volumetric_flow]
+"0.4" = 10.0
+"0.6" = 14.0
+
+[cooling]
+fan_min_speed                = 50
+fan_max_speed                = 90
+overhang_fan_speed           = 100
+slow_down_layer_time         = 5
+fan_cooling_layer_time       = 30
+close_fan_the_first_x_layers = 1
+
+[retraction]
+z_hop                        = 0.4

@@ -1,0 +1,43 @@
+id                           = "esun-petg"
+label                        = "eSUN PETG"
+order                        = 9
+short                        = "PETG"
+brand                        = "eSUN"
+material                     = "PETG"
+base                         = "Generic PETG"
+abrasive                     = false
+hardened                     = false
+transparent                  = false
+status                       = "baseline"
+drying                       = "65 °C / 8 h"
+storage                      = "zwingend trocken"
+nozzles                      = ["0.2", "0.4", "0.6"]
+description                  = "PETG mit etwas niedrigerem Temperaturfenster als die SUNLU-Variante, dafür mit spürbar heißerem Bett für die Haftung. Sonst dieselbe Charakteristik: wenig Kühlung, hoher Z-Hop."
+
+[temperature]
+nozzle                       = 243
+nozzle_initial               = 248
+range_low                    = 230
+range_high                   = 255
+vitrification                = 71
+bed                          = 75
+bed_initial                  = 80
+
+[flow]
+ratio                        = 0.95
+
+[volumetric_flow]
+"0.2" = 1.2
+"0.4" = 13.0
+"0.6" = 17.5
+
+[cooling]
+fan_min_speed                = 20
+fan_max_speed                = 50
+overhang_fan_speed           = 60
+slow_down_layer_time         = 6
+fan_cooling_layer_time       = 20
+close_fan_the_first_x_layers = 2
+
+[retraction]
+z_hop                        = 0.6

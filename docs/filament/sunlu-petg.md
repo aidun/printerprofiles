@@ -29,11 +29,15 @@ verliert bei zu starker Kühlung die Schichthaftung.
 
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
-| H2C | 3.4 | 15.5 | 20.7 |
-| X1 Carbon | 3.0 | 13.5 | 18.0 |
-| P1S | 2.8 | 12.8 | 17.1 |
-| A1 | 2.7 | 12.2 | 16.2 |
-| A1 mini | 2.5 | 11.5 | 15.3 |
+| H2C | 1.4 | 15.5 | 20.7 |
+| X1 Carbon | 1.2 | 13.5 | 18.0 |
+| P1S | 1.1 | 12.8 | 17.1 |
+| A1 | 1.1 | 12.2 | 16.2 |
+| A1 mini | 1.0 | 11.5 | 15.3 |
+
+> **Zur 0.2-mm-Spalte.** Rund 1.2 mm³/s statt der linear erwarteten 3 mm³/s. Die
+> Herstellerprofile geben für diese Düse nicht mehr frei — begrenzend ist der
+> Druckvorschub im Schmelzkanal, nicht die Heizleistung.
 
 ## Die drei Eigenheiten
 
@@ -64,4 +68,4 @@ wechseln.
 
 ---
 
-[← SUNLU PLA Glow](sunlu-pla-glow.md) · [Materialübersicht](README.md) · [SUNLU PETG Glow →](sunlu-petg-glow.md)
+[← SUNLU PLA Transparent](sunlu-pla-transparent.md) · [Materialübersicht](README.md) · [SUNLU PETG Glow →](sunlu-petg-glow.md)

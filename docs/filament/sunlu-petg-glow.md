@@ -72,4 +72,4 @@ vor dem ersten größeren Druck auf einem anderen Gerät empfiehlt sich
 
 ---
 
-[← SUNLU PETG](sunlu-petg.md) · [Materialübersicht](README.md)
+[← SUNLU PETG](sunlu-petg.md) · [Materialübersicht](README.md) · [SUNLU PETG Transparent →](sunlu-petg-transparent.md)

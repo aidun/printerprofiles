@@ -73,4 +73,4 @@ Schmelzbereich; höhere Werte führen direkt zu Unterextrusion.
 
 ---
 
-[← SUNLU PLA](sunlu-pla.md) · [Materialübersicht](README.md) · [SUNLU PETG →](sunlu-petg.md)
+[← SUNLU PLA](sunlu-pla.md) · [Materialübersicht](README.md) · [SUNLU PLA Transparent →](sunlu-pla-transparent.md)

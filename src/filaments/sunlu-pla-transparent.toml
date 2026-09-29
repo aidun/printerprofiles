@@ -1,0 +1,43 @@
+id                           = "sunlu-pla-transparent"
+label                        = "SUNLU PLA Transparent"
+order                        = 3
+short                        = "PLA Transparent"
+brand                        = "SUNLU"
+material                     = "PLA"
+base                         = "Generic PLA"
+abrasive                     = false
+hardened                     = false
+transparent                  = true
+status                       = "baseline"
+drying                       = "45 °C / 6 h"
+storage                      = "trocken, Silikagel; Staub setzt sich sichtbar in der Oberfläche ab"
+nozzles                      = ["0.2", "0.4", "0.6"]
+description                  = "Klarsichtiges PLA. Die Klarheit entsteht nicht im Material, sondern im Druckbild: heißer, langsamer und mit deutlich weniger Kühlung als opakes PLA, damit die Schichten optisch verschmelzen statt zu streuen."
+
+[temperature]
+nozzle                       = 223
+nozzle_initial               = 228
+range_low                    = 205
+range_high                   = 240
+vitrification                = 55
+bed                          = 55
+bed_initial                  = 60
+
+[flow]
+ratio                        = 0.98
+
+[volumetric_flow]
+"0.2" = 1.4
+"0.4" = 12.8
+"0.6" = 17.9
+
+[cooling]
+fan_min_speed                = 30
+fan_max_speed                = 60
+overhang_fan_speed           = 80
+slow_down_layer_time         = 6
+fan_cooling_layer_time       = 20
+close_fan_the_first_x_layers = 2
+
+[retraction]
+z_hop                        = 0.4
