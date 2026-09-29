@@ -1,0 +1,22 @@
+name: "💡 Material fehlt"
+description: Ein Filament, das hier aufgenommen werden sollte.
+title: "Material: <Hersteller> <Produkt>"
+labels: ["material"]
+body:
+  - type: input
+    id: produkt
+    attributes:
+      label: Hersteller und genaue Produktbezeichnung
+      placeholder: eSUN PETG Solid
+    validations:
+      required: true
+  - type: input
+    id: datenblatt
+    attributes:
+      label: Link zum Herstellerdatenblatt
+      description: Temperaturfenster und empfohlene Werte sind die Grundlage jedes Profils.
+  - type: textarea
+    id: erfahrung
+    attributes:
+      label: Eigene Erfahrungswerte
+      description: Temperatur, Bett, Volumenstrom, Kühlung — soweit vorhanden.

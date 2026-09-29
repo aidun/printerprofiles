@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Fehlerbilder nachschlagen
+    url: https://github.com/aidun/printerprofiles/blob/main/docs/troubleshooting.md
+    about: Vom Symptom zum Parameter — Haftung, Fädenbildung, Maßhaltigkeit und mehr.
+  - name: Installation nachschlagen
+    url: https://github.com/aidun/printerprofiles/blob/main/docs/install.md
+    about: Import in Bambu Studio, Aktualisieren, Entfernen, Preset erscheint nicht.

@@ -1,0 +1,37 @@
+name: "🟢 Werte bestätigt"
+description: Eine Kombination hat sauber gedruckt — damit wird aus 🔵 ein 🟢.
+title: "Bestätigt: <Material> · <Drucker> · <Düse>"
+labels: ["verifiziert"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke! Bestätigungen sind der einzige Weg, wie die Werte hier über die Zeit
+        belastbarer werden.
+  - type: input
+    id: kombination
+    attributes:
+      label: Kombination
+      description: Am besten der Preset-Name aus dem Dateinamen.
+      placeholder: SUNLU PETG Glow H2C 0.4
+    validations:
+      required: true
+  - type: dropdown
+    id: stufe
+    attributes:
+      label: Qualitätsstufe
+      options: ["Qualität", "Normal", "Schnell"]
+    validations:
+      required: true
+  - type: textarea
+    id: ergebnis
+    attributes:
+      label: Was gedruckt wurde und wie es lief
+      placeholder: Gehäuse 180 × 120 mm, 6 h, Maße innerhalb 0.1 mm, keine Auffälligkeiten.
+    validations:
+      required: true
+  - type: input
+    id: studio
+    attributes:
+      label: Version von Bambu Studio
+      placeholder: "2.7.1"

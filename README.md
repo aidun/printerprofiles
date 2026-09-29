@@ -2,146 +2,206 @@
 
 # Bambu Lab Druckprofile
 
-**Abgestimmte Filament- und Prozessprofile für 15 Materialien von SUNLU, eSUN
-und Bambu Lab — auf fünf Bambu-Lab-Druckern, drei Düsendurchmessern und drei
-Qualitätsstufen.**
+**250 fertige Presets für Bambu Studio — 15 Materialien von SUNLU, eSUN und
+Bambu Lab, abgestimmt auf fünf Drucker, drei Düsen und drei Qualitätsstufen.
+Herunterladen, importieren, drucken.**
 
 [![Presets](https://img.shields.io/badge/Presets-250-2d7ff9)](docs/matrix.md)
 [![Materialien](https://img.shields.io/badge/Materialien-15-2d7ff9)](docs/filament/README.md)
 [![Drucker](https://img.shields.io/badge/Drucker-5-2d7ff9)](docs/drucker/README.md)
 [![Slicer](https://img.shields.io/badge/Bambu%20Studio-2.7%2B-00a76f)](https://bambulab.com/en/download/studio)
-[![Abhängigkeiten](https://img.shields.io/badge/Abhängigkeiten-keine-6b7280)](#werkzeuge)
 
-[Matrix](docs/matrix.md) · [Installation](docs/install.md) · [Düsen](docs/nozzles.md) · [Kalibrierung](docs/calibration.md) · [Fehlerbilder](docs/troubleshooting.md)
+[Loslegen](#in-drei-schritten-loslegen) · [Passendes Profil finden](#das-passende-profil-finden) · [Materialien](docs/filament/README.md) · [Fehlerbilder](docs/troubleshooting.md) · [Rückmeldung geben](#rückmeldung-geben)
 
 </div>
 
 ---
 
-## Was hier drin ist
+## Wofür das gut ist
 
-Bambu Studio liefert Profile für Bambus eigene Filamente — allerdings nur je
-Drucker, nicht je Düse. Für Drittanbieter-Material bleibt der Weg über `Generic PLA`
-oder `Generic PETG`, brauchbar, aber weder auf das Material noch auf die Düse
-abgestimmt. Dieses Repository schließt beide Lücken:
+Bambu Studio bringt Profile für Bambus eigene Filamente mit — allerdings je Drucker,
+nicht je Düse. Für Material anderer Hersteller bleibt nur `Generic PLA` oder
+`Generic PETG`: druckbar, aber weder auf das Material noch auf den Düsendurchmesser
+abgestimmt.
+
+Dieses Repository liefert für jede sinnvolle Kombination ein fertiges Preset —
+mit passender Temperatur, Flussrate, Kühlung und einem Volumenstrom, der zur
+Leistung des jeweiligen Hotends passt.
 
 | | |
 |---|---|
-| **205 Filamentprofile** | Temperatur, Fluss, Volumenstrom und Kühlung je Material, Drucker und Düse |
-| **45 Prozessprofile** | Schichthöhe, Wandstärke, Füllung und Tempo je Drucker, Düse und Qualitätsstufe |
 | **5 Drucker** | H2C · X1 Carbon · P1S · A1 · A1 mini |
-| **15 Materialien** | 6 × SUNLU · 4 × eSUN · 5 × Bambu Lab, davon 4 Glow und 5 transparent |
+| **15 Materialien** | 6 × SUNLU · 4 × eSUN · 5 × Bambu Lab — darunter 4 Glow und 5 transparente |
 | **3 Düsen** | 0.2 mm · 0.4 mm · 0.6 mm |
 | **3 Stufen** | Qualität · Normal · Schnell |
 
 Alle Profile **erben** von den Originalprofilen aus Bambu Studio. Überschrieben wird
-nur, was tatsächlich material- oder stufenspezifisch ist. Alles andere bleibt auf den
-vom Hersteller abgestimmten Werten und wandert bei einem Studio-Update mit.
+nur, was tatsächlich material- oder stufenspezifisch ist — alles andere bleibt auf
+den vom Hersteller abgestimmten Werten und wandert bei einem Studio-Update mit.
 
-## Schnellstart
+---
+
+## In drei Schritten loslegen
+
+### 1. Dateien holen
 
 ```bash
-git clone <repo-url> && cd printprofiles
-open dist/            # die fertigen Presets
+git clone https://github.com/aidun/printerprofiles.git
+cd printerprofiles
+open dist/
 ```
 
-In Bambu Studio: **Datei → Import → Import-Konfiguration** und die benötigten
-JSON-Dateien aus `dist/filament/` und `dist/process/` auswählen.
-Die ausführliche Anleitung steht in [docs/install.md](docs/install.md).
+Ohne Git geht es genauso: oben auf **Code → Download ZIP** und entpacken. Gebraucht
+wird nur der Ordner `dist/` — alles darin ist fertig und muss nicht erzeugt werden.
 
-Welche Datei die richtige ist, verrät der Name:
+### 2. Die beiden passenden Dateien heraussuchen
+
+Für einen Druck werden **immer zwei** Presets gebraucht:
+
+```
+dist/filament/SUNLU PETG Glow H2C 0.4.json     ← das Material
+dist/process/Qualität H2C 0.4.json             ← die Qualitätsstufe
+```
+
+Der Dateiname sagt alles:
 
 ```
 dist/filament/SUNLU PETG Glow H2C 0.4.json
-              └── Material ──┘ └─┘ └─┘
-                          Drucker  Düse
+              └─── Material ───┘ └─┘ └─┘
+                            Drucker  Düse
 
 dist/process/Qualität X1C 0.6.json
-             └─ Stufe ─┘ └┘  └─┘
-                  Drucker    Düse
+             └─ Stufe ─┘ └─┘ └─┘
+                   Drucker  Düse
 ```
 
-## Reifegrad der Werte
+Drucker und Düse müssen bei beiden Dateien übereinstimmen.
 
-Ehrlichkeit vor Marketing: nur eine Kombination in diesem Repository ist tatsächlich
-am Gerät gedruckt und bestätigt worden.
+### 3. In Bambu Studio importieren
+
+```
+Datei → Import → Import-Konfiguration …     (⌘ / Strg + I)
+```
+
+Mehrfachauswahl ist möglich. Danach erscheinen die Profile rechts in den
+Auswahllisten für Filament und Prozess.
+
+> **Ein Profil taucht nicht auf?** Dann ist in Studio eine andere Düse eingestellt.
+> Jedes Preset ist an genau eine Drucker-Düsen-Kombination gebunden und erscheint
+> nur dort. Weitere Fälle in der [Installationsanleitung](docs/install.md#wenn-ein-preset-nicht-auftaucht).
+
+Der ausführliche Weg samt Aktualisieren und Entfernen steht in
+**[docs/install.md](docs/install.md)**.
+
+---
+
+## Das passende Profil finden
+
+**Welches Material?** Die Entscheidung fällt fast immer an der Wärmefestigkeit:
+PLA gibt ab 45 – 55 °C nach, PETG hält deutlich mehr aus. Die Auswahlhilfe steht in
+der [Materialübersicht](docs/filament/README.md#welches-material-wofür), jedes
+Material hat ein eigenes Datenblatt mit Kennwerten und Fallstricken.
+
+**Welche Düse?**
+
+| Düse | Wofür |
+|---|---|
+| **0.2 mm** | Miniaturen, feine Schrift, Passungen — langsam, empfindlich |
+| **0.4 mm** | der Standard für fast alles |
+| **0.6 mm** | große Teile, Funktionsdruck, kurze Druckzeit |
+
+Ausführlich, samt der Frage Messing oder gehärtet:
+[Düsenkunde](docs/nozzles.md).
+
+**Welche Stufe?**
+
+| Stufe | Wofür |
+|---|---|
+| **Qualität** | Sichtflächen, feine Details — die längste Druckzeit |
+| **Normal** | der Alltagsfall |
+| **Schnell** | Prototypen, Passproben, Hilfsteile |
+
+Welche Kombination es gibt und mit welchen Werten, zeigt die
+**[Profilmatrix](docs/matrix.md)**.
+
+> ⚠️ **Glow-Material braucht eine gehärtete Düse** und ist für 0.2 mm nicht
+> verfügbar — das Leuchtpigment setzt die Bohrung zu.
+> [Warum](docs/nozzles.md#warum-02-mm-bei-glow-gesperrt-ist).
+
+---
+
+## Wie belastbar die Werte sind
+
+Ehrlichkeit vor Marketing: bisher ist **eine** Kombination tatsächlich am Gerät
+gedruckt und bestätigt worden.
 
 | Symbol | Bedeutung |
 |---|---|
 | 🟢 **verifiziert** | Am Drucker gedruckt und bestätigt. Aktuell: **SUNLU PETG Glow · H2C · 0.4 mm** |
 | 🔵 **Startwert** | Aus dem Bambu-Basisprofil abgeleitet und rechnerisch auf Drucker und Düse skaliert. Druckbar, aber nicht einzeln erprobt. |
 
-Startwerte sind keine Schätzungen ins Blaue: sie gehen von Bambus eigenen,
-abgestimmten Werten aus und werden über den Leistungsfaktor des jeweiligen Hotends
-umgerechnet. Für den ersten Druck reichen sie. Für Serienteile lohnt sich der
-Durchlauf in [docs/calibration.md](docs/calibration.md) — er dauert rund 20 Minuten
-je Kombination und hebt den Eintrag auf 🟢.
+Startwerte sind keine Schätzungen ins Blaue: Sie gehen von Bambus eigenen,
+abgestimmten Werten aus und werden über die Hotend-Leistung des jeweiligen Druckers
+umgerechnet. Für den ersten Druck reichen sie.
 
-Den aktuellen Stand je Kombination zeigt die [Profilmatrix](docs/matrix.md).
+Für Serienteile oder enge Passmaße lohnt der Durchlauf in
+[Kalibrierung](docs/calibration.md) — rund 20 Minuten je Kombination, danach steht
+der Eintrag auf 🟢. Den aktuellen Stand je Kombination zeigt die
+[Profilmatrix](docs/matrix.md).
+
+---
+
+## Wenn etwas nicht stimmt
+
+Erste Anlaufstelle ist **[Fehlerbilder](docs/troubleshooting.md)** — vom Symptom zum
+Parameter, von Haftung über Fädenbildung bis Maßhaltigkeit.
+
+| Beobachtung | Seite |
+|---|---|
+| Preset erscheint nicht in Studio | [Installation](docs/install.md#wenn-ein-preset-nicht-auftaucht) |
+| Erste Schicht hält nicht, Ecken heben ab | [Fehlerbilder](docs/troubleshooting.md) |
+| Fäden, matte Oberfläche, Knacken beim Extrudieren | [Fehlerbilder](docs/troubleshooting.md) |
+| Maße stimmen nicht | [Kalibrierung → Flussrate](docs/calibration.md#schritt-2--flussrate) |
+| Wände werden dünn, obwohl nichts geändert wurde | [Kalibrierung → Volumenstrom](docs/calibration.md#schritt-3--volumenstrom) |
+
+---
+
+## Rückmeldung geben
+
+Jede Rückmeldung verbessert die Werte für alle — besonders von Kombinationen, die
+hier noch auf 🔵 stehen.
+
+**[→ Ein Thema eröffnen](https://github.com/aidun/printerprofiles/issues/new/choose)**
+
+| Anlass | Was hilft |
+|---|---|
+| 🟢 **Werte bestätigt** | Drucker, Düse, Material, Stufe — und dass es sauber lief |
+| 🔧 **Wert passt nicht** | dieselben Angaben plus der Wert, der bei dir funktioniert, und wie du ihn ermittelt hast |
+| 💡 **Material fehlt** | Hersteller, genaue Produktbezeichnung, Link zum Datenblatt |
+| 📖 **Doku unklar oder falsch** | die Seite und die Stelle |
+
+Hilfreich in jedem Fall: die Version von Bambu Studio, der genaue Preset-Name
+(er steht im Dateinamen) und bei Druckproblemen ein Foto.
+
+Wer die Änderung gleich selbst einreichen möchte, findet den Weg in
+[Entwicklung → Beitrag einreichen](docs/entwicklung.md#beitrag-einreichen).
+
+---
 
 ## Dokumentation
 
 | Seite | Inhalt |
 |---|---|
-| [Profilmatrix](docs/matrix.md) | Welche Kombination existiert, mit welchen Werten, in welchem Zustand |
-| [Installation](docs/install.md) | Import in Bambu Studio, Aktualisierung, Deinstallation |
-| [Düsenkunde](docs/nozzles.md) | Wann 0.2, wann 0.4, wann 0.6 — und warum Glow-Material die 0.2 sperrt |
-| [Kalibrierung](docs/calibration.md) | Flussrate, Volumenstrom, Temperatur: der Weg von 🔵 nach 🟢 |
-| [Fehlerbilder](docs/troubleshooting.md) | Vom Symptom zum Parameter |
+| [Installation](docs/install.md) | Import in Bambu Studio, Aktualisierung, Entfernen |
 | [Materialien](docs/filament/README.md) | 15 Datenblätter: Kennwerte, Volumenströme, Fallstricke |
 | [Drucker](docs/drucker/README.md) | Eigenheiten der fünf Maschinen |
+| [Düsenkunde](docs/nozzles.md) | Wann 0.2, wann 0.4, wann 0.6 — und warum Glow die 0.2 sperrt |
+| [Profilmatrix](docs/matrix.md) | Welche Kombination existiert, mit welchen Werten, in welchem Zustand |
+| [Kalibrierung](docs/calibration.md) | Temperatur, Flussrate, Volumenstrom: der Weg von 🔵 nach 🟢 |
+| [Fehlerbilder](docs/troubleshooting.md) | Vom Symptom zum Parameter |
+| [Entwicklung](docs/entwicklung.md) | Quelldaten, Generator, Tests — für alle, die Werte ändern |
 
-## Aufbau des Repositories
-
-```
-src/                 Quelldaten — hier wird bearbeitet
-├── printers.toml      5 Drucker: Hotend-Leistung, Bauraum, Extruder
-├── quality.toml       3 Stufen: Schichthöhen, Wände, Tempofaktoren
-└── filaments/        15 Materialien: Temperatur, Fluss, Kühlung
-tools/               Generator und Prüfung
-├── bambulib.py        liest die Bambu-Studio-Profilbibliothek
-├── generate.py        src/ → dist/
-├── validate.py        prüft dist/ gegen die Bibliothek
-└── build_docs.py      erzeugt docs/matrix.md
-dist/                Ergebnis — hier wird importiert, nicht bearbeitet
-├── filament/         205 Presets
-├── process/           45 Presets
-└── _index.json        Metadaten aller Presets
-tests/               24 Tests der Generatorlogik
-```
-
-**`dist/` ist erzeugt.** Änderungen gehören nach `src/`, danach neu generieren.
-Eine Bearbeitung direkt in `dist/` überlebt den nächsten Lauf nicht.
-
-## Werkzeuge
-
-Reine Standardbibliothek, Python 3.11 oder neuer. Keine Installation, kein
-`requirements.txt`, kein Build-Schritt.
-
-```bash
-python3 tools/generate.py        # src/ → dist/
-python3 tools/validate.py        # 15808 Prüfungen gegen die Bambu-Bibliothek
-python3 tools/build_docs.py      # docs/matrix.md neu erzeugen
-python3 -m unittest discover -s tests
-```
-
-Der Generator liest die Profilbibliothek aus der lokalen Bambu-Studio-Installation.
-Liegt sie woanders, hilft eine Umgebungsvariable:
-
-```bash
-export BAMBU_PROFILE_DIR=/Pfad/zu/BambuStudio/resources/profiles/BBL
-```
-
-## Etwas ändern
-
-1. Wert in `src/` anpassen — etwa den Volumenstrom in `src/filaments/sunlu-petg.toml`
-2. `python3 tools/generate.py && python3 tools/validate.py`
-3. `python3 tools/build_docs.py`
-4. Neu importieren (siehe [Installation](docs/install.md))
-
-Der Validator fängt dabei ab, was Bambu Studio sonst stillschweigend verschluckt:
-fehlende Elternprofile, unbekannte Schlüssel, falsche Arraylängen, Schichthöhen
-außerhalb der Maschinengrenzen, Temperaturen über dem Hotend-Limit.
+---
 
 ## Haftung
 

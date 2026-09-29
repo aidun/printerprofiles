@@ -1,0 +1,37 @@
+name: "🔧 Wert passt nicht"
+description: Ein Profil druckt nicht sauber oder ein Wert liegt daneben.
+title: "Wert: <Material> · <Drucker> · <Düse>"
+labels: ["wert"]
+body:
+  - type: input
+    id: kombination
+    attributes:
+      label: Kombination
+      description: Am besten der Preset-Name aus dem Dateinamen.
+      placeholder: SUNLU PETG H2C 0.4
+    validations:
+      required: true
+  - type: textarea
+    id: beobachtung
+    attributes:
+      label: Was passiert
+      description: Fehlerbild möglichst konkret — gern mit Foto.
+    validations:
+      required: true
+  - type: textarea
+    id: abweichung
+    attributes:
+      label: Welcher Wert funktioniert bei dir
+      description: |
+        Parameter, ausgelieferter Wert, dein Wert — und wie du ihn ermittelt hast
+        (geschätzt, aus dem Herstellerdatenblatt, gemessen nach docs/calibration.md).
+      placeholder: |
+        filament_max_volumetric_speed: 13.5 ausgeliefert, 11.0 funktioniert
+        ermittelt über Kalibrierung Schritt 3, Einbruch bei 13 mm³/s
+    validations:
+      required: true
+  - type: input
+    id: studio
+    attributes:
+      label: Version von Bambu Studio
+      placeholder: "2.7.1"
