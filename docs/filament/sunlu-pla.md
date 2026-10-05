@@ -32,8 +32,9 @@ Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
 | H2C | 1.8 | 17.2 | 24.1 |
-| X1 Carbon | 1.6 | 15.0 | 21.0 |
+| X1 Carbon | 1.6 | 15 | 21 |
 | P1S | 1.5 | 14.2 | 19.9 |
+| P1P | 1.5 | 14.2 | 19.9 |
 | A1 | 1.4 | 13.5 | 18.9 |
 | A1 mini | 1.4 | 12.8 | 17.8 |
 
@@ -41,6 +42,12 @@ Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
 > Hochrechnung aus der 0.4-mm-Düse ergäbe. Das ist beabsichtigt: Sämtliche
 > Basisprofile von Bambu Studio geben für diese Düse 1.0 – 2.0 mm³/s frei. Der
 > Druckvorschub begrenzt hier, nicht das Hotend.
+
+> **Einordnung des 0.4-mm-Werts.** Für SUNLU PLA selbst liefert Bambu kein
+> herstellereigenes Profil, für die Variante SUNLU PLA+ dagegen zwei, und die
+> klammern den hier geführten Wert ein: `SUNLU PLA+ @BBL X1C` steht auf 12.0 mm³/s,
+> `SUNLU PLA+ 2.0 @BBL X1C` auf 22.0 mm³/s. Die 15.0 dieses Repositories liegen
+> bewusst dazwischen und bleiben, bis eine Messung sie ersetzt.
 
 ## Hinweise
 

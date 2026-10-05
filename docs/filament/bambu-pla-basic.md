@@ -51,8 +51,9 @@ Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
 | H2C | 2.3 | 24.1 | 28.7 |
-| X1 Carbon | 2.0 | 21.0 | 25.0 |
+| X1 Carbon | 2 | 21 | 25 |
 | P1S | 1.9 | 19.9 | 23.8 |
+| P1P | 1.9 | 19.9 | 23.8 |
 | A1 | 1.8 | 18.9 | 22.5 |
 | A1 mini | 1.7 | 17.8 | 21.2 |
 
@@ -80,4 +81,4 @@ eine Düsenstufe nach oben extrapoliert.
 
 ---
 
-[← eSUN PETG Transparent](esun-petg-transparent.md) · [Materialübersicht](README.md) · [Bambu PLA Glow →](bambu-pla-glow.md)
+[← eSUN ABS+](esun-abs.md) · [Materialübersicht](README.md) · [Bambu PLA Glow →](bambu-pla-glow.md)

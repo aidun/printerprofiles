@@ -1,6 +1,6 @@
 id                           = "esun-petg-transparent"
 label                        = "eSUN PETG Transparent"
-order                        = 10
+order                        = 11
 short                        = "PETG Transparent"
 brand                        = "eSUN"
 material                     = "PETG"
@@ -8,6 +8,7 @@ base                         = "Generic PETG"
 abrasive                     = false
 hardened                     = false
 transparent                  = true
+flexible                     = false
 status                       = "baseline"
 drying                       = "65 °C / 8 h — vor jedem Klarsichtdruck"
 storage                      = "zwingend trocken"

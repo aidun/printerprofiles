@@ -25,10 +25,14 @@ PETG; das High-Flow-Hotend erlaubt die höchsten Volumenströme.
 
 | Material | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
-| SUNLU PLA | 4.0 | 17.2 | 24.1 |
+| SUNLU PLA | 1.8 | 17.2 | 24.1 |
 | SUNLU PLA Glow | — | 12.1 | 17.2 |
-| SUNLU PETG | 3.4 | 15.5 | 20.7 |
+| SUNLU PETG | 1.1 | 16.1 | 18.4 |
 | SUNLU PETG Glow | — | **12.6** 🟢 | 16.7 |
+| SUNLU TPU | — | 3.7 | 3.7 |
+| eSUN ABS+ | 2.3 | 17.2 | 17.2 |
+
+`—` heißt: nicht ausgeliefert. Glow-Material ist für die 0.2-mm-Düse gesperrt, flexibles TPU ebenfalls — bei beiden begrenzt nicht die Düse den Durchsatz.
 
 🟢 am Gerät gemessen — der Referenzwert des gesamten Repositories.
 

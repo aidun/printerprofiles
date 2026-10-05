@@ -28,6 +28,14 @@ flow_factor  = 0.95
 max_hotend   = 300
 nozzles      = ["0.2", "0.4", "0.6"]
 
+[p1p]
+label        = "Bambu Lab P1P"
+machine_name = "Bambu Lab P1P {n} nozzle"
+tag          = "P1P"
+flow_factor  = 0.95
+max_hotend   = 300
+nozzles      = ["0.2", "0.4", "0.6"]
+
 [a1]
 label        = "Bambu Lab A1"
 machine_name = "Bambu Lab A1 {n} nozzle"

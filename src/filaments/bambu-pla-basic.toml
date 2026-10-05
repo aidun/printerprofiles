@@ -1,6 +1,6 @@
 id                           = "bambu-pla-basic"
 label                        = "Bambu PLA Basic"
-order                        = 11
+order                        = 13
 short                        = "PLA Basic"
 brand                        = "Bambu Lab"
 material                     = "PLA"
@@ -8,6 +8,7 @@ base                         = "Bambu PLA Basic"
 abrasive                     = false
 hardened                     = false
 transparent                  = false
+flexible                     = false
 status                       = "baseline"
 drying                       = "45 °C / 6 h"
 storage                      = "trocken; im AMS unkritisch"

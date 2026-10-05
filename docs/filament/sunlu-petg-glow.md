@@ -49,9 +49,10 @@ an der Düsenwand ab. Das Fenster ist gemessen, nicht geschätzt.
 
 | Drucker | 0.4 mm | 0.6 mm |
 |---|--:|--:|
-| **H2C** | **12.6** 🟢 | 16.7 |
-| X1 Carbon | 11.0 | 14.5 |
+| H2C | **12.6** 🟢 | 16.7 |
+| X1 Carbon | 11 | 14.5 |
 | P1S | 10.4 | 13.8 |
+| P1P | 10.4 | 13.8 |
 | A1 | 9.9 | 13.1 |
 | A1 mini | 9.3 | 12.3 |
 

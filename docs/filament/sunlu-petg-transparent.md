@@ -30,7 +30,7 @@ Feuchtigkeit, Fädenbildung und die Empfindlichkeit gegen Kühlung.
 | Temperaturfenster | 240 – 262 °C | höher |
 | Bett | **70 °C** (erste Schicht 75 °C) | gleich |
 | Glasübergang | 71 °C | gleich |
-| Flussrate | 0.96 | gleich |
+| Flussrate | 0.95 | gleich |
 | Lüfter | **10 – 25 %** | halbiert |
 | Überhangkühlung | 40 % | reduziert |
 | Verzögerung ab | 8 s Schichtzeit | +2 s |
@@ -43,14 +43,21 @@ Feuchtigkeit, Fädenbildung und die Empfindlichkeit gegen Kühlung.
 
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
-| H2C | 1.1 | 13.2 | 17.6 |
-| X1 Carbon | 1.0 | 11.5 | 15.3 |
-| P1S | 0.9 | 10.9 | 14.5 |
-| A1 | 0.9 | 10.3 | 13.8 |
-| A1 mini | 0.8 | 9.8 | 13.0 |
+| H2C | 1.1 | 13.7 | 15.6 |
+| X1 Carbon | 1 | 11.9 | 13.6 |
+| P1S | 0.9 | 11.3 | 12.9 |
+| P1P | 0.9 | 11.3 | 12.9 |
+| A1 | 0.9 | 10.7 | 12.2 |
+| A1 mini | 0.8 | 10.1 | 11.6 |
 
 Die 0.2-mm-Werte liegen bewusst im Bereich von rund 1 mm³/s. Das entspricht der
 Freigabe der Herstellerprofile für diese Düse und ist keine Vorsichtsmarge.
+
+> **Quelle der Werte.** Die Klarheitsreserve rechnet auf den SUNLU-eigenen Profilen
+> von [SUNLU PETG](sunlu-petg.md) auf: 85 % von 14.0 / 16.0 mm³/s ergeben die
+> 11.9 / 13.6 mm³/s dieser Tabelle. Die 0.2-mm-Düse bleibt bei 1.0 — 85 % davon
+> würden auf der A1 mini unter die Plausibilitätsgrenze von 0.8 mm³/s fallen, die
+> `tools/validate.py` zieht.
 
 ## So wird das Teil wirklich klar
 
@@ -81,4 +88,4 @@ Oberflächenriefen und bringt optisch mehr als jede weitere Parameteränderung.
 
 ---
 
-[← SUNLU PETG Glow](sunlu-petg-glow.md) · [Materialübersicht](README.md) · [eSUN PLA+ →](esun-pla-plus.md)
+[← SUNLU PETG Glow](sunlu-petg-glow.md) · [Materialübersicht](README.md) · [SUNLU TPU →](sunlu-tpu.md)

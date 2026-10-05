@@ -60,6 +60,12 @@ Ecken heben sich während des Drucks vom Bett ab, das Teil verzieht sich.
 PETG neigt deutlich stärker zum Verzug als PLA. Die Profile tragen dem bereits
 Rechnung: PETG startet mit 10 – 30 % Lüfterleistung, PLA mit 60 – 100 %.
 
+**Bei ABS ist Warping kein Fehlerbild, sondern die Grundeigenschaft des Materials.**
+ABS schrumpft beim Abkühlen um rund 0.8 %; ohne geschlossene, warme Kammer ist ein
+größeres Teil nicht zu retten. Die Maßnahmen oben helfen dort nur noch am Rand — die
+Reihenfolge ist umgekehrt: erst die Kammer, dann alles andere. Details im Datenblatt
+[eSUN ABS+](filament/esun-abs.md#die-geschlossene-kammer-ist-keine-empfehlung).
+
 ---
 
 ## Fädenbildung
@@ -140,9 +146,16 @@ Fädenbildung bei unveränderten Einstellungen.
 |---|---|---|
 | Alle PLA-Varianten (auch PLA+, Glow, transparent) | 45 °C / 6 h | gering |
 | Alle PETG-Varianten (auch Glow, transparent) | 65 °C / 8 h | **hoch** |
+| TPU | 50 °C / 8 h | **sehr hoch** |
+| ABS | 70 °C / 4 h | gering |
 
-Die Werte gelten herstellerübergreifend für alle 15 Materialien; die
+Die Werte gelten herstellerübergreifend für alle 17 Materialien; die
 [Datenblätter](filament/README.md) führen sie je Material einzeln.
+
+TPU ist der Extremfall: Es nimmt Feuchtigkeit schneller auf als jedes andere Material
+hier und blubbert dann hörbar an der Düse. Eine offen liegende Spule ist nach wenigen
+Tagen unbrauchbar, bis sie getrocknet wurde. ABS ist umgekehrt das robusteste —
+es trocknet heißer, dafür kürzer.
 
 PETG zieht innerhalb weniger Tage offener Lagerung so viel Wasser, dass der Druck
 sichtbar leidet. Silikagel im Trockenbehälter ist bei diesem Material keine

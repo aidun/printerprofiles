@@ -17,7 +17,7 @@ verliert bei zu starker Kühlung die Schichthaftung.
 | Temperaturfenster | 230 – 260 °C | deutlich höher |
 | Bett | **70 °C** (erste Schicht 75 °C) | +15 °C |
 | Glasübergang | 71 °C | +16 °C |
-| Flussrate | 0.96 | −0.02 |
+| Flussrate | 0.95 | −0.03 |
 | Lüfter | **20 – 50 %** | stark reduziert |
 | Überhangkühlung | 60 % | reduziert |
 | Z-Hop | **0.6 mm** | +0.2 mm |
@@ -29,15 +29,27 @@ verliert bei zu starker Kühlung die Schichthaftung.
 
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
-| H2C | 1.4 | 15.5 | 20.7 |
-| X1 Carbon | 1.2 | 13.5 | 18.0 |
-| P1S | 1.1 | 12.8 | 17.1 |
-| A1 | 1.1 | 12.2 | 16.2 |
-| A1 mini | 1.0 | 11.5 | 15.3 |
+| H2C | 1.1 | 16.1 | 18.4 |
+| X1 Carbon | 1 | 14 | 16 |
+| P1S | 0.9 | 13.3 | 15.2 |
+| P1P | 0.9 | 13.3 | 15.2 |
+| A1 | 0.9 | 12.6 | 14.4 |
+| A1 mini | 0.8 | 11.9 | 13.6 |
 
-> **Zur 0.2-mm-Spalte.** Rund 1.2 mm³/s statt der linear erwarteten 3 mm³/s. Die
+> **Quelle der Werte.** Volumenstrom und Flussrate stammen aus den SUNLU-eigenen
+> Profilen der Bambu-Bibliothek: `SUNLU PETG @BBL X1C 0.2 nozzle` gibt 1.0 mm³/s frei,
+> `SUNLU PETG @BBL X1C` — das Profil der 0.4-mm-Düse — 14.0 mm³/s, beide bei
+> Flussrate 0.95. Für 0.6 mm liefert SUNLU kein Profil; die 16.0 sind der Wert des
+> 0.8-mm-Profils. Das ersetzt die früher hier geführten hergeleiteten Werte.
+
+> **Zur 0.2-mm-Spalte.** Rund 1.0 mm³/s statt der linear erwarteten 3 mm³/s. Die
 > Herstellerprofile geben für diese Düse nicht mehr frei — begrenzend ist der
 > Druckvorschub im Schmelzkanal, nicht die Heizleistung.
+
+> **Warum 0.4 und 0.6 mm so nah beieinanderliegen.** SUNLUs Kurve läuft ab 0.4 mm
+> flach: Von 14.0 auf 16.0 mm³/s sind es nur 14 % mehr, und das erst bei 0.8 mm —
+> der vierfachen Querschnittsfläche. Die Grenze ist die Aufschmelzleistung des
+> Hotends, nicht die Düsenbohrung.
 
 ## Die drei Eigenheiten
 

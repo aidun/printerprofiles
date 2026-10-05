@@ -2,13 +2,13 @@
 
 # Bambu Lab Druckprofile
 
-**250 fertige Presets für Bambu Studio — 15 Materialien von SUNLU, eSUN und
-Bambu Lab, abgestimmt auf fünf Drucker, drei Düsen und drei Qualitätsstufen.
+**327 fertige Presets für Bambu Studio — 17 Materialien von SUNLU, eSUN und
+Bambu Lab, abgestimmt auf sechs Drucker, drei Düsen und drei Qualitätsstufen.
 Herunterladen, importieren, drucken.**
 
-[![Presets](https://img.shields.io/badge/Presets-250-2d7ff9)](docs/matrix.md)
-[![Materialien](https://img.shields.io/badge/Materialien-15-2d7ff9)](docs/filament/README.md)
-[![Drucker](https://img.shields.io/badge/Drucker-5-2d7ff9)](docs/drucker/README.md)
+[![Presets](https://img.shields.io/badge/Presets-327-2d7ff9)](docs/matrix.md)
+[![Materialien](https://img.shields.io/badge/Materialien-17-2d7ff9)](docs/filament/README.md)
+[![Drucker](https://img.shields.io/badge/Drucker-6-2d7ff9)](docs/drucker/README.md)
 [![Slicer](https://img.shields.io/badge/Bambu%20Studio-2.7%2B-00a76f)](https://bambulab.com/en/download/studio)
 
 [Loslegen](#in-drei-schritten-loslegen) · [Passendes Profil finden](#das-passende-profil-finden) · [Materialien](docs/filament/README.md) · [Fehlerbilder](docs/troubleshooting.md) · [Rückmeldung geben](#rückmeldung-geben)
@@ -30,8 +30,8 @@ Leistung des jeweiligen Hotends passt.
 
 | | |
 |---|---|
-| **5 Drucker** | H2C · X1 Carbon · P1S · A1 · A1 mini |
-| **15 Materialien** | 6 × SUNLU · 4 × eSUN · 5 × Bambu Lab — darunter 4 Glow und 5 transparente |
+| **6 Drucker** | H2C · X1 Carbon · P1S · P1P · A1 · A1 mini |
+| **17 Materialien** | 7 × SUNLU · 5 × eSUN · 5 × Bambu Lab — PLA, PETG, TPU und ABS, darunter 4 Glow und 5 transparente |
 | **3 Düsen** | 0.2 mm · 0.4 mm · 0.6 mm |
 | **3 Stufen** | Qualität · Normal · Schnell |
 
@@ -128,6 +128,10 @@ Welche Kombination es gibt und mit welchen Werten, zeigt die
 > verfügbar — das Leuchtpigment setzt die Bohrung zu.
 > [Warum](docs/nozzles.md#warum-02-mm-bei-glow-gesperrt-ist).
 
+> 🧵 **TPU gibt es ebenfalls nicht für 0.2 mm** — dort begrenzt der Extruder, nicht
+> die Bohrung. 🔥 **ABS fehlt auf der A1 mini**, weil Bambu dort kein Basisprofil
+> dafür führt.
+
 ---
 
 ## Wie belastbar die Werte sind
@@ -193,8 +197,8 @@ Wer die Änderung gleich selbst einreichen möchte, findet den Weg in
 | Seite | Inhalt |
 |---|---|
 | [Installation](docs/install.md) | Import in Bambu Studio, Aktualisierung, Entfernen |
-| [Materialien](docs/filament/README.md) | 15 Datenblätter: Kennwerte, Volumenströme, Fallstricke |
-| [Drucker](docs/drucker/README.md) | Eigenheiten der fünf Maschinen |
+| [Materialien](docs/filament/README.md) | 17 Datenblätter: Kennwerte, Volumenströme, Fallstricke |
+| [Drucker](docs/drucker/README.md) | Eigenheiten der sechs Maschinen |
 | [Düsenkunde](docs/nozzles.md) | Wann 0.2, wann 0.4, wann 0.6 — und warum Glow die 0.2 sperrt |
 | [Profilmatrix](docs/matrix.md) | Welche Kombination existiert, mit welchen Werten, in welchem Zustand |
 | [Kalibrierung](docs/calibration.md) | Temperatur, Flussrate, Volumenstrom: der Weg von 🔵 nach 🟢 |

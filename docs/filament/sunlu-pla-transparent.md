@@ -51,7 +51,8 @@ Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
 |---|--:|--:|--:|
 | H2C | 1.6 | 14.7 | 20.6 |
 | X1 Carbon | 1.4 | 12.8 | 17.9 |
-| P1S | 1.3 | 12.2 | 17.0 |
+| P1S | 1.3 | 12.2 | 17 |
+| P1P | 1.3 | 12.2 | 17 |
 | A1 | 1.3 | 11.5 | 16.1 |
 | A1 mini | 1.2 | 10.9 | 15.2 |
 

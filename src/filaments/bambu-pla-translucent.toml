@@ -1,6 +1,6 @@
 id                           = "bambu-pla-translucent"
 label                        = "Bambu PLA Translucent"
-order                        = 13
+order                        = 15
 short                        = "PLA Translucent"
 brand                        = "Bambu Lab"
 material                     = "PLA"
@@ -8,6 +8,7 @@ base                         = "Bambu PLA Translucent"
 abrasive                     = false
 hardened                     = false
 transparent                  = true
+flexible                     = false
 status                       = "baseline"
 drying                       = "45 °C / 6 h"
 storage                      = "trocken, Silikagel"

@@ -63,6 +63,18 @@ def variants(lib: Library, machine: str) -> list[str]:
     return unique
 
 
+def released_for(filament: dict, printers: dict) -> list[str]:
+    """The printers a material is released for.
+
+    The optional 'printers' key narrows a material to a subset of
+    src/printers.toml — needed whenever the Bambu library does not ship the
+    base profile for every machine. Without the key the material applies to
+    all of them, which is the case for most.
+    """
+    listed = filament.get("printers")
+    return list(listed) if listed else list(printers)
+
+
 def per_variant(value, count: int, filler: str = "nil") -> list[str]:
     """Extruder-dependent value: first entry real, the rest placeholders.
 
@@ -223,6 +235,8 @@ def main() -> int:
         for nozzle in printer["nozzles"]:
             for filament in filaments.values():
                 if nozzle not in filament["nozzles"]:
+                    continue
+                if printer_id not in released_for(filament, printers):
                     continue
                 name, preset, meta = build_filament(lib, printer_id, printer, filament, nozzle)
                 write(TARGET / "filament" / f"{name}.json", preset)

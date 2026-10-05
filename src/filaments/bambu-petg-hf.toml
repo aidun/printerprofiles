@@ -1,6 +1,6 @@
 id                           = "bambu-petg-hf"
 label                        = "Bambu PETG HF"
-order                        = 14
+order                        = 16
 short                        = "PETG HF"
 brand                        = "Bambu Lab"
 material                     = "PETG"
@@ -8,6 +8,7 @@ base                         = "Bambu PETG HF"
 abrasive                     = false
 hardened                     = false
 transparent                  = false
+flexible                     = false
 status                       = "baseline"
 drying                       = "65 °C / 8 h"
 storage                      = "zwingend trocken"

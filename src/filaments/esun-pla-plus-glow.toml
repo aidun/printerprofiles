@@ -1,6 +1,6 @@
 id                           = "esun-pla-plus-glow"
 label                        = "eSUN PLA+ Glow"
-order                        = 8
+order                        = 9
 short                        = "PLA+ Glow"
 brand                        = "eSUN"
 material                     = "PLA"
@@ -8,6 +8,7 @@ base                         = "Generic PLA"
 abrasive                     = true
 hardened                     = true
 transparent                  = false
+flexible                     = false
 status                       = "baseline"
 drying                       = "45 °C / 6 h"
 storage                      = "trocken, Silikagel"

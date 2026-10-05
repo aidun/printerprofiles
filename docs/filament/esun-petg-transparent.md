@@ -45,8 +45,9 @@ die Klarheit verlangt.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
 | H2C | 1.1 | 12.6 | 17.1 |
-| X1 Carbon | 1.0 | 11.0 | 14.9 |
+| X1 Carbon | 1 | 11 | 14.9 |
 | P1S | 0.9 | 10.4 | 14.2 |
+| P1P | 0.9 | 10.4 | 14.2 |
 | A1 | 0.9 | 9.9 | 13.4 |
 | A1 mini | 0.8 | 9.3 | 12.7 |
 
@@ -78,4 +79,4 @@ bringen optisch mehr als jede weitere Parameteränderung.
 
 ---
 
-[← eSUN PETG](esun-petg.md) · [Materialübersicht](README.md) · [Bambu PLA Basic →](bambu-pla-basic.md)
+[← eSUN PETG](esun-petg.md) · [Materialübersicht](README.md) · [eSUN ABS+ →](esun-abs.md)

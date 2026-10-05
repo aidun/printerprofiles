@@ -8,6 +8,7 @@ base                         = "Generic PLA"
 abrasive                     = false
 hardened                     = false
 transparent                  = true
+flexible                     = false
 status                       = "baseline"
 drying                       = "45 °C / 6 h"
 storage                      = "trocken, Silikagel; Staub setzt sich sichtbar in der Oberfläche ab"

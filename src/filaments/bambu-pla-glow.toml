@@ -1,6 +1,6 @@
 id                           = "bambu-pla-glow"
 label                        = "Bambu PLA Glow"
-order                        = 12
+order                        = 14
 short                        = "PLA Glow"
 brand                        = "Bambu Lab"
 material                     = "PLA"
@@ -8,6 +8,7 @@ base                         = "Bambu PLA Glow"
 abrasive                     = true
 hardened                     = true
 transparent                  = false
+flexible                     = false
 status                       = "baseline"
 drying                       = "45 °C / 6 h"
 storage                      = "trocken, Silikagel"

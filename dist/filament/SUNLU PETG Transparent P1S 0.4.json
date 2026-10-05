@@ -25,11 +25,11 @@
         "Direct Drive High Flow"
     ],
     "filament_flow_ratio": [
-        "0.96",
+        "0.95",
         "nil"
     ],
     "filament_max_volumetric_speed": [
-        "10.9",
+        "11.3",
         "nil"
     ],
     "filament_settings_id": [

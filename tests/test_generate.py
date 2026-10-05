@@ -76,20 +76,21 @@ class TestSources(unittest.TestCase):
         cls.printers, cls.filaments, cls.levels = generate.load_sources()
 
     def test_all_printers_and_nozzles_present(self):
-        self.assertEqual(set(self.printers), {"h2c", "x1c", "p1s", "a1", "a1mini"})
+        self.assertEqual(set(self.printers),
+                         {"h2c", "x1c", "p1s", "p1p", "a1", "a1mini"})
         for printer in self.printers.values():
             self.assertEqual(printer["nozzles"], ["0.2", "0.4", "0.6"])
 
     def test_every_filament_is_complete(self):
         keys = {"id", "label", "order", "short", "brand", "material", "base",
-                "abrasive", "hardened", "transparent", "status", "drying",
-                "storage", "nozzles", "description"}
+                "abrasive", "hardened", "transparent", "flexible", "status",
+                "drying", "storage", "nozzles", "description"}
         orders = []
         for key, filament in self.filaments.items():
             self.assertTrue(keys <= set(filament), f"{key} is missing keys")
             self.assertEqual(filament["id"], key)
             self.assertIn(filament["brand"], {"SUNLU", "eSUN", "Bambu Lab"})
-            self.assertIn(filament["material"], {"PLA", "PETG"})
+            self.assertIn(filament["material"], {"PLA", "PETG", "TPU", "ABS"})
             orders.append(filament["order"])
         self.assertEqual(orders, list(range(1, len(self.filaments) + 1)))
 
@@ -102,9 +103,20 @@ class TestSources(unittest.TestCase):
             self.assertTrue(self.filaments[key]["abrasive"])
             self.assertTrue(self.filaments[key]["hardened"])
 
+    def test_flexible_filaments_exclude_the_02_nozzle(self):
+        # Soft filament buckles instead of feeding; Bambu ships no TPU base
+        # profile for the 0.2 mm nozzle on any machine.
+        flexible = [k for k, f in self.filaments.items() if f["flexible"]]
+        self.assertEqual(flexible, ["sunlu-tpu"])
+        for key in flexible:
+            self.assertNotIn("0.2", self.filaments[key]["nozzles"])
+            self.assertFalse(self.filaments[key]["abrasive"], key)
+
     def test_every_other_filament_covers_all_three_nozzles(self):
+        # Only two documented traits may drop the 0.2 mm nozzle: abrasive
+        # (glow) and flexible (TPU). Everything else carries all three.
         for key, filament in self.filaments.items():
-            if filament["abrasive"]:
+            if filament["abrasive"] or filament["flexible"]:
                 continue
             self.assertEqual(filament["nozzles"], ["0.2", "0.4", "0.6"], key)
 
@@ -157,9 +169,10 @@ class TestGeneratedPresets(unittest.TestCase):
         cls.printers, cls.filaments, cls.levels = generate.load_sources()
 
     def test_preset_counts(self):
-        filament = sum(len(f["nozzles"]) for f in self.filaments.values()) * len(self.printers)
+        filament = sum(len(f["nozzles"]) * len(generate.released_for(f, self.printers))
+                       for f in self.filaments.values())
         process = len(self.printers) * 3 * len(self.levels)
-        self.assertEqual((filament, process), (205, 45))
+        self.assertEqual((filament, process), (273, 54))
 
     def test_verified_reference_preset_is_reproduced(self):
         # Values confirmed on the machine for SUNLU PETG Glow, H2C, 0.4 mm.
@@ -180,18 +193,47 @@ class TestGeneratedPresets(unittest.TestCase):
         # library really has is Bambu PLA Glow with a 0.2 mm nozzle, and that
         # combination is excluded by the glow rule anyway.
         for filament in self.filaments.values():
-            for printer in self.printers.values():
+            for printer_id in generate.released_for(filament, self.printers):
+                printer = self.printers[printer_id]
                 for nozzle in filament["nozzles"]:
                     machine = generate.machine_name(printer, nozzle)
                     base = self.lib.filament_base(filament["base"], machine)
                     self.assertTrue(base.startswith(filament["base"]))
+
+    def test_printer_restrictions_match_the_library(self):
+        # The optional 'printers' key states intent; this test proves it. A
+        # material must list exactly those printers whose base profile the
+        # library actually releases for every nozzle the material allows —
+        # neither one too few nor one too many.
+        for key, filament in self.filaments.items():
+            available = []
+            for printer_id, printer in self.printers.items():
+                ok = True
+                for nozzle in filament["nozzles"]:
+                    machine = generate.machine_name(printer, nozzle)
+                    try:
+                        base = self.lib.filament_base(filament["base"], machine)
+                    except KeyError:
+                        ok = False
+                        break
+                    allowed = self.lib.resolved(
+                        self.lib.filaments, base).get("compatible_printers") or []
+                    if machine not in allowed:
+                        ok = False
+                        break
+                if ok:
+                    available.append(printer_id)
+            self.assertEqual(generate.released_for(filament, self.printers),
+                             available, key)
 
     def test_bambu_filaments_inherit_their_own_family(self):
         for filament in self.filaments.values():
             if filament["brand"] == "Bambu Lab":
                 self.assertEqual(filament["base"], filament["label"])
             else:
-                self.assertIn(filament["base"], {"Generic PLA", "Generic PETG"})
+                self.assertIn(filament["base"],
+                              {"Generic PLA", "Generic PETG",
+                               "Generic TPU", "Generic ABS"})
 
     def test_volumetric_flow_scales_with_the_printer(self):
         values = {}

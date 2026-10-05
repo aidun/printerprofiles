@@ -25,10 +25,14 @@ Basiswert, Faktor 1.00. Werte in mm³/s:
 
 | Material | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
-| SUNLU PLA | 3.5 | 15.0 | 21.0 |
-| SUNLU PLA Glow | — | 10.5 | 15.0 |
-| SUNLU PETG | 3.0 | 13.5 | 18.0 |
-| SUNLU PETG Glow | — | 11.0 | 14.5 |
+| SUNLU PLA | 1.6 | 15 | 21 |
+| SUNLU PLA Glow | — | 10.5 | 15 |
+| SUNLU PETG | 1 | 14 | 16 |
+| SUNLU PETG Glow | — | 11 | 14.5 |
+| SUNLU TPU | — | 3.2 | 3.2 |
+| eSUN ABS+ | 2 | 15 | 15 |
+
+`—` heißt: nicht ausgeliefert. Glow-Material ist für die 0.2-mm-Düse gesperrt, flexibles TPU ebenfalls — bei beiden begrenzt nicht die Düse den Durchsatz.
 
 ## Schichthöhen
 

@@ -33,6 +33,7 @@ neigt in engen Bohrungen zum Verklumpen.
 | Glasübergang | 55 °C | gleich |
 | Flussrate | 0.96 | −0.02 |
 | Lüfter | 60 – 100 % | gleich |
+| Überhangkühlung | 100 % | gleich |
 | Z-Hop | 0.4 mm | gleich |
 | Düsen | 0.4 · 0.6 mm | **0.2 mm entfällt** |
 | Trocknung | 45 °C / 6 h | gleich |
@@ -45,8 +46,9 @@ die leicht reduzierte Flussrate den Volumenanteil der Feststoffpartikel.
 | Drucker | 0.4 mm | 0.6 mm |
 |---|--:|--:|
 | H2C | 12.1 | 17.2 |
-| X1 Carbon | 10.5 | 15.0 |
-| P1S | 10.0 | 14.2 |
+| X1 Carbon | 10.5 | 15 |
+| P1S | 10 | 14.2 |
+| P1P | 10 | 14.2 |
 | A1 | 9.5 | 13.5 |
 | A1 mini | 8.9 | 12.8 |
 

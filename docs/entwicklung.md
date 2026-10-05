@@ -27,17 +27,17 @@ src/*.toml   ──  tools/generate.py  ──▶  dist/*.json   ──▶  Bamb
 
 ```
 src/                 Quelldaten — hier wird bearbeitet
-├── printers.toml      5 Drucker: Maschinenname, Hotend-Grenze, Leistungsfaktor
+├── printers.toml      6 Drucker: Maschinenname, Hotend-Grenze, Leistungsfaktor
 ├── quality.toml       3 Stufen: Schichthöhen, Wände, Tempofaktoren
-└── filaments/        15 Materialien: Temperatur, Fluss, Kühlung
+└── filaments/        17 Materialien: Temperatur, Fluss, Kühlung
 tools/               Generator und Prüfung
 ├── bambulib.py        liest die Bambu-Studio-Profilbibliothek
 ├── generate.py        src/ → dist/
 ├── validate.py        prüft dist/ gegen die Bibliothek
 └── build_docs.py      erzeugt docs/matrix.md
 dist/                Ergebnis — hier wird importiert, nicht bearbeitet
-├── filament/         205 Presets
-├── process/           45 Presets
+├── filament/         273 Presets
+├── process/           54 Presets
 └── _index.json        Metadaten aller Presets
 docs/                Dokumentation — Deutsch, von Hand außer matrix.md
 tests/               Tests der Generatorlogik
@@ -94,12 +94,13 @@ Material derselben Klasse. Pflichtfelder:
 | `order` | Position in Dokumentation und Matrix, lückenlos ab 1 |
 | `short` | Kurzform für Tabellenspalten, etwa `PLA` oder `PETG-CF` |
 | `brand` | `SUNLU`, `eSUN` oder `Bambu Lab` |
-| `material` | `PLA` oder `PETG` |
+| `material` | `PLA`, `PETG`, `TPU` oder `ABS` |
 | `base` | Elternprofil aus Bambu Studio, etwa `Generic PETG` |
 | `abrasive` / `hardened` | steuern Warnhinweis und Düsenempfehlung |
 | `transparent` | steuert den Klarheits-Hinweis in der Dokumentation |
+| `flexible` | flexibles Material; sperrt wie `abrasive` die 0.2-mm-Düse |
 | `status` | `baseline` oder `validated-<drucker>-<düse>`, etwa `validated-h2c-04` |
-| `nozzles` | freigegebene Durchmesser; Glow-Material lässt `0.2` weg |
+| `nozzles` | freigegebene Durchmesser; abrasives und flexibles Material lässt `0.2` weg |
 | `drying` | Trocknungsempfehlung in der Form `45 °C / 6 h` |
 | `storage` | Lagerhinweis, etwa `trocken, Silikagel` |
 | `description` | zwei bis drei Sätze zum Material, für das Datenblatt |
@@ -107,6 +108,16 @@ Material derselben Klasse. Pflichtfelder:
 `short`, `drying`, `storage` und `description` wertet die Pipeline nicht aus — sie
 sind Quelle für die Dokumentation. Pflicht sind sie trotzdem, `tests/test_generate.py`
 wacht darüber.
+
+Dazu kommt ein optionaler Schlüssel:
+
+| Feld | Bedeutung |
+|---|---|
+| `printers` | Liste der Druckerkürzel aus `src/printers.toml`, für die das Material erzeugt wird. Fehlt der Schlüssel, gilt es für alle. Nötig, wenn die Bambu-Bibliothek für ein Gerät kein Basisprofil führt — bei `esun-abs` die A1 mini. |
+
+`test_printer_restrictions_match_the_library` prüft diese Liste in beide Richtungen
+gegen die Bibliothek: Sie muss **genau** die Geräte nennen, deren Basisprofil
+tatsächlich auflöst. Ein zu großzügiger wie ein zu knapper Eintrag fällt auf.
 
 Dazu kommen fünf Tabellen, die alle gezeigten Schlüssel brauchen:
 
@@ -145,7 +156,7 @@ nicht:
 | Volumenstrom 0.8 – 40 mm³/s, Flussrate 0.85 – 1.15 | Tippfehler bleiben unbemerkt |
 
 Der Lauf endet mit einer Zeile der Form
-`<n> checks, 0 errors, 250 presets.` und einem Exitcode ungleich null, sobald
+`<n> checks, 0 errors, 327 presets.` und einem Exitcode ungleich null, sobald
 etwas nicht stimmt.
 
 ---
@@ -157,9 +168,10 @@ python3 -m unittest discover -s tests -v
 ```
 
 Die Tests decken vier Bereiche ab: Hilfsfunktionen des Generators, das Lesen der
-Bambu-Bibliothek, die Konsistenz der Quelldaten (Vollständigkeit, Glow-Regel,
-Temperaturfenster, Klarheitsregel für transparente Varianten) und das Ergebnis eines
-vollständigen Laufs — darunter die am Gerät verifizierte Referenzkombination
+Bambu-Bibliothek, die Konsistenz der Quelldaten (Vollständigkeit, Glow- und
+TPU-Regel für die 0.2-mm-Düse, Temperaturfenster, Klarheitsregel für transparente
+Varianten, Abgleich des `printers`-Schlüssels mit der Bibliothek) und das Ergebnis
+eines vollständigen Laufs — darunter die am Gerät verifizierte Referenzkombination
 SUNLU PETG Glow · H2C · 0.4 mm.
 
 Wer einen Wert ändert, der in einem Test steht, ändert den Test bewusst mit — nicht

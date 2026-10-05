@@ -113,6 +113,11 @@ def main() -> int:
                 "Die 0.2-mm-Düse ist für dieses Material gesperrt — "
                 "siehe [Düsen](nozzles.md).")
             out("")
+        if filament["flexible"]:
+            out("> 🧶 **Flexibel.** Der Volumenstrom wird vom Extruder begrenzt, "
+                "nicht von der Düse — eine größere Düse bringt hier nichts. "
+                "Die 0.2-mm-Düse ist gesperrt.")
+            out("")
         if filament["transparent"]:
             out("> 💧 **Auf Klarheit optimiert.** Höhere Düsentemperatur, bewusst "
                 "abgesenkter Volumenstrom und stark zurückgenommene Kühlung — "
@@ -184,7 +189,9 @@ def main() -> int:
     out("| 🔵 | Startwert aus der Bambu-Basis abgeleitet, nicht einzeln gedruckt |")
     out("| ⚠️ | Materialbedingte Einschränkung beachten |")
     out("| 💧 | Auf optische Klarheit abgestimmt, nicht auf Geschwindigkeit |")
-    out("| — | Kombination bewusst nicht ausgeliefert |")
+    out("| 🧶 | Flexibel, Volumenstrom durch den Extruder begrenzt |")
+    out("| — | Kombination nicht ausgeliefert — Düse gesperrt oder Bambu "
+        "liefert für dieses Gerät kein Basisprofil |")
     out("")
 
     TARGET.parent.mkdir(parents=True, exist_ok=True)

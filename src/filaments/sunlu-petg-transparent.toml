@@ -8,6 +8,7 @@ base                         = "Generic PETG"
 abrasive                     = false
 hardened                     = false
 transparent                  = true
+flexible                     = false
 status                       = "baseline"
 drying                       = "65 °C / 8 h — Feuchtigkeit zerstört die Klarheit zuerst"
 storage                      = "zwingend trocken; Blasen im Strang bleiben im Bauteil sichtbar"
@@ -24,12 +25,15 @@ bed                          = 70
 bed_initial                  = 75
 
 [flow]
-ratio                        = 0.96
+ratio                        = 0.95
 
+# 85 % of the opaque SUNLU PETG curve (vendor profile 'SUNLU PETG @BBL X1C'),
+# the deliberate clarity reserve. 0.2 mm stays at 1.0: 0.85 of that would drop
+# below the validator's 0.8 mm³/s floor on the A1 mini.
 [volumetric_flow]
 "0.2" = 1.0
-"0.4" = 11.5
-"0.6" = 15.3
+"0.4" = 11.9
+"0.6" = 13.6
 
 [cooling]
 fan_min_speed                = 10

@@ -24,10 +24,14 @@ Flusskalibrierung ist der einzige, dafür spürbare Unterschied im Alltag.
 
 | Material | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
-| SUNLU PLA | 3.3 | 14.2 | 19.9 |
-| SUNLU PLA Glow | — | 10.0 | 14.2 |
-| SUNLU PETG | 2.8 | 12.8 | 17.1 |
+| SUNLU PLA | 1.5 | 14.2 | 19.9 |
+| SUNLU PLA Glow | — | 10 | 14.2 |
+| SUNLU PETG | 0.9 | 13.3 | 15.2 |
 | SUNLU PETG Glow | — | 10.4 | 13.8 |
+| SUNLU TPU | — | 3 | 3 |
+| eSUN ABS+ | 1.9 | 14.2 | 14.2 |
+
+`—` heißt: nicht ausgeliefert. Glow-Material ist für die 0.2-mm-Düse gesperrt, flexibles TPU ebenfalls — bei beiden begrenzt nicht die Düse den Durchsatz.
 
 ## Schichthöhen
 
@@ -52,4 +56,4 @@ Düse voraus.
 
 ---
 
-[← X1 Carbon](x1c.md) · [Druckerübersicht](README.md) · [A1 →](a1.md)
+[← X1 Carbon](x1c.md) · [Druckerübersicht](README.md) · [P1P →](p1p.md)

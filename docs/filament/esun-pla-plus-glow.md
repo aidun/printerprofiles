@@ -32,6 +32,7 @@ und entsprechend niedrig der Volumenstrom.
 | Glasübergang | 55 °C | gleich |
 | Flussrate | 0.95 | −0.02 |
 | Lüfter | 50 – 90 % | gleich |
+| Überhangkühlung | 100 % | gleich |
 | Z-Hop | 0.4 mm | gleich |
 | Düsen | 0.4 · 0.6 mm | **0.2 mm entfällt** |
 | Trocknung | 45 °C / 6 h | gleich |
@@ -41,9 +42,10 @@ und entsprechend niedrig der Volumenstrom.
 | Drucker | 0.4 mm | 0.6 mm |
 |---|--:|--:|
 | H2C | 11.5 | 16.1 |
-| X1 Carbon | 10.0 | 14.0 |
+| X1 Carbon | 10 | 14 |
 | P1S | 9.5 | 13.3 |
-| A1 | 9.0 | 12.6 |
+| P1P | 9.5 | 13.3 |
+| A1 | 9 | 12.6 |
 | A1 mini | 8.5 | 11.9 |
 
 Knapp 29 % unter PLA+ und der niedrigste Wert aller PLA-Varianten im Repository.

@@ -24,10 +24,10 @@
         "Direct Drive Standard"
     ],
     "filament_flow_ratio": [
-        "0.96"
+        "0.95"
     ],
     "filament_max_volumetric_speed": [
-        "13"
+        "11.6"
     ],
     "filament_settings_id": [
         "SUNLU PETG Transparent A1M 0.6"

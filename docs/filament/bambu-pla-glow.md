@@ -33,6 +33,7 @@ stört.
 | Glasübergang | 45 °C | gleich |
 | Flussrate | 0.98 | gleich |
 | Lüfter | **100 %** durchgehend | gleich |
+| Überhangkühlung | 100 % | gleich |
 | Z-Hop | 0.4 mm | gleich |
 | Düsen | 0.4 · 0.6 mm | **0.2 mm entfällt** |
 | Trocknung | 45 °C / 6 h | gleich |
@@ -45,8 +46,9 @@ Temperatur** als das Basismaterial. Der Unterschied steckt allein im Volumenstro
 | Drucker | 0.4 mm | 0.6 mm |
 |---|--:|--:|
 | H2C | 20.7 | 24.1 |
-| X1 Carbon | 18.0 | 21.0 |
+| X1 Carbon | 18 | 21 |
 | P1S | 17.1 | 19.9 |
+| P1P | 17.1 | 19.9 |
 | A1 | 16.2 | 18.9 |
 | A1 mini | 15.3 | 17.8 |
 

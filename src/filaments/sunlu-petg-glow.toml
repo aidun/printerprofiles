@@ -8,6 +8,7 @@ base                         = "Generic PETG"
 abrasive                     = true
 hardened                     = true
 transparent                  = false
+flexible                     = false
 status                       = "validated-h2c-04"
 drying                       = "65 °C / 8 h"
 storage                      = "zwingend trocken"

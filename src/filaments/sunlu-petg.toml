@@ -8,6 +8,7 @@ base                         = "Generic PETG"
 abrasive                     = false
 hardened                     = false
 transparent                  = false
+flexible                     = false
 status                       = "baseline"
 drying                       = "65 °C / 8 h — PETG ist stark hygroskopisch"
 storage                      = "zwingend trocken; feuchtes PETG fädelt und knackt beim Druck"
@@ -24,12 +25,17 @@ bed                          = 70
 bed_initial                  = 75
 
 [flow]
-ratio                        = 0.96
+ratio                        = 0.95
 
+# Vendor values from the SUNLU profiles in the Bambu library:
+# 'SUNLU PETG @BBL X1C 0.2 nozzle' = 1.0 and 'SUNLU PETG @BBL X1C' (the 0.4 mm
+# default) = 14.0. SUNLU ships no 0.6 mm profile; 16.0 is the value of its
+# 0.8 mm profile, so the plateau above 0.4 mm is SUNLU's own: the limit is the
+# melt rate of the hotend, not the nozzle bore.
 [volumetric_flow]
-"0.2" = 1.2
-"0.4" = 13.5
-"0.6" = 18.0
+"0.2" = 1.0
+"0.4" = 14.0
+"0.6" = 16.0
 
 [cooling]
 fan_min_speed                = 20

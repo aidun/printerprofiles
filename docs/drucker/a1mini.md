@@ -25,10 +25,14 @@ Limit der Aufschmelzleistung.
 
 | Material | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
-| SUNLU PLA | 3.0 | 12.8 | 17.8 |
+| SUNLU PLA | 1.4 | 12.8 | 17.8 |
 | SUNLU PLA Glow | — | 8.9 | 12.8 |
-| SUNLU PETG | 2.5 | 11.5 | 15.3 |
+| SUNLU PETG | 0.8 | 11.9 | 13.6 |
 | SUNLU PETG Glow | — | 9.3 | 12.3 |
+| SUNLU TPU | — | 2.7 | 2.7 |
+| eSUN ABS+ | — | — | — |
+
+`—` heißt: nicht ausgeliefert. Glow-Material ist für die 0.2-mm-Düse gesperrt, flexibles TPU ebenfalls — bei beiden begrenzt nicht die Düse den Durchsatz. Für ABS liefert Bambu auf der A1 mini kein Basisprofil; Bauraum und Bettleistung tragen das Material nicht.
 
 ## Schichthöhen
 

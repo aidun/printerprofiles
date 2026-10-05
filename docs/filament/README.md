@@ -2,8 +2,9 @@
 
 [← Zurück zur Übersicht](../../README.md)
 
-15 Materialien von drei Herstellern, jeweils als eigenes Datenblatt mit Kennwerten,
-Volumenströmen je Drucker und den materialtypischen Fallstricken.
+17 Materialien von drei Herstellern, jeweils als eigenes Datenblatt mit Kennwerten,
+Volumenströmen je Drucker und den materialtypischen Fallstricken. Vier
+Materialklassen: PLA, PETG, TPU und ABS.
 
 | Material | Düsen | Besonderheit | Status | Datenblatt |
 |---|---|---|---|---|
@@ -13,10 +14,12 @@ Volumenströmen je Drucker und den materialtypischen Fallstricken.
 | **SUNLU PETG** | 0.2 · 0.4 · 0.6 | | 🔵 Startwert | [öffnen](sunlu-petg.md) |
 | **SUNLU PETG Glow** | 0.4 · 0.6 | ⚠️ abrasiv | 🟢 H2C · 0.4 mm verifiziert | [öffnen](sunlu-petg-glow.md) |
 | **SUNLU PETG Transparent** | 0.2 · 0.4 · 0.6 | 💧 klar | 🔵 Startwert | [öffnen](sunlu-petg-transparent.md) |
+| **SUNLU TPU** | 0.4 · 0.6 | 🧵 flexibel | 🔵 Startwert | [öffnen](sunlu-tpu.md) |
 | **eSUN PLA+** | 0.2 · 0.4 · 0.6 | zäh | 🔵 Startwert | [öffnen](esun-pla-plus.md) |
 | **eSUN PLA+ Glow** | 0.4 · 0.6 | ⚠️ abrasiv | 🔵 Startwert | [öffnen](esun-pla-plus-glow.md) |
 | **eSUN PETG** | 0.2 · 0.4 · 0.6 | | 🔵 Startwert | [öffnen](esun-petg.md) |
 | **eSUN PETG Transparent** | 0.2 · 0.4 · 0.6 | 💧 klar | 🔵 Startwert | [öffnen](esun-petg-transparent.md) |
+| **eSUN ABS+** | 0.2 · 0.4 · 0.6 | 🔥 Kammer nötig | 🔵 Startwert | [öffnen](esun-abs.md) |
 | **Bambu PLA Basic** | 0.2 · 0.4 · 0.6 | schnell | 🔵 Startwert | [öffnen](bambu-pla-basic.md) |
 | **Bambu PLA Glow** | 0.4 · 0.6 | ⚠️ abrasiv | 🔵 Startwert | [öffnen](bambu-pla-glow.md) |
 | **Bambu PLA Translucent** | 0.2 · 0.4 · 0.6 | 💧 durchscheinend | 🔵 Startwert | [öffnen](bambu-pla-translucent.md) |
@@ -24,7 +27,8 @@ Volumenströmen je Drucker und den materialtypischen Fallstricken.
 | **Bambu PETG Translucent** | 0.2 · 0.4 · 0.6 | 💧 durchscheinend | 🔵 Startwert | [öffnen](bambu-petg-translucent.md) |
 
 🟢 am Gerät gemessen · 🔵 berechneter Startwert · ⚠️ gehärtete Düse zwingend ·
-💧 auf optische Klarheit abgestimmt
+💧 auf optische Klarheit abgestimmt · 🧵 flexibel, nicht über die AMS ·
+🔥 geschlossene Kammer erforderlich, auf der A1 mini nicht verfügbar
 
 ---
 
@@ -35,27 +39,27 @@ Volumenstrom bezogen auf den X1 Carbon mit 0.4-mm-Düse; die übrigen Drucker we
 
 ### SUNLU
 
-| | PLA | PLA Glow | PLA Transp. | PETG | PETG Glow | PETG Transp. |
-|---|--:|--:|--:|--:|--:|--:|
-| Düse | 215 °C | 225 °C | 223 °C | 245 °C | 248 °C | 252 °C |
-| Bett | 55 °C | 55 °C | 55 °C | 70 °C | 70 °C | 70 °C |
-| Glasübergang | 55 °C | 55 °C | 55 °C | 71 °C | 71 °C | 71 °C |
-| Flussrate | 0.98 | 0.96 | 0.98 | 0.96 | 0.98 | 0.96 |
-| Lüfter | 60–100 % | 60–100 % | 30–60 % | 20–50 % | 10–30 % | 10–25 % |
-| Volumenstrom | 15.0 | 10.5 | 12.8 | 13.5 | 11.0 | 11.5 |
-| Trocknung | 45/6 h | 45/6 h | 45/6 h | 65/8 h | 65/8 h | 65/8 h |
+| | PLA | PLA Glow | PLA Transp. | PETG | PETG Glow | PETG Transp. | TPU |
+|---|--:|--:|--:|--:|--:|--:|--:|
+| Düse | 215 °C | 225 °C | 223 °C | 245 °C | 248 °C | 252 °C | 225 °C |
+| Bett | 55 °C | 55 °C | 55 °C | 70 °C | 70 °C | 70 °C | 35 °C |
+| Glasübergang | 55 °C | 55 °C | 55 °C | 71 °C | 71 °C | 71 °C | 30 °C |
+| Flussrate | 0.98 | 0.96 | 0.98 | 0.95 | 0.98 | 0.95 | 1.00 |
+| Lüfter | 60–100 % | 60–100 % | 30–60 % | 20–50 % | 10–30 % | 10–25 % | 100 % |
+| Volumenstrom | 15.0 | 10.5 | 12.8 | 14.0 | 11.0 | 11.9 | 3.2 |
+| Trocknung | 45/6 h | 45/6 h | 45/6 h | 65/8 h | 65/8 h | 65/8 h | 50/8 h |
 
 ### eSUN
 
-| | PLA+ | PLA+ Glow | PETG | PETG Transp. |
-|---|--:|--:|--:|--:|
-| Düse | 220 °C | 228 °C | 243 °C | 250 °C |
-| Bett | 60 °C | 60 °C | 75 °C | 75 °C |
-| Glasübergang | 55 °C | 55 °C | 71 °C | 71 °C |
-| Flussrate | 0.97 | 0.95 | 0.95 | 0.95 |
-| Lüfter | 50–90 % | 50–90 % | 20–50 % | 10–25 % |
-| Volumenstrom | 14.0 | 10.0 | 13.0 | 11.0 |
-| Trocknung | 45/6 h | 45/6 h | 65/8 h | 65/8 h |
+| | PLA+ | PLA+ Glow | PETG | PETG Transp. | ABS+ |
+|---|--:|--:|--:|--:|--:|
+| Düse | 220 °C | 228 °C | 243 °C | 250 °C | 255 °C |
+| Bett | 60 °C | 60 °C | 75 °C | 75 °C | 90 °C |
+| Glasübergang | 55 °C | 55 °C | 71 °C | 71 °C | 100 °C |
+| Flussrate | 0.98 | 0.95 | 0.95 | 0.95 | 0.95 |
+| Lüfter | 50–90 % | 50–90 % | 20–50 % | 10–25 % | 10–30 % |
+| Volumenstrom | 16.0 | 10.0 | 13.0 | 11.0 | 15.0 |
+| Trocknung | 45/6 h | 45/6 h | 65/8 h | 65/8 h | 70/4 h |
 
 ### Bambu Lab
 
@@ -64,7 +68,7 @@ Volumenstrom bezogen auf den X1 Carbon mit 0.4-mm-Düse; die übrigen Drucker we
 | Düse | 220 °C | 220 °C | 228 °C | 245 °C | 250 °C |
 | Bett | 55 °C | 55 °C | 55 °C | 70 °C | 70 °C |
 | Glasübergang | 45 °C | 45 °C | 45 °C | 70 °C | 70 °C |
-| Flussrate | 0.98 | 0.99 | 0.99 | 0.97 | 0.97 |
+| Flussrate | 0.98 | 0.98 | 0.98 | 0.97 | 0.97 |
 | Lüfter | 100 % | 100 % | 40–70 % | 20–40 % | 10–25 % |
 | Volumenstrom | **21.0** | 18.0 | 12.0 | **21.0** | 6.0 |
 | Trocknung | 45/6 h | 45/6 h | 45/6 h | 65/8 h | 65/8 h |
@@ -79,6 +83,8 @@ Volumenstrom bezogen auf den X1 Carbon mit 0.4-mm-Düse; die übrigen Drucker we
 | Kürzeste Druckzeit | **Bambu PLA Basic** · **Bambu PETG HF** |
 | Halterungen, Clips, Rastverbindungen | **eSUN PLA+** |
 | Wärme, Sonne, mechanische Dauerlast | jedes PETG |
+| Dauerhaft über 70 °C | **eSUN ABS+** — nur mit geschlossener Kammer |
+| Dichtungen, Puffer, griffige Auflagen | **SUNLU TPU** |
 | Belastbar **und** schnell | **Bambu PETG HF** |
 | Leuchteffekt, dekorativ | Bambu PLA Glow (schnellstes) · SUNLU PLA Glow |
 | Leuchteffekt und Belastbarkeit | SUNLU PETG Glow |
@@ -88,7 +94,13 @@ Volumenstrom bezogen auf den X1 Carbon mit 0.4-mm-Düse; die übrigen Drucker we
 **Wärmefestigkeit ist das Hauptkriterium bei der Materialklasse.** PLA gibt ab 45 – 55 °C
 nach — das erreicht ein Auto im Sommer mühelos. Für alles, was Wärme oder dauerhafte
 Last sieht, ist PETG die richtige Wahl, auch wenn es im Druck mehr Aufmerksamkeit
-verlangt.
+verlangt. Oberhalb von 70 °C hilft auch PETG nicht mehr; dort beginnt der Bereich von
+[ABS](esun-abs.md), das als einziges Material hier einen Glasübergang von 100 °C
+mitbringt — und als einziges eine geschlossene Kammer verlangt.
+
+**TPU ist ein Sonderfall.** Es konkurriert mit keinem der anderen Materialien, weil es
+etwas anderes kann: dauerhaft nachgeben, ohne zu brechen. Der Preis ist der
+Durchsatz — rund ein Fünftel von PLA, siehe [SUNLU TPU](sunlu-tpu.md).
 
 **Der Hersteller entscheidet über die Druckzeit.** Die Bambu-Materialien erben von
 den herstellereigenen Basisprofilen und bringen deren gemessene Volumenströme mit —
@@ -112,9 +124,9 @@ Beim Volumenstrom gehen die Hersteller dagegen auseinander:
 | Material | Volumenstrom 0.4 mm | gegenüber dem Basismaterial |
 |---|--:|---|
 | SUNLU PLA Glow | 10.5 | −30 % |
-| eSUN PLA+ Glow | 10.0 | −29 % |
+| eSUN PLA+ Glow | 10.0 | −38 % |
 | **Bambu PLA Glow** | **18.0** | **−14 %** |
-| SUNLU PETG Glow | 11.0 | −19 % |
+| SUNLU PETG Glow | 11.0 | −21 % |
 
 Bambus feineres Pigment stört den Schmelzfluss deutlich weniger. Für größere
 Leuchtteile ist das der entscheidende Unterschied.

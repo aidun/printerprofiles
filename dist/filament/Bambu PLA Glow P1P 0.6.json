@@ -1,0 +1,85 @@
+{
+    "close_fan_the_first_x_layers": [
+        "1"
+    ],
+    "compatible_printers": [
+        "Bambu Lab P1P 0.6 nozzle"
+    ],
+    "eng_plate_temp": [
+        "55"
+    ],
+    "eng_plate_temp_initial_layer": [
+        "60"
+    ],
+    "fan_cooling_layer_time": [
+        "100"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "100"
+    ],
+    "filament_extruder_variant": [
+        "Direct Drive Standard",
+        "Direct Drive High Flow"
+    ],
+    "filament_flow_ratio": [
+        "0.98",
+        "nil"
+    ],
+    "filament_max_volumetric_speed": [
+        "19.9",
+        "nil"
+    ],
+    "filament_settings_id": [
+        "Bambu PLA Glow P1P 0.6"
+    ],
+    "filament_z_hop": [
+        "0.4"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "55"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "inherits": "Bambu PLA Glow @BBL P1P 0.6 nozzle",
+    "name": "Bambu PLA Glow P1P 0.6",
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "nozzle_temperature_range_high": [
+        "230"
+    ],
+    "nozzle_temperature_range_low": [
+        "210"
+    ],
+    "overhang_fan_speed": [
+        "100"
+    ],
+    "slow_down_layer_time": [
+        "4"
+    ],
+    "supertack_plate_temp": [
+        "55"
+    ],
+    "supertack_plate_temp_initial_layer": [
+        "60"
+    ],
+    "temperature_vitrification": [
+        "45"
+    ],
+    "textured_plate_temp": [
+        "55"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "60"
+    ],
+    "type": "filament",
+    "version": "2.7.0.8"
+}

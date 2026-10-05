@@ -17,7 +17,7 @@ Standard-PLA deutlich überlegen, ohne dessen Gutmütigkeit im Druck aufzugeben.
 | Temperaturfenster | 200 – 235 °C | leicht höher |
 | Bett | **60 °C** (erste Schicht 65 °C) | +5 °C |
 | Glasübergang | 55 °C | gleich |
-| Flussrate | 0.97 | −0.01 |
+| Flussrate | 0.98 | gleich |
 | Lüfter | **50 – 90 %** | leicht reduziert |
 | Überhangkühlung | 100 % | gleich |
 | Z-Hop | 0.4 mm | gleich |
@@ -36,13 +36,24 @@ Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
 
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
-| H2C | 1.7 | 16.1 | 22.4 |
-| X1 Carbon | 1.5 | 14.0 | 19.5 |
-| P1S | 1.4 | 13.3 | 18.5 |
-| A1 | 1.4 | 12.6 | 17.6 |
-| A1 mini | 1.3 | 11.9 | 16.6 |
+| H2C | 2.1 | 18.4 | 18.4 |
+| X1 Carbon | 1.8 | 16 | 16 |
+| P1S | 1.7 | 15.2 | 15.2 |
+| P1P | 1.7 | 15.2 | 15.2 |
+| A1 | 1.6 | 14.4 | 14.4 |
+| A1 mini | 1.5 | 13.6 | 13.6 |
 
-Rund 7 % unter SUNLU PLA — die zähere Schmelze fließt langsamer nach.
+> **Quelle der Werte.** Volumenstrom und Flussrate stammen aus den eSUN-eigenen
+> Profilen der Bambu-Bibliothek: `eSUN PLA+ @BBL X1C 0.2 nozzle` gibt 1.8 mm³/s frei,
+> `eSUN PLA+ @BBL X1C` — das Profil der 0.4-mm-Düse — 16.0 mm³/s, beide bei
+> Flussrate 0.98. eSUN stuft sein PLA+ damit **höher** ein als Bambu das
+> `Generic PLA` — die früher hier geführte Annahme eines reduzierten Volumenstroms
+> war hergeleitet und ist damit überholt.
+
+Auffällig ist die flache Kurve: 0.4 und 0.6 mm teilen denselben Wert. Für Düsen über
+0.4 mm liefert eSUN überhaupt kein Profil, und dieses Repository erfindet keine Rampe
+dazu — die Grenze liegt im Hotend, nicht in der Bohrung. Gegenüber SUNLU PLA bedeutet
+das: bei 0.4 mm rund 7 % mehr Durchsatz, bei 0.6 mm dagegen knapp ein Viertel weniger.
 
 ## Wann PLA+ statt PLA
 
@@ -69,4 +80,4 @@ braucht, kommt an PETG nicht vorbei.
 
 ---
 
-[← SUNLU PETG Transparent](sunlu-petg-transparent.md) · [Materialübersicht](README.md) · [eSUN PLA+ Glow →](esun-pla-plus-glow.md)
+[← SUNLU TPU](sunlu-tpu.md) · [Materialübersicht](README.md) · [eSUN PLA+ Glow →](esun-pla-plus-glow.md)

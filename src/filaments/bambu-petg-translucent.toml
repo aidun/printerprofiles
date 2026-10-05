@@ -1,6 +1,6 @@
 id                           = "bambu-petg-translucent"
 label                        = "Bambu PETG Translucent"
-order                        = 15
+order                        = 17
 short                        = "PETG Translucent"
 brand                        = "Bambu Lab"
 material                     = "PETG"
@@ -8,6 +8,7 @@ base                         = "Bambu PETG Translucent"
 abrasive                     = false
 hardened                     = false
 transparent                  = true
+flexible                     = false
 status                       = "baseline"
 drying                       = "65 °C / 8 h — vor jedem Klarsichtdruck"
 storage                      = "zwingend trocken"

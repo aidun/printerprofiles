@@ -37,10 +37,11 @@ Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
 | H2C | 1.4 | 14.9 | 20.1 |
-| X1 Carbon | 1.2 | 13.0 | 17.5 |
+| X1 Carbon | 1.2 | 13 | 17.5 |
 | P1S | 1.1 | 12.3 | 16.6 |
+| P1P | 1.1 | 12.3 | 16.6 |
 | A1 | 1.1 | 11.7 | 15.8 |
-| A1 mini | 1.0 | 11.0 | 14.9 |
+| A1 mini | 1 | 11 | 14.9 |
 
 ## Was gegenüber SUNLU PETG anders zu beachten ist
 

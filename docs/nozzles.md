@@ -70,10 +70,11 @@ dick, Maße stimmen nicht mehr.
 |---|---|---|
 | Alle PLA- und PETG-Varianten ohne Leuchtpigment | Messing genügt | ungefüllt |
 | Alle transparenten Varianten | Messing genügt | ungefüllt |
+| TPU und ABS | Messing genügt | ungefüllt |
 | SUNLU PLA Glow · SUNLU PETG Glow | **gehärtet zwingend** | Strontiumaluminat |
 | eSUN PLA+ Glow · Bambu PLA Glow | **gehärtet zwingend** | Strontiumaluminat |
 
-Von den 15 Materialien dieses Repositories brauchen also genau vier eine gehärtete
+Von den 17 Materialien dieses Repositories brauchen also genau vier eine gehärtete
 Düse. Welches welches ist, steht in der [Materialübersicht](filament/README.md) —
 dort trägt jedes betroffene Datenblatt die Kennzeichnung ⚠️.
 
@@ -92,6 +93,17 @@ nur der Düsenwechsel hilft.
 Dieses Repository liefert deshalb **keine Glow-Profile für 0.2 mm**. Das ist eine
 bewusste Auslassung, kein Versehen: Die Kombination lässt sich technisch einstellen,
 aber nicht zuverlässig drucken.
+
+### Warum 0.2 mm bei TPU fehlt
+
+Der Grund ist ein anderer. [SUNLU TPU](filament/README.md) ist nicht gefüllt und
+verschleißt die Düse nicht — hier begrenzt der Extruder. Weiches Filament knickt
+unter Vorschubdruck aus, statt zu fördern, und die 0.2-mm-Bohrung verlangt den
+höchsten Druck von allen drei Durchmessern. Bambu führt für TPU auf keinem der sechs
+Geräte ein Basisprofil für 0.2 mm; dieses Repository erfindet keines dazu.
+
+Dass der Volumenstrom bei TPU über 0.4 und 0.6 mm **identisch** bleibt, hat dieselbe
+Ursache: Die größere Bohrung hebt nicht an, was der Extruder durchschieben kann.
 
 ---
 
