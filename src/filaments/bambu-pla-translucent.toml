@@ -24,7 +24,7 @@ bed                          = 55
 bed_initial                  = 60
 
 [flow]
-ratio                        = 0.99
+ratio                        = 0.98
 
 # Datasheet values; the fan settings deviate from Bambu deliberately (clarity).
 [volumetric_flow]

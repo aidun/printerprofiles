@@ -31,7 +31,7 @@ gewünschte Eigenschaft.
 | Temperaturfenster | 215 – 235 °C | höher |
 | Bett | **55 °C** (erste Schicht 60 °C) | gleich |
 | Glasübergang | 45 °C | gleich |
-| Flussrate | 0.99 | +0.01 |
+| Flussrate | 0.98 | gleich |
 | Lüfter | **40 – 70 %** | stark reduziert |
 | Überhangkühlung | 90 % | leicht reduziert |
 | Verzögerung ab | 8 s Schichtzeit | +4 s |

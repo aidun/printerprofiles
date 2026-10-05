@@ -128,6 +128,11 @@ class TestSources(unittest.TestCase):
                             opaque["volumetric_flow"]["0.4"], clear_key)
             self.assertLess(clear["cooling"]["fan_max_speed"],
                             opaque["cooling"]["fan_max_speed"], clear_key)
+            # Clarity is never bought with extra material: the flow ratio stays
+            # the one of the opaque sibling. Heat, volumetric flow and cooling
+            # carry the adjustment, and those are asserted above.
+            self.assertEqual(clear["flow"]["ratio"],
+                             opaque["flow"]["ratio"], clear_key)
 
     def test_temperature_windows_are_consistent(self):
         for filament in self.filaments.values():
