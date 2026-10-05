@@ -1,0 +1,51 @@
+id                           = "bambu-asa-cf"
+label                        = "Bambu ASA-CF"
+order                        = 21
+short                        = "ASA-CF"
+brand                        = "Bambu Lab"
+material                     = "ASA-CF"
+base                         = "Bambu ASA-CF"
+# Bambu's own profile sets required_nozzle_HRC = 3 — unlike PETG-CF, which
+# demands 40. Chopped carbon fibre still wears brass, so this repository marks
+# the material abrasive and keeps the 0.2 mm nozzle locked.
+abrasive                     = true
+hardened                     = true
+transparent                  = false
+flexible                     = false
+status                       = "baseline"
+drying                       = "80 °C / 8 h"
+storage                      = "trocken, Silikagel; Faseranteil nimmt kaum Wasser auf"
+nozzles                      = ["0.4", "0.6"]
+# Like ABS and ASA, no base profile for the A1 mini.
+printers                     = ["h2c", "x1c", "p1s", "p1p", "a1"]
+description                  = "Das steifste und wärmefesteste Material im Sortiment: Glasübergang 108 °C, UV-stabil, faserverstärkt. Verlangt geschlossene Kammer, Bett 100 °C, gehärtete Düse und die niedrigste Flussrate des Repositories. Für Außenteile unter Dauerlast."
+
+[temperature]
+nozzle                       = 275
+nozzle_initial               = 275
+range_low                    = 250
+range_high                   = 280
+vitrification                = 108
+bed                          = 100
+bed_initial                  = 100
+
+[flow]
+ratio                        = 0.90
+
+# Values from 'Bambu ASA-CF @BBL X1C': 18 mm³/s on both extruder variants and
+# both nozzles — the fibre load, not the bore, sets the limit. No 0.2 mm
+# profile exists for any fibre-filled material.
+[volumetric_flow]
+"0.4" = 18.0
+"0.6" = 18.0
+
+[cooling]
+fan_min_speed                = 10
+fan_max_speed                = 25
+overhang_fan_speed           = 80
+slow_down_layer_time         = 12
+fan_cooling_layer_time       = 35
+close_fan_the_first_x_layers = 3
+
+[retraction]
+z_hop                        = 0.6

@@ -90,7 +90,8 @@ class TestSources(unittest.TestCase):
             self.assertTrue(keys <= set(filament), f"{key} is missing keys")
             self.assertEqual(filament["id"], key)
             self.assertIn(filament["brand"], {"SUNLU", "eSUN", "Bambu Lab"})
-            self.assertIn(filament["material"], {"PLA", "PETG", "TPU", "ABS"})
+            self.assertIn(filament["material"],
+                          {"PLA", "PETG", "PETG-CF", "TPU", "ABS", "ASA", "ASA-CF"})
             orders.append(filament["order"])
         self.assertEqual(orders, list(range(1, len(self.filaments) + 1)))
 
@@ -112,9 +113,32 @@ class TestSources(unittest.TestCase):
             self.assertNotIn("0.2", self.filaments[key]["nozzles"])
             self.assertFalse(self.filaments[key]["abrasive"], key)
 
+    def test_fibre_filled_filaments_need_a_hardened_nozzle(self):
+        # Chopped fibre wears brass. Bambu's own ASA-CF profile claims
+        # required_nozzle_HRC = 3, which this repository deliberately ignores:
+        # every fibre-filled material is marked abrasive and locks 0.2 mm,
+        # for which the library ships no profile anyway.
+        fibre = sorted(k for k, f in self.filaments.items()
+                       if f["material"].endswith("-CF"))
+        self.assertEqual(fibre, ["bambu-asa-cf", "bambu-petg-cf"])
+        for key in fibre:
+            self.assertTrue(self.filaments[key]["abrasive"], key)
+            self.assertTrue(self.filaments[key]["hardened"], key)
+            self.assertEqual(self.filaments[key]["nozzles"], ["0.4", "0.6"], key)
+
+    def test_chamber_materials_skip_the_a1_mini(self):
+        # ABS, ASA and ASA-CF shrink on cooling and need a closed chamber;
+        # Bambu releases no base profile for any of them on the A1 mini.
+        for key, filament in self.filaments.items():
+            if filament["material"] in {"ABS", "ASA", "ASA-CF"}:
+                self.assertNotIn("a1mini",
+                                 generate.released_for(filament, self.printers), key)
+                self.assertGreaterEqual(filament["temperature"]["bed"], 90, key)
+
     def test_every_other_filament_covers_all_three_nozzles(self):
-        # Only two documented traits may drop the 0.2 mm nozzle: abrasive
-        # (glow) and flexible (TPU). Everything else carries all three.
+        # Only three documented traits may drop the 0.2 mm nozzle: abrasive
+        # (glow and fibre-filled) and flexible (TPU). Everything else carries
+        # all three.
         for key, filament in self.filaments.items():
             if filament["abrasive"] or filament["flexible"]:
                 continue
@@ -172,7 +196,7 @@ class TestGeneratedPresets(unittest.TestCase):
         filament = sum(len(f["nozzles"]) * len(generate.released_for(f, self.printers))
                        for f in self.filaments.values())
         process = len(self.printers) * 3 * len(self.levels)
-        self.assertEqual((filament, process), (273, 54))
+        self.assertEqual((filament, process), (325, 54))
 
     def test_verified_reference_preset_is_reproduced(self):
         # Values confirmed on the machine for SUNLU PETG Glow, H2C, 0.4 mm.

@@ -1,0 +1,47 @@
+id                           = "bambu-petg-cf"
+label                        = "Bambu PETG-CF"
+order                        = 18
+short                        = "PETG-CF"
+brand                        = "Bambu Lab"
+material                     = "PETG-CF"
+base                         = "Bambu PETG-CF"
+abrasive                     = true
+hardened                     = true
+transparent                  = false
+flexible                     = false
+status                       = "baseline"
+drying                       = "70 °C / 8 h"
+storage                      = "zwingend trocken"
+nozzles                      = ["0.4", "0.6"]
+description                  = "Kurzfaserverstärktes PETG. Deutlich steifer und maßhaltiger als PETG, mattschwarz und ohne Fädenbildung, dafür spröder und rund 45 % langsamer. Das einzige faserverstärkte Material im Sortiment, das auf allen sechs Geräten läuft und ohne geschlossene Kammer auskommt."
+
+[temperature]
+nozzle                       = 255
+nozzle_initial               = 255
+range_low                    = 240
+range_high                   = 270
+vitrification                = 70
+bed                          = 70
+bed_initial                  = 70
+
+[flow]
+ratio                        = 0.95
+
+# Values from 'Bambu PETG-CF @BBL X1C 0.4 nozzle': 11.5 mm³/s on the standard
+# extruder. No 0.6-specific profile exists; 0.6 falls back to the bare machine
+# profile with the same value, so the curve stays flat on purpose. The library
+# ships no 0.2 mm profile for any fibre-filled material.
+[volumetric_flow]
+"0.4" = 11.5
+"0.6" = 11.5
+
+[cooling]
+fan_min_speed                = 5
+fan_max_speed                = 40
+overhang_fan_speed           = 100
+slow_down_layer_time         = 6
+fan_cooling_layer_time       = 30
+close_fan_the_first_x_layers = 3
+
+[retraction]
+z_hop                        = 0.4

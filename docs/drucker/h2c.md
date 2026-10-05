@@ -31,8 +31,11 @@ PETG; das High-Flow-Hotend erlaubt die höchsten Volumenströme.
 | SUNLU PETG Glow | — | **12.6** 🟢 | 16.7 |
 | SUNLU TPU | — | 3.7 | 3.7 |
 | eSUN ABS+ | 2.3 | 17.2 | 17.2 |
+| Bambu PETG-CF | — | 13.2 | 13.2 |
+| Bambu ASA | 2.3 | 20.7 | 20.7 |
+| Bambu ASA-CF | — | 20.7 | 20.7 |
 
-`—` heißt: nicht ausgeliefert. Glow-Material ist für die 0.2-mm-Düse gesperrt, flexibles TPU ebenfalls — bei beiden begrenzt nicht die Düse den Durchsatz.
+`—` heißt: nicht ausgeliefert. Glow-Material ist für die 0.2-mm-Düse gesperrt, flexibles TPU ebenfalls — bei beiden begrenzt nicht die Düse den Durchsatz. Für die faserverstärkten Materialien PETG-CF und ASA-CF liefert Bambu überhaupt kein 0.2-mm-Profil; die Faserlänge liegt in der Größenordnung der Bohrung.
 
 🟢 am Gerät gemessen — der Referenzwert des gesamten Repositories.
 

@@ -146,16 +146,21 @@ Fädenbildung bei unveränderten Einstellungen.
 |---|---|---|
 | Alle PLA-Varianten (auch PLA+, Glow, transparent) | 45 °C / 6 h | gering |
 | Alle PETG-Varianten (auch Glow, transparent) | 65 °C / 8 h | **hoch** |
+| PETG-CF | 70 °C / 8 h | **hoch** |
 | TPU | 50 °C / 8 h | **sehr hoch** |
-| ABS | 70 °C / 4 h | gering |
+| ABS | 70 – 80 °C / 4 – 8 h | gering |
+| ASA und ASA-CF | 80 °C / 8 h | gering |
 
-Die Werte gelten herstellerübergreifend für alle 17 Materialien; die
-[Datenblätter](filament/README.md) führen sie je Material einzeln.
+Die Werte gelten herstellerübergreifend für alle 21 Materialien; die
+[Datenblätter](filament/README.md) führen sie je Material einzeln. Bei ABS hängt die
+Dauer vom Hersteller ab: [eSUN ABS+](filament/esun-abs.md) 70 °C / 4 h,
+[Bambu ABS](filament/bambu-abs.md) 80 °C / 8 h.
 
 TPU ist der Extremfall: Es nimmt Feuchtigkeit schneller auf als jedes andere Material
 hier und blubbert dann hörbar an der Düse. Eine offen liegende Spule ist nach wenigen
-Tagen unbrauchbar, bis sie getrocknet wurde. ABS ist umgekehrt das robusteste —
-es trocknet heißer, dafür kürzer.
+Tagen unbrauchbar, bis sie getrocknet wurde. Die Kammermaterialien ABS, ASA und
+ASA-CF sind umgekehrt die robustesten — sie nehmen kaum Wasser auf und trocknen
+dafür heißer.
 
 PETG zieht innerhalb weniger Tage offener Lagerung so viel Wasser, dass der Druck
 sichtbar leidet. Silikagel im Trockenbehälter ist bei diesem Material keine

@@ -66,17 +66,29 @@ das durch die Düse geht, trägt einen Bruchteil davon ab. Nach ein bis zwei Spu
 ist die Bohrung messbar aufgeweitet, die Extrusion wird unpräzise, Wände werden zu
 dick, Maße stimmen nicht mehr.
 
+**Kohlenstofffaser ist der härtere Fall.** Gemahlene Faser ist nicht nur hart, sie
+ist kantig und schneidet. Bambu gibt für sein PETG-CF `required_nozzle_HRC = 40` vor
+— den höchsten Wert der Bibliothek. Eine Messingdüse ist dort schon nach wenigen
+hundert Gramm sichtbar aufgeweitet.
+
 | Material | Düse | Begründung |
 |---|---|---|
 | Alle PLA- und PETG-Varianten ohne Leuchtpigment | Messing genügt | ungefüllt |
 | Alle transparenten Varianten | Messing genügt | ungefüllt |
-| TPU und ABS | Messing genügt | ungefüllt |
+| TPU, ABS und ASA | Messing genügt | ungefüllt |
 | SUNLU PLA Glow · SUNLU PETG Glow | **gehärtet zwingend** | Strontiumaluminat |
 | eSUN PLA+ Glow · Bambu PLA Glow | **gehärtet zwingend** | Strontiumaluminat |
+| Bambu PETG-CF · Bambu ASA-CF | **gehärtet zwingend** | Kohlenstofffaser |
 
-Von den 17 Materialien dieses Repositories brauchen also genau vier eine gehärtete
-Düse. Welches welches ist, steht in der [Materialübersicht](filament/README.md) —
-dort trägt jedes betroffene Datenblatt die Kennzeichnung ⚠️.
+Von den 21 Materialien dieses Repositories brauchen also genau sechs eine gehärtete
+Düse: die vier Glow-Varianten und die zwei faserverstärkten. Welches welches ist,
+steht in der [Materialübersicht](filament/README.md) — dort trägt jedes betroffene
+Datenblatt die Kennzeichnung ⚠️.
+
+> Bambu selbst setzt bei ASA-CF nur `required_nozzle_HRC = 3` und widerspricht sich
+> damit gegenüber PETG-CF. Dieses Repository folgt hier nicht der Bibliothek, sondern
+> behandelt beide faserverstärkten Materialien gleich — Begründung im
+> [ASA-CF-Datenblatt](filament/bambu-asa-cf.md#zur-gehärteten-düse--bewusste-abweichung-vom-herstellerprofil).
 
 Bambu liefert die gehärtete Variante unter der Bezeichnung *Hardened Steel* für alle
 drei Durchmesser. Bei den Profilen dieses Repositories macht die Düsenhärte keinen
@@ -93,6 +105,14 @@ nur der Düsenwechsel hilft.
 Dieses Repository liefert deshalb **keine Glow-Profile für 0.2 mm**. Das ist eine
 bewusste Auslassung, kein Versehen: Die Kombination lässt sich technisch einstellen,
 aber nicht zuverlässig drucken.
+
+### Warum 0.2 mm bei faserverstärktem Material gesperrt ist
+
+Derselbe Mechanismus, nur ausgeprägter: Die gemahlenen Fasern sind 50 – 150 µm lang
+und liegen damit in der Größenordnung der Bohrung selbst. Für **kein**
+faserverstärktes Material führt Bambu überhaupt ein 0.2-mm-Profil — weder für die
+eigenen noch für die generischen. [Bambu PETG-CF](filament/bambu-petg-cf.md) und
+[Bambu ASA-CF](filament/bambu-asa-cf.md) sind deshalb auf 0.4 und 0.6 mm beschränkt.
 
 ### Warum 0.2 mm bei TPU fehlt
 

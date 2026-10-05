@@ -2,12 +2,12 @@
 
 # Bambu Lab Druckprofile
 
-**327 fertige Presets für Bambu Studio — 17 Materialien von SUNLU, eSUN und
+**379 fertige Presets für Bambu Studio — 21 Materialien von SUNLU, eSUN und
 Bambu Lab, abgestimmt auf sechs Drucker, drei Düsen und drei Qualitätsstufen.
 Herunterladen, importieren, drucken.**
 
-[![Presets](https://img.shields.io/badge/Presets-327-2d7ff9)](docs/matrix.md)
-[![Materialien](https://img.shields.io/badge/Materialien-17-2d7ff9)](docs/filament/README.md)
+[![Presets](https://img.shields.io/badge/Presets-379-2d7ff9)](docs/matrix.md)
+[![Materialien](https://img.shields.io/badge/Materialien-21-2d7ff9)](docs/filament/README.md)
 [![Drucker](https://img.shields.io/badge/Drucker-6-2d7ff9)](docs/drucker/README.md)
 [![Slicer](https://img.shields.io/badge/Bambu%20Studio-2.7%2B-00a76f)](https://bambulab.com/en/download/studio)
 
@@ -31,7 +31,7 @@ Leistung des jeweiligen Hotends passt.
 | | |
 |---|---|
 | **6 Drucker** | H2C · X1 Carbon · P1S · P1P · A1 · A1 mini |
-| **17 Materialien** | 7 × SUNLU · 5 × eSUN · 5 × Bambu Lab — PLA, PETG, TPU und ABS, darunter 4 Glow und 5 transparente |
+| **21 Materialien** | 7 × SUNLU · 5 × eSUN · 9 × Bambu Lab — PLA, PETG, PETG-CF, TPU, ABS, ASA und ASA-CF, darunter 4 Glow, 5 transparente und 2 faserverstärkte |
 | **3 Düsen** | 0.2 mm · 0.4 mm · 0.6 mm |
 | **3 Stufen** | Qualität · Normal · Schnell |
 

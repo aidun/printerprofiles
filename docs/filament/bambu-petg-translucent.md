@@ -85,4 +85,4 @@ sichtbar und lässt sich nicht mehr entfernen.
 
 ---
 
-[← Bambu PETG HF](bambu-petg-hf.md) · [Materialübersicht](README.md)
+[← Bambu PETG HF](bambu-petg-hf.md) · [Materialübersicht](README.md) · [Bambu PETG-CF →](bambu-petg-cf.md)

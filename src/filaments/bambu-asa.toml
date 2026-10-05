@@ -1,0 +1,49 @@
+id                           = "bambu-asa"
+label                        = "Bambu ASA"
+order                        = 20
+short                        = "ASA"
+brand                        = "Bambu Lab"
+material                     = "ASA"
+base                         = "Bambu ASA"
+abrasive                     = false
+hardened                     = false
+transparent                  = false
+flexible                     = false
+status                       = "baseline"
+drying                       = "80 °C / 8 h"
+storage                      = "trocken, Silikagel; wie ABS wenig hygroskopisch"
+nozzles                      = ["0.2", "0.4", "0.6"]
+# Like ABS, the library ships no ASA base profile for the A1 mini.
+printers                     = ["h2c", "x1c", "p1s", "p1p", "a1"]
+description                  = "UV-stabiles ABS. Chemisch nahe am ABS, aber witterungsfest: ASA vergilbt und verkreidet im Freien nicht. Das richtige Material für Außenteile, die Wärme und Sonne sehen. Bett 100 °C und geschlossene Kammer sind Pflicht."
+
+[temperature]
+nozzle                       = 270
+nozzle_initial               = 270
+range_low                    = 240
+range_high                   = 280
+vitrification                = 100
+bed                          = 100
+bed_initial                  = 100
+
+[flow]
+ratio                        = 0.95
+
+# Values from 'Bambu ASA @BBL X1C 0.4 nozzle': 18 mm³/s on the standard
+# extruder, 25 on High Flow. The 0.6 nozzle falls back to 'Bambu ASA @BBL X1C'
+# with the same pair. 0.2 from 'Bambu ASA @BBL X1C 0.2 nozzle'.
+[volumetric_flow]
+"0.2" = 2.0
+"0.4" = 18.0
+"0.6" = 18.0
+
+[cooling]
+fan_min_speed                = 10
+fan_max_speed                = 35
+overhang_fan_speed           = 80
+slow_down_layer_time         = 12
+fan_cooling_layer_time       = 35
+close_fan_the_first_x_layers = 3
+
+[retraction]
+z_hop                        = 0.6

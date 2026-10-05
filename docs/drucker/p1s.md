@@ -30,8 +30,11 @@ Flusskalibrierung ist der einzige, dafür spürbare Unterschied im Alltag.
 | SUNLU PETG Glow | — | 10.4 | 13.8 |
 | SUNLU TPU | — | 3 | 3 |
 | eSUN ABS+ | 1.9 | 14.2 | 14.2 |
+| Bambu PETG-CF | — | 10.9 | 10.9 |
+| Bambu ASA | 1.9 | 17.1 | 17.1 |
+| Bambu ASA-CF | — | 17.1 | 17.1 |
 
-`—` heißt: nicht ausgeliefert. Glow-Material ist für die 0.2-mm-Düse gesperrt, flexibles TPU ebenfalls — bei beiden begrenzt nicht die Düse den Durchsatz.
+`—` heißt: nicht ausgeliefert. Glow-Material ist für die 0.2-mm-Düse gesperrt, flexibles TPU ebenfalls — bei beiden begrenzt nicht die Düse den Durchsatz. Für die faserverstärkten Materialien PETG-CF und ASA-CF liefert Bambu überhaupt kein 0.2-mm-Profil; die Faserlänge liegt in der Größenordnung der Bohrung.
 
 ## Schichthöhen
 

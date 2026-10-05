@@ -31,8 +31,11 @@ Basiswert, Faktor 1.00. Werte in mm³/s:
 | SUNLU PETG Glow | — | 11 | 14.5 |
 | SUNLU TPU | — | 3.2 | 3.2 |
 | eSUN ABS+ | 2 | 15 | 15 |
+| Bambu PETG-CF | — | 11.5 | 11.5 |
+| Bambu ASA | 2 | 18 | 18 |
+| Bambu ASA-CF | — | 18 | 18 |
 
-`—` heißt: nicht ausgeliefert. Glow-Material ist für die 0.2-mm-Düse gesperrt, flexibles TPU ebenfalls — bei beiden begrenzt nicht die Düse den Durchsatz.
+`—` heißt: nicht ausgeliefert. Glow-Material ist für die 0.2-mm-Düse gesperrt, flexibles TPU ebenfalls — bei beiden begrenzt nicht die Düse den Durchsatz. Für die faserverstärkten Materialien PETG-CF und ASA-CF liefert Bambu überhaupt kein 0.2-mm-Profil; die Faserlänge liegt in der Größenordnung der Bohrung.
 
 ## Schichthöhen
 

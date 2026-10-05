@@ -3,7 +3,7 @@
 > **Generierte Datei.** Nicht von Hand bearbeiten — sie entsteht aus
 > `dist/_index.json` über `python3 tools/build_docs.py`.
 
-Das Repository enthält **273 Filamentprofile** und **54 Prozessprofile**.
+Das Repository enthält **325 Filamentprofile** und **54 Prozessprofile**.
 
 ---
 
@@ -171,7 +171,7 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 
 ### Bambu Lab
 
-5 Materialien.
+9 Materialien.
 
 #### Bambu PLA Basic
 
@@ -234,6 +234,54 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 
 > 💧 **Auf Klarheit optimiert.** Höhere Düsentemperatur, bewusst abgesenkter Volumenstrom und stark zurückgenommene Kühlung — Klarheit geht hier vor Druckzeit.
 
+#### Bambu PETG-CF
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | — | **13.2** | **13.2** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | — | **11.5** | **11.5** | 🔵 Startwerte |
+| Bambu Lab P1S | — | **10.9** | **10.9** | 🔵 Startwerte |
+| Bambu Lab P1P | — | **10.9** | **10.9** | 🔵 Startwerte |
+| Bambu Lab A1 | — | **10.3** | **10.3** | 🔵 Startwerte |
+| Bambu Lab A1 mini | — | **9.8** | **9.8** | 🔵 Startwerte |
+
+> ⚠️ **Abrasiv.** Gehärtete Düse zwingend erforderlich. Die 0.2-mm-Düse ist für dieses Material gesperrt — siehe [Düsen](nozzles.md).
+
+#### Bambu ABS
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | **2.3** | **18.4** | **18.4** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **2** | **16** | **16** | 🔵 Startwerte |
+| Bambu Lab P1S | **1.9** | **15.2** | **15.2** | 🔵 Startwerte |
+| Bambu Lab P1P | **1.9** | **15.2** | **15.2** | 🔵 Startwerte |
+| Bambu Lab A1 | **1.8** | **14.4** | **14.4** | 🔵 Startwerte |
+| Bambu Lab A1 mini | — | — | — | — |
+
+#### Bambu ASA
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | **2.3** | **20.7** | **20.7** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **2** | **18** | **18** | 🔵 Startwerte |
+| Bambu Lab P1S | **1.9** | **17.1** | **17.1** | 🔵 Startwerte |
+| Bambu Lab P1P | **1.9** | **17.1** | **17.1** | 🔵 Startwerte |
+| Bambu Lab A1 | **1.8** | **16.2** | **16.2** | 🔵 Startwerte |
+| Bambu Lab A1 mini | — | — | — | — |
+
+#### Bambu ASA-CF
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | — | **20.7** | **20.7** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | — | **18** | **18** | 🔵 Startwerte |
+| Bambu Lab P1S | — | **17.1** | **17.1** | 🔵 Startwerte |
+| Bambu Lab P1P | — | **17.1** | **17.1** | 🔵 Startwerte |
+| Bambu Lab A1 | — | **16.2** | **16.2** | 🔵 Startwerte |
+| Bambu Lab A1 mini | — | — | — | — |
+
+> ⚠️ **Abrasiv.** Gehärtete Düse zwingend erforderlich. Die 0.2-mm-Düse ist für dieses Material gesperrt — siehe [Düsen](nozzles.md).
+
 ---
 
 ## Prozessprofile
@@ -284,6 +332,46 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 
 | Profil | erbt von |
 |---|---|
+| `Bambu ABS A1 0.2` | `Bambu ABS @BBL A1 0.2 nozzle` |
+| `Bambu ABS A1 0.4` | `Bambu ABS @BBL A1` |
+| `Bambu ABS A1 0.6` | `Bambu ABS @BBL A1` |
+| `Bambu ABS H2C 0.2` | `Bambu ABS @BBL H2C 0.2 nozzle` |
+| `Bambu ABS H2C 0.4` | `Bambu ABS @BBL H2C` |
+| `Bambu ABS H2C 0.6` | `Bambu ABS @BBL H2C 0.6 nozzle` |
+| `Bambu ABS P1P 0.2` | `Bambu ABS @BBL P1P 0.2 nozzle` |
+| `Bambu ABS P1P 0.4` | `Bambu ABS @BBL P1P` |
+| `Bambu ABS P1P 0.6` | `Bambu ABS @BBL P1P 0.6 nozzle` |
+| `Bambu ABS P1S 0.2` | `Bambu ABS @BBL X1C 0.2 nozzle` |
+| `Bambu ABS P1S 0.4` | `Bambu ABS @BBL P1S 0.4 nozzle` |
+| `Bambu ABS P1S 0.6` | `Bambu ABS @BBL P1S 0.6 nozzle` |
+| `Bambu ABS X1C 0.2` | `Bambu ABS @BBL X1C 0.2 nozzle` |
+| `Bambu ABS X1C 0.4` | `Bambu ABS @BBL X1C` |
+| `Bambu ABS X1C 0.6` | `Bambu ABS @BBL X1C 0.6 nozzle` |
+| `Bambu ASA A1 0.2` | `Bambu ASA @BBL A1 0.2 nozzle` |
+| `Bambu ASA A1 0.4` | `Bambu ASA @BBL A1 0.4 nozzle` |
+| `Bambu ASA A1 0.6` | `Bambu ASA @BBL A1 0.6 nozzle` |
+| `Bambu ASA H2C 0.2` | `Bambu ASA @BBL H2C 0.2 nozzle` |
+| `Bambu ASA H2C 0.4` | `Bambu ASA @BBL H2C` |
+| `Bambu ASA H2C 0.6` | `Bambu ASA @BBL H2C 0.6 nozzle` |
+| `Bambu ASA P1P 0.2` | `Bambu ASA @BBL X1C 0.2 nozzle` |
+| `Bambu ASA P1P 0.4` | `Bambu ASA @BBL X1C 0.4 nozzle` |
+| `Bambu ASA P1P 0.6` | `Bambu ASA @BBL X1C` |
+| `Bambu ASA P1S 0.2` | `Bambu ASA @BBL X1C 0.2 nozzle` |
+| `Bambu ASA P1S 0.4` | `Bambu ASA @BBL X1C 0.4 nozzle` |
+| `Bambu ASA P1S 0.6` | `Bambu ASA @BBL X1C` |
+| `Bambu ASA X1C 0.2` | `Bambu ASA @BBL X1C 0.2 nozzle` |
+| `Bambu ASA X1C 0.4` | `Bambu ASA @BBL X1C 0.4 nozzle` |
+| `Bambu ASA X1C 0.6` | `Bambu ASA @BBL X1C` |
+| `Bambu ASA-CF A1 0.4` | `Bambu ASA-CF @BBL A1` |
+| `Bambu ASA-CF A1 0.6` | `Bambu ASA-CF @BBL A1 0.6 nozzle` |
+| `Bambu ASA-CF H2C 0.4` | `Bambu ASA-CF @BBL H2C 0.4 nozzle` |
+| `Bambu ASA-CF H2C 0.6` | `Bambu ASA-CF @BBL H2C` |
+| `Bambu ASA-CF P1P 0.4` | `Bambu ASA-CF @BBL P1P` |
+| `Bambu ASA-CF P1P 0.6` | `Bambu ASA-CF @BBL P1P 0.6 nozzle` |
+| `Bambu ASA-CF P1S 0.4` | `Bambu ASA-CF @BBL X1C` |
+| `Bambu ASA-CF P1S 0.6` | `Bambu ASA-CF @BBL X1C 0.6 nozzle` |
+| `Bambu ASA-CF X1C 0.4` | `Bambu ASA-CF @BBL X1C` |
+| `Bambu ASA-CF X1C 0.6` | `Bambu ASA-CF @BBL X1C 0.6 nozzle` |
 | `Bambu PETG HF A1 0.2` | `Bambu PETG HF @BBL A1 0.2 nozzle` |
 | `Bambu PETG HF A1 0.4` | `Bambu PETG HF @BBL A1` |
 | `Bambu PETG HF A1 0.6` | `Bambu PETG HF @BBL A1 0.8 nozzle` |
@@ -320,6 +408,18 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Bambu PETG Translucent X1C 0.2` | `Bambu PETG Translucent @BBL X1C 0.2 nozzle` |
 | `Bambu PETG Translucent X1C 0.4` | `Bambu PETG Translucent @BBL X1C` |
 | `Bambu PETG Translucent X1C 0.6` | `Bambu PETG Translucent @BBL X1C 0.6 nozzle` |
+| `Bambu PETG-CF A1 0.4` | `Bambu PETG-CF @BBL A1 0.4 nozzle` |
+| `Bambu PETG-CF A1 0.6` | `Bambu PETG-CF @BBL A1 0.8 nozzle` |
+| `Bambu PETG-CF A1M 0.4` | `Bambu PETG-CF @BBL A1M 0.4 nozzle` |
+| `Bambu PETG-CF A1M 0.6` | `Bambu PETG-CF @BBL A1M` |
+| `Bambu PETG-CF H2C 0.4` | `Bambu PETG-CF @BBL H2C 0.4 nozzle` |
+| `Bambu PETG-CF H2C 0.6` | `Bambu PETG-CF @BBL H2C` |
+| `Bambu PETG-CF P1P 0.4` | `Bambu PETG-CF @BBL P1P 0.4 nozzle` |
+| `Bambu PETG-CF P1P 0.6` | `Bambu PETG-CF @BBL P1P` |
+| `Bambu PETG-CF P1S 0.4` | `Bambu PETG-CF @BBL X1C 0.4 nozzle` |
+| `Bambu PETG-CF P1S 0.6` | `Bambu PETG-CF @BBL X1C` |
+| `Bambu PETG-CF X1C 0.4` | `Bambu PETG-CF @BBL X1C 0.4 nozzle` |
+| `Bambu PETG-CF X1C 0.6` | `Bambu PETG-CF @BBL X1C` |
 | `Bambu PLA Basic A1 0.2` | `Bambu PLA Basic @BBL A1 0.2 nozzle` |
 | `Bambu PLA Basic A1 0.4` | `Bambu PLA Basic @BBL A1` |
 | `Bambu PLA Basic A1 0.6` | `Bambu PLA Basic @BBL A1` |

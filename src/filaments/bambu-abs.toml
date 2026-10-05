@@ -1,0 +1,50 @@
+id                           = "bambu-abs"
+label                        = "Bambu ABS"
+order                        = 19
+short                        = "ABS"
+brand                        = "Bambu Lab"
+material                     = "ABS"
+base                         = "Bambu ABS"
+abrasive                     = false
+hardened                     = false
+transparent                  = false
+flexible                     = false
+status                       = "baseline"
+drying                       = "80 °C / 8 h"
+storage                      = "trocken, Silikagel; ABS ist weniger hygroskopisch als PETG"
+nozzles                      = ["0.2", "0.4", "0.6"]
+# No ABS base profile exists for the A1 mini in the Bambu library — its build
+# volume and bed power do not carry the material.
+printers                     = ["h2c", "x1c", "p1s", "p1p", "a1"]
+description                  = "Herstellereigenes ABS. Läuft rund 15 °C heißer als das eSUN ABS+ und erlaubt dafür mehr Kühlung, weil das Profil auf die geschlossene Kammer des X1C abgestimmt ist. Braucht wie jedes ABS eine geschlossene Kammer."
+
+[temperature]
+nozzle                       = 270
+nozzle_initial               = 260
+range_low                    = 240
+range_high                   = 280
+vitrification                = 100
+bed                          = 90
+bed_initial                  = 90
+
+[flow]
+ratio                        = 0.95
+
+# Values from 'Bambu ABS @BBL X1C': 16 mm³/s on the standard extruder, 25 on
+# High Flow. The 0.6 profile repeats the same pair, so the curve stays flat.
+# 0.2 from 'Bambu ABS @BBL X1C 0.2 nozzle'.
+[volumetric_flow]
+"0.2" = 2.0
+"0.4" = 16.0
+"0.6" = 16.0
+
+[cooling]
+fan_min_speed                = 10
+fan_max_speed                = 60
+overhang_fan_speed           = 80
+slow_down_layer_time         = 12
+fan_cooling_layer_time       = 30
+close_fan_the_first_x_layers = 3
+
+[retraction]
+z_hop                        = 0.6

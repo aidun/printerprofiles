@@ -2,9 +2,9 @@
 
 [← Zurück zur Übersicht](../../README.md)
 
-17 Materialien von drei Herstellern, jeweils als eigenes Datenblatt mit Kennwerten,
-Volumenströmen je Drucker und den materialtypischen Fallstricken. Vier
-Materialklassen: PLA, PETG, TPU und ABS.
+21 Materialien von drei Herstellern, jeweils als eigenes Datenblatt mit Kennwerten,
+Volumenströmen je Drucker und den materialtypischen Fallstricken. Sieben
+Materialklassen: PLA, PETG, PETG-CF, TPU, ABS, ASA und ASA-CF.
 
 | Material | Düsen | Besonderheit | Status | Datenblatt |
 |---|---|---|---|---|
@@ -25,9 +25,15 @@ Materialklassen: PLA, PETG, TPU und ABS.
 | **Bambu PLA Translucent** | 0.2 · 0.4 · 0.6 | 💧 durchscheinend | 🔵 Startwert | [öffnen](bambu-pla-translucent.md) |
 | **Bambu PETG HF** | 0.2 · 0.4 · 0.6 | schnell | 🔵 Startwert | [öffnen](bambu-petg-hf.md) |
 | **Bambu PETG Translucent** | 0.2 · 0.4 · 0.6 | 💧 durchscheinend | 🔵 Startwert | [öffnen](bambu-petg-translucent.md) |
+| **Bambu PETG-CF** | 0.4 · 0.6 | 🧱 faserverstärkt · ⚠️ abrasiv | 🔵 Startwert | [öffnen](bambu-petg-cf.md) |
+| **Bambu ABS** | 0.2 · 0.4 · 0.6 | 🔥 Kammer nötig | 🔵 Startwert | [öffnen](bambu-abs.md) |
+| **Bambu ASA** | 0.2 · 0.4 · 0.6 | 🔥 Kammer nötig · ☀️ UV-stabil | 🔵 Startwert | [öffnen](bambu-asa.md) |
+| **Bambu ASA-CF** | 0.4 · 0.6 | 🔥 Kammer nötig · 🧱 faserverstärkt · ⚠️ abrasiv · ☀️ UV-stabil | 🔵 Startwert | [öffnen](bambu-asa-cf.md) |
 
 🟢 am Gerät gemessen · 🔵 berechneter Startwert · ⚠️ gehärtete Düse zwingend ·
 💧 auf optische Klarheit abgestimmt · 🧵 flexibel, nicht über die AMS ·
+🧱 kohlenstofffaserverstärkt, steif und spröde, immer mattschwarz ·
+☀️ UV- und witterungsstabil, für Außenteile ·
 🔥 geschlossene Kammer erforderlich, auf der A1 mini nicht verfügbar
 
 ---
@@ -61,7 +67,7 @@ Volumenstrom bezogen auf den X1 Carbon mit 0.4-mm-Düse; die übrigen Drucker we
 | Volumenstrom | 16.0 | 10.0 | 13.0 | 11.0 | 15.0 |
 | Trocknung | 45/6 h | 45/6 h | 65/8 h | 65/8 h | 70/4 h |
 
-### Bambu Lab
+### Bambu Lab — PLA und PETG
 
 | | PLA Basic | PLA Glow | PLA Transl. | PETG HF | PETG Transl. |
 |---|--:|--:|--:|--:|--:|
@@ -73,6 +79,21 @@ Volumenstrom bezogen auf den X1 Carbon mit 0.4-mm-Düse; die übrigen Drucker we
 | Volumenstrom | **21.0** | 18.0 | 12.0 | **21.0** | 6.0 |
 | Trocknung | 45/6 h | 45/6 h | 45/6 h | 65/8 h | 65/8 h |
 
+### Bambu Lab — faserverstärkt und Kammermaterialien
+
+| | PETG-CF | ABS | ASA | ASA-CF |
+|---|--:|--:|--:|--:|
+| Düse | 255 °C | 270 °C | 270 °C | **275 °C** |
+| Bett | 70 °C | 90 °C | 100 °C | 100 °C |
+| Glasübergang | 70 °C | 100 °C | 100 °C | **108 °C** |
+| Flussrate | 0.95 | 0.95 | 0.95 | **0.90** |
+| Lüfter | 5–40 % | 10–60 % | 10–35 % | 10–25 % |
+| Volumenstrom | 11.5 | 16.0 | 18.0 | 18.0 |
+| Trocknung | 70/8 h | 80/8 h | 80/8 h | 80/8 h |
+| Düsen | 0.4 · 0.6 | alle drei | alle drei | 0.4 · 0.6 |
+| Kammer | nicht nötig | **zwingend** | **zwingend** | **zwingend** |
+| A1 mini | verfügbar | — | — | — |
+
 ---
 
 ## Welches Material wofür
@@ -83,7 +104,11 @@ Volumenstrom bezogen auf den X1 Carbon mit 0.4-mm-Düse; die übrigen Drucker we
 | Kürzeste Druckzeit | **Bambu PLA Basic** · **Bambu PETG HF** |
 | Halterungen, Clips, Rastverbindungen | **eSUN PLA+** |
 | Wärme, Sonne, mechanische Dauerlast | jedes PETG |
-| Dauerhaft über 70 °C | **eSUN ABS+** — nur mit geschlossener Kammer |
+| Dauerhaft über 70 °C | **Bambu ASA** · eSUN ABS+ · Bambu ABS — nur mit geschlossener Kammer |
+| Dauerhaft über 100 °C | **Bambu ASA-CF** — als einziges Material hier |
+| Sonne, Regen, Außeneinsatz | **Bambu ASA** · **Bambu ASA-CF** — ABS verkreidet, PETG wird spröde |
+| Höchste Steifigkeit, geringes Gewicht | **Bambu ASA-CF** · **Bambu PETG-CF** |
+| Steifigkeit ohne geschlossene Kammer | **Bambu PETG-CF** |
 | Dichtungen, Puffer, griffige Auflagen | **SUNLU TPU** |
 | Belastbar **und** schnell | **Bambu PETG HF** |
 | Leuchteffekt, dekorativ | Bambu PLA Glow (schnellstes) · SUNLU PLA Glow |
@@ -94,9 +119,12 @@ Volumenstrom bezogen auf den X1 Carbon mit 0.4-mm-Düse; die übrigen Drucker we
 **Wärmefestigkeit ist das Hauptkriterium bei der Materialklasse.** PLA gibt ab 45 – 55 °C
 nach — das erreicht ein Auto im Sommer mühelos. Für alles, was Wärme oder dauerhafte
 Last sieht, ist PETG die richtige Wahl, auch wenn es im Druck mehr Aufmerksamkeit
-verlangt. Oberhalb von 70 °C hilft auch PETG nicht mehr; dort beginnt der Bereich von
-[ABS](esun-abs.md), das als einziges Material hier einen Glasübergang von 100 °C
-mitbringt — und als einziges eine geschlossene Kammer verlangt.
+verlangt. Oberhalb von 70 °C hilft auch PETG nicht mehr; dort beginnt der Bereich der
+Kammermaterialien: [eSUN ABS+](esun-abs.md), [Bambu ABS](bambu-abs.md) und
+[Bambu ASA](bambu-asa.md) halten 100 °C, [Bambu ASA-CF](bambu-asa-cf.md) als
+einziges 108 °C. Alle vier verlangen eine geschlossene Kammer und sind auf der
+A1 mini nicht verfügbar. Im Freien kommt ein zweites Kriterium hinzu: nur die beiden
+ASA-Varianten sind UV-stabil.
 
 **TPU ist ein Sonderfall.** Es konkurriert mit keinem der anderen Materialien, weil es
 etwas anderes kann: dauerhaft nachgeben, ohne zu brechen. Der Preis ist der
@@ -130,6 +158,35 @@ Beim Volumenstrom gehen die Hersteller dagegen auseinander:
 
 Bambus feineres Pigment stört den Schmelzfluss deutlich weniger. Für größere
 Leuchtteile ist das der entscheidende Unterschied.
+
+---
+
+## Was die faserverstärkten Varianten unterscheidet
+
+Beide CF-Materialien enthalten gemahlene Kohlenstofffaser. Daraus folgt unabhängig
+von der Matrix:
+
+- gehärtete Düse zwingend
+- 0.2 mm nicht verwendbar — für **kein** faserverstärktes Material der Bibliothek
+  existiert ein 0.2-mm-Profil, die Faserlänge liegt in der Größenordnung der Bohrung
+- deutlich steifer, aber spröde: ein CF-Teil verbiegt sich nicht, es bricht
+- immer mattschwarz, keine Farb- oder Klarvarianten
+- kaum Fädenbildung — die Fasern erhöhen die Schmelzviskosität
+
+Der Unterschied liegt in der Matrix:
+
+| | [PETG-CF](bambu-petg-cf.md) | [ASA-CF](bambu-asa-cf.md) |
+|---|---|---|
+| Glasübergang | 70 °C | **108 °C** |
+| Geschlossene Kammer | nicht nötig | **zwingend** |
+| Verfügbar auf | allen sechs Geräten | fünf — ohne A1 mini |
+| Volumenstrom 0.4 mm | 11.5 | **18.0** |
+| UV-stabil | nein | **ja** |
+
+> Bambu setzt bei PETG-CF `required_nozzle_HRC = 40`, bei ASA-CF dagegen nur **3**.
+> Das ist eine Inkonsistenz der Bibliothek, keine Materialeigenschaft; dieses
+> Repository markiert **beide** als abrasiv. Die Begründung steht im
+> [ASA-CF-Datenblatt](bambu-asa-cf.md#zur-gehärteten-düse--bewusste-abweichung-vom-herstellerprofil).
 
 ---
 

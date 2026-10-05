@@ -67,10 +67,12 @@ einer Stufe dort nicht verfügbar ist, wählt der Generator automatisch das
 nächstgelegene freigegebene Profil innerhalb der Maschinengrenzen. Betroffene Werte
 sind in der [Profilmatrix](../matrix.md) mit ⁽¹⁾ markiert.
 
-Umgekehrt fehlt manchen Geräten das Basisprofil für ein ganzes Material: Für ABS
-liefert Bambu auf der A1 mini keines, weil Bauraum und Bettleistung das Material
-nicht tragen. Solche Materialien tragen in `src/filaments/` einen `printers`-Schlüssel
-und erscheinen in der Matrix für das betroffene Gerät als `—`.
+Umgekehrt fehlt manchen Geräten das Basisprofil für ein ganzes Material: Für die
+Kammermaterialien **ABS, ASA und ASA-CF** liefert Bambu auf der A1 mini keines, weil
+Bauraum und Bettleistung sie nicht tragen. Solche Materialien tragen in
+`src/filaments/` einen `printers`-Schlüssel und erscheinen in der Matrix für das
+betroffene Gerät als `—`. Das faserverstärkte PETG-CF ist davon nicht betroffen — es
+braucht keine geschlossene Kammer und läuft auf allen sechs Geräten.
 
 ---
 
