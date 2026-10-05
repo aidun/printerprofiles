@@ -74,6 +74,7 @@ class TestSources(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.printers, cls.filaments, cls.levels = generate.load_sources()
+        cls.lib = Library()
 
     def test_all_printers_and_nozzles_present(self):
         self.assertEqual(set(self.printers),
@@ -89,7 +90,7 @@ class TestSources(unittest.TestCase):
         for key, filament in self.filaments.items():
             self.assertTrue(keys <= set(filament), f"{key} is missing keys")
             self.assertEqual(filament["id"], key)
-            self.assertIn(filament["brand"], {"SUNLU", "eSUN", "Bambu Lab"})
+            self.assertIn(filament["brand"], {"SUNLU", "eSUN", "Geeetech", "Bambu Lab"})
             self.assertIn(filament["material"],
                           {"PLA", "PETG", "PETG-CF", "TPU", "ABS", "ASA", "ASA-CF"})
             orders.append(filament["order"])
@@ -120,7 +121,7 @@ class TestSources(unittest.TestCase):
         # for which the library ships no profile anyway.
         fibre = sorted(k for k, f in self.filaments.items()
                        if f["material"].endswith("-CF"))
-        self.assertEqual(fibre, ["bambu-asa-cf", "bambu-petg-cf"])
+        self.assertEqual(fibre, ["bambu-asa-cf", "bambu-petg-cf", "esun-petg-cf"])
         for key in fibre:
             self.assertTrue(self.filaments[key]["abrasive"], key)
             self.assertTrue(self.filaments[key]["hardened"], key)
@@ -135,12 +136,28 @@ class TestSources(unittest.TestCase):
                                  generate.released_for(filament, self.printers), key)
                 self.assertGreaterEqual(filament["temperature"]["bed"], 90, key)
 
+    def test_silk_pla_has_no_02_profile_in_the_library(self):
+        # 'Generic PLA Silk' is the only base profile for silk PLA, and the
+        # library ships no 0.2 mm variant of it on any of the six machines.
+        # The restriction is the library's, not a trait of the material.
+        silk = [k for k, f in self.filaments.items()
+                if f["base"] == "Generic PLA Silk"]
+        self.assertEqual(silk, ["geeetech-pla-silk"])
+        for key in silk:
+            self.assertEqual(self.filaments[key]["nozzles"], ["0.4", "0.6"], key)
+            for printer in self.printers.values():
+                machine = printer["machine_name"].format(n="0.2")
+                with self.assertRaises(KeyError):
+                    self.lib.filament_base("Generic PLA Silk", machine)
+
     def test_every_other_filament_covers_all_three_nozzles(self):
-        # Only three documented traits may drop the 0.2 mm nozzle: abrasive
-        # (glow and fibre-filled) and flexible (TPU). Everything else carries
-        # all three.
+        # Only four documented reasons may drop the 0.2 mm nozzle: abrasive
+        # (glow and fibre-filled), flexible (TPU) and a missing base profile
+        # (silk, see above). Everything else carries all three.
         for key, filament in self.filaments.items():
             if filament["abrasive"] or filament["flexible"]:
+                continue
+            if filament["base"] == "Generic PLA Silk":
                 continue
             self.assertEqual(filament["nozzles"], ["0.2", "0.4", "0.6"], key)
 
@@ -196,7 +213,7 @@ class TestGeneratedPresets(unittest.TestCase):
         filament = sum(len(f["nozzles"]) * len(generate.released_for(f, self.printers))
                        for f in self.filaments.values())
         process = len(self.printers) * 3 * len(self.levels)
-        self.assertEqual((filament, process), (325, 54))
+        self.assertEqual((filament, process), (418, 54))
 
     def test_verified_reference_preset_is_reproduced(self):
         # Values confirmed on the machine for SUNLU PETG Glow, H2C, 0.4 mm.
@@ -256,8 +273,8 @@ class TestGeneratedPresets(unittest.TestCase):
                 self.assertEqual(filament["base"], filament["label"])
             else:
                 self.assertIn(filament["base"],
-                              {"Generic PLA", "Generic PETG",
-                               "Generic TPU", "Generic ABS"})
+                              {"Generic PLA", "Generic PLA Silk", "Generic PETG",
+                               "Generic PETG-CF", "Generic TPU", "Generic ABS"})
 
     def test_volumetric_flow_scales_with_the_printer(self):
         values = {}
@@ -267,6 +284,35 @@ class TestGeneratedPresets(unittest.TestCase):
             values[key] = float(preset["filament_max_volumetric_speed"][0])
         self.assertGreater(values["h2c"], values["x1c"])
         self.assertGreater(values["x1c"], values["a1mini"])
+
+    def test_volumetric_flow_caps_follow_the_library(self):
+        # Where the library states a ceiling below the scaled X1C value, the
+        # material carries it in 'volumetric_flow_cap'. The numbers are not
+        # hand-written: every one of them is checked against the base profile.
+        capped = {k: f for k, f in self.filaments.items()
+                  if "volumetric_flow_cap" in f}
+        self.assertEqual(sorted(capped), ["bambu-petg-cf", "esun-petg-cf"])
+        for key, filament in capped.items():
+            for printer_id, cap in filament["volumetric_flow_cap"].items():
+                self.assertIn(printer_id, self.printers, key)
+                printer = self.printers[printer_id]
+                for nozzle in filament["nozzles"]:
+                    machine = generate.machine_name(printer, nozzle)
+                    base = self.lib.filament_base(filament["base"], machine)
+                    stated = float(self.lib.resolved(
+                        self.lib.filaments,
+                        base)["filament_max_volumetric_speed"][0])
+                    self.assertEqual(cap, stated, f"{key} {printer_id} {nozzle}")
+                    # A cap that does not bite would only be noise.
+                    self.assertLess(cap,
+                                    filament["volumetric_flow"][nozzle]
+                                    * printer["flow_factor"],
+                                    f"{key} {printer_id} {nozzle}")
+                    _, preset, _ = generate.build_filament(
+                        self.lib, printer_id, printer, filament, nozzle)
+                    self.assertEqual(
+                        preset["filament_max_volumetric_speed"][0],
+                        generate.fmt(cap), f"{key} {printer_id} {nozzle}")
 
     def test_process_preset_inherits_the_base_array_format(self):
         _, preset, _ = generate.build_process(

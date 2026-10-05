@@ -146,15 +146,17 @@ Fädenbildung bei unveränderten Einstellungen.
 |---|---|---|
 | Alle PLA-Varianten (auch PLA+, Glow, transparent) | 45 °C / 6 h | gering |
 | Alle PETG-Varianten (auch Glow, transparent) | 65 °C / 8 h | **hoch** |
-| PETG-CF | 70 °C / 8 h | **hoch** |
+| PETG-CF | 65 – 70 °C / 8 h | **hoch** |
 | TPU | 50 °C / 8 h | **sehr hoch** |
 | ABS | 70 – 80 °C / 4 – 8 h | gering |
 | ASA und ASA-CF | 80 °C / 8 h | gering |
 
-Die Werte gelten herstellerübergreifend für alle 21 Materialien; die
+Die Werte gelten herstellerübergreifend für alle 27 Materialien; die
 [Datenblätter](filament/README.md) führen sie je Material einzeln. Bei ABS hängt die
 Dauer vom Hersteller ab: [eSUN ABS+](filament/esun-abs.md) 70 °C / 4 h,
-[Bambu ABS](filament/bambu-abs.md) 80 °C / 8 h.
+[SUNLU ABS](filament/sunlu-abs.md) 80 °C / 6 h, [Bambu ABS](filament/bambu-abs.md)
+80 °C / 8 h. Bei PETG-CF ebenso: [Bambu PETG-CF](filament/bambu-petg-cf.md) 70 °C,
+[eSUN PETG-CF](filament/esun-petg-cf.md) 65 °C — beide 8 Stunden.
 
 TPU ist der Extremfall: Es nimmt Feuchtigkeit schneller auf als jedes andere Material
 hier und blubbert dann hörbar an der Düse. Eine offen liegende Spule ist nach wenigen

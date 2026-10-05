@@ -116,6 +116,20 @@ def write(path: Path, data: dict) -> None:
 # Filament presets
 # --------------------------------------------------------------------------
 
+def volumetric_flow(filament: dict, printer_id: str, printer: dict, nozzle: str) -> float:
+    """The volumetric flow for one printer, nozzle and material.
+
+    The base value in src/filaments/ is the X1C figure; 'flow_factor' scales it
+    to the hotend of the machine. The optional 'volumetric_flow_cap' table caps
+    the result per printer, which is needed wherever the library states a
+    ceiling below the scaled value — the single-extruder bed slingers do that
+    for fibre-filled material.
+    """
+    flow = filament["volumetric_flow"][nozzle] * printer["flow_factor"]
+    cap = filament.get("volumetric_flow_cap", {}).get(printer_id)
+    return min(flow, cap) if cap is not None else flow
+
+
 def build_filament(lib, printer_id, printer, filament, nozzle):
     machine = machine_name(printer, nozzle)
     base = lib.filament_base(filament["base"], machine)
@@ -124,7 +138,7 @@ def build_filament(lib, printer_id, printer, filament, nozzle):
 
     temp = filament["temperature"]
     cooling = filament["cooling"]
-    flow = filament["volumetric_flow"][nozzle] * printer["flow_factor"]
+    flow = volumetric_flow(filament, printer_id, printer, nozzle)
 
     preset = {
         "type": "filament",

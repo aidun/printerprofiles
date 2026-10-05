@@ -30,8 +30,11 @@ Basiswert, Faktor 1.00. Werte in mm³/s:
 | SUNLU PETG | 1 | 14 | 16 |
 | SUNLU PETG Glow | — | 11 | 14.5 |
 | SUNLU TPU | — | 3.2 | 3.2 |
+| SUNLU ABS | 2 | 15 | 15 |
 | eSUN ABS+ | 2 | 15 | 15 |
+| eSUN PETG-CF | — | 11.5 | 11.5 |
 | Bambu PETG-CF | — | 11.5 | 11.5 |
+| Bambu ABS | 2 | 16 | 16 |
 | Bambu ASA | 2 | 18 | 18 |
 | Bambu ASA-CF | — | 18 | 18 |
 

@@ -1,0 +1,47 @@
+id                           = "geeetech-pla-silk"
+label                        = "Geeetech PLA Silk"
+order                        = 17
+short                        = "PLA Silk"
+brand                        = "Geeetech"
+material                     = "PLA"
+base                         = "Generic PLA Silk"
+abrasive                     = false
+hardened                     = false
+transparent                  = false
+flexible                     = false
+status                       = "baseline"
+drying                       = "45 °C / 6 h"
+storage                      = "trocken, Silikagel"
+nozzles                      = ["0.4", "0.6"]
+description                  = "PLA mit Glanzadditiv. Die seidige Oberfläche entsteht durch eine gestreckte Schmelze und braucht deshalb Wärme und wenig Luft — gekühlt wie normales PLA wird aus dem Glanz eine stumpfe, streifige Fläche. Der Volumenstrom liegt mit 7.5 mm³/s bei knapp zwei Dritteln von Standard-PLA; der Glanz verträgt kein Tempo."
+
+[temperature]
+nozzle                       = 215
+nozzle_initial               = 220
+range_low                    = 200
+range_high                   = 230
+vitrification                = 60
+bed                          = 60
+bed_initial                  = 65
+
+[flow]
+ratio                        = 0.98
+
+# Volumetric flow (7.5) and flow ratio (0.98) from 'Generic PLA Silk' of the
+# Bambu library — the only base profile for silk PLA, and the reason this
+# material carries no 0.2 mm entry: the library ships no silk profile for that
+# nozzle on any of the six printers.
+[volumetric_flow]
+"0.4" = 7.5
+"0.6" = 7.5
+
+[cooling]
+fan_min_speed                = 40
+fan_max_speed                = 80
+overhang_fan_speed           = 100
+slow_down_layer_time         = 6
+fan_cooling_layer_time       = 30
+close_fan_the_first_x_layers = 1
+
+[retraction]
+z_hop                        = 0.4

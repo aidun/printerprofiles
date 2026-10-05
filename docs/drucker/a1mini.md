@@ -30,12 +30,17 @@ Limit der Aufschmelzleistung.
 | SUNLU PETG | 0.8 | 11.9 | 13.6 |
 | SUNLU PETG Glow | — | 9.3 | 12.3 |
 | SUNLU TPU | — | 2.7 | 2.7 |
+| SUNLU ABS | — | — | — |
 | eSUN ABS+ | — | — | — |
-| Bambu PETG-CF | — | 9.8 | 9.8 |
+| eSUN PETG-CF | — | **8** | **8** |
+| Bambu PETG-CF | — | **9** | **9** |
+| Bambu ABS | — | — | — |
 | Bambu ASA | — | — | — |
 | Bambu ASA-CF | — | — | — |
 
-`—` heißt: nicht ausgeliefert. Glow-Material ist für die 0.2-mm-Düse gesperrt, flexibles TPU ebenfalls — bei beiden begrenzt nicht die Düse den Durchsatz. Für die faserverstärkten Materialien PETG-CF und ASA-CF liefert Bambu überhaupt kein 0.2-mm-Profil; die Faserlänge liegt in der Größenordnung der Bohrung. Für die Kammermaterialien ABS, ASA und ASA-CF liefert Bambu auf der A1 mini kein Basisprofil; Bauraum und Bettleistung tragen sie nicht. PETG-CF ist als einziges faserverstärktes Material auch hier verfügbar.
+`—` heißt: nicht ausgeliefert. Glow-Material ist für die 0.2-mm-Düse gesperrt, flexibles TPU ebenfalls — bei beiden begrenzt nicht die Düse den Durchsatz. Für die faserverstärkten Materialien PETG-CF und ASA-CF liefert Bambu überhaupt kein 0.2-mm-Profil; die Faserlänge liegt in der Größenordnung der Bohrung. Für die Kammermaterialien ABS, ASA und ASA-CF liefert Bambu auf der A1 mini kein Basisprofil; Bauraum und Bettleistung tragen sie nicht. Die beiden PETG-CF sind die einzigen faserverstärkten Materialien, die auch hier laufen.
+
+> **Zwei Werte stammen nicht aus dem Durchsatzfaktor.** `Bambu PETG-CF @BBL A1M` nennt 9 mm³/s und `Generic PETG-CF @BBL A1M` 8 mm³/s ausdrücklich — beide unterhalb dessen, was der Faktor aus dem X1C-Wert ableiten würde. Dieses Repository trägt sie als Deckel in `[volumetric_flow_cap]` und prüft jeden einzelnen gegen das Basisprofil.
 
 ## Schichthöhen
 

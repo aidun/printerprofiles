@@ -1,0 +1,50 @@
+id                           = "geeetech-pla-plus-2"
+label                        = "Geeetech PLA+ 2.0"
+order                        = 15
+short                        = "PLA+"
+brand                        = "Geeetech"
+material                     = "PLA"
+base                         = "Generic PLA"
+abrasive                     = false
+hardened                     = false
+transparent                  = false
+flexible                     = false
+status                       = "baseline"
+drying                       = "45 °C / 6 h"
+storage                      = "trocken, Silikagel"
+nozzles                      = ["0.2", "0.4", "0.6"]
+description                  = "Zähmodifiziertes PLA der zweiten Generation. Geeetech gibt für sein PLA 200 °C vor; die zähere Schmelze des PLA+ wird hier 10 °C heißer gefahren, bleibt aber im Fenster des Herstellers. Volumenstrom, Flussrate und Glasübergang stammen unverändert aus dem Geeetech-eigenen PLA-Profil."
+
+[temperature]
+nozzle                       = 210
+nozzle_initial               = 215
+range_low                    = 195
+range_high                   = 230
+vitrification                = 60
+bed                          = 60
+bed_initial                  = 65
+
+[flow]
+ratio                        = 0.98
+
+# Vendor values from the Geeetech profiles shipped with Bambu Studio
+# ('Generic PLA @Geeetech' and its parent 'fdm_filament_pla'):
+# filament_max_volumetric_speed = 12, filament_flow_ratio = 0.98,
+# temperature_vitrification = 60. Geeetech ships no nozzle-specific profiles,
+# so 0.2 mm carries the value of 'Generic PLA @0.2 nozzle' from the Bambu
+# library and 0.6 mm repeats the 0.4 value rather than an invented ramp.
+[volumetric_flow]
+"0.2" = 1.6
+"0.4" = 12.0
+"0.6" = 12.0
+
+[cooling]
+fan_min_speed                = 60
+fan_max_speed                = 100
+overhang_fan_speed           = 100
+slow_down_layer_time         = 4
+fan_cooling_layer_time       = 30
+close_fan_the_first_x_layers = 1
+
+[retraction]
+z_hop                        = 0.4

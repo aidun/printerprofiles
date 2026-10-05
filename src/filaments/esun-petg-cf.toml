@@ -1,0 +1,60 @@
+id                           = "esun-petg-cf"
+label                        = "eSUN PETG-CF"
+order                        = 13
+short                        = "PETG-CF"
+brand                        = "eSUN"
+material                     = "PETG-CF"
+base                         = "Generic PETG-CF"
+abrasive                     = true
+hardened                     = true
+transparent                  = false
+flexible                     = false
+status                       = "baseline"
+drying                       = "65 °C / 8 h"
+storage                      = "zwingend trocken"
+nozzles                      = ["0.4", "0.6"]
+description                  = "Kurzfaserverstärktes PETG von eSUN. eSUN belegt gegenüber ungefülltem PETG 84 % mehr Biegefestigkeit und ein knapp dreifaches Biegemodul; Wärmeformbeständigkeit 70 °C. Läuft rund 5 °C kühler als das Bambu PETG-CF und auf einem wärmeren Bett, auf der A1 und A1 mini begrenzt das Basisprofil den Volumenstrom hart auf 8 mm³/s."
+
+[temperature]
+# eSUN: Düse 240 – 260 °C, Bett 75 – 90 °C. Das Basisprofil fährt 255 °C bei
+# 70 °C Bett; die Düse folgt der Mitte des eSUN-Fensters, das Bett dessen
+# unterer Hälfte — mehr Bett hilft bei faserverstärktem PETG gegen Ablösen.
+nozzle                       = 250
+nozzle_initial               = 255
+range_low                    = 240
+range_high                   = 260
+# HDT 70 °C aus dem eSUN-Datenblatt.
+vitrification                = 70
+bed                          = 80
+bed_initial                  = 85
+
+[flow]
+ratio                        = 0.95
+
+# Values from 'Generic PETG-CF @BBL X1C': 11.5 mm³/s on the standard extruder.
+# The library ships no 0.6-specific profile, so 0.6 keeps the same value and the
+# curve stays flat on purpose — and no 0.2 mm profile for any fibre material.
+[volumetric_flow]
+"0.4" = 11.5
+"0.6" = 11.5
+
+# 'Generic PETG-CF @BBL A1' and '@BBL A1M' state 8 mm³/s outright, far below
+# what flow_factor derives from the X1C value. The library wins: a ceiling above
+# what the hotend melts does not print faster, it under-extrudes.
+[volumetric_flow_cap]
+a1     = 8.0
+a1mini = 8.0
+
+# eSUN prints the fan at 100 % on its sheet; the library runs PETG-CF at 5 – 40 %
+# and only opens up over overhangs. The library value stays — PETG loses layer
+# adhesion under full cooling, and the fibre does not change that.
+[cooling]
+fan_min_speed                = 5
+fan_max_speed                = 40
+overhang_fan_speed           = 100
+slow_down_layer_time         = 6
+fan_cooling_layer_time       = 30
+close_fan_the_first_x_layers = 3
+
+[retraction]
+z_hop                        = 0.4

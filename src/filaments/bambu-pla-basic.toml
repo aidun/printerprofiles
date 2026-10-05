@@ -1,6 +1,6 @@
 id                           = "bambu-pla-basic"
 label                        = "Bambu PLA Basic"
-order                        = 13
+order                        = 19
 short                        = "PLA Basic"
 brand                        = "Bambu Lab"
 material                     = "PLA"

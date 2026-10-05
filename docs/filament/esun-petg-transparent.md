@@ -79,4 +79,4 @@ bringen optisch mehr als jede weitere Parameteränderung.
 
 ---
 
-[← eSUN PETG](esun-petg.md) · [Materialübersicht](README.md) · [eSUN ABS+ →](esun-abs.md)
+[← eSUN PETG](esun-petg.md) · [Materialübersicht](README.md) · [eSUN PETG-CF →](esun-petg-cf.md)

@@ -2,12 +2,12 @@
 
 # Bambu Lab Druckprofile
 
-**379 fertige Presets für Bambu Studio — 21 Materialien von SUNLU, eSUN und
-Bambu Lab, abgestimmt auf sechs Drucker, drei Düsen und drei Qualitätsstufen.
-Herunterladen, importieren, drucken.**
+**472 fertige Presets für Bambu Studio — 27 Materialien von SUNLU, eSUN,
+Geeetech und Bambu Lab, abgestimmt auf sechs Drucker, drei Düsen und drei
+Qualitätsstufen. Herunterladen, importieren, drucken.**
 
-[![Presets](https://img.shields.io/badge/Presets-379-2d7ff9)](docs/matrix.md)
-[![Materialien](https://img.shields.io/badge/Materialien-21-2d7ff9)](docs/filament/README.md)
+[![Presets](https://img.shields.io/badge/Presets-472-2d7ff9)](docs/matrix.md)
+[![Materialien](https://img.shields.io/badge/Materialien-27-2d7ff9)](docs/filament/README.md)
 [![Drucker](https://img.shields.io/badge/Drucker-6-2d7ff9)](docs/drucker/README.md)
 [![Slicer](https://img.shields.io/badge/Bambu%20Studio-2.7%2B-00a76f)](https://bambulab.com/en/download/studio)
 
@@ -31,7 +31,7 @@ Leistung des jeweiligen Hotends passt.
 | | |
 |---|---|
 | **6 Drucker** | H2C · X1 Carbon · P1S · P1P · A1 · A1 mini |
-| **21 Materialien** | 7 × SUNLU · 5 × eSUN · 9 × Bambu Lab — PLA, PETG, PETG-CF, TPU, ABS, ASA und ASA-CF, darunter 4 Glow, 5 transparente und 2 faserverstärkte |
+| **27 Materialien** | 8 × SUNLU · 6 × eSUN · 4 × Geeetech · 9 × Bambu Lab — PLA, PETG, PETG-CF, TPU, ABS, ASA und ASA-CF, darunter 4 Glow, 5 transparente, 3 faserverstärkte, 1 mattes und 1 seidenglänzendes |
 | **3 Düsen** | 0.2 mm · 0.4 mm · 0.6 mm |
 | **3 Stufen** | Qualität · Normal · Schnell |
 
@@ -129,8 +129,10 @@ Welche Kombination es gibt und mit welchen Werten, zeigt die
 > [Warum](docs/nozzles.md#warum-02-mm-bei-glow-gesperrt-ist).
 
 > 🧵 **TPU gibt es ebenfalls nicht für 0.2 mm** — dort begrenzt der Extruder, nicht
-> die Bohrung. 🔥 **ABS fehlt auf der A1 mini**, weil Bambu dort kein Basisprofil
-> dafür führt.
+> die Bohrung. 🧱 **Faserverstärktes Material ebenfalls nicht** — die Faserlänge liegt
+> in der Größenordnung der Bohrung. ✨ **Silk-PLA fehlt für 0.2 mm**, weil Bambu
+> Studio kein Elternprofil dafür mitbringt — kein Materialgrund.
+> 🔥 **ABS fehlt auf der A1 mini**, weil Bambu dort kein Basisprofil dafür führt.
 
 ---
 
@@ -197,7 +199,7 @@ Wer die Änderung gleich selbst einreichen möchte, findet den Weg in
 | Seite | Inhalt |
 |---|---|
 | [Installation](docs/install.md) | Import in Bambu Studio, Aktualisierung, Entfernen |
-| [Materialien](docs/filament/README.md) | 17 Datenblätter: Kennwerte, Volumenströme, Fallstricke |
+| [Materialien](docs/filament/README.md) | 27 Datenblätter: Kennwerte, Volumenströme, Fallstricke |
 | [Drucker](docs/drucker/README.md) | Eigenheiten der sechs Maschinen |
 | [Düsenkunde](docs/nozzles.md) | Wann 0.2, wann 0.4, wann 0.6 — und warum Glow die 0.2 sperrt |
 | [Profilmatrix](docs/matrix.md) | Welche Kombination existiert, mit welchen Werten, in welchem Zustand |

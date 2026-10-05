@@ -80,4 +80,4 @@ braucht, kommt an PETG nicht vorbei.
 
 ---
 
-[← SUNLU TPU](sunlu-tpu.md) · [Materialübersicht](README.md) · [eSUN PLA+ Glow →](esun-pla-plus-glow.md)
+[← SUNLU ABS](sunlu-abs.md) · [Materialübersicht](README.md) · [eSUN PLA+ Glow →](esun-pla-plus-glow.md)

@@ -30,8 +30,11 @@ PETG; das High-Flow-Hotend erlaubt die höchsten Volumenströme.
 | SUNLU PETG | 1.1 | 16.1 | 18.4 |
 | SUNLU PETG Glow | — | **12.6** 🟢 | 16.7 |
 | SUNLU TPU | — | 3.7 | 3.7 |
+| SUNLU ABS | 2.3 | 17.2 | 17.2 |
 | eSUN ABS+ | 2.3 | 17.2 | 17.2 |
+| eSUN PETG-CF | — | 13.2 | 13.2 |
 | Bambu PETG-CF | — | 13.2 | 13.2 |
+| Bambu ABS | 2.3 | 18.4 | 18.4 |
 | Bambu ASA | 2.3 | 20.7 | 20.7 |
 | Bambu ASA-CF | — | 20.7 | 20.7 |
 

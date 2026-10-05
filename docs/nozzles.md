@@ -75,19 +75,19 @@ hundert Gramm sichtbar aufgeweitet.
 |---|---|---|
 | Alle PLA- und PETG-Varianten ohne Leuchtpigment | Messing genügt | ungefüllt |
 | Alle transparenten Varianten | Messing genügt | ungefüllt |
-| TPU, ABS und ASA | Messing genügt | ungefüllt |
+| TPU sowie alle ABS- und ASA-Varianten | Messing genügt | ungefüllt |
 | SUNLU PLA Glow · SUNLU PETG Glow | **gehärtet zwingend** | Strontiumaluminat |
 | eSUN PLA+ Glow · Bambu PLA Glow | **gehärtet zwingend** | Strontiumaluminat |
-| Bambu PETG-CF · Bambu ASA-CF | **gehärtet zwingend** | Kohlenstofffaser |
+| Bambu PETG-CF · eSUN PETG-CF · Bambu ASA-CF | **gehärtet zwingend** | Kohlenstofffaser |
 
-Von den 21 Materialien dieses Repositories brauchen also genau sechs eine gehärtete
-Düse: die vier Glow-Varianten und die zwei faserverstärkten. Welches welches ist,
+Von den 27 Materialien dieses Repositories brauchen also genau sieben eine gehärtete
+Düse: die vier Glow-Varianten und die drei faserverstärkten. Welches welches ist,
 steht in der [Materialübersicht](filament/README.md) — dort trägt jedes betroffene
 Datenblatt die Kennzeichnung ⚠️.
 
 > Bambu selbst setzt bei ASA-CF nur `required_nozzle_HRC = 3` und widerspricht sich
 > damit gegenüber PETG-CF. Dieses Repository folgt hier nicht der Bibliothek, sondern
-> behandelt beide faserverstärkten Materialien gleich — Begründung im
+> behandelt alle faserverstärkten Materialien gleich — Begründung im
 > [ASA-CF-Datenblatt](filament/bambu-asa-cf.md#zur-gehärteten-düse--bewusste-abweichung-vom-herstellerprofil).
 
 Bambu liefert die gehärtete Variante unter der Bezeichnung *Hardened Steel* für alle
@@ -111,8 +111,9 @@ aber nicht zuverlässig drucken.
 Derselbe Mechanismus, nur ausgeprägter: Die gemahlenen Fasern sind 50 – 150 µm lang
 und liegen damit in der Größenordnung der Bohrung selbst. Für **kein**
 faserverstärktes Material führt Bambu überhaupt ein 0.2-mm-Profil — weder für die
-eigenen noch für die generischen. [Bambu PETG-CF](filament/bambu-petg-cf.md) und
-[Bambu ASA-CF](filament/bambu-asa-cf.md) sind deshalb auf 0.4 und 0.6 mm beschränkt.
+eigenen noch für die generischen. [Bambu PETG-CF](filament/bambu-petg-cf.md),
+[eSUN PETG-CF](filament/esun-petg-cf.md) und [Bambu ASA-CF](filament/bambu-asa-cf.md)
+sind deshalb auf 0.4 und 0.6 mm beschränkt.
 
 ### Warum 0.2 mm bei TPU fehlt
 
@@ -124,6 +125,32 @@ Geräte ein Basisprofil für 0.2 mm; dieses Repository erfindet keines dazu.
 
 Dass der Volumenstrom bei TPU über 0.4 und 0.6 mm **identisch** bleibt, hat dieselbe
 Ursache: Die größere Bohrung hebt nicht an, was der Extruder durchschieben kann.
+
+### Warum 0.2 mm bei Silk-PLA fehlt
+
+Hier liegt es weder am Material noch am Extruder, sondern allein an der Bibliothek.
+`Generic PLA Silk` ist das einzige Basisprofil für Silk-PLA, das Bambu Studio
+mitbringt, und eine 0.2-mm-Variante davon existiert auf **keinem** der sechs Geräte.
+[Geeetech PLA Silk](filament/geeetech-pla-silk.md) führt deshalb nur 0.4 und 0.6 mm.
+
+Technisch wäre die Kombination unauffällig — Silk-PLA ist nicht gefüllt, nicht abrasiv
+und nicht weich. Dieses Repository erfindet aber grundsätzlich kein Elternprofil, das
+die Bibliothek nicht hat, weil Bambu Studio ein Preset ohne gültiges Elternprofil
+stillschweigend verwirft. Ein Test prüft die Lücke gegen die installierte Bibliothek:
+Kommt eines Tages ein 0.2-mm-Silk-Profil dazu, schlägt er fehl und holt die Düse
+zurück.
+
+### Die vier Gründe im Überblick
+
+| Grund | Betroffen | Ursache |
+|---|---|---|
+| Korngröße | alle Glow-Varianten | Pigmentagglomerate setzen die Bohrung zu |
+| Faserlänge | alle CF-Materialien | Faser in der Größenordnung der Bohrung; kein Profil |
+| Vorschubdruck | TPU | weiches Filament knickt aus; kein Profil |
+| fehlendes Profil | Silk-PLA | Lücke der Bibliothek, kein Materialgrund |
+
+Mehr Gründe gibt es nicht: Jedes andere Material in diesem Repository führt alle drei
+Durchmesser, und ein Test hält das fest.
 
 ---
 

@@ -1,0 +1,56 @@
+id                           = "sunlu-abs"
+label                        = "SUNLU ABS"
+order                        = 8
+short                        = "ABS"
+brand                        = "SUNLU"
+material                     = "ABS"
+base                         = "Generic ABS"
+abrasive                     = false
+hardened                     = false
+transparent                  = false
+flexible                     = false
+status                       = "baseline"
+drying                       = "80 °C / 6 h"
+storage                      = "trocken, Silikagel; ABS ist weniger hygroskopisch als PETG"
+nozzles                      = ["0.2", "0.4", "0.6"]
+# No ABS base profile exists for the A1 mini in the Bambu library — its build
+# volume and bed power do not carry the material.
+printers                     = ["h2c", "x1c", "p1s", "p1p", "a1"]
+description                  = "Schlagfestes ABS aus SUNLUs Standardlinie. SUNLU gibt die Glasübergangstemperatur mit 108.9 °C an — der höchste Wert aller ABS-Varianten hier — und verlangt dafür ein heißeres Bett und eine geschlossene Kammer. Volumenstrom und Kühlung entsprechen dem eSUN ABS+, beide erben vom selben Basisprofil."
+
+[temperature]
+# SUNLU nennt zwei geschwindigkeitsabhängige Fenster: 250 – 260 °C bei
+# 50 – 100 mm/s, 260 – 280 °C bei 100 – 200 mm/s. 260 °C liegt in beiden.
+nozzle                       = 260
+nozzle_initial               = 265
+range_low                    = 250
+range_high                   = 280
+# Tg 108.9 °C aus dem SUNLU-Datenblatt, abgerundet.
+vitrification                = 108
+# SUNLU gibt 80 – 100 °C vor; die obere Hälfte, weil bei ABS Bett und Kammer
+# über den Verzug entscheiden. Das Basisprofil liegt je Gerät bei 90 – 100 °C.
+bed                          = 95
+bed_initial                  = 100
+
+[flow]
+ratio                        = 0.95
+
+# Identical to eSUN ABS+ and for the same reason: 0.4/0.6 from 'Generic ABS',
+# 0.2 from 'Generic ABS @0.2 nozzle'. SUNLU ships no profile of its own for ABS,
+# so the throughput is the one of the generic base — only temperature, Tg and
+# drying come from the vendor sheet.
+[volumetric_flow]
+"0.2" = 2.0
+"0.4" = 15.0
+"0.6" = 15.0
+
+[cooling]
+fan_min_speed                = 10
+fan_max_speed                = 30
+overhang_fan_speed           = 60
+slow_down_layer_time         = 5
+fan_cooling_layer_time       = 30
+close_fan_the_first_x_layers = 3
+
+[retraction]
+z_hop                        = 0.4

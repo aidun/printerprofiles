@@ -1,6 +1,6 @@
 id                           = "bambu-petg-hf"
 label                        = "Bambu PETG HF"
-order                        = 16
+order                        = 22
 short                        = "PETG HF"
 brand                        = "Bambu Lab"
 material                     = "PETG"

@@ -1,6 +1,6 @@
 id                           = "bambu-petg-cf"
 label                        = "Bambu PETG-CF"
-order                        = 18
+order                        = 24
 short                        = "PETG-CF"
 brand                        = "Bambu Lab"
 material                     = "PETG-CF"
@@ -34,6 +34,13 @@ ratio                        = 0.95
 [volumetric_flow]
 "0.4" = 11.5
 "0.6" = 11.5
+
+# 'Bambu PETG-CF @BBL A1' and '@BBL A1M' state 9 mm³/s outright, below what
+# flow_factor derives from the X1C value. The library wins: a ceiling above what
+# the hotend melts does not print faster, it under-extrudes.
+[volumetric_flow_cap]
+a1     = 9.0
+a1mini = 9.0
 
 [cooling]
 fan_min_speed                = 5

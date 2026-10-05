@@ -81,4 +81,4 @@ eine Düsenstufe nach oben extrapoliert.
 
 ---
 
-[← eSUN ABS+](esun-abs.md) · [Materialübersicht](README.md) · [Bambu PLA Glow →](bambu-pla-glow.md)
+[← Geeetech PETG](geeetech-petg.md) · [Materialübersicht](README.md) · [Bambu PLA Glow →](bambu-pla-glow.md)

@@ -3,10 +3,11 @@
 [← Materialübersicht](README.md) · Status: 🔵 Startwert · Basis: `Generic ABS`
 
 Schlagfestes, temperaturbeständiges ABS. Der Glasübergang liegt bei 100 °C — damit
-ist dies das einzige Material im Sortiment, das ein Teil im Sommerauto oder neben
-einem warmen Gerät übersteht. Der Preis dafür ist der anspruchsvollste Druckablauf:
-ABS schrumpft beim Abkühlen, und jeder Luftzug macht daraus Warping oder einen Riss
-zwischen den Schichten.
+übersteht ein Teil daraus das Sommerauto oder den Platz neben einem warmen Gerät,
+anders als jedes PLA und jedes PETG hier. Von den fünf Kammermaterialien hat es den
+schonendsten Druckablauf — niedrigste Düsentemperatur, kürzeste Trocknung. Der Preis
+bleibt derselbe wie bei allen: ABS schrumpft beim Abkühlen, und jeder Luftzug macht
+daraus Warping oder einen Riss zwischen den Schichten.
 
 ---
 
@@ -112,4 +113,4 @@ idealerweise mit Aktivkohlefilter oder Abluft.
 
 ---
 
-[← eSUN PETG Transparent](esun-petg-transparent.md) · [Materialübersicht](README.md) · [Bambu PLA Basic →](bambu-pla-basic.md)
+[← eSUN PETG-CF](esun-petg-cf.md) · [Materialübersicht](README.md) · [Geeetech PLA+ 2.0 →](geeetech-pla-plus-2.md)

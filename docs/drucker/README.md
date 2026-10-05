@@ -71,8 +71,10 @@ Umgekehrt fehlt manchen Geräten das Basisprofil für ein ganzes Material: Für 
 Kammermaterialien **ABS, ASA und ASA-CF** liefert Bambu auf der A1 mini keines, weil
 Bauraum und Bettleistung sie nicht tragen. Solche Materialien tragen in
 `src/filaments/` einen `printers`-Schlüssel und erscheinen in der Matrix für das
-betroffene Gerät als `—`. Das faserverstärkte PETG-CF ist davon nicht betroffen — es
-braucht keine geschlossene Kammer und läuft auf allen sechs Geräten.
+betroffene Gerät als `—`. Die beiden faserverstärkten PETG-CF sind davon nicht
+betroffen — sie brauchen keine geschlossene Kammer und laufen auf allen sechs Geräten,
+auf der A1 und der A1 mini allerdings mit einem festen Deckel von 9 beziehungsweise
+8 mm³/s statt des skalierten Wertes.
 
 ---
 

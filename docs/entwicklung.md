@@ -29,14 +29,14 @@ src/*.toml   ──  tools/generate.py  ──▶  dist/*.json   ──▶  Bamb
 src/                 Quelldaten — hier wird bearbeitet
 ├── printers.toml      6 Drucker: Maschinenname, Hotend-Grenze, Leistungsfaktor
 ├── quality.toml       3 Stufen: Schichthöhen, Wände, Tempofaktoren
-└── filaments/        21 Materialien: Temperatur, Fluss, Kühlung
+└── filaments/        27 Materialien: Temperatur, Fluss, Kühlung
 tools/               Generator und Prüfung
 ├── bambulib.py        liest die Bambu-Studio-Profilbibliothek
 ├── generate.py        src/ → dist/
 ├── validate.py        prüft dist/ gegen die Bibliothek
 └── build_docs.py      erzeugt docs/matrix.md
 dist/                Ergebnis — hier wird importiert, nicht bearbeitet
-├── filament/         325 Presets
+├── filament/         418 Presets
 ├── process/           54 Presets
 └── _index.json        Metadaten aller Presets
 docs/                Dokumentation — Deutsch, von Hand außer matrix.md
@@ -109,13 +109,14 @@ Material derselben Klasse. Pflichtfelder:
 sind Quelle für die Dokumentation. Pflicht sind sie trotzdem, `tests/test_generate.py`
 wacht darüber.
 
-Dazu kommt ein optionaler Schlüssel:
+Dazu kommen zwei optionale Einträge:
 
 | Feld | Bedeutung |
 |---|---|
 | `printers` | Liste der Druckerkürzel aus `src/printers.toml`, für die das Material erzeugt wird. Fehlt der Schlüssel, gilt es für alle. Nötig, wenn die Bambu-Bibliothek für ein Gerät kein Basisprofil führt — bei `esun-abs` die A1 mini. |
+| `[volumetric_flow_cap]` | Obergrenze je Druckerkürzel, in mm³/s. Der skalierte Wert wird damit nach unten begrenzt. Nötig, wenn das Basisprofil eines Geräts ausdrücklich weniger freigibt als der Durchsatzfaktor ergibt — bei beiden PETG-CF die A1 und die A1 mini. |
 
-`test_printer_restrictions_match_the_library` prüft diese Liste in beide Richtungen
+`test_printer_restrictions_match_the_library` prüft die `printers`-Liste in beide Richtungen
 gegen die Bibliothek: Sie muss **genau** die Geräte nennen, deren Basisprofil
 tatsächlich auflöst. Ein zu großzügiger wie ein zu knapper Eintrag fällt auf.
 
@@ -130,7 +131,11 @@ Dazu kommen fünf Tabellen, die alle gezeigten Schlüssel brauchen:
 | `[retraction]` | `z_hop` |
 
 Die Volumenströme unter `[volumetric_flow]` beziehen sich immer auf den X1 Carbon;
-`flow_factor` aus `src/printers.toml` rechnet sie auf die übrigen Drucker um.
+`flow_factor` aus `src/printers.toml` rechnet sie auf die übrigen Drucker um. Steht für
+ein Gerät ein Eintrag in `[volumetric_flow_cap]`, gewinnt der kleinere der beiden Werte
+— `test_volumetric_flow_caps_follow_the_library` prüft jeden Deckel gegen
+`filament_max_volumetric_speed` des Basisprofils und schlägt auch dann an, wenn ein
+Deckel gar nicht mehr greift.
 
 > **Bambu-eigene Materialien** erben von ihrem Herstellerprofil, nicht von
 > `Generic …` — `base` ist dort identisch mit `label`. Ein Test wacht darüber.
@@ -156,7 +161,7 @@ nicht:
 | Volumenstrom 0.8 – 40 mm³/s, Flussrate 0.85 – 1.15 | Tippfehler bleiben unbemerkt |
 
 Der Lauf endet mit einer Zeile der Form
-`<n> checks, 0 errors, 379 presets.` und einem Exitcode ungleich null, sobald
+`<n> checks, 0 errors, 472 presets.` und einem Exitcode ungleich null, sobald
 etwas nicht stimmt.
 
 ---

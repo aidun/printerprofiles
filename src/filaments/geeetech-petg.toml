@@ -1,0 +1,50 @@
+id                           = "geeetech-petg"
+label                        = "Geeetech PETG"
+order                        = 18
+short                        = "PETG"
+brand                        = "Geeetech"
+material                     = "PETG"
+base                         = "Generic PETG"
+abrasive                     = false
+hardened                     = false
+transparent                  = false
+flexible                     = false
+status                       = "baseline"
+drying                       = "65 °C / 8 h"
+storage                      = "zwingend trocken"
+nozzles                      = ["0.2", "0.4", "0.6"]
+description                  = "PETG mit dem niedrigsten Temperaturfenster der drei PETG hier: Geeetech nennt 220 – 230 °C bei 70 – 80 °C Bett und ausdrücklich nur 30 – 40 % Lüfterleistung. Der Volumenstrom liegt mit 10 mm³/s unter dem der Konkurrenz — es ist Geeetechs eigene Angabe, keine Vorsicht dieses Repositories."
+
+[temperature]
+nozzle                       = 230
+nozzle_initial               = 235
+range_low                    = 220
+range_high                   = 260
+vitrification                = 80
+bed                          = 75
+bed_initial                  = 80
+
+[flow]
+ratio                        = 0.95
+
+# Vendor values from the Geeetech profiles shipped with Bambu Studio
+# ('Generic PETG @Geeetech' and its parent 'fdm_filament_pet'):
+# filament_max_volumetric_speed = 10, filament_flow_ratio = 0.95,
+# temperature_vitrification = 80, nozzle window 220 - 260. Geeetech ships no
+# nozzle-specific profiles, so 0.2 mm carries the value of
+# 'Generic PETG @0.2 nozzle' from the Bambu library.
+[volumetric_flow]
+"0.2" = 1.0
+"0.4" = 10.0
+"0.6" = 10.0
+
+[cooling]
+fan_min_speed                = 30
+fan_max_speed                = 40
+overhang_fan_speed           = 60
+slow_down_layer_time         = 8
+fan_cooling_layer_time       = 30
+close_fan_the_first_x_layers = 3
+
+[retraction]
+z_hop                        = 0.6

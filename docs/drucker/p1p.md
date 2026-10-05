@@ -29,8 +29,11 @@ identisch — es fehlen die Seitenwände, der Deckel und die Kammerentlüftung.
 | SUNLU PETG | 0.9 | 13.3 | 15.2 |
 | SUNLU PETG Glow | — | 10.4 | 13.8 |
 | SUNLU TPU | — | 3 | 3 |
+| SUNLU ABS | 1.9 | 14.2 | 14.2 |
 | eSUN ABS+ | 1.9 | 14.2 | 14.2 |
+| eSUN PETG-CF | — | 10.9 | 10.9 |
 | Bambu PETG-CF | — | 10.9 | 10.9 |
+| Bambu ABS | 1.9 | 15.2 | 15.2 |
 | Bambu ASA | 1.9 | 17.1 | 17.1 |
 | Bambu ASA-CF | — | 17.1 | 17.1 |
 

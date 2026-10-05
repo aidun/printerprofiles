@@ -1,6 +1,6 @@
 id                           = "bambu-petg-translucent"
 label                        = "Bambu PETG Translucent"
-order                        = 17
+order                        = 23
 short                        = "PETG Translucent"
 brand                        = "Bambu Lab"
 material                     = "PETG"

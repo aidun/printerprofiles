@@ -5,8 +5,9 @@
 Kurzfaserverstärktes PETG. Rund 15 % der Masse sind gemahlene Kohlenstofffasern, und
 die ändern das Material grundlegend: deutlich steifer, maßhaltiger und ohne
 Fädenbildung, dafür spröder und nur noch halb so schnell. Das einzige
-faserverstärkte Material im Sortiment, das auf **allen sechs Geräten** läuft und
-ohne geschlossene Kammer auskommt.
+Bambu-Material im Sortiment, das faserverstärkt ist, auf **allen sechs Geräten**
+läuft und ohne geschlossene Kammer auskommt. Daneben steht das
+[eSUN PETG-CF](esun-petg-cf.md) mit derselben Matrix und denselben Durchsätzen.
 
 ---
 
@@ -39,7 +40,8 @@ lassen, wie sie sind.
 ## Volumenstrom je Drucker und Düse
 
 Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
-[Durchsatzfaktor](../drucker/README.md#durchsatzfaktoren) skaliert.
+[Durchsatzfaktor](../drucker/README.md#durchsatzfaktoren) skaliert — **außer auf der
+A1 und der A1 mini**, siehe unten.
 
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
@@ -47,14 +49,22 @@ Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
 | X1 Carbon | — | 11.5 | 11.5 |
 | P1S | — | 10.9 | 10.9 |
 | P1P | — | 10.9 | 10.9 |
-| A1 | — | 10.3 | 10.3 |
-| A1 mini | — | 9.8 | 9.8 |
+| A1 | — | **9** | **9** |
+| A1 mini | — | **9** | **9** |
 
 > **Quelle der Werte.** Volumenstrom und Flussrate stammen aus
 > `Bambu PETG-CF @BBL X1C 0.4 nozzle`: 11.5 mm³/s auf dem Standardextruder bei
 > Flussrate 0.95. Für die 0.6-mm-Düse führt Bambu **kein eigenes Profil**; sie fällt
 > auf `Bambu PETG-CF @BBL X1C` zurück, das denselben Wert nennt. Die flache Kurve ist
 > deshalb keine Vereinfachung dieses Repositories, sondern die Herstellerangabe.
+
+> **Warum A1 und A1 mini bei 9 mm³/s stehen bleiben.**
+> `Bambu PETG-CF @BBL A1` und `@BBL A1M` nennen 9 mm³/s ausdrücklich — unterhalb
+> dessen, was der Durchsatzfaktor aus dem X1C-Wert ableiten würde (10.3 beziehungsweise
+> 9.8). Hier gewinnt die Bibliothek: eine Obergrenze über dem, was das Hotend
+> aufschmelzen kann, druckt nicht schneller, sondern unterextrudiert.
+> `src/filaments/bambu-petg-cf.toml` trägt die Deckel deshalb in einer eigenen Tabelle
+> `[volumetric_flow_cap]`, und ein Test prüft jeden einzelnen gegen das Basisprofil.
 
 > **Warum 0.2 mm fehlt.** Für **kein** faserverstärktes Material der Bibliothek
 > existiert ein 0.2-mm-Profil. Die Faserlänge liegt in der Größenordnung der
@@ -73,10 +83,11 @@ führt grundsätzlich den Standardwert, weil er auf jeder Maschine gilt.
 | Steifigkeit bei geringem Gewicht | **PETG-CF** — Drohnenrahmen, Halterungen, Hebel |
 | Maßhaltigkeit über Temperaturwechsel | **PETG-CF** — minimaler Schrumpf |
 | Mattschwarze Oberfläche ohne Nachbearbeitung | **PETG-CF** |
-| Faserverstärkung ohne geschlossene Kammer | **PETG-CF** — als einziges hier |
+| Faserverstärkung ohne geschlossene Kammer | **PETG-CF** — nur die beiden CF-PETG hier |
 | Schlagbelastung, Fallenlassen | [Bambu PETG HF](bambu-petg-hf.md) — CF bricht spröde |
 | Dauerhaft über 70 °C | [Bambu ASA-CF](bambu-asa-cf.md) |
 | Durchsichtige oder farbige Teile | PETG — CF ist immer schwarz |
+| Wärmeres Bett, kürzere Trocknung | [eSUN PETG-CF](esun-petg-cf.md) — 80 °C statt 70, 65 °C statt 70 |
 
 **Steif heißt nicht zäh.** Die Fasern erhöhen den E-Modul deutlich und senken die
 Bruchdehnung genauso deutlich. Ein PETG-CF-Teil verbiegt sich nicht, es bricht —

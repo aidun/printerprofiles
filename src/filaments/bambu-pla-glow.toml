@@ -1,6 +1,6 @@
 id                           = "bambu-pla-glow"
 label                        = "Bambu PLA Glow"
-order                        = 14
+order                        = 20
 short                        = "PLA Glow"
 brand                        = "Bambu Lab"
 material                     = "PLA"
