@@ -113,9 +113,6 @@ def build_filament(lib, printer_id, printer, filament, nozzle):
     temp = filament["temperature"]
     cooling = filament["cooling"]
     flow = filament["volumetric_flow"][nozzle] * printer["flow_factor"]
-    # No printer may be pushed beyond its hotend's melting capacity; the cap is
-    # set conservatively at the 0.6 mm level.
-    flow = min(flow, 30.0)
 
     preset = {
         "type": "filament",

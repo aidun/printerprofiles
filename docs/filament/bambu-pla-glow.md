@@ -31,7 +31,7 @@ stört.
 | Temperaturfenster | 210 – 230 °C | gleich |
 | Bett | **55 °C** (erste Schicht 60 °C) | gleich |
 | Glasübergang | 45 °C | gleich |
-| Flussrate | 0.99 | +0.01 |
+| Flussrate | 0.98 | gleich |
 | Lüfter | **100 %** durchgehend | gleich |
 | Z-Hop | 0.4 mm | gleich |
 | Düsen | 0.4 · 0.6 mm | **0.2 mm entfällt** |

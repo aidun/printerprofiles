@@ -80,10 +80,11 @@ Der Benutzerordner liegt hier:
 in der Regel nur eine.
 
 ```bash
-# macOS — Pfad zuerst prüfen, dann kopieren
-ZIEL=~/Library/Application\ Support/BambuStudio/user/*/
-cp dist/filament/*.json $ZIEL/filament/
-cp dist/process/*.json  $ZIEL/process/
+# macOS — der Pfad enthält ein Leerzeichen und ein *, deshalb die Schleife
+for ZIEL in ~/Library/Application\ Support/BambuStudio/user/*/; do
+  cp dist/filament/*.json "$ZIEL/filament/"
+  cp dist/process/*.json  "$ZIEL/process/"
+done
 ```
 
 Beim nächsten Start liest Studio die Dateien ein.

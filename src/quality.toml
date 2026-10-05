@@ -17,9 +17,7 @@
 
 [quality]
 label     = "Qualität"
-suffix    = "Qualitaet"
 order     = 1
-purpose   = "Sichtteile, feine Details, Miniaturen — Oberfläche vor Zeit"
 base_hint = ["High Quality", "Fine", "Balanced Quality", "Optimal", "Standard"]
 [quality.layer_height]
 "0.2" = 0.08
@@ -42,9 +40,7 @@ gap_infill_speed    = 0.60
 
 [normal]
 label     = "Normal"
-suffix    = "Normal"
 order     = 2
-purpose   = "Allzweck — ausgewogen zwischen Oberfläche, Festigkeit und Zeit"
 base_hint = ["Standard", "Optimal", "Balanced Quality", "High Quality", "Fine"]
 [normal.layer_height]
 "0.2" = 0.12
@@ -67,9 +63,7 @@ gap_infill_speed    = 1.00
 
 [fast]
 label     = "Schnell"
-suffix    = "Schnell"
 order     = 3
-purpose   = "Prototypen, Passtests, Funktionsteile ohne Sichtanspruch"
 base_hint = ["Draft", "Extra Draft", "Standard", "Balanced Strength", "Optimal"]
 [fast.layer_height]
 "0.2" = 0.14

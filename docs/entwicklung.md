@@ -27,7 +27,7 @@ src/*.toml   ──  tools/generate.py  ──▶  dist/*.json   ──▶  Bamb
 
 ```
 src/                 Quelldaten — hier wird bearbeitet
-├── printers.toml      5 Drucker: Hotend-Leistung, Bauraum, Extruder
+├── printers.toml      5 Drucker: Maschinenname, Hotend-Grenze, Leistungsfaktor
 ├── quality.toml       3 Stufen: Schichthöhen, Wände, Tempofaktoren
 └── filaments/        15 Materialien: Temperatur, Fluss, Kühlung
 tools/               Generator und Prüfung
@@ -40,7 +40,7 @@ dist/                Ergebnis — hier wird importiert, nicht bearbeitet
 ├── process/           45 Presets
 └── _index.json        Metadaten aller Presets
 docs/                Dokumentation — Deutsch, von Hand außer matrix.md
-tests/               24 Tests der Generatorlogik
+tests/               Tests der Generatorlogik
 ```
 
 Der Code ist durchgehend englisch, die Dokumentation durchgehend deutsch.
@@ -54,7 +54,7 @@ Reine Standardbibliothek, Python 3.11 oder neuer. Keine Installation, kein
 
 ```bash
 python3 tools/generate.py        # src/ → dist/
-python3 tools/validate.py        # 15808 Prüfungen gegen die Bambu-Bibliothek
+python3 tools/validate.py        # prüft dist/ gegen die Bambu-Bibliothek
 python3 tools/build_docs.py      # docs/matrix.md neu erzeugen
 python3 -m unittest discover -s tests
 ```
@@ -92,6 +92,7 @@ Material derselben Klasse. Pflichtfelder:
 | `id` | Dateiname ohne Endung, zugleich Schlüssel in `dist/_index.json` |
 | `label` | Anzeigename, erscheint im Preset-Namen |
 | `order` | Position in Dokumentation und Matrix, lückenlos ab 1 |
+| `short` | Kurzform für Tabellenspalten, etwa `PLA` oder `PETG-CF` |
 | `brand` | `SUNLU`, `eSUN` oder `Bambu Lab` |
 | `material` | `PLA` oder `PETG` |
 | `base` | Elternprofil aus Bambu Studio, etwa `Generic PETG` |
@@ -99,8 +100,26 @@ Material derselben Klasse. Pflichtfelder:
 | `transparent` | steuert den Klarheits-Hinweis in der Dokumentation |
 | `status` | `baseline` oder `validated-<drucker>-<düse>`, etwa `validated-h2c-04` |
 | `nozzles` | freigegebene Durchmesser; Glow-Material lässt `0.2` weg |
+| `drying` | Trocknungsempfehlung in der Form `45 °C / 6 h` |
+| `storage` | Lagerhinweis, etwa `trocken, Silikagel` |
+| `description` | zwei bis drei Sätze zum Material, für das Datenblatt |
 
-Die Volumenströme unter `[volumetric_flow]` beziehen sich immer auf den X1 Carbon.
+`short`, `drying`, `storage` und `description` wertet die Pipeline nicht aus — sie
+sind Quelle für die Dokumentation. Pflicht sind sie trotzdem, `tests/test_generate.py`
+wacht darüber.
+
+Dazu kommen fünf Tabellen, die alle gezeigten Schlüssel brauchen:
+
+| Tabelle | Schlüssel |
+|---|---|
+| `[temperature]` | `nozzle`, `nozzle_initial`, `range_low`, `range_high`, `vitrification`, `bed`, `bed_initial` |
+| `[flow]` | `ratio` — Flussrate zwischen 0.85 und 1.15 |
+| `[volumetric_flow]` | je freigegebene Düse ein Eintrag, Schlüssel als String: `"0.2"`, `"0.4"`, `"0.6"` |
+| `[cooling]` | `fan_min_speed`, `fan_max_speed`, `overhang_fan_speed`, `slow_down_layer_time`, `fan_cooling_layer_time`, `close_fan_the_first_x_layers` |
+| `[retraction]` | `z_hop` |
+
+Die Volumenströme unter `[volumetric_flow]` beziehen sich immer auf den X1 Carbon;
+`flow_factor` aus `src/printers.toml` rechnet sie auf die übrigen Drucker um.
 
 > **Bambu-eigene Materialien** erben von ihrem Herstellerprofil, nicht von
 > `Generic …` — `base` ist dort identisch mit `label`. Ein Test wacht darüber.
@@ -126,7 +145,7 @@ nicht:
 | Volumenstrom 0.8 – 40 mm³/s, Flussrate 0.85 – 1.15 | Tippfehler bleiben unbemerkt |
 
 Der Lauf endet mit einer Zeile der Form
-`15808 checks, 0 errors, 250 presets.` und einem Exitcode ungleich null, sobald
+`<n> checks, 0 errors, 250 presets.` und einem Exitcode ungleich null, sobald
 etwas nicht stimmt.
 
 ---
@@ -137,7 +156,7 @@ etwas nicht stimmt.
 python3 -m unittest discover -s tests -v
 ```
 
-Die 24 Tests decken vier Bereiche ab: Hilfsfunktionen des Generators, das Lesen der
+Die Tests decken vier Bereiche ab: Hilfsfunktionen des Generators, das Lesen der
 Bambu-Bibliothek, die Konsistenz der Quelldaten (Vollständigkeit, Glow-Regel,
 Temperaturfenster, Klarheitsregel für transparente Varianten) und das Ergebnis eines
 vollständigen Laufs — darunter die am Gerät verifizierte Referenzkombination

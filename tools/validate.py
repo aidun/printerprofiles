@@ -68,7 +68,7 @@ def main() -> int:
         c.check(kind in ("filament", "process"), f"{short}: unknown type {kind!r}")
         c.check(d.get("from") == "User", f"{short}: 'from' must be 'User'")
         c.check(d.get("name") == file.stem, f"{short}: file name and 'name' differ")
-        c.check(d["name"] not in names, f"{short}: name used twice")
+        c.check(d.get("name") not in names, f"{short}: name used twice")
         names[d.get("name", str(short))] = str(short)
 
         # The parent profile must exist
@@ -101,10 +101,15 @@ def main() -> int:
     index = TARGET / "_index.json"
     c.check(index.is_file(), "dist/_index.json is missing")
     if index.is_file():
-        meta = json.loads(index.read_text(encoding="utf-8"))
-        counted = len([f for f in files if f.name != "_index.json"])
-        c.check(meta["filament_presets"] + meta["process_presets"] == counted,
-                "dist/_index.json does not match the number of files")
+        try:
+            meta = json.loads(index.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as error:
+            meta = None
+            c.errors.append(f"dist/_index.json: not valid JSON ({error})")
+        if meta is not None:
+            counted = len([f for f in files if f.name != "_index.json"])
+            c.check(meta.get("filament_presets", 0) + meta.get("process_presets", 0) == counted,
+                    "dist/_index.json does not match the number of files")
 
     for message in c.errors:
         print(f"ERROR  {message}")
@@ -133,14 +138,18 @@ def check_filament(c, lib, short, d, machines, hotend):
     high = _number(d.get("nozzle_temperature_range_high"))
     nozzle = _number(d.get("nozzle_temperature"))
     first = _number(d.get("nozzle_temperature_initial_layer"))
-    c.check(low is not None and high is not None and low < high,
-            f"{short}: temperature window {low}–{high} is not ascending")
+    # A missing or unreadable value must produce an error line, never an
+    # exception: a preset that is broken is exactly the case this run is for.
+    window = low is not None and high is not None and low < high
+    c.check(window, f"{short}: temperature window {low}–{high} is not ascending")
     for label, value in (("nozzle_temperature", nozzle), ("initial_layer", first)):
-        c.check(value is not None and low <= value <= high,
-                f"{short}: {label}={value} lies outside {low}–{high}")
+        c.check(value is not None, f"{short}: {label} is missing or not a number")
+        if window and value is not None:
+            c.check(low <= value <= high,
+                    f"{short}: {label}={value} lies outside {low}–{high}")
     for machine in machines:
         limit = hotend.get(machine)
-        if limit:
+        if limit and high is not None:
             c.check(high <= limit, f"{short}: {high} °C exceeds the hotend limit of {limit} °C")
 
     flow = _number(d.get("filament_max_volumetric_speed"))
