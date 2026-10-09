@@ -5019,6 +5019,222 @@
             "status": "baseline"
         },
         {
+            "file": "process/Normal + Stützen A1 0.2.json",
+            "inherits": "0.12mm Draft @BBL A1 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "normal",
+            "name": "Normal + Stützen A1 0.2",
+            "nozzle": "0.2",
+            "printer": "a1",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Normal + Stützen A1 0.4.json",
+            "inherits": "0.20mm Standard @BBL A1",
+            "kind": "process",
+            "layer_height": "0.2",
+            "level": "normal",
+            "name": "Normal + Stützen A1 0.4",
+            "nozzle": "0.4",
+            "printer": "a1",
+            "support": true,
+            "target_layer_height": "0.2"
+        },
+        {
+            "file": "process/Normal + Stützen A1 0.6.json",
+            "inherits": "0.30mm Standard @BBL A1 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "normal",
+            "name": "Normal + Stützen A1 0.6",
+            "nozzle": "0.6",
+            "printer": "a1",
+            "support": true,
+            "target_layer_height": "0.3"
+        },
+        {
+            "file": "process/Normal + Stützen A1M 0.2.json",
+            "inherits": "0.12mm Draft @BBL A1M 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "normal",
+            "name": "Normal + Stützen A1M 0.2",
+            "nozzle": "0.2",
+            "printer": "a1mini",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Normal + Stützen A1M 0.4.json",
+            "inherits": "0.20mm Standard @BBL A1M",
+            "kind": "process",
+            "layer_height": "0.2",
+            "level": "normal",
+            "name": "Normal + Stützen A1M 0.4",
+            "nozzle": "0.4",
+            "printer": "a1mini",
+            "support": true,
+            "target_layer_height": "0.2"
+        },
+        {
+            "file": "process/Normal + Stützen A1M 0.6.json",
+            "inherits": "0.30mm Standard @BBL A1M 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "normal",
+            "name": "Normal + Stützen A1M 0.6",
+            "nozzle": "0.6",
+            "printer": "a1mini",
+            "support": true,
+            "target_layer_height": "0.3"
+        },
+        {
+            "file": "process/Normal + Stützen H2C 0.2.json",
+            "inherits": "0.12mm Balanced Quality @BBL H2C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "normal",
+            "name": "Normal + Stützen H2C 0.2",
+            "nozzle": "0.2",
+            "printer": "h2c",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Normal + Stützen H2C 0.4.json",
+            "inherits": "0.20mm Standard @BBL H2C",
+            "kind": "process",
+            "layer_height": "0.2",
+            "level": "normal",
+            "name": "Normal + Stützen H2C 0.4",
+            "nozzle": "0.4",
+            "printer": "h2c",
+            "support": true,
+            "target_layer_height": "0.2"
+        },
+        {
+            "file": "process/Normal + Stützen H2C 0.6.json",
+            "inherits": "0.30mm Standard @BBL H2C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "normal",
+            "name": "Normal + Stützen H2C 0.6",
+            "nozzle": "0.6",
+            "printer": "h2c",
+            "support": true,
+            "target_layer_height": "0.3"
+        },
+        {
+            "file": "process/Normal + Stützen P1P 0.2.json",
+            "inherits": "0.12mm Draft @BBL P1P 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "normal",
+            "name": "Normal + Stützen P1P 0.2",
+            "nozzle": "0.2",
+            "printer": "p1p",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Normal + Stützen P1P 0.4.json",
+            "inherits": "0.20mm Standard @BBL P1P",
+            "kind": "process",
+            "layer_height": "0.2",
+            "level": "normal",
+            "name": "Normal + Stützen P1P 0.4",
+            "nozzle": "0.4",
+            "printer": "p1p",
+            "support": true,
+            "target_layer_height": "0.2"
+        },
+        {
+            "file": "process/Normal + Stützen P1P 0.6.json",
+            "inherits": "0.30mm Standard @BBL P1P 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "normal",
+            "name": "Normal + Stützen P1P 0.6",
+            "nozzle": "0.6",
+            "printer": "p1p",
+            "support": true,
+            "target_layer_height": "0.3"
+        },
+        {
+            "file": "process/Normal + Stützen P1S 0.2.json",
+            "inherits": "0.12mm Standard @BBL X1C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "normal",
+            "name": "Normal + Stützen P1S 0.2",
+            "nozzle": "0.2",
+            "printer": "p1s",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Normal + Stützen P1S 0.4.json",
+            "inherits": "0.20mm Standard @BBL X1C",
+            "kind": "process",
+            "layer_height": "0.2",
+            "level": "normal",
+            "name": "Normal + Stützen P1S 0.4",
+            "nozzle": "0.4",
+            "printer": "p1s",
+            "support": true,
+            "target_layer_height": "0.2"
+        },
+        {
+            "file": "process/Normal + Stützen P1S 0.6.json",
+            "inherits": "0.30mm Standard @BBL X1C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "normal",
+            "name": "Normal + Stützen P1S 0.6",
+            "nozzle": "0.6",
+            "printer": "p1s",
+            "support": true,
+            "target_layer_height": "0.3"
+        },
+        {
+            "file": "process/Normal + Stützen X1C 0.2.json",
+            "inherits": "0.12mm Standard @BBL X1C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "normal",
+            "name": "Normal + Stützen X1C 0.2",
+            "nozzle": "0.2",
+            "printer": "x1c",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Normal + Stützen X1C 0.4.json",
+            "inherits": "0.20mm Standard @BBL X1C",
+            "kind": "process",
+            "layer_height": "0.2",
+            "level": "normal",
+            "name": "Normal + Stützen X1C 0.4",
+            "nozzle": "0.4",
+            "printer": "x1c",
+            "support": true,
+            "target_layer_height": "0.2"
+        },
+        {
+            "file": "process/Normal + Stützen X1C 0.6.json",
+            "inherits": "0.30mm Standard @BBL X1C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "normal",
+            "name": "Normal + Stützen X1C 0.6",
+            "nozzle": "0.6",
+            "printer": "x1c",
+            "support": true,
+            "target_layer_height": "0.3"
+        },
+        {
             "file": "process/Normal A1 0.2.json",
             "inherits": "0.12mm Draft @BBL A1 0.2 nozzle",
             "kind": "process",
@@ -5027,6 +5243,7 @@
             "name": "Normal A1 0.2",
             "nozzle": "0.2",
             "printer": "a1",
+            "support": false,
             "target_layer_height": "0.12"
         },
         {
@@ -5038,6 +5255,7 @@
             "name": "Normal A1 0.4",
             "nozzle": "0.4",
             "printer": "a1",
+            "support": false,
             "target_layer_height": "0.2"
         },
         {
@@ -5049,6 +5267,7 @@
             "name": "Normal A1 0.6",
             "nozzle": "0.6",
             "printer": "a1",
+            "support": false,
             "target_layer_height": "0.3"
         },
         {
@@ -5060,6 +5279,7 @@
             "name": "Normal A1M 0.2",
             "nozzle": "0.2",
             "printer": "a1mini",
+            "support": false,
             "target_layer_height": "0.12"
         },
         {
@@ -5071,6 +5291,7 @@
             "name": "Normal A1M 0.4",
             "nozzle": "0.4",
             "printer": "a1mini",
+            "support": false,
             "target_layer_height": "0.2"
         },
         {
@@ -5082,6 +5303,7 @@
             "name": "Normal A1M 0.6",
             "nozzle": "0.6",
             "printer": "a1mini",
+            "support": false,
             "target_layer_height": "0.3"
         },
         {
@@ -5093,6 +5315,7 @@
             "name": "Normal H2C 0.2",
             "nozzle": "0.2",
             "printer": "h2c",
+            "support": false,
             "target_layer_height": "0.12"
         },
         {
@@ -5104,6 +5327,7 @@
             "name": "Normal H2C 0.4",
             "nozzle": "0.4",
             "printer": "h2c",
+            "support": false,
             "target_layer_height": "0.2"
         },
         {
@@ -5115,6 +5339,7 @@
             "name": "Normal H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "support": false,
             "target_layer_height": "0.3"
         },
         {
@@ -5126,6 +5351,7 @@
             "name": "Normal P1P 0.2",
             "nozzle": "0.2",
             "printer": "p1p",
+            "support": false,
             "target_layer_height": "0.12"
         },
         {
@@ -5137,6 +5363,7 @@
             "name": "Normal P1P 0.4",
             "nozzle": "0.4",
             "printer": "p1p",
+            "support": false,
             "target_layer_height": "0.2"
         },
         {
@@ -5148,6 +5375,7 @@
             "name": "Normal P1P 0.6",
             "nozzle": "0.6",
             "printer": "p1p",
+            "support": false,
             "target_layer_height": "0.3"
         },
         {
@@ -5159,6 +5387,7 @@
             "name": "Normal P1S 0.2",
             "nozzle": "0.2",
             "printer": "p1s",
+            "support": false,
             "target_layer_height": "0.12"
         },
         {
@@ -5170,6 +5399,7 @@
             "name": "Normal P1S 0.4",
             "nozzle": "0.4",
             "printer": "p1s",
+            "support": false,
             "target_layer_height": "0.2"
         },
         {
@@ -5181,6 +5411,7 @@
             "name": "Normal P1S 0.6",
             "nozzle": "0.6",
             "printer": "p1s",
+            "support": false,
             "target_layer_height": "0.3"
         },
         {
@@ -5192,6 +5423,7 @@
             "name": "Normal X1C 0.2",
             "nozzle": "0.2",
             "printer": "x1c",
+            "support": false,
             "target_layer_height": "0.12"
         },
         {
@@ -5203,6 +5435,7 @@
             "name": "Normal X1C 0.4",
             "nozzle": "0.4",
             "printer": "x1c",
+            "support": false,
             "target_layer_height": "0.2"
         },
         {
@@ -5214,7 +5447,224 @@
             "name": "Normal X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "support": false,
             "target_layer_height": "0.3"
+        },
+        {
+            "file": "process/Qualität + Stützen A1 0.2.json",
+            "inherits": "0.08mm High Quality @BBL A1 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.08",
+            "level": "quality",
+            "name": "Qualität + Stützen A1 0.2",
+            "nozzle": "0.2",
+            "printer": "a1",
+            "support": true,
+            "target_layer_height": "0.08"
+        },
+        {
+            "file": "process/Qualität + Stützen A1 0.4.json",
+            "inherits": "0.12mm High Quality @BBL A1",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "quality",
+            "name": "Qualität + Stützen A1 0.4",
+            "nozzle": "0.4",
+            "printer": "a1",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Qualität + Stützen A1 0.6.json",
+            "inherits": "0.18mm Fine @BBL A1 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.18",
+            "level": "quality",
+            "name": "Qualität + Stützen A1 0.6",
+            "nozzle": "0.6",
+            "printer": "a1",
+            "support": true,
+            "target_layer_height": "0.18"
+        },
+        {
+            "file": "process/Qualität + Stützen A1M 0.2.json",
+            "inherits": "0.08mm High Quality @BBL A1M 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.08",
+            "level": "quality",
+            "name": "Qualität + Stützen A1M 0.2",
+            "nozzle": "0.2",
+            "printer": "a1mini",
+            "support": true,
+            "target_layer_height": "0.08"
+        },
+        {
+            "file": "process/Qualität + Stützen A1M 0.4.json",
+            "inherits": "0.12mm High Quality @BBL A1M",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "quality",
+            "name": "Qualität + Stützen A1M 0.4",
+            "nozzle": "0.4",
+            "printer": "a1mini",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Qualität + Stützen A1M 0.6.json",
+            "inherits": "0.18mm Fine @BBL A1M 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.18",
+            "level": "quality",
+            "name": "Qualität + Stützen A1M 0.6",
+            "nozzle": "0.6",
+            "printer": "a1mini",
+            "support": true,
+            "target_layer_height": "0.18"
+        },
+        {
+            "file": "process/Qualität + Stützen H2C 0.2.json",
+            "inherits": "0.08mm High Quality @BBL H2C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.08",
+            "level": "quality",
+            "name": "Qualität + Stützen H2C 0.2",
+            "nozzle": "0.2",
+            "printer": "h2c",
+            "support": true,
+            "target_layer_height": "0.08"
+        },
+        {
+            "file": "process/Qualität + Stützen H2C 0.4.json",
+            "inherits": "0.12mm High Quality @BBL H2C",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "quality",
+            "name": "Qualität + Stützen H2C 0.4",
+            "nozzle": "0.4",
+            "printer": "h2c",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Qualität + Stützen H2C 0.6.json",
+            "inherits": "0.18mm Balanced Quality @BBL H2C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.18",
+            "level": "quality",
+            "name": "Qualität + Stützen H2C 0.6",
+            "nozzle": "0.6",
+            "printer": "h2c",
+            "support": true,
+            "target_layer_height": "0.18"
+        },
+        {
+            "file": "process/Qualität + Stützen P1P 0.2.json",
+            "inherits": "0.08mm High Quality @BBL P1P 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.08",
+            "level": "quality",
+            "name": "Qualität + Stützen P1P 0.2",
+            "nozzle": "0.2",
+            "printer": "p1p",
+            "support": true,
+            "target_layer_height": "0.08"
+        },
+        {
+            "file": "process/Qualität + Stützen P1P 0.4.json",
+            "inherits": "0.12mm High Quality @BBL P1P",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "quality",
+            "name": "Qualität + Stützen P1P 0.4",
+            "nozzle": "0.4",
+            "printer": "p1p",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Qualität + Stützen P1P 0.6.json",
+            "inherits": "0.18mm Fine @BBL P1P 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.18",
+            "level": "quality",
+            "name": "Qualität + Stützen P1P 0.6",
+            "nozzle": "0.6",
+            "printer": "p1p",
+            "support": true,
+            "target_layer_height": "0.18"
+        },
+        {
+            "file": "process/Qualität + Stützen P1S 0.2.json",
+            "inherits": "0.08mm High Quality @BBL X1C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.08",
+            "level": "quality",
+            "name": "Qualität + Stützen P1S 0.2",
+            "nozzle": "0.2",
+            "printer": "p1s",
+            "support": true,
+            "target_layer_height": "0.08"
+        },
+        {
+            "file": "process/Qualität + Stützen P1S 0.4.json",
+            "inherits": "0.12mm High Quality @BBL X1C",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "quality",
+            "name": "Qualität + Stützen P1S 0.4",
+            "nozzle": "0.4",
+            "printer": "p1s",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Qualität + Stützen P1S 0.6.json",
+            "inherits": "0.18mm Standard @BBL X1C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.18",
+            "level": "quality",
+            "name": "Qualität + Stützen P1S 0.6",
+            "nozzle": "0.6",
+            "printer": "p1s",
+            "support": true,
+            "target_layer_height": "0.18"
+        },
+        {
+            "file": "process/Qualität + Stützen X1C 0.2.json",
+            "inherits": "0.08mm High Quality @BBL X1C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.08",
+            "level": "quality",
+            "name": "Qualität + Stützen X1C 0.2",
+            "nozzle": "0.2",
+            "printer": "x1c",
+            "support": true,
+            "target_layer_height": "0.08"
+        },
+        {
+            "file": "process/Qualität + Stützen X1C 0.4.json",
+            "inherits": "0.12mm High Quality @BBL X1C",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "quality",
+            "name": "Qualität + Stützen X1C 0.4",
+            "nozzle": "0.4",
+            "printer": "x1c",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Qualität + Stützen X1C 0.6.json",
+            "inherits": "0.18mm Standard @BBL X1C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.18",
+            "level": "quality",
+            "name": "Qualität + Stützen X1C 0.6",
+            "nozzle": "0.6",
+            "printer": "x1c",
+            "support": true,
+            "target_layer_height": "0.18"
         },
         {
             "file": "process/Qualität A1 0.2.json",
@@ -5225,6 +5675,7 @@
             "name": "Qualität A1 0.2",
             "nozzle": "0.2",
             "printer": "a1",
+            "support": false,
             "target_layer_height": "0.08"
         },
         {
@@ -5236,6 +5687,7 @@
             "name": "Qualität A1 0.4",
             "nozzle": "0.4",
             "printer": "a1",
+            "support": false,
             "target_layer_height": "0.12"
         },
         {
@@ -5247,6 +5699,7 @@
             "name": "Qualität A1 0.6",
             "nozzle": "0.6",
             "printer": "a1",
+            "support": false,
             "target_layer_height": "0.18"
         },
         {
@@ -5258,6 +5711,7 @@
             "name": "Qualität A1M 0.2",
             "nozzle": "0.2",
             "printer": "a1mini",
+            "support": false,
             "target_layer_height": "0.08"
         },
         {
@@ -5269,6 +5723,7 @@
             "name": "Qualität A1M 0.4",
             "nozzle": "0.4",
             "printer": "a1mini",
+            "support": false,
             "target_layer_height": "0.12"
         },
         {
@@ -5280,6 +5735,7 @@
             "name": "Qualität A1M 0.6",
             "nozzle": "0.6",
             "printer": "a1mini",
+            "support": false,
             "target_layer_height": "0.18"
         },
         {
@@ -5291,6 +5747,7 @@
             "name": "Qualität H2C 0.2",
             "nozzle": "0.2",
             "printer": "h2c",
+            "support": false,
             "target_layer_height": "0.08"
         },
         {
@@ -5302,6 +5759,7 @@
             "name": "Qualität H2C 0.4",
             "nozzle": "0.4",
             "printer": "h2c",
+            "support": false,
             "target_layer_height": "0.12"
         },
         {
@@ -5313,6 +5771,7 @@
             "name": "Qualität H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "support": false,
             "target_layer_height": "0.18"
         },
         {
@@ -5324,6 +5783,7 @@
             "name": "Qualität P1P 0.2",
             "nozzle": "0.2",
             "printer": "p1p",
+            "support": false,
             "target_layer_height": "0.08"
         },
         {
@@ -5335,6 +5795,7 @@
             "name": "Qualität P1P 0.4",
             "nozzle": "0.4",
             "printer": "p1p",
+            "support": false,
             "target_layer_height": "0.12"
         },
         {
@@ -5346,6 +5807,7 @@
             "name": "Qualität P1P 0.6",
             "nozzle": "0.6",
             "printer": "p1p",
+            "support": false,
             "target_layer_height": "0.18"
         },
         {
@@ -5357,6 +5819,7 @@
             "name": "Qualität P1S 0.2",
             "nozzle": "0.2",
             "printer": "p1s",
+            "support": false,
             "target_layer_height": "0.08"
         },
         {
@@ -5368,6 +5831,7 @@
             "name": "Qualität P1S 0.4",
             "nozzle": "0.4",
             "printer": "p1s",
+            "support": false,
             "target_layer_height": "0.12"
         },
         {
@@ -5379,6 +5843,7 @@
             "name": "Qualität P1S 0.6",
             "nozzle": "0.6",
             "printer": "p1s",
+            "support": false,
             "target_layer_height": "0.18"
         },
         {
@@ -5390,6 +5855,7 @@
             "name": "Qualität X1C 0.2",
             "nozzle": "0.2",
             "printer": "x1c",
+            "support": false,
             "target_layer_height": "0.08"
         },
         {
@@ -5401,6 +5867,7 @@
             "name": "Qualität X1C 0.4",
             "nozzle": "0.4",
             "printer": "x1c",
+            "support": false,
             "target_layer_height": "0.12"
         },
         {
@@ -5412,7 +5879,224 @@
             "name": "Qualität X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "support": false,
             "target_layer_height": "0.18"
+        },
+        {
+            "file": "process/Schnell + Stützen A1 0.2.json",
+            "inherits": "0.14mm Extra Draft @BBL A1 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.14",
+            "level": "fast",
+            "name": "Schnell + Stützen A1 0.2",
+            "nozzle": "0.2",
+            "printer": "a1",
+            "support": true,
+            "target_layer_height": "0.14"
+        },
+        {
+            "file": "process/Schnell + Stützen A1 0.4.json",
+            "inherits": "0.28mm Extra Draft @BBL A1",
+            "kind": "process",
+            "layer_height": "0.28",
+            "level": "fast",
+            "name": "Schnell + Stützen A1 0.4",
+            "nozzle": "0.4",
+            "printer": "a1",
+            "support": true,
+            "target_layer_height": "0.28"
+        },
+        {
+            "file": "process/Schnell + Stützen A1 0.6.json",
+            "inherits": "0.42mm Extra Draft @BBL A1 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.42",
+            "level": "fast",
+            "name": "Schnell + Stützen A1 0.6",
+            "nozzle": "0.6",
+            "printer": "a1",
+            "support": true,
+            "target_layer_height": "0.42"
+        },
+        {
+            "file": "process/Schnell + Stützen A1M 0.2.json",
+            "inherits": "0.14mm Extra Draft @BBL A1M 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.14",
+            "level": "fast",
+            "name": "Schnell + Stützen A1M 0.2",
+            "nozzle": "0.2",
+            "printer": "a1mini",
+            "support": true,
+            "target_layer_height": "0.14"
+        },
+        {
+            "file": "process/Schnell + Stützen A1M 0.4.json",
+            "inherits": "0.28mm Extra Draft @BBL A1M",
+            "kind": "process",
+            "layer_height": "0.28",
+            "level": "fast",
+            "name": "Schnell + Stützen A1M 0.4",
+            "nozzle": "0.4",
+            "printer": "a1mini",
+            "support": true,
+            "target_layer_height": "0.28"
+        },
+        {
+            "file": "process/Schnell + Stützen A1M 0.6.json",
+            "inherits": "0.42mm Extra Draft @BBL A1M 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.42",
+            "level": "fast",
+            "name": "Schnell + Stützen A1M 0.6",
+            "nozzle": "0.6",
+            "printer": "a1mini",
+            "support": true,
+            "target_layer_height": "0.42"
+        },
+        {
+            "file": "process/Schnell + Stützen H2C 0.2.json",
+            "inherits": "0.12mm Balanced Quality @BBL H2C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "fast",
+            "name": "Schnell + Stützen H2C 0.2",
+            "nozzle": "0.2",
+            "printer": "h2c",
+            "support": true,
+            "target_layer_height": "0.14"
+        },
+        {
+            "file": "process/Schnell + Stützen H2C 0.4.json",
+            "inherits": "0.24mm Standard @BBL H2C",
+            "kind": "process",
+            "layer_height": "0.24",
+            "level": "fast",
+            "name": "Schnell + Stützen H2C 0.4",
+            "nozzle": "0.4",
+            "printer": "h2c",
+            "support": true,
+            "target_layer_height": "0.28"
+        },
+        {
+            "file": "process/Schnell + Stützen H2C 0.6.json",
+            "inherits": "0.30mm Standard @BBL H2C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "fast",
+            "name": "Schnell + Stützen H2C 0.6",
+            "nozzle": "0.6",
+            "printer": "h2c",
+            "support": true,
+            "target_layer_height": "0.42"
+        },
+        {
+            "file": "process/Schnell + Stützen P1P 0.2.json",
+            "inherits": "0.14mm Extra Draft @BBL P1P 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.14",
+            "level": "fast",
+            "name": "Schnell + Stützen P1P 0.2",
+            "nozzle": "0.2",
+            "printer": "p1p",
+            "support": true,
+            "target_layer_height": "0.14"
+        },
+        {
+            "file": "process/Schnell + Stützen P1P 0.4.json",
+            "inherits": "0.28mm Extra Draft @BBL P1P",
+            "kind": "process",
+            "layer_height": "0.28",
+            "level": "fast",
+            "name": "Schnell + Stützen P1P 0.4",
+            "nozzle": "0.4",
+            "printer": "p1p",
+            "support": true,
+            "target_layer_height": "0.28"
+        },
+        {
+            "file": "process/Schnell + Stützen P1P 0.6.json",
+            "inherits": "0.42mm Extra Draft @BBL P1P 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.42",
+            "level": "fast",
+            "name": "Schnell + Stützen P1P 0.6",
+            "nozzle": "0.6",
+            "printer": "p1p",
+            "support": true,
+            "target_layer_height": "0.42"
+        },
+        {
+            "file": "process/Schnell + Stützen P1S 0.2.json",
+            "inherits": "0.14mm Standard @BBL X1C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.14",
+            "level": "fast",
+            "name": "Schnell + Stützen P1S 0.2",
+            "nozzle": "0.2",
+            "printer": "p1s",
+            "support": true,
+            "target_layer_height": "0.14"
+        },
+        {
+            "file": "process/Schnell + Stützen P1S 0.4.json",
+            "inherits": "0.28mm Extra Draft @BBL X1C",
+            "kind": "process",
+            "layer_height": "0.28",
+            "level": "fast",
+            "name": "Schnell + Stützen P1S 0.4",
+            "nozzle": "0.4",
+            "printer": "p1s",
+            "support": true,
+            "target_layer_height": "0.28"
+        },
+        {
+            "file": "process/Schnell + Stützen P1S 0.6.json",
+            "inherits": "0.42mm Standard @BBL X1C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.42",
+            "level": "fast",
+            "name": "Schnell + Stützen P1S 0.6",
+            "nozzle": "0.6",
+            "printer": "p1s",
+            "support": true,
+            "target_layer_height": "0.42"
+        },
+        {
+            "file": "process/Schnell + Stützen X1C 0.2.json",
+            "inherits": "0.14mm Standard @BBL X1C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.14",
+            "level": "fast",
+            "name": "Schnell + Stützen X1C 0.2",
+            "nozzle": "0.2",
+            "printer": "x1c",
+            "support": true,
+            "target_layer_height": "0.14"
+        },
+        {
+            "file": "process/Schnell + Stützen X1C 0.4.json",
+            "inherits": "0.28mm Extra Draft @BBL X1C",
+            "kind": "process",
+            "layer_height": "0.28",
+            "level": "fast",
+            "name": "Schnell + Stützen X1C 0.4",
+            "nozzle": "0.4",
+            "printer": "x1c",
+            "support": true,
+            "target_layer_height": "0.28"
+        },
+        {
+            "file": "process/Schnell + Stützen X1C 0.6.json",
+            "inherits": "0.42mm Standard @BBL X1C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.42",
+            "level": "fast",
+            "name": "Schnell + Stützen X1C 0.6",
+            "nozzle": "0.6",
+            "printer": "x1c",
+            "support": true,
+            "target_layer_height": "0.42"
         },
         {
             "file": "process/Schnell A1 0.2.json",
@@ -5423,6 +6107,7 @@
             "name": "Schnell A1 0.2",
             "nozzle": "0.2",
             "printer": "a1",
+            "support": false,
             "target_layer_height": "0.14"
         },
         {
@@ -5434,6 +6119,7 @@
             "name": "Schnell A1 0.4",
             "nozzle": "0.4",
             "printer": "a1",
+            "support": false,
             "target_layer_height": "0.28"
         },
         {
@@ -5445,6 +6131,7 @@
             "name": "Schnell A1 0.6",
             "nozzle": "0.6",
             "printer": "a1",
+            "support": false,
             "target_layer_height": "0.42"
         },
         {
@@ -5456,6 +6143,7 @@
             "name": "Schnell A1M 0.2",
             "nozzle": "0.2",
             "printer": "a1mini",
+            "support": false,
             "target_layer_height": "0.14"
         },
         {
@@ -5467,6 +6155,7 @@
             "name": "Schnell A1M 0.4",
             "nozzle": "0.4",
             "printer": "a1mini",
+            "support": false,
             "target_layer_height": "0.28"
         },
         {
@@ -5478,6 +6167,7 @@
             "name": "Schnell A1M 0.6",
             "nozzle": "0.6",
             "printer": "a1mini",
+            "support": false,
             "target_layer_height": "0.42"
         },
         {
@@ -5489,6 +6179,7 @@
             "name": "Schnell H2C 0.2",
             "nozzle": "0.2",
             "printer": "h2c",
+            "support": false,
             "target_layer_height": "0.14"
         },
         {
@@ -5500,6 +6191,7 @@
             "name": "Schnell H2C 0.4",
             "nozzle": "0.4",
             "printer": "h2c",
+            "support": false,
             "target_layer_height": "0.28"
         },
         {
@@ -5511,6 +6203,7 @@
             "name": "Schnell H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "support": false,
             "target_layer_height": "0.42"
         },
         {
@@ -5522,6 +6215,7 @@
             "name": "Schnell P1P 0.2",
             "nozzle": "0.2",
             "printer": "p1p",
+            "support": false,
             "target_layer_height": "0.14"
         },
         {
@@ -5533,6 +6227,7 @@
             "name": "Schnell P1P 0.4",
             "nozzle": "0.4",
             "printer": "p1p",
+            "support": false,
             "target_layer_height": "0.28"
         },
         {
@@ -5544,6 +6239,7 @@
             "name": "Schnell P1P 0.6",
             "nozzle": "0.6",
             "printer": "p1p",
+            "support": false,
             "target_layer_height": "0.42"
         },
         {
@@ -5555,6 +6251,7 @@
             "name": "Schnell P1S 0.2",
             "nozzle": "0.2",
             "printer": "p1s",
+            "support": false,
             "target_layer_height": "0.14"
         },
         {
@@ -5566,6 +6263,7 @@
             "name": "Schnell P1S 0.4",
             "nozzle": "0.4",
             "printer": "p1s",
+            "support": false,
             "target_layer_height": "0.28"
         },
         {
@@ -5577,6 +6275,7 @@
             "name": "Schnell P1S 0.6",
             "nozzle": "0.6",
             "printer": "p1s",
+            "support": false,
             "target_layer_height": "0.42"
         },
         {
@@ -5588,6 +6287,7 @@
             "name": "Schnell X1C 0.2",
             "nozzle": "0.2",
             "printer": "x1c",
+            "support": false,
             "target_layer_height": "0.14"
         },
         {
@@ -5599,6 +6299,7 @@
             "name": "Schnell X1C 0.4",
             "nozzle": "0.4",
             "printer": "x1c",
+            "support": false,
             "target_layer_height": "0.28"
         },
         {
@@ -5610,8 +6311,9 @@
             "name": "Schnell X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "support": false,
             "target_layer_height": "0.42"
         }
     ],
-    "process_presets": 54
+    "process_presets": 108
 }

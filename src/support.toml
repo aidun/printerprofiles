@@ -1,0 +1,26 @@
+# Support variant.
+#
+# Every level in quality.toml is written a second time with supports switched
+# on — same geometry, same speeds, plus the values below. Whether a part needs
+# supports depends on the model, so the plain levels leave the setting alone.
+#
+# The aim is supports that hold firm while printing and still come off clean.
+# Only what serves that aim is overridden; everything else is inherited:
+#
+#   support_type             tree(auto) in every Bambu base profile
+#   support_threshold_angle  30° in every Bambu base profile
+#   support_top_z_distance   Bambu ties the gap to the layer height and caps it
+#   support_bottom_z_distance  at 0.2 mm — the base profile already matches the
+#                            preset's layer height, so the gap is right as is
+#
+# Process presets know nothing about the material. The values are chosen for
+# PLA; PETG bonds harder to itself and comes off with more force.
+
+label = "Stützen"
+
+[parameters]
+enable_support               = "1"
+support_interface_top_layers = "3"     # Bambu: 2 — firmer bed for the part
+support_interface_spacing    = "0.3"   # Bambu: 0.5 — cleaner underside
+support_object_xy_distance   = "0.45"  # Bambu: 0.35 — keeps trees off the walls
+tree_support_wall_count      = "2"     # Bambu: -1 (auto) — stiffer branches

@@ -212,8 +212,9 @@ class TestGeneratedPresets(unittest.TestCase):
     def test_preset_counts(self):
         filament = sum(len(f["nozzles"]) * len(generate.released_for(f, self.printers))
                        for f in self.filaments.values())
-        process = len(self.printers) * 3 * len(self.levels)
-        self.assertEqual((filament, process), (418, 54))
+        # Every level exists twice: plain and with supports.
+        process = len(self.printers) * 3 * len(self.levels) * 2
+        self.assertEqual((filament, process), (418, 108))
 
     def test_verified_reference_preset_is_reproduced(self):
         # Values confirmed on the machine for SUNLU PETG Glow, H2C, 0.4 mm.
@@ -327,6 +328,71 @@ class TestGeneratedPresets(unittest.TestCase):
                 self.lib, "x1c", self.printers["x1c"], "0.4", level, self.levels[level])
             speed[level] = float(preset["outer_wall_speed"][0])
         self.assertLess(speed["quality"], speed["fast"])
+
+
+class TestSupportPresets(unittest.TestCase):
+    """The support variant of each level: firm trees that still come off."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.lib = Library()
+        cls.printers, _, cls.levels = generate.load_sources()
+        cls.support = generate.load_support()
+
+    def build(self, printer_id, nozzle, level_id, support=None):
+        return generate.build_process(
+            self.lib, printer_id, self.printers[printer_id], nozzle,
+            level_id, self.levels[level_id], support)
+
+    def test_plain_levels_leave_supports_off(self):
+        # Whether a part needs supports depends on the model, not on the
+        # level — the plain presets must not touch the setting at all.
+        _, preset, meta = self.build("x1c", "0.4", "normal")
+        self.assertFalse(any("support" in key for key in preset))
+        self.assertFalse(meta["support"])
+
+    def test_support_variant_sets_every_parameter(self):
+        name, preset, meta = self.build("x1c", "0.4", "normal", self.support)
+        self.assertEqual(name, "Normal + Stützen X1C 0.4")
+        self.assertTrue(meta["support"])
+        self.assertEqual(preset["enable_support"], "1")
+        self.assertEqual(preset["support_interface_top_layers"], "3")
+        self.assertEqual(preset["support_interface_spacing"], "0.3")
+        self.assertEqual(preset["support_object_xy_distance"], "0.45")
+        self.assertEqual(preset["tree_support_wall_count"], "2")
+
+    def test_support_variant_keeps_the_level_geometry(self):
+        _, plain, _ = self.build("h2c", "0.6", "fast")
+        _, support, _ = self.build("h2c", "0.6", "fast", self.support)
+        for key, value in plain.items():
+            if key not in ("name", "print_settings_id"):
+                self.assertEqual(support[key], value, key)
+
+    def test_support_type_and_angle_are_inherited(self):
+        # Tree(auto) and the 30° threshold are Bambu's defaults; overriding
+        # them would only freeze today's values.
+        _, preset, _ = self.build("a1", "0.4", "quality", self.support)
+        for key in ("support_type", "support_threshold_angle"):
+            self.assertNotIn(key, preset)
+        base = self.lib.resolved(self.lib.processes, preset["inherits"])
+        self.assertEqual(base["support_type"], "tree(auto)")
+
+    def test_z_gap_follows_the_layer_height_by_inheritance(self):
+        # The gap under the part decides how cleanly the support comes off.
+        # Bambu ties it to the layer height and caps it at 0.2 mm, in every
+        # profile of the library. Inheriting is therefore enough; this test
+        # proves the rule holds for every preset the generator writes.
+        for printer_id, printer in self.printers.items():
+            for nozzle in printer["nozzles"]:
+                for level_id in self.levels:
+                    _, preset, _ = self.build(printer_id, nozzle, level_id, self.support)
+                    self.assertNotIn("support_top_z_distance", preset)
+                    base = self.lib.resolved(self.lib.processes, preset["inherits"])
+                    height = float(preset["layer_height"])
+                    expected = min(height, 0.2)
+                    for key in ("support_top_z_distance", "support_bottom_z_distance"):
+                        self.assertAlmostEqual(float(base[key]), expected, places=3,
+                                               msg=f"{preset['name']} {key}")
 
 
 class TestDistIsCurrent(unittest.TestCase):

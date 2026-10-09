@@ -133,7 +133,9 @@ def main() -> int:
     out("Ein Prozessprofil beschreibt die Geometrie: Schichthöhe, Wände, Füllung,")
     out("Geschwindigkeiten. Es gilt für jedes Material auf demselben Drucker.")
     out("")
-    out("Die Zahl in der Zelle ist die Schichthöhe in mm.")
+    out("Die Zahl in der Zelle ist die Schichthöhe in mm. Jede Stufe gibt es")
+    out("zusätzlich als **„+ Stützen“** — gleiche Geometrie, Baumstützen an,")
+    out("abgestimmt auf feste, aber sauber lösbare Stützen.")
     out("")
     out("| Drucker | Düse | " + " | ".join(s["label"] for s in levels.values()) + " |")
     out("|---|---|" + "---|" * len(levels))
@@ -142,7 +144,8 @@ def main() -> int:
             cells = []
             for level_id in levels:
                 hits = [e for e in pro if e["printer"] == printer_id
-                        and e["nozzle"] == nozzle and e["level"] == level_id]
+                        and e["nozzle"] == nozzle and e["level"] == level_id
+                        and not e.get("support")]
                 if not hits:
                     cells.append("—")
                     continue
@@ -153,7 +156,8 @@ def main() -> int:
                 cells.append(text)
             out(f"| {p['label']} | {nozzle} mm | " + " | ".join(cells) + " |")
     out("")
-    snapped = [e for e in pro if e["layer_height"] != e["target_layer_height"]]
+    snapped = [e for e in pro if e["layer_height"] != e["target_layer_height"]
+               and not e.get("support")]
     if snapped:
         out("⁽¹⁾ Der Zielwert der Stufe ist auf diesem Drucker nicht verfügbar; das")
         out("Profil rastet auf die nächstgelegene freigegebene Schichthöhe ein:")

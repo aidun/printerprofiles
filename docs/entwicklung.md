@@ -29,6 +29,7 @@ src/*.toml   ──  tools/generate.py  ──▶  dist/*.json   ──▶  Bamb
 src/                 Quelldaten — hier wird bearbeitet
 ├── printers.toml      6 Drucker: Maschinenname, Hotend-Grenze, Leistungsfaktor
 ├── quality.toml       3 Stufen: Schichthöhen, Wände, Tempofaktoren
+├── support.toml       Stützenvariante, die jede Stufe ein zweites Mal erzeugt
 └── filaments/        27 Materialien: Temperatur, Fluss, Kühlung
 tools/               Generator und Prüfung
 ├── bambulib.py        liest die Bambu-Studio-Profilbibliothek
@@ -37,7 +38,7 @@ tools/               Generator und Prüfung
 └── build_docs.py      erzeugt docs/matrix.md
 dist/                Ergebnis — hier wird importiert, nicht bearbeitet
 ├── filament/         418 Presets
-├── process/           54 Presets
+├── process/          108 Presets
 └── _index.json        Metadaten aller Presets
 docs/                Dokumentation — Deutsch, von Hand außer matrix.md
 tests/               Tests der Generatorlogik
@@ -161,7 +162,7 @@ nicht:
 | Volumenstrom 0.8 – 40 mm³/s, Flussrate 0.85 – 1.15 | Tippfehler bleiben unbemerkt |
 
 Der Lauf endet mit einer Zeile der Form
-`<n> checks, 0 errors, 472 presets.` und einem Exitcode ungleich null, sobald
+`<n> checks, 0 errors, 526 presets.` und einem Exitcode ungleich null, sobald
 etwas nicht stimmt.
 
 ---

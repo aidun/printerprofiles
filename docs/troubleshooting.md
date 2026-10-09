@@ -187,6 +187,32 @@ Keine Einstellung gleicht feuchtes Filament aus. Erst trocknen, dann weitersuche
 Bei PETG sind die Kühlwerte bewusst niedrig gehalten, weil das Material sonst die
 Schichthaftung verliert. Überhänge über etwa 50° brauchen dort Stützmaterial.
 
+### Stützen
+
+Jede Stufe gibt es als Variante **„+ Stützen“**, etwa `Normal + Stützen X1C 0.4`.
+Sie setzt Baumstützen, die beim Druck fest stehen und sich danach sauber lösen:
+
+| Parameter | Bambu | hier | Wirkung |
+|---|---|---|---|
+| `support_interface_top_layers` | 2 | 3 | festere Auflage für das Teil |
+| `support_interface_spacing` | 0.5 | 0.3 | glattere Unterseite |
+| `support_object_xy_distance` | 0.35 | 0.45 | Äste schmelzen nicht an Wänden an |
+| `tree_support_wall_count` | auto | 2 | steifere Äste, hohe Bäume knicken nicht |
+
+Der Luftspalt unter dem Teil wird nicht überschrieben: Bambu koppelt ihn an die
+Schichthöhe und deckelt ihn bei 0.2 mm — genau das, was die Ablösbarkeit braucht.
+
+Die Werte sind auf PLA abgestimmt. Ein Prozessprofil kennt das Material nicht, und
+Bambu Studio verwirft Stützenwerte in einem Filamentprofil. **PETG** haftet stärker
+an sich selbst und löst sich mit mehr Kraft. Abhilfe schafft eine Kontaktschicht
+aus PLA über das AMS: In den Stützeneinstellungen das Filament der Kontaktfläche
+(`support_interface_filament`) auf den PLA-Slot stellen — die beiden Materialien
+verbinden sich kaum. Das hängt vom AMS-Slot ab und gehört deshalb nicht ins Preset.
+
+Stützen wachsen nicht nur vom Bett aus. Wo ein Ast das Bett nicht erreicht, steht er
+auf dem Teil selbst und hinterlässt dort eine Spur. `support_on_build_plate_only`
+verhindert das, lässt solche Überhänge aber ohne Warnung ungestützt — deshalb bleibt es aus.
+
 ---
 
 ## Verstopfung

@@ -1,0 +1,54 @@
+{
+    "bottom_shell_layers": "3",
+    "compatible_printers": [
+        "Bambu Lab H2C 0.6 nozzle"
+    ],
+    "enable_arc_fitting": "1",
+    "enable_support": "1",
+    "from": "User",
+    "gap_infill_speed": [
+        "50",
+        "50",
+        "50",
+        "50"
+    ],
+    "inherits": "0.30mm Standard @BBL H2C 0.6 nozzle",
+    "inner_wall_speed": [
+        "300",
+        "600",
+        "300",
+        "600"
+    ],
+    "layer_height": "0.3",
+    "name": "Normal + Stützen H2C 0.6",
+    "outer_wall_speed": [
+        "200",
+        "500",
+        "200",
+        "500"
+    ],
+    "print_settings_id": "Normal + Stützen H2C 0.6",
+    "seam_position": "aligned",
+    "sparse_infill_density": "15%",
+    "sparse_infill_pattern": "grid",
+    "sparse_infill_speed": [
+        "350",
+        "600",
+        "350",
+        "600"
+    ],
+    "support_interface_spacing": "0.3",
+    "support_interface_top_layers": "3",
+    "support_object_xy_distance": "0.45",
+    "top_shell_layers": "4",
+    "top_surface_speed": [
+        "200",
+        "200",
+        "200",
+        "200"
+    ],
+    "tree_support_wall_count": "2",
+    "type": "process",
+    "version": "2.7.0.8",
+    "wall_loops": "2"
+}

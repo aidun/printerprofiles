@@ -36,6 +36,10 @@ def load_sources():
     return printers, filaments, levels
 
 
+def load_support() -> dict:
+    return tomllib.loads((SOURCE / "support.toml").read_text(encoding="utf-8"))
+
+
 # --------------------------------------------------------------------------
 # Helpers
 # --------------------------------------------------------------------------
@@ -195,12 +199,14 @@ def build_filament(lib, printer_id, printer, filament, nozzle):
 # Process presets
 # --------------------------------------------------------------------------
 
-def build_process(lib, printer_id, printer, nozzle, level_id, level):
+def build_process(lib, printer_id, printer, nozzle, level_id, level, support=None):
+    """One process preset; with 'support' the level's variant with supports."""
     machine = machine_name(printer, nozzle)
     target = level["layer_height"][nozzle]
     base, height = lib.process_base(machine, target, level["base_hint"])
     base_values = lib.resolved(lib.processes, base)
-    name = f"{level['label']} {printer['tag']} {nozzle}"
+    label = f"{level['label']} + {support['label']}" if support else level["label"]
+    name = f"{label} {printer['tag']} {nozzle}"
 
     preset = {
         "type": "process",
@@ -216,6 +222,8 @@ def build_process(lib, printer_id, printer, nozzle, level_id, level):
     for key, factor in level["speed"].items():
         if key in base_values:
             preset[key] = scale(base_values[key], factor)
+    if support:
+        preset.update({k: str(v) for k, v in support["parameters"].items()})
 
     meta = {
         "file": f"process/{name}.json",
@@ -224,6 +232,7 @@ def build_process(lib, printer_id, printer, nozzle, level_id, level):
         "printer": printer_id,
         "nozzle": nozzle,
         "level": level_id,
+        "support": support is not None,
         "inherits": base,
         "layer_height": fmt(height, 2),
         "target_layer_height": fmt(target, 2),
@@ -236,6 +245,7 @@ def build_process(lib, printer_id, printer, nozzle, level_id, level):
 def main() -> int:
     lib = Library()
     printers, filaments, levels = load_sources()
+    support = load_support()
 
     for subdir in ("filament", "process"):
         folder = TARGET / subdir
@@ -256,9 +266,11 @@ def main() -> int:
                 write(TARGET / "filament" / f"{name}.json", preset)
                 index.append(meta)
             for level_id, level in levels.items():
-                name, preset, meta = build_process(lib, printer_id, printer, nozzle, level_id, level)
-                write(TARGET / "process" / f"{name}.json", preset)
-                index.append(meta)
+                for variant in (None, support):
+                    name, preset, meta = build_process(
+                        lib, printer_id, printer, nozzle, level_id, level, variant)
+                    write(TARGET / "process" / f"{name}.json", preset)
+                    index.append(meta)
 
     filament_count = sum(1 for e in index if e["kind"] == "filament")
     process_count = sum(1 for e in index if e["kind"] == "process")

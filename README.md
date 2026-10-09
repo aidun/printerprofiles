@@ -2,11 +2,11 @@
 
 # Bambu Lab Druckprofile
 
-**472 fertige Presets für Bambu Studio — 27 Materialien von SUNLU, eSUN,
+**526 fertige Presets für Bambu Studio — 27 Materialien von SUNLU, eSUN,
 Geeetech und Bambu Lab, abgestimmt auf sechs Drucker, drei Düsen und drei
 Qualitätsstufen. Herunterladen, importieren, drucken.**
 
-[![Presets](https://img.shields.io/badge/Presets-472-2d7ff9)](docs/matrix.md)
+[![Presets](https://img.shields.io/badge/Presets-526-2d7ff9)](docs/matrix.md)
 [![Materialien](https://img.shields.io/badge/Materialien-27-2d7ff9)](docs/filament/README.md)
 [![Drucker](https://img.shields.io/badge/Drucker-6-2d7ff9)](docs/drucker/README.md)
 [![Slicer](https://img.shields.io/badge/Bambu%20Studio-2.7%2B-00a76f)](https://bambulab.com/en/download/studio)
@@ -33,7 +33,7 @@ Leistung des jeweiligen Hotends passt.
 | **6 Drucker** | H2C · X1 Carbon · P1S · P1P · A1 · A1 mini |
 | **27 Materialien** | 8 × SUNLU · 6 × eSUN · 4 × Geeetech · 9 × Bambu Lab — PLA, PETG, PETG-CF, TPU, ABS, ASA und ASA-CF, darunter 4 Glow, 5 transparente, 3 faserverstärkte, 1 mattes und 1 seidenglänzendes |
 | **3 Düsen** | 0.2 mm · 0.4 mm · 0.6 mm |
-| **3 Stufen** | Qualität · Normal · Schnell |
+| **3 Stufen** | Qualität · Normal · Schnell — jede auch als „+ Stützen“ |
 
 Alle Profile **erben** von den Originalprofilen aus Bambu Studio. Überschrieben wird
 nur, was tatsächlich material- oder stufenspezifisch ist — alles andere bleibt auf
@@ -76,6 +76,13 @@ dist/process/Qualität X1C 0.6.json
 ```
 
 Drucker und Düse müssen bei beiden Dateien übereinstimmen.
+
+Braucht das Teil Stützen, kommt statt der Stufe ihre Variante mit Stützen dazu —
+gleiche Geometrie, Baumstützen an:
+
+```
+dist/process/Qualität + Stützen X1C 0.6.json
+```
 
 ### 3. In Bambu Studio importieren
 

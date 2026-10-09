@@ -3,7 +3,7 @@
 > **Generierte Datei.** Nicht von Hand bearbeiten — sie entsteht aus
 > `dist/_index.json` über `python3 tools/build_docs.py`.
 
-Das Repository enthält **418 Filamentprofile** und **54 Prozessprofile**.
+Das Repository enthält **418 Filamentprofile** und **108 Prozessprofile**.
 
 ---
 
@@ -361,7 +361,9 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 Ein Prozessprofil beschreibt die Geometrie: Schichthöhe, Wände, Füllung,
 Geschwindigkeiten. Es gilt für jedes Material auf demselben Drucker.
 
-Die Zahl in der Zelle ist die Schichthöhe in mm.
+Die Zahl in der Zelle ist die Schichthöhe in mm. Jede Stufe gibt es
+zusätzlich als **„+ Stützen“** — gleiche Geometrie, Baumstützen an,
+abgestimmt auf feste, aber sauber lösbare Stützen.
 
 | Drucker | Düse | Qualität | Normal | Schnell |
 |---|---|---|---|---|
@@ -822,6 +824,24 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `eSUN PLA+ X1C 0.2` | `Generic PLA @0.2 nozzle` |
 | `eSUN PLA+ X1C 0.4` | `Generic PLA` |
 | `eSUN PLA+ X1C 0.6` | `Generic PLA` |
+| `Normal + Stützen A1 0.2` | `0.12mm Draft @BBL A1 0.2 nozzle` |
+| `Normal + Stützen A1 0.4` | `0.20mm Standard @BBL A1` |
+| `Normal + Stützen A1 0.6` | `0.30mm Standard @BBL A1 0.6 nozzle` |
+| `Normal + Stützen A1M 0.2` | `0.12mm Draft @BBL A1M 0.2 nozzle` |
+| `Normal + Stützen A1M 0.4` | `0.20mm Standard @BBL A1M` |
+| `Normal + Stützen A1M 0.6` | `0.30mm Standard @BBL A1M 0.6 nozzle` |
+| `Normal + Stützen H2C 0.2` | `0.12mm Balanced Quality @BBL H2C 0.2 nozzle` |
+| `Normal + Stützen H2C 0.4` | `0.20mm Standard @BBL H2C` |
+| `Normal + Stützen H2C 0.6` | `0.30mm Standard @BBL H2C 0.6 nozzle` |
+| `Normal + Stützen P1P 0.2` | `0.12mm Draft @BBL P1P 0.2 nozzle` |
+| `Normal + Stützen P1P 0.4` | `0.20mm Standard @BBL P1P` |
+| `Normal + Stützen P1P 0.6` | `0.30mm Standard @BBL P1P 0.6 nozzle` |
+| `Normal + Stützen P1S 0.2` | `0.12mm Standard @BBL X1C 0.2 nozzle` |
+| `Normal + Stützen P1S 0.4` | `0.20mm Standard @BBL X1C` |
+| `Normal + Stützen P1S 0.6` | `0.30mm Standard @BBL X1C 0.6 nozzle` |
+| `Normal + Stützen X1C 0.2` | `0.12mm Standard @BBL X1C 0.2 nozzle` |
+| `Normal + Stützen X1C 0.4` | `0.20mm Standard @BBL X1C` |
+| `Normal + Stützen X1C 0.6` | `0.30mm Standard @BBL X1C 0.6 nozzle` |
 | `Normal A1 0.2` | `0.12mm Draft @BBL A1 0.2 nozzle` |
 | `Normal A1 0.4` | `0.20mm Standard @BBL A1` |
 | `Normal A1 0.6` | `0.30mm Standard @BBL A1 0.6 nozzle` |
@@ -840,6 +860,24 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Normal X1C 0.2` | `0.12mm Standard @BBL X1C 0.2 nozzle` |
 | `Normal X1C 0.4` | `0.20mm Standard @BBL X1C` |
 | `Normal X1C 0.6` | `0.30mm Standard @BBL X1C 0.6 nozzle` |
+| `Qualität + Stützen A1 0.2` | `0.08mm High Quality @BBL A1 0.2 nozzle` |
+| `Qualität + Stützen A1 0.4` | `0.12mm High Quality @BBL A1` |
+| `Qualität + Stützen A1 0.6` | `0.18mm Fine @BBL A1 0.6 nozzle` |
+| `Qualität + Stützen A1M 0.2` | `0.08mm High Quality @BBL A1M 0.2 nozzle` |
+| `Qualität + Stützen A1M 0.4` | `0.12mm High Quality @BBL A1M` |
+| `Qualität + Stützen A1M 0.6` | `0.18mm Fine @BBL A1M 0.6 nozzle` |
+| `Qualität + Stützen H2C 0.2` | `0.08mm High Quality @BBL H2C 0.2 nozzle` |
+| `Qualität + Stützen H2C 0.4` | `0.12mm High Quality @BBL H2C` |
+| `Qualität + Stützen H2C 0.6` | `0.18mm Balanced Quality @BBL H2C 0.6 nozzle` |
+| `Qualität + Stützen P1P 0.2` | `0.08mm High Quality @BBL P1P 0.2 nozzle` |
+| `Qualität + Stützen P1P 0.4` | `0.12mm High Quality @BBL P1P` |
+| `Qualität + Stützen P1P 0.6` | `0.18mm Fine @BBL P1P 0.6 nozzle` |
+| `Qualität + Stützen P1S 0.2` | `0.08mm High Quality @BBL X1C 0.2 nozzle` |
+| `Qualität + Stützen P1S 0.4` | `0.12mm High Quality @BBL X1C` |
+| `Qualität + Stützen P1S 0.6` | `0.18mm Standard @BBL X1C 0.6 nozzle` |
+| `Qualität + Stützen X1C 0.2` | `0.08mm High Quality @BBL X1C 0.2 nozzle` |
+| `Qualität + Stützen X1C 0.4` | `0.12mm High Quality @BBL X1C` |
+| `Qualität + Stützen X1C 0.6` | `0.18mm Standard @BBL X1C 0.6 nozzle` |
 | `Qualität A1 0.2` | `0.08mm High Quality @BBL A1 0.2 nozzle` |
 | `Qualität A1 0.4` | `0.12mm High Quality @BBL A1` |
 | `Qualität A1 0.6` | `0.18mm Fine @BBL A1 0.6 nozzle` |
@@ -858,6 +896,24 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Qualität X1C 0.2` | `0.08mm High Quality @BBL X1C 0.2 nozzle` |
 | `Qualität X1C 0.4` | `0.12mm High Quality @BBL X1C` |
 | `Qualität X1C 0.6` | `0.18mm Standard @BBL X1C 0.6 nozzle` |
+| `Schnell + Stützen A1 0.2` | `0.14mm Extra Draft @BBL A1 0.2 nozzle` |
+| `Schnell + Stützen A1 0.4` | `0.28mm Extra Draft @BBL A1` |
+| `Schnell + Stützen A1 0.6` | `0.42mm Extra Draft @BBL A1 0.6 nozzle` |
+| `Schnell + Stützen A1M 0.2` | `0.14mm Extra Draft @BBL A1M 0.2 nozzle` |
+| `Schnell + Stützen A1M 0.4` | `0.28mm Extra Draft @BBL A1M` |
+| `Schnell + Stützen A1M 0.6` | `0.42mm Extra Draft @BBL A1M 0.6 nozzle` |
+| `Schnell + Stützen H2C 0.2` | `0.12mm Balanced Quality @BBL H2C 0.2 nozzle` |
+| `Schnell + Stützen H2C 0.4` | `0.24mm Standard @BBL H2C` |
+| `Schnell + Stützen H2C 0.6` | `0.30mm Standard @BBL H2C 0.6 nozzle` |
+| `Schnell + Stützen P1P 0.2` | `0.14mm Extra Draft @BBL P1P 0.2 nozzle` |
+| `Schnell + Stützen P1P 0.4` | `0.28mm Extra Draft @BBL P1P` |
+| `Schnell + Stützen P1P 0.6` | `0.42mm Extra Draft @BBL P1P 0.6 nozzle` |
+| `Schnell + Stützen P1S 0.2` | `0.14mm Standard @BBL X1C 0.2 nozzle` |
+| `Schnell + Stützen P1S 0.4` | `0.28mm Extra Draft @BBL X1C` |
+| `Schnell + Stützen P1S 0.6` | `0.42mm Standard @BBL X1C 0.6 nozzle` |
+| `Schnell + Stützen X1C 0.2` | `0.14mm Standard @BBL X1C 0.2 nozzle` |
+| `Schnell + Stützen X1C 0.4` | `0.28mm Extra Draft @BBL X1C` |
+| `Schnell + Stützen X1C 0.6` | `0.42mm Standard @BBL X1C 0.6 nozzle` |
 | `Schnell A1 0.2` | `0.14mm Extra Draft @BBL A1 0.2 nozzle` |
 | `Schnell A1 0.4` | `0.28mm Extra Draft @BBL A1` |
 | `Schnell A1 0.6` | `0.42mm Extra Draft @BBL A1 0.6 nozzle` |
