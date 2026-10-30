@@ -32,7 +32,7 @@ ist keine Vorsichtsmarge dieses Repositories.
 | Bett | **70 °C** (erste Schicht 75 °C) | gleich |
 | Glasübergang | 70 °C | gleich |
 | Flussrate | 0.97 | gleich |
-| Lüfter | **10 – 25 %** | halbiert |
+| Lüfter | **15 – 25 %** | Obergrenze −15 Punkte |
 | Überhangkühlung | **40 %** | von 100 % gesenkt |
 | Verzögerung ab | 8 s Schichtzeit | −2 s |
 | Lüfter aus für | 3 Schichten | gleich |

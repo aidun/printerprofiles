@@ -44,6 +44,9 @@
     ],
     "inherits": "Bambu PETG-CF @BBL A1 0.4 nozzle",
     "name": "Bambu PETG-CF A1 0.4",
+    "no_slow_down_for_cooling_on_outwalls": [
+        "1"
+    ],
     "nozzle_temperature": [
         "255"
     ],

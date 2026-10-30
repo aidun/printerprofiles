@@ -34,7 +34,7 @@ Kühlungsempfindlichkeit von PETG.
 | Bett | **70 °C** (erste Schicht 75 °C) | |
 | Glasübergang | 71 °C | |
 | Flussrate | **0.98** | 🟢 gemessen |
-| Lüfter | **10 – 30 %** | niedrigster Wert im Repository |
+| Lüfter | **20 – 30 %** | 🔵 Untergrenze von gemessenen 10 % angehoben, siehe [Schichtlinien](../troubleshooting.md#sichtbare-schichtlinien) |
 | Überhangkühlung | 40 % | |
 | Z-Hop | 0.6 mm | |
 | Düsen | 0.4 · 0.6 mm | **0.2 mm entfällt** |

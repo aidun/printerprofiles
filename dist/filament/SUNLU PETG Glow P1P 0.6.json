@@ -18,7 +18,7 @@
         "30"
     ],
     "fan_min_speed": [
-        "10"
+        "20"
     ],
     "filament_extruder_variant": [
         "Direct Drive Standard",
@@ -47,6 +47,9 @@
     ],
     "inherits": "Generic PETG @BBL P1P",
     "name": "SUNLU PETG Glow P1P 0.6",
+    "no_slow_down_for_cooling_on_outwalls": [
+        "1"
+    ],
     "nozzle_temperature": [
         "248"
     ],

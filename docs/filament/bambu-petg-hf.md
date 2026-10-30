@@ -18,7 +18,7 @@ Durchsatz eingestellt: **21 mm³/s auf dem X1C** — derselbe Wert wie
 | Bett | **70 °C** (erste Schicht 75 °C) | gleich |
 | Glasübergang | 70 °C | −1 °C |
 | Flussrate | 0.97 | +0.01 |
-| Lüfter | **20 – 40 %** | oben reduziert |
+| Lüfter | **30 – 40 %** | schmaleres Fenster |
 | Überhangkühlung | **100 %** | deutlich höher |
 | Verzögerung ab | 10 s Schichtzeit | +4 s |
 | Lüfter aus für | 3 Schichten | +1 |

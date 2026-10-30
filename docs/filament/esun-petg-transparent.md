@@ -14,7 +14,7 @@ die Klarheit verlangt.
 ## Was „auf Klarheit optimiert" bedeutet
 
 > 💧 Gegenüber dem opaken [eSUN PETG](esun-petg.md): **Düse 7 °C heißer**,
-> **Volumenstrom rund 15 % niedriger**, **Lüfter von 20 – 50 % auf 10 – 25 %
+> **Volumenstrom rund 15 % niedriger**, **Lüfter von 30 – 40 % auf 15 – 25 %
 > zurückgenommen**, Verzögerungsschwelle erhöht und die ersten drei Schichten ohne
 > Lüfter.
 >
@@ -33,7 +33,7 @@ die Klarheit verlangt.
 | Bett | **75 °C** (erste Schicht 80 °C) | gleich |
 | Glasübergang | 71 °C | gleich |
 | Flussrate | 0.95 | gleich |
-| Lüfter | **10 – 25 %** | halbiert |
+| Lüfter | **15 – 25 %** | Obergrenze −15 Punkte |
 | Überhangkühlung | 40 % | reduziert |
 | Verzögerung ab | 8 s Schichtzeit | +2 s |
 | Lüfter aus für | 3 Schichten | +1 |

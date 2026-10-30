@@ -18,7 +18,7 @@ am Bett schwächer und bekommt eine um 5 °C höhere Betttemperatur.
 | Bett | **75 °C** (erste Schicht 80 °C) | +5 °C |
 | Glasübergang | 71 °C | gleich |
 | Flussrate | 0.95 | −0.01 |
-| Lüfter | **20 – 50 %** | gleich |
+| Lüfter | **30 – 40 %** | gleich |
 | Überhangkühlung | 60 % | gleich |
 | Z-Hop | 0.6 mm | gleich |
 | Abrasiv | nein | |
@@ -49,7 +49,7 @@ Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
 größere Teile dieses Materials an den Ecken. Dafür ist der Ausriss beim Ablösen
 weniger heftig — die glatte PEI-Platte ist hier unkritischer als bei SUNLU PETG.
 
-**2 · Kühlung bleibt der Feind der Festigkeit.** Wie bei jedem PETG: 20 – 50 %
+**2 · Kühlung bleibt der Feind der Festigkeit.** Wie bei jedem PETG: 30 – 40 %
 Lüfterleistung sind die Obergrenze. Überhänge über etwa 50° gehören auf
 Stützmaterial, nicht auf mehr Lüfter.
 

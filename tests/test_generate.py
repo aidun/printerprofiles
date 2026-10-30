@@ -127,6 +127,23 @@ class TestSources(unittest.TestCase):
             self.assertTrue(self.filaments[key]["hardened"], key)
             self.assertEqual(self.filaments[key]["nozzles"], ["0.4", "0.6"], key)
 
+    def test_petg_keeps_layer_lines_even(self):
+        # Visible PETG layer lines come from layers that differ: a fan that
+        # swings with the layer time changes the gloss, a cooling slowdown on
+        # the outer wall its width. Every PETG keeps the outer wall at speed;
+        # unfilled PETG also holds the fan within 10 points. Fibre-filled PETG
+        # keeps the vendor fan range, its matte surface hides the gloss.
+        petg = [k for k, f in self.filaments.items() if f["material"].startswith("PETG")]
+        self.assertEqual(len(petg), 10)
+        for key in petg:
+            cooling = self.filaments[key]["cooling"]
+            self.assertIs(cooling.get("no_slow_down_for_cooling_on_outwalls"), True, key)
+            if self.filaments[key]["material"] == "PETG":
+                self.assertLessEqual(cooling["fan_max_speed"] - cooling["fan_min_speed"], 10, key)
+        for key, filament in self.filaments.items():
+            if key not in petg:
+                self.assertNotIn("no_slow_down_for_cooling_on_outwalls", filament["cooling"], key)
+
     def test_chamber_materials_skip_the_a1_mini(self):
         # ABS, ASA and ASA-CF shrink on cooling and need a closed chamber;
         # Bambu releases no base profile for any of them on the A1 mini.
@@ -227,8 +244,11 @@ class TestGeneratedPresets(unittest.TestCase):
         self.assertEqual(preset["nozzle_temperature_range_high"], ["250"])
         self.assertEqual(preset["hot_plate_temp_initial_layer"], ["75"])
         self.assertEqual(preset["temperature_vitrification"], ["71"])
-        self.assertEqual(preset["fan_min_speed"], ["10"])
+        # Confirmed at 10 %; raised to 20 % for even layer lines, not yet
+        # printed again.
+        self.assertEqual(preset["fan_min_speed"], ["20"])
         self.assertEqual(preset["fan_max_speed"], ["30"])
+        self.assertEqual(preset["no_slow_down_for_cooling_on_outwalls"], ["1"])
 
     def test_every_base_resolves_for_every_machine(self):
         # A missing base would only surface at generation time; the one gap the

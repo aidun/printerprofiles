@@ -47,6 +47,9 @@
     ],
     "inherits": "Generic PETG @BBL H2C",
     "name": "Geeetech PETG H2C 0.6",
+    "no_slow_down_for_cooling_on_outwalls": [
+        "1"
+    ],
     "nozzle_temperature": [
         "230"
     ],

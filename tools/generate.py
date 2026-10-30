@@ -180,6 +180,10 @@ def build_filament(lib, printer_id, printer, filament, nozzle):
         "filament_max_volumetric_speed": per_variant(fmt(flow), count),
         "filament_z_hop": [str(filament["retraction"]["z_hop"])],
     }
+    # Optional: without the key the base profile's value is inherited.
+    if "no_slow_down_for_cooling_on_outwalls" in cooling:
+        preset["no_slow_down_for_cooling_on_outwalls"] = [
+            "1" if cooling["no_slow_down_for_cooling_on_outwalls"] else "0"]
     meta = {
         "file": f"filament/{name}.json",
         "name": name,

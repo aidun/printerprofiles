@@ -16,6 +16,7 @@ und sagt, welcher Wert in `src/` anzupassen ist.
 | Feine Fäden zwischen den Teilen | zu heiß, Einzug zu kurz | [Fädenbildung](#fädenbildung) |
 | Wände zu dünn, Löcher in der Oberfläche | Unterextrusion | [Unterextrusion](#unterextrusion) |
 | Teil lässt sich in Schichten trennen | zu kalt, Kühlung zu stark | [Schichthaftung](#schichthaftung) |
+| Schichtlinien deutlich sichtbar, Glanzbänder | Schichten ungleich gekühlt oder gebremst | [Sichtbare Schichtlinien](#sichtbare-schichtlinien) |
 | Maße stimmen nicht | Flussrate falsch | [Maßhaltigkeit](#maßhaltigkeit) |
 | Knacken beim Druck, Blasen im Material | Filament feucht | [Feuchtigkeit](#feuchtigkeit) |
 | Überhänge hängen durch | zu heiß, zu wenig Kühlung | [Überhänge](#überhänge) |
@@ -58,7 +59,7 @@ Ecken heben sich während des Drucks vom Bett ab, das Teil verzieht sich.
 | Lüfter insgesamt drosseln | `[kuehlung] fan_max_speed` senken | mittel |
 
 PETG neigt deutlich stärker zum Verzug als PLA. Die Profile tragen dem bereits
-Rechnung: PETG startet mit 10 – 30 % Lüfterleistung, PLA mit 60 – 100 %.
+Rechnung: PETG startet mit 15 – 40 % Lüfterleistung, PLA mit 60 – 100 %.
 
 **Bei ABS ist Warping kein Fehlerbild, sondern die Grundeigenschaft des Materials.**
 ABS schrumpft beim Abkühlen um rund 0.8 %; ohne geschlossene, warme Kammer ist ein
@@ -114,6 +115,42 @@ Das Teil lässt sich entlang der Schichten trennen, bricht bei geringer Belastun
    dünnere Schichten verschweißen besser.
 4. **Wandzahl erhöhen.** In `src/quality.toml` unter `[<level>.parameters]`
    `wall_loops`.
+
+---
+
+## Sichtbare Schichtlinien
+
+Jede Schicht ist einzeln zu erkennen, oft als Wechsel aus glänzenden und matten
+Bändern — besonders bei PETG, das empfindlich auf Kühlung reagiert.
+
+Sichtbar wird eine Schichtlinie, wenn sich Nachbarschichten **unterscheiden**. Die
+beiden häufigsten Gründe liegen in der Kühllogik von Bambu Studio: Ist eine Schicht
+schneller fertig als `fan_cooling_layer_time`, dreht der Lüfter zwischen
+`fan_min_speed` und `fan_max_speed` hoch — der Glanz ändert sich. Ist sie schneller
+als `slow_down_layer_time`, bremst der Slicer, ab Werk auch die Außenwand — die
+Bahnbreite ändert sich.
+
+Die PETG-Profile setzen deshalb zwei Regeln um, ein Test wacht darüber:
+
+| Regel | Parameter | Gilt für |
+|---|---|---|
+| Außenwand wird nie gebremst, nur das Innere | `[cooling] no_slow_down_for_cooling_on_outwalls = true` | jedes PETG und PETG-CF |
+| Lüfterfenster höchstens 10 Prozentpunkte breit | `fan_min_speed`, `fan_max_speed` | PETG ohne Faser |
+
+PETG-CF behält die Lüfterwerte des Herstellers: Die matte Faseroberfläche zeigt keine
+Glanzbänder. Die engeren Fenster sind hergeleitet, nicht gemessen — auch beim
+SUNLU PETG Glow, dessen Untergrenze von den am Gerät bestätigten 10 % auf 20 %
+gestiegen ist.
+
+Bleiben die Linien sichtbar:
+
+1. **Stufe *Qualität* wählen.** Dünnere Schichten bedeuten flachere Übergänge.
+2. **Temperatur anheben.** `[temperature] nozzle` um 5 °C — die Bahn fließt besser
+   in die Schicht darunter. Kostet etwas Fädenbildung.
+3. **Feuchtigkeit ausschließen.** Feuchtes PETG zeigt raue, unregelmäßige Wände,
+   die wie Schichtlinien aussehen — [trocknen](#feuchtigkeit).
+4. **Mechanik prüfen.** Wiederholen sich die Linien in festem Abstand, liegt es an
+   Z-Achse oder Riemen, nicht am Profil.
 
 ---
 

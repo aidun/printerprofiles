@@ -47,6 +47,9 @@
     ],
     "inherits": "Generic PETG @BBL P1P 0.2 nozzle",
     "name": "Geeetech PETG P1P 0.2",
+    "no_slow_down_for_cooling_on_outwalls": [
+        "1"
+    ],
     "nozzle_temperature": [
         "230"
     ],

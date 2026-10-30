@@ -131,6 +131,12 @@ Dazu kommen fünf Tabellen, die alle gezeigten Schlüssel brauchen:
 | `[cooling]` | `fan_min_speed`, `fan_max_speed`, `overhang_fan_speed`, `slow_down_layer_time`, `fan_cooling_layer_time`, `close_fan_the_first_x_layers` |
 | `[retraction]` | `z_hop` |
 
+Optional ist `no_slow_down_for_cooling_on_outwalls` in `[cooling]`: `true` nimmt die
+Außenwand von der Verzögerung für kurze Schichten aus. Fehlt der Schlüssel, erbt das
+Preset den Wert des Basisprofils. `test_petg_keeps_layer_lines_even` verlangt ihn für
+jedes PETG und verbietet ihn für alle anderen Materialien — Hintergrund unter
+[Sichtbare Schichtlinien](troubleshooting.md#sichtbare-schichtlinien).
+
 Die Volumenströme unter `[volumetric_flow]` beziehen sich immer auf den X1 Carbon;
 `flow_factor` aus `src/printers.toml` rechnet sie auf die übrigen Drucker um. Steht für
 ein Gerät ein Eintrag in `[volumetric_flow_cap]`, gewinnt der kleinere der beiden Werte

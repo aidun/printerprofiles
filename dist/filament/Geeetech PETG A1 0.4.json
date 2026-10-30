@@ -44,6 +44,9 @@
     ],
     "inherits": "Generic PETG @BBL A1",
     "name": "Geeetech PETG A1 0.4",
+    "no_slow_down_for_cooling_on_outwalls": [
+        "1"
+    ],
     "nozzle_temperature": [
         "230"
     ],

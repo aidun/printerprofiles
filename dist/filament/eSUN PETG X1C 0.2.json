@@ -15,10 +15,10 @@
         "20"
     ],
     "fan_max_speed": [
-        "50"
+        "40"
     ],
     "fan_min_speed": [
-        "20"
+        "30"
     ],
     "filament_extruder_variant": [
         "Direct Drive Standard",
@@ -47,6 +47,9 @@
     ],
     "inherits": "Generic PETG @0.2 nozzle",
     "name": "eSUN PETG X1C 0.2",
+    "no_slow_down_for_cooling_on_outwalls": [
+        "1"
+    ],
     "nozzle_temperature": [
         "243"
     ],

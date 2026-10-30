@@ -15,10 +15,10 @@
         "20"
     ],
     "fan_max_speed": [
-        "50"
+        "40"
     ],
     "fan_min_speed": [
-        "20"
+        "30"
     ],
     "filament_extruder_variant": [
         "Direct Drive Standard"
@@ -44,6 +44,9 @@
     ],
     "inherits": "Generic PETG @BBL A1M",
     "name": "eSUN PETG A1M 0.4",
+    "no_slow_down_for_cooling_on_outwalls": [
+        "1"
+    ],
     "nozzle_temperature": [
         "243"
     ],

@@ -27,8 +27,9 @@ Belastung für die Düse. Der Durchsatz bleibt dafür der niedrigste.
 | Lagerung | zwingend trocken | gleich |
 
 **Das schmale Lüfterfenster ist eine Herstellerangabe.** `Generic PETG @Geeetech` gibt
-30 % Mindest- und 40 % Maximalkühlung vor — zehn Prozentpunkte Spielraum, wo eSUN und
-SUNLU zwischen 20 und 50 % arbeiten. Geeetech legt die Kühlung damit auf einen schmalen
+30 % Mindest- und 40 % Maximalkühlung vor — zehn Prozentpunkte Spielraum. Dieses Fenster
+hat das Repository inzwischen für jedes PETG übernommen, siehe
+[Schichtlinien](../troubleshooting.md#sichtbare-schichtlinien). Geeetech legt die Kühlung damit auf einen schmalen
 Korridor fest: genug Luft, damit Überhänge nicht durchhängen, zu wenig, um die
 Schichthaftung zu kosten. Für Warping-Fälle bleibt
 `close_fan_the_first_x_layers = 3` der wirksamere Hebel als eine weitere Absenkung.

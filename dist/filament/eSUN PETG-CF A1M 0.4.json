@@ -44,6 +44,9 @@
     ],
     "inherits": "Generic PETG-CF @BBL A1M",
     "name": "eSUN PETG-CF A1M 0.4",
+    "no_slow_down_for_cooling_on_outwalls": [
+        "1"
+    ],
     "nozzle_temperature": [
         "250"
     ],

@@ -18,7 +18,7 @@
         "25"
     ],
     "fan_min_speed": [
-        "10"
+        "15"
     ],
     "filament_extruder_variant": [
         "Direct Drive Standard"
@@ -44,6 +44,9 @@
     ],
     "inherits": "Bambu PETG Translucent @BBL A1 0.2 nozzle",
     "name": "Bambu PETG Translucent A1 0.2",
+    "no_slow_down_for_cooling_on_outwalls": [
+        "1"
+    ],
     "nozzle_temperature": [
         "250"
     ],

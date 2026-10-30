@@ -47,6 +47,9 @@
     ],
     "inherits": "Bambu PETG-CF @BBL X1C",
     "name": "Bambu PETG-CF X1C 0.6",
+    "no_slow_down_for_cooling_on_outwalls": [
+        "1"
+    ],
     "nozzle_temperature": [
         "255"
     ],

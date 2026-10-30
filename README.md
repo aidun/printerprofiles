@@ -150,7 +150,7 @@ gedruckt und bestätigt worden.
 
 | Symbol | Bedeutung |
 |---|---|
-| 🟢 **verifiziert** | Am Drucker gedruckt und bestätigt. Aktuell: **SUNLU PETG Glow · H2C · 0.4 mm** |
+| 🟢 **verifiziert** | Am Drucker gedruckt und bestätigt. Aktuell: **SUNLU PETG Glow · H2C · 0.4 mm** — bis auf die Lüfter-Untergrenze, die seither für gleichmäßigere Schichtlinien auf 20 % angehoben ist |
 | 🔵 **Startwert** | Aus dem Bambu-Basisprofil abgeleitet und rechnerisch auf Drucker und Düse skaliert. Druckbar, aber nicht einzeln erprobt. |
 
 Startwerte sind keine Schätzungen ins Blaue: Sie gehen von Bambus eigenen,

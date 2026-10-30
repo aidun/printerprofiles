@@ -18,7 +18,7 @@
         "25"
     ],
     "fan_min_speed": [
-        "10"
+        "15"
     ],
     "filament_extruder_variant": [
         "Direct Drive Standard"
@@ -44,6 +44,9 @@
     ],
     "inherits": "Generic PETG @BBL A1M",
     "name": "SUNLU PETG Transparent A1M 0.4",
+    "no_slow_down_for_cooling_on_outwalls": [
+        "1"
+    ],
     "nozzle_temperature": [
         "252"
     ],

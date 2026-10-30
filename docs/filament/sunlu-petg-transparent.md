@@ -13,7 +13,7 @@ Feuchtigkeit, Fädenbildung und die Empfindlichkeit gegen Kühlung.
 ## Was „auf Klarheit optimiert" bedeutet
 
 > 💧 Gegenüber dem Standard-PETG: **Düse 7 °C heißer**, **Volumenstrom rund 15 %
-> niedriger**, **Lüfter von 20 – 50 % auf 10 – 25 % zurückgenommen** und die
+> niedriger**, **Lüfter von 30 – 40 % auf 15 – 25 % zurückgenommen** und die
 > Verzögerungsschwelle erhöht, damit kleine Schichten mehr Zeit zum Abfließen haben.
 >
 > PETG verzeiht diese Einstellung besser als PLA: Weniger Kühlung verbessert bei
@@ -31,7 +31,7 @@ Feuchtigkeit, Fädenbildung und die Empfindlichkeit gegen Kühlung.
 | Bett | **70 °C** (erste Schicht 75 °C) | gleich |
 | Glasübergang | 71 °C | gleich |
 | Flussrate | 0.95 | gleich |
-| Lüfter | **10 – 25 %** | halbiert |
+| Lüfter | **15 – 25 %** | Obergrenze −15 Punkte |
 | Überhangkühlung | 40 % | reduziert |
 | Verzögerung ab | 8 s Schichtzeit | +2 s |
 | Lüfter aus für | 3 Schichten | +1 |

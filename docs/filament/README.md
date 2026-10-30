@@ -59,7 +59,7 @@ Volumenstrom bezogen auf den X1 Carbon mit 0.4-mm-Düse; die übrigen Drucker we
 | Bett | 55 °C | 55 °C | 55 °C | 70 °C | 70 °C | 70 °C | 35 °C | 95 °C |
 | Glasübergang | 55 °C | 55 °C | 55 °C | 71 °C | 71 °C | 71 °C | 30 °C | **108 °C** |
 | Flussrate | 0.98 | 0.96 | 0.98 | 0.95 | 0.98 | 0.95 | 1.00 | 0.95 |
-| Lüfter | 60–100 % | 60–100 % | 30–60 % | 20–50 % | 10–30 % | 10–25 % | 100 % | 10–30 % |
+| Lüfter | 60–100 % | 60–100 % | 30–60 % | 30–40 % | 20–30 % | 15–25 % | 100 % | 10–30 % |
 | Volumenstrom | 15.0 | 10.5 | 12.8 | 14.0 | 11.0 | 11.9 | 3.2 | 15.0 |
 | Trocknung | 45/6 h | 45/6 h | 45/6 h | 65/8 h | 65/8 h | 65/8 h | 50/8 h | 80/6 h |
 
@@ -71,7 +71,7 @@ Volumenstrom bezogen auf den X1 Carbon mit 0.4-mm-Düse; die übrigen Drucker we
 | Bett | 60 °C | 60 °C | 75 °C | 75 °C | 80 °C | 90 °C |
 | Glasübergang | 55 °C | 55 °C | 71 °C | 71 °C | 70 °C | 100 °C |
 | Flussrate | 0.98 | 0.95 | 0.95 | 0.95 | 0.95 | 0.95 |
-| Lüfter | 50–90 % | 50–90 % | 20–50 % | 10–25 % | 5–40 % | 10–30 % |
+| Lüfter | 50–90 % | 50–90 % | 30–40 % | 15–25 % | 5–40 % | 10–30 % |
 | Volumenstrom | 16.0 | 10.0 | 13.0 | 11.0 | 11.5 | 15.0 |
 | Trocknung | 45/6 h | 45/6 h | 65/8 h | 65/8 h | 65/8 h | 70/4 h |
 
@@ -105,7 +105,7 @@ führt — und diese Bibliothek kennt für Silk **keine 0.2-mm-Variante**.
 | Bett | 55 °C | 55 °C | 55 °C | 70 °C | 70 °C |
 | Glasübergang | 45 °C | 45 °C | 45 °C | 70 °C | 70 °C |
 | Flussrate | 0.98 | 0.98 | 0.98 | 0.97 | 0.97 |
-| Lüfter | 100 % | 100 % | 40–70 % | 20–40 % | 10–25 % |
+| Lüfter | 100 % | 100 % | 40–70 % | 30–40 % | 15–25 % |
 | Volumenstrom | **21.0** | 18.0 | 12.0 | **21.0** | 6.0 |
 | Trocknung | 45/6 h | 45/6 h | 45/6 h | 65/8 h | 65/8 h |
 
@@ -272,7 +272,7 @@ Alle fünf klaren Materialien fahren deshalb dasselbe Rezept:
 
 - **Düse 5 – 10 °C heißer** als das opake Material derselben Familie
 - **Volumenstrom rund 15 % niedriger** — der eigentliche Wirkmechanismus
-- **Lüfter etwa halbiert**, Verzögerungsschwelle erhöht, eine Schicht länger aus
+- **Lüfter-Obergrenze deutlich gesenkt**, Verzögerungsschwelle erhöht, eine Schicht länger aus
 
 Dazu kommen drei Regeln, die nicht im Profil stehen, sondern beim Slicen gelten:
 

@@ -18,7 +18,7 @@ verliert bei zu starker Kühlung die Schichthaftung.
 | Bett | **70 °C** (erste Schicht 75 °C) | +15 °C |
 | Glasübergang | 71 °C | +16 °C |
 | Flussrate | 0.95 | −0.03 |
-| Lüfter | **20 – 50 %** | stark reduziert |
+| Lüfter | **30 – 40 %** | stark reduziert, schmales Fenster |
 | Überhangkühlung | 60 % | reduziert |
 | Z-Hop | **0.6 mm** | +0.2 mm |
 | Abrasiv | nein | |
@@ -54,7 +54,7 @@ verliert bei zu starker Kühlung die Schichthaftung.
 ## Die drei Eigenheiten
 
 **1 · Kühlung ist der Feind der Festigkeit.** PETG verschweißt seine Schichten
-langsamer als PLA. Die Profile fahren deshalb nur 20 – 50 % Lüfterleistung. Wer die
+langsamer als PLA. Die Profile fahren deshalb nur 30 – 40 % Lüfterleistung. Wer die
 Kühlung hochdreht, bekommt schönere Überhänge und Teile, die in der Hand brechen.
 Überhänge über etwa 50° gehören bei PETG auf Stützmaterial, nicht auf mehr Lüfter.
 
