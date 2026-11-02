@@ -228,6 +228,9 @@ def build_process(lib, printer_id, printer, nozzle, level_id, level, support=Non
             preset[key] = scale(base_values[key], factor)
     if support:
         preset.update({k: str(v) for k, v in support["parameters"].items()})
+        for key, factor in support.get("speed", {}).items():
+            if key in base_values:
+                preset[key] = scale(base_values[key], factor)
 
     meta = {
         "file": f"process/{name}.json",

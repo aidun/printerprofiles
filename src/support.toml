@@ -13,6 +13,8 @@
 #   support_bottom_z_distance  at 0.2 mm — the base profile already matches the
 #                            preset's layer height, so the gap is right as is
 #
+# "speed" holds factors on the base profile's values, as in quality.toml.
+#
 # Process presets know nothing about the material. The values are chosen for
 # PLA; PETG bonds harder to itself and comes off with more force.
 
@@ -24,3 +26,12 @@ support_interface_top_layers = "3"     # Bambu: 2 — firmer bed for the part
 support_interface_spacing    = "0.3"   # Bambu: 0.5 — cleaner underside
 support_object_xy_distance   = "0.45"  # Bambu: 0.35 — keeps trees off the walls
 tree_support_wall_count      = "2"     # Bambu: -1 (auto) — stiffer branches
+enable_support_ironing       = "1"     # Bambu: 0 — smooth bed, smooth underside
+
+# The part copies the top interface layer onto its underside. Ironing flattens
+# that layer's ridges; Bambu's ironing values (10 % flow, 0.15 mm spacing,
+# 30 mm/s) are inherited. A slower interface lays the dense lines more evenly.
+# Bambu prints it at 80 mm/s on every machine and nozzle. Materials with a low
+# volumetric limit, TPU above all, are slowed further by the filament preset.
+[speed]
+support_interface_speed      = 0.625   # 80 → 50 mm/s
