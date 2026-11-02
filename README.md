@@ -128,6 +128,12 @@ Ausführlich, samt der Frage Messing oder gehärtet:
 | **Normal** | der Alltagsfall |
 | **Schnell** | Prototypen, Passproben, Hilfsteile |
 
+*Qualität* und *Normal* bringen zusätzlich Einstellungen mit, die man am Teil sieht,
+die aber keine Druckzeit kosten: eine schräg auslaufende Naht (Scarf-Naht), die
+Außenwand zwischen zwei Innenwänden gedruckt, die Naht weg von Überhängen und
+Leerfahrten um die Außenwände herum. *Qualität* nutzt außerdem den Wandgenerator
+Arachne für feine Details und Schrift. *Schnell* bleibt bei Bambus Vorgaben.
+
 Welche Kombination es gibt und mit welchen Werten, zeigt die
 **[Profilmatrix](docs/matrix.md)**.
 

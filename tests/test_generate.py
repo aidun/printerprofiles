@@ -217,6 +217,25 @@ class TestSources(unittest.TestCase):
                        for level in ("quality", "normal", "fast")]
             self.assertEqual(heights, sorted(heights))
 
+    def test_visible_surface_settings_cost_no_time(self):
+        # Quality and Normal carry what shows on the part without slowing the
+        # print; Fast stays on Bambu's values. Only Quality uses Arachne.
+        surface = {
+            "seam_slope_type": "external",
+            "override_filament_scarf_seam_setting": "1",
+            "wall_infill_order": "inner-outer-inner wall/infill",
+            "seam_placement_away_from_overhangs": "1",
+            "reduce_crossing_wall": "1",
+        }
+        for level_id in ("quality", "normal"):
+            params = self.levels[level_id]["parameters"]
+            for key, value in surface.items():
+                self.assertEqual(params.get(key), value, f"{level_id} {key}")
+        for key in surface:
+            self.assertNotIn(key, self.levels["fast"]["parameters"])
+        self.assertEqual(self.levels["quality"]["parameters"]["wall_generator"], "arachne")
+        self.assertNotIn("wall_generator", self.levels["normal"]["parameters"])
+
 
 class TestGeneratedPresets(unittest.TestCase):
     """Checks the outcome of a complete run."""
