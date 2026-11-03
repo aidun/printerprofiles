@@ -235,12 +235,13 @@ Sie setzt Baumstützen, die beim Druck fest stehen und sich danach sauber lösen
 | `support_interface_spacing` | 0.5 | 0.3 | glattere Unterseite |
 | `support_object_xy_distance` | 0.35 | 0.45 | Äste schmelzen nicht an Wänden an |
 | `tree_support_wall_count` | auto | 2 | steifere Äste, hohe Bäume knicken nicht |
-| `enable_support_ironing` | aus | an | Kontaktschicht wird gebügelt, die Unterseite des Teils glatt |
 | `support_interface_speed` | 80 mm/s | 50 mm/s | Kontaktbahnen liegen gleichmäßiger |
 
 Das Teil bildet die oberste Kontaktschicht auf seiner Unterseite ab — deshalb
-setzen die letzten beiden Zeilen dort an. Das Bügeln übernimmt Bambus Werte
-(10 % Fluss, 0.15 mm Abstand, 30 mm/s) und kostet nur auf den Kontaktlagen Zeit.
+setzt die letzte Zeile dort an. Das Bügeln der Kontaktschicht
+(`enable_support_ironing`) bleibt aus: Bambu Studio erlaubt es nur bei
+geschlossener Kontaktschicht (`support_interface_spacing` 0) und stürzt sonst beim
+Start ab.
 Material mit niedrigem Volumenstrom, allen voran TPU, bremst das Filamentpreset
 ohnehin weiter herunter.
 

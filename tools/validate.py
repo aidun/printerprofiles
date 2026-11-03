@@ -180,6 +180,12 @@ def check_process(c, lib, short, d, machines):
                     f"{short}: layer height {height} above 75 % of the nozzle diameter {nozzle}")
 
     base_values = lib.resolved(lib.processes, d.get("inherits", ""))
+    # Bambu Studio crashes on startup when an active preset breaks this rule.
+    merged = {**base_values, **d}
+    if merged.get("enable_support_ironing") == "1":
+        c.check(_number(merged.get("support_interface_spacing")) == 0
+                and merged.get("support_interface_pattern") != "grid",
+                f"{short}: support ironing needs a solid interface (spacing 0, pattern not grid)")
     for key, value in d.items():
         if isinstance(value, list) and key.endswith("_speed"):
             base = base_values.get(key)

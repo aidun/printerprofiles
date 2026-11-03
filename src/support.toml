@@ -26,11 +26,11 @@ support_interface_top_layers = "3"     # Bambu: 2 — firmer bed for the part
 support_interface_spacing    = "0.3"   # Bambu: 0.5 — cleaner underside
 support_object_xy_distance   = "0.45"  # Bambu: 0.35 — keeps trees off the walls
 tree_support_wall_count      = "2"     # Bambu: -1 (auto) — stiffer branches
-enable_support_ironing       = "1"     # Bambu: 0 — smooth bed, smooth underside
 
-# The part copies the top interface layer onto its underside. Ironing flattens
-# that layer's ridges; Bambu's ironing values (10 % flow, 0.15 mm spacing,
-# 30 mm/s) are inherited. A slower interface lays the dense lines more evenly.
+# The part copies the top interface layer onto its underside. A slower interface
+# lays the dense lines more evenly. Support ironing stays off: Bambu Studio only
+# accepts it on a solid interface (spacing 0, pattern not grid) and crashes on
+# startup when the active preset combines it with a sparse one.
 # Bambu prints it at 80 mm/s on every machine and nozzle. Materials with a low
 # volumetric limit, TPU above all, are slowed further by the filament preset.
 [speed]

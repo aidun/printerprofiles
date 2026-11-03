@@ -399,26 +399,22 @@ class TestSupportPresets(unittest.TestCase):
         self.assertEqual(preset["support_interface_spacing"], "0.3")
         self.assertEqual(preset["support_object_xy_distance"], "0.45")
         self.assertEqual(preset["tree_support_wall_count"], "2")
-        self.assertEqual(preset["enable_support_ironing"], "1")
         self.assertEqual(preset["support_interface_speed"], ["50", "50"])
 
-    def test_interface_is_ironed_and_slowed_everywhere(self):
+    def test_interface_is_slowed_and_not_ironed_everywhere(self):
         # The underside is a copy of the top interface layer. Every support
-        # preset irons it with Bambu's ironing values and lays it at 50 mm/s,
-        # one entry per extruder variant.
+        # preset lays it at 50 mm/s, one entry per extruder variant. Ironing
+        # stays off: Bambu Studio crashes on it with a sparse interface.
         for printer_id, printer in self.printers.items():
             for nozzle in printer["nozzles"]:
                 for level_id in self.levels:
                     _, preset, _ = self.build(printer_id, nozzle, level_id, self.support)
-                    self.assertEqual(preset["enable_support_ironing"], "1", preset["name"])
+                    self.assertNotIn("enable_support_ironing", preset, preset["name"])
                     base = self.lib.resolved(self.lib.processes, preset["inherits"])
                     self.assertEqual(len(preset["support_interface_speed"]),
                                      len(base["support_interface_speed"]), preset["name"])
                     self.assertEqual(set(preset["support_interface_speed"]), {"50"},
                                      preset["name"])
-                    for key in ("support_ironing_flow", "support_ironing_spacing",
-                                "support_ironing_speed"):
-                        self.assertNotIn(key, preset)
 
     def test_support_variant_keeps_the_level_geometry(self):
         _, plain, _ = self.build("h2c", "0.6", "fast")
