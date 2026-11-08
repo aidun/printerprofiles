@@ -65,7 +65,8 @@ class TestLibrary(unittest.TestCase):
 
     def test_extruder_variants_are_unique(self):
         variants = generate.variants(self.lib, "Bambu Lab H2C 0.4 nozzle")
-        self.assertEqual(variants, ["Direct Drive Standard", "Direct Drive High Flow"])
+        self.assertEqual(variants, ["Direct Drive Standard", "Direct Drive High Flow",
+                                    "Direct Drive E3D High Flow"])
         self.assertEqual(generate.variants(self.lib, "Bambu Lab A1 0.4 nozzle"),
                          ["Direct Drive Standard"])
 
@@ -257,8 +258,8 @@ class TestGeneratedPresets(unittest.TestCase):
         _, preset, _ = generate.build_filament(
             self.lib, "h2c", self.printers["h2c"], self.filaments["sunlu-petg-glow"], "0.4")
         self.assertEqual(preset["inherits"], "Generic PETG @BBL H2C 0.4 nozzle")
-        self.assertEqual(preset["filament_flow_ratio"], ["0.98", "nil"])
-        self.assertEqual(preset["filament_max_volumetric_speed"], ["12.6", "nil"])
+        self.assertEqual(preset["filament_flow_ratio"], ["0.98", "nil", "nil"])
+        self.assertEqual(preset["filament_max_volumetric_speed"], ["12.6", "nil", "nil"])
         self.assertEqual(preset["nozzle_temperature_range_low"], ["245"])
         self.assertEqual(preset["nozzle_temperature_range_high"], ["250"])
         self.assertEqual(preset["hot_plate_temp_initial_layer"], ["75"])

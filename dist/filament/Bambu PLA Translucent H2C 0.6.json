@@ -22,14 +22,17 @@
     ],
     "filament_extruder_variant": [
         "Direct Drive Standard",
-        "Direct Drive High Flow"
+        "Direct Drive High Flow",
+        "Direct Drive E3D High Flow"
     ],
     "filament_flow_ratio": [
         "0.98",
+        "nil",
         "nil"
     ],
     "filament_max_volumetric_speed": [
         "16.1",
+        "nil",
         "nil"
     ],
     "filament_settings_id": [
@@ -45,7 +48,7 @@
     "hot_plate_temp_initial_layer": [
         "60"
     ],
-    "inherits": "Bambu PLA Translucent @BBL H2C",
+    "inherits": "Bambu PLA Translucent @BBL H2C 0.6 nozzle",
     "name": "Bambu PLA Translucent H2C 0.6",
     "nozzle_temperature": [
         "228"

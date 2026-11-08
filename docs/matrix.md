@@ -532,7 +532,7 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Bambu PLA Translucent A1M 0.6` | `Bambu PLA Translucent @BBL A1M 0.8 nozzle` |
 | `Bambu PLA Translucent H2C 0.2` | `Bambu PLA Translucent @BBL H2C 0.2 nozzle` |
 | `Bambu PLA Translucent H2C 0.4` | `Bambu PLA Translucent @BBL H2C` |
-| `Bambu PLA Translucent H2C 0.6` | `Bambu PLA Translucent @BBL H2C` |
+| `Bambu PLA Translucent H2C 0.6` | `Bambu PLA Translucent @BBL H2C 0.6 nozzle` |
 | `Bambu PLA Translucent P1P 0.2` | `Bambu PLA Translucent @BBL P1P 0.2 nozzle` |
 | `Bambu PLA Translucent P1P 0.4` | `Bambu PLA Translucent @BBL P1P` |
 | `Bambu PLA Translucent P1P 0.6` | `Bambu PLA Translucent @BBL P1P 0.8 nozzle` |

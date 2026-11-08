@@ -9,12 +9,14 @@
     "gap_infill_speed": [
         "250",
         "150",
+        "150",
         "250",
         "150"
     ],
     "inherits": "0.20mm Standard @BBL H2C",
     "inner_wall_speed": [
         "300",
+        "600",
         "600",
         "300",
         "600"
@@ -23,6 +25,7 @@
     "name": "Normal + Stützen H2C 0.4",
     "outer_wall_speed": [
         "200",
+        "500",
         "500",
         "200",
         "500"
@@ -38,11 +41,13 @@
     "sparse_infill_speed": [
         "350",
         "600",
+        "600",
         "350",
         "600"
     ],
     "support_interface_spacing": "0.3",
     "support_interface_speed": [
+        "50",
         "50",
         "50",
         "50",
@@ -52,6 +57,7 @@
     "support_object_xy_distance": "0.45",
     "top_shell_layers": "4",
     "top_surface_speed": [
+        "200",
         "200",
         "200",
         "200",

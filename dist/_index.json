@@ -1519,7 +1519,7 @@
             "filament": "bambu-pla-translucent",
             "file": "filament/Bambu PLA Translucent H2C 0.6.json",
             "flow": "16.1",
-            "inherits": "Bambu PLA Translucent @BBL H2C",
+            "inherits": "Bambu PLA Translucent @BBL H2C 0.6 nozzle",
             "kind": "filament",
             "name": "Bambu PLA Translucent H2C 0.6",
             "nozzle": "0.6",
