@@ -30,6 +30,8 @@ verliert bei zu starker Kühlung die Schichthaftung.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
 | H2C | 1.1 | 16.1 | 18.4 |
+| H3C | 1.1 | 16.1 | 18.4 |
+| X2D | 1 | 14 | 16 |
 | X1 Carbon | 1 | 14 | 16 |
 | P1S | 0.9 | 13.3 | 15.2 |
 | P1P | 0.9 | 13.3 | 15.2 |

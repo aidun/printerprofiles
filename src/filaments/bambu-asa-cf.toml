@@ -17,7 +17,7 @@ drying                       = "80 °C / 8 h"
 storage                      = "trocken, Silikagel; Faseranteil nimmt kaum Wasser auf"
 nozzles                      = ["0.4", "0.6"]
 # Like ABS and ASA, no base profile for the A1 mini.
-printers                     = ["h2c", "x1c", "p1s", "p1p", "a1"]
+printers                     = ["h2c", "h3c", "x2d", "x1c", "p1s", "p1p", "a1"]
 description                  = "Das steifste und wärmefesteste Material im Sortiment: Glasübergang 108 °C, UV-stabil, faserverstärkt. Verlangt geschlossene Kammer, Bett 100 °C, gehärtete Düse und die niedrigste Flussrate des Repositories. Für Außenteile unter Dauerlast."
 
 [temperature]

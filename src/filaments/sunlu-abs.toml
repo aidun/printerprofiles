@@ -15,7 +15,7 @@ storage                      = "trocken, Silikagel; ABS ist weniger hygroskopisc
 nozzles                      = ["0.2", "0.4", "0.6"]
 # No ABS base profile exists for the A1 mini in the Bambu library — its build
 # volume and bed power do not carry the material.
-printers                     = ["h2c", "x1c", "p1s", "p1p", "a1"]
+printers                     = ["h2c", "h3c", "x2d", "x1c", "p1s", "p1p", "a1"]
 description                  = "Schlagfestes ABS aus SUNLUs Standardlinie. SUNLU gibt die Glasübergangstemperatur mit 108.9 °C an — der höchste Wert aller ABS-Varianten hier — und verlangt dafür ein heißeres Bett und eine geschlossene Kammer. Volumenstrom und Kühlung entsprechen dem eSUN ABS+, beide erben vom selben Basisprofil."
 
 [temperature]

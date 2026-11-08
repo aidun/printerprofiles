@@ -120,7 +120,7 @@ sind deshalb auf 0.4 und 0.6 mm beschränkt.
 Der Grund ist ein anderer. [SUNLU TPU](filament/README.md) ist nicht gefüllt und
 verschleißt die Düse nicht — hier begrenzt der Extruder. Weiches Filament knickt
 unter Vorschubdruck aus, statt zu fördern, und die 0.2-mm-Bohrung verlangt den
-höchsten Druck von allen drei Durchmessern. Bambu führt für TPU auf keinem der sechs
+höchsten Druck von allen drei Durchmessern. Bambu führt für TPU auf keinem der acht
 Geräte ein Basisprofil für 0.2 mm; dieses Repository erfindet keines dazu.
 
 Dass der Volumenstrom bei TPU über 0.4 und 0.6 mm **identisch** bleibt, hat dieselbe
@@ -130,7 +130,7 @@ Ursache: Die größere Bohrung hebt nicht an, was der Extruder durchschieben kan
 
 Hier liegt es weder am Material noch am Extruder, sondern allein an der Bibliothek.
 `Generic PLA Silk` ist das einzige Basisprofil für Silk-PLA, das Bambu Studio
-mitbringt, und eine 0.2-mm-Variante davon existiert auf **keinem** der sechs Geräte.
+mitbringt, und eine 0.2-mm-Variante davon existiert auf **keinem** der acht Geräte.
 [Geeetech PLA Silk](filament/geeetech-pla-silk.md) führt deshalb nur 0.4 und 0.6 mm.
 
 Technisch wäre die Kombination unauffällig — Silk-PLA ist nicht gefüllt, nicht abrasiv

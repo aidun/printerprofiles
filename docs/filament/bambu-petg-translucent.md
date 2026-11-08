@@ -45,6 +45,8 @@ ist keine Vorsichtsmarge dieses Repositories.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
 | H2C | 1.1 | 6.9 | 9.2 |
+| H3C | 1.1 | 6.9 | 9.2 |
+| X2D | 1 | 6 | 8 |
 | X1 Carbon | 1 | 6 | 8 |
 | P1S | 0.9 | 5.7 | 7.6 |
 | P1P | 0.9 | 5.7 | 7.6 |

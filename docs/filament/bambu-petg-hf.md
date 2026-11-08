@@ -40,6 +40,8 @@ Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
 | H2C | 1.1 | 24.1 | 28.7 |
+| H3C | 1.1 | 24.1 | 28.7 |
+| X2D | 1 | 21 | 25 |
 | X1 Carbon | 1 | 21 | 25 |
 | P1S | 0.9 | 19.9 | 23.8 |
 | P1P | 0.9 | 19.9 | 23.8 |

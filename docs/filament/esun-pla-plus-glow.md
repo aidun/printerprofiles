@@ -42,6 +42,8 @@ und entsprechend niedrig der Volumenstrom.
 | Drucker | 0.4 mm | 0.6 mm |
 |---|--:|--:|
 | H2C | 11.5 | 16.1 |
+| H3C | — | 11.5 | 16.1 |
+| X2D | — | 10 | 14 |
 | X1 Carbon | 10 | 14 |
 | P1S | 9.5 | 13.3 |
 | P1P | 9.5 | 13.3 |

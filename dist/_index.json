@@ -1,5 +1,5 @@
 {
-    "filament_presets": 418,
+    "filament_presets": 562,
     "library": "/Applications/BambuStudio.app/Contents/Resources/profiles/BBL",
     "presets": [
         {
@@ -72,6 +72,42 @@
             "name": "Bambu ABS H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-abs",
+            "file": "filament/Bambu ABS H3C 0.2.json",
+            "flow": "2.3",
+            "inherits": "Bambu ABS @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "Bambu ABS H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-abs",
+            "file": "filament/Bambu ABS H3C 0.4.json",
+            "flow": "18.4",
+            "inherits": "Bambu ABS @BBL H3C",
+            "kind": "filament",
+            "name": "Bambu ABS H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-abs",
+            "file": "filament/Bambu ABS H3C 0.6.json",
+            "flow": "18.4",
+            "inherits": "Bambu ABS @BBL H3C 0.6 nozzle",
+            "kind": "filament",
+            "name": "Bambu ABS H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "status": "baseline"
         },
         {
@@ -184,6 +220,42 @@
         },
         {
             "abrasive": false,
+            "filament": "bambu-abs",
+            "file": "filament/Bambu ABS X2D 0.2.json",
+            "flow": "2",
+            "inherits": "Bambu ABS @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "Bambu ABS X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-abs",
+            "file": "filament/Bambu ABS X2D 0.4.json",
+            "flow": "16",
+            "inherits": "Bambu ABS @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "Bambu ABS X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-abs",
+            "file": "filament/Bambu ABS X2D 0.6.json",
+            "flow": "16",
+            "inherits": "Bambu ABS @BBL X2D",
+            "kind": "filament",
+            "name": "Bambu ABS X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
             "filament": "bambu-asa",
             "file": "filament/Bambu ASA A1 0.2.json",
             "flow": "1.8",
@@ -252,6 +324,42 @@
             "name": "Bambu ASA H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-asa",
+            "file": "filament/Bambu ASA H3C 0.2.json",
+            "flow": "2.3",
+            "inherits": "Bambu ASA @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "Bambu ASA H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-asa",
+            "file": "filament/Bambu ASA H3C 0.4.json",
+            "flow": "20.7",
+            "inherits": "Bambu ASA @BBL H3C",
+            "kind": "filament",
+            "name": "Bambu ASA H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-asa",
+            "file": "filament/Bambu ASA H3C 0.6.json",
+            "flow": "20.7",
+            "inherits": "Bambu ASA @BBL H3C 0.6 nozzle",
+            "kind": "filament",
+            "name": "Bambu ASA H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "status": "baseline"
         },
         {
@@ -363,6 +471,42 @@
             "status": "baseline"
         },
         {
+            "abrasive": false,
+            "filament": "bambu-asa",
+            "file": "filament/Bambu ASA X2D 0.2.json",
+            "flow": "2",
+            "inherits": "Bambu ASA @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "Bambu ASA X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-asa",
+            "file": "filament/Bambu ASA X2D 0.4.json",
+            "flow": "18",
+            "inherits": "Bambu ASA @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "Bambu ASA X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-asa",
+            "file": "filament/Bambu ASA X2D 0.6.json",
+            "flow": "18",
+            "inherits": "Bambu ASA @BBL X2D",
+            "kind": "filament",
+            "name": "Bambu ASA X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
             "abrasive": true,
             "filament": "bambu-asa-cf",
             "file": "filament/Bambu ASA-CF A1 0.4.json",
@@ -408,6 +552,30 @@
             "name": "Bambu ASA-CF H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "bambu-asa-cf",
+            "file": "filament/Bambu ASA-CF H3C 0.4.json",
+            "flow": "20.7",
+            "inherits": "Bambu ASA-CF @BBL H3C",
+            "kind": "filament",
+            "name": "Bambu ASA-CF H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "bambu-asa-cf",
+            "file": "filament/Bambu ASA-CF H3C 0.6.json",
+            "flow": "20.7",
+            "inherits": "Bambu ASA-CF @BBL H3C",
+            "kind": "filament",
+            "name": "Bambu ASA-CF H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "status": "baseline"
         },
         {
@@ -480,6 +648,30 @@
             "name": "Bambu ASA-CF X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "bambu-asa-cf",
+            "file": "filament/Bambu ASA-CF X2D 0.4.json",
+            "flow": "18",
+            "inherits": "Bambu ASA-CF @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "Bambu ASA-CF X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "bambu-asa-cf",
+            "file": "filament/Bambu ASA-CF X2D 0.6.json",
+            "flow": "18",
+            "inherits": "Bambu ASA-CF @BBL X2D",
+            "kind": "filament",
+            "name": "Bambu ASA-CF X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
             "status": "baseline"
         },
         {
@@ -593,6 +785,42 @@
         {
             "abrasive": false,
             "filament": "bambu-petg-hf",
+            "file": "filament/Bambu PETG HF H3C 0.2.json",
+            "flow": "1.1",
+            "inherits": "Bambu PETG HF @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "Bambu PETG HF H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-petg-hf",
+            "file": "filament/Bambu PETG HF H3C 0.4.json",
+            "flow": "24.1",
+            "inherits": "Bambu PETG HF @BBL H3C",
+            "kind": "filament",
+            "name": "Bambu PETG HF H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-petg-hf",
+            "file": "filament/Bambu PETG HF H3C 0.6.json",
+            "flow": "28.7",
+            "inherits": "Bambu PETG HF @BBL H3C 0.6 nozzle",
+            "kind": "filament",
+            "name": "Bambu PETG HF H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-petg-hf",
             "file": "filament/Bambu PETG HF P1P 0.2.json",
             "flow": "0.9",
             "inherits": "Bambu PETG HF @BBL X1C 0.2 nozzle",
@@ -696,6 +924,42 @@
             "name": "Bambu PETG HF X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-petg-hf",
+            "file": "filament/Bambu PETG HF X2D 0.2.json",
+            "flow": "1",
+            "inherits": "Bambu PETG HF @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "Bambu PETG HF X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-petg-hf",
+            "file": "filament/Bambu PETG HF X2D 0.4.json",
+            "flow": "21",
+            "inherits": "Bambu PETG HF @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "Bambu PETG HF X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-petg-hf",
+            "file": "filament/Bambu PETG HF X2D 0.6.json",
+            "flow": "25",
+            "inherits": "Bambu PETG HF @BBL X2D",
+            "kind": "filament",
+            "name": "Bambu PETG HF X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
             "status": "baseline"
         },
         {
@@ -809,6 +1073,42 @@
         {
             "abrasive": false,
             "filament": "bambu-petg-translucent",
+            "file": "filament/Bambu PETG Translucent H3C 0.2.json",
+            "flow": "1.1",
+            "inherits": "Bambu PETG Translucent @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "Bambu PETG Translucent H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-petg-translucent",
+            "file": "filament/Bambu PETG Translucent H3C 0.4.json",
+            "flow": "6.9",
+            "inherits": "Bambu PETG Translucent @BBL H3C",
+            "kind": "filament",
+            "name": "Bambu PETG Translucent H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-petg-translucent",
+            "file": "filament/Bambu PETG Translucent H3C 0.6.json",
+            "flow": "9.2",
+            "inherits": "Bambu PETG Translucent @BBL H3C",
+            "kind": "filament",
+            "name": "Bambu PETG Translucent H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-petg-translucent",
             "file": "filament/Bambu PETG Translucent P1P 0.2.json",
             "flow": "0.9",
             "inherits": "Bambu PETG Translucent @BBL X1C 0.2 nozzle",
@@ -915,6 +1215,42 @@
             "status": "baseline"
         },
         {
+            "abrasive": false,
+            "filament": "bambu-petg-translucent",
+            "file": "filament/Bambu PETG Translucent X2D 0.2.json",
+            "flow": "1",
+            "inherits": "Bambu PETG Translucent @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "Bambu PETG Translucent X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-petg-translucent",
+            "file": "filament/Bambu PETG Translucent X2D 0.4.json",
+            "flow": "6",
+            "inherits": "Bambu PETG Translucent @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "Bambu PETG Translucent X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-petg-translucent",
+            "file": "filament/Bambu PETG Translucent X2D 0.6.json",
+            "flow": "8",
+            "inherits": "Bambu PETG Translucent @BBL X2D",
+            "kind": "filament",
+            "name": "Bambu PETG Translucent X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
             "abrasive": true,
             "filament": "bambu-petg-cf",
             "file": "filament/Bambu PETG-CF A1 0.4.json",
@@ -989,6 +1325,30 @@
         {
             "abrasive": true,
             "filament": "bambu-petg-cf",
+            "file": "filament/Bambu PETG-CF H3C 0.4.json",
+            "flow": "6",
+            "inherits": "Bambu PETG-CF @BBL H3C",
+            "kind": "filament",
+            "name": "Bambu PETG-CF H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "bambu-petg-cf",
+            "file": "filament/Bambu PETG-CF H3C 0.6.json",
+            "flow": "6",
+            "inherits": "Bambu PETG-CF @BBL H3C",
+            "kind": "filament",
+            "name": "Bambu PETG-CF H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "bambu-petg-cf",
             "file": "filament/Bambu PETG-CF P1P 0.4.json",
             "flow": "10.9",
             "inherits": "Bambu PETG-CF @BBL P1P 0.4 nozzle",
@@ -1056,6 +1416,30 @@
             "name": "Bambu PETG-CF X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "bambu-petg-cf",
+            "file": "filament/Bambu PETG-CF X2D 0.4.json",
+            "flow": "11.5",
+            "inherits": "Bambu PETG-CF @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "Bambu PETG-CF X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "bambu-petg-cf",
+            "file": "filament/Bambu PETG-CF X2D 0.6.json",
+            "flow": "11.5",
+            "inherits": "Bambu PETG-CF @BBL X2D",
+            "kind": "filament",
+            "name": "Bambu PETG-CF X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
             "status": "baseline"
         },
         {
@@ -1169,6 +1553,42 @@
         {
             "abrasive": false,
             "filament": "bambu-pla-basic",
+            "file": "filament/Bambu PLA Basic H3C 0.2.json",
+            "flow": "2.3",
+            "inherits": "Bambu PLA Basic @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "Bambu PLA Basic H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-pla-basic",
+            "file": "filament/Bambu PLA Basic H3C 0.4.json",
+            "flow": "24.1",
+            "inherits": "Bambu PLA Basic @BBL H3C",
+            "kind": "filament",
+            "name": "Bambu PLA Basic H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-pla-basic",
+            "file": "filament/Bambu PLA Basic H3C 0.6.json",
+            "flow": "28.7",
+            "inherits": "Bambu PLA Basic @BBL H3C 0.6 nozzle",
+            "kind": "filament",
+            "name": "Bambu PLA Basic H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-pla-basic",
             "file": "filament/Bambu PLA Basic P1P 0.2.json",
             "flow": "1.9",
             "inherits": "Bambu PLA Basic @BBL P1P 0.2 nozzle",
@@ -1275,6 +1695,42 @@
             "status": "baseline"
         },
         {
+            "abrasive": false,
+            "filament": "bambu-pla-basic",
+            "file": "filament/Bambu PLA Basic X2D 0.2.json",
+            "flow": "2",
+            "inherits": "Bambu PLA Basic @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "Bambu PLA Basic X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-pla-basic",
+            "file": "filament/Bambu PLA Basic X2D 0.4.json",
+            "flow": "21",
+            "inherits": "Bambu PLA Basic @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "Bambu PLA Basic X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-pla-basic",
+            "file": "filament/Bambu PLA Basic X2D 0.6.json",
+            "flow": "25",
+            "inherits": "Bambu PLA Basic @BBL X2D 0.6 nozzle",
+            "kind": "filament",
+            "name": "Bambu PLA Basic X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
             "abrasive": true,
             "filament": "bambu-pla-glow",
             "file": "filament/Bambu PLA Glow A1 0.4.json",
@@ -1349,6 +1805,30 @@
         {
             "abrasive": true,
             "filament": "bambu-pla-glow",
+            "file": "filament/Bambu PLA Glow H3C 0.4.json",
+            "flow": "20.7",
+            "inherits": "Bambu PLA Glow @BBL H3C",
+            "kind": "filament",
+            "name": "Bambu PLA Glow H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "bambu-pla-glow",
+            "file": "filament/Bambu PLA Glow H3C 0.6.json",
+            "flow": "24.1",
+            "inherits": "Bambu PLA Glow @BBL H3C",
+            "kind": "filament",
+            "name": "Bambu PLA Glow H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "bambu-pla-glow",
             "file": "filament/Bambu PLA Glow P1P 0.4.json",
             "flow": "17.1",
             "inherits": "Bambu PLA Glow @BBL P1P",
@@ -1416,6 +1896,30 @@
             "name": "Bambu PLA Glow X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "bambu-pla-glow",
+            "file": "filament/Bambu PLA Glow X2D 0.4.json",
+            "flow": "18",
+            "inherits": "Bambu PLA Glow @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "Bambu PLA Glow X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "bambu-pla-glow",
+            "file": "filament/Bambu PLA Glow X2D 0.6.json",
+            "flow": "21",
+            "inherits": "Bambu PLA Glow @BBL X2D",
+            "kind": "filament",
+            "name": "Bambu PLA Glow X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
             "status": "baseline"
         },
         {
@@ -1529,6 +2033,42 @@
         {
             "abrasive": false,
             "filament": "bambu-pla-translucent",
+            "file": "filament/Bambu PLA Translucent H3C 0.2.json",
+            "flow": "1.8",
+            "inherits": "Bambu PLA Translucent @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "Bambu PLA Translucent H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-pla-translucent",
+            "file": "filament/Bambu PLA Translucent H3C 0.4.json",
+            "flow": "13.8",
+            "inherits": "Bambu PLA Translucent @BBL H3C",
+            "kind": "filament",
+            "name": "Bambu PLA Translucent H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-pla-translucent",
+            "file": "filament/Bambu PLA Translucent H3C 0.6.json",
+            "flow": "16.1",
+            "inherits": "Bambu PLA Translucent @BBL H3C",
+            "kind": "filament",
+            "name": "Bambu PLA Translucent H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-pla-translucent",
             "file": "filament/Bambu PLA Translucent P1P 0.2.json",
             "flow": "1.5",
             "inherits": "Bambu PLA Translucent @BBL P1P 0.2 nozzle",
@@ -1632,6 +2172,42 @@
             "name": "Bambu PLA Translucent X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-pla-translucent",
+            "file": "filament/Bambu PLA Translucent X2D 0.2.json",
+            "flow": "1.6",
+            "inherits": "Bambu PLA Translucent @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "Bambu PLA Translucent X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-pla-translucent",
+            "file": "filament/Bambu PLA Translucent X2D 0.4.json",
+            "flow": "12",
+            "inherits": "Bambu PLA Translucent @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "Bambu PLA Translucent X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "bambu-pla-translucent",
+            "file": "filament/Bambu PLA Translucent X2D 0.6.json",
+            "flow": "14",
+            "inherits": "Bambu PLA Translucent @BBL X2D 0.6 nozzle",
+            "kind": "filament",
+            "name": "Bambu PLA Translucent X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
             "status": "baseline"
         },
         {
@@ -1745,6 +2321,42 @@
         {
             "abrasive": false,
             "filament": "geeetech-petg",
+            "file": "filament/Geeetech PETG H3C 0.2.json",
+            "flow": "1.1",
+            "inherits": "Generic PETG @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "Geeetech PETG H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-petg",
+            "file": "filament/Geeetech PETG H3C 0.4.json",
+            "flow": "11.5",
+            "inherits": "Generic PETG @BBL H3C",
+            "kind": "filament",
+            "name": "Geeetech PETG H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-petg",
+            "file": "filament/Geeetech PETG H3C 0.6.json",
+            "flow": "11.5",
+            "inherits": "Generic PETG @BBL H3C",
+            "kind": "filament",
+            "name": "Geeetech PETG H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-petg",
             "file": "filament/Geeetech PETG P1P 0.2.json",
             "flow": "0.9",
             "inherits": "Generic PETG @BBL P1P 0.2 nozzle",
@@ -1848,6 +2460,42 @@
             "name": "Geeetech PETG X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-petg",
+            "file": "filament/Geeetech PETG X2D 0.2.json",
+            "flow": "1",
+            "inherits": "Generic PETG @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "Geeetech PETG X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-petg",
+            "file": "filament/Geeetech PETG X2D 0.4.json",
+            "flow": "10",
+            "inherits": "Generic PETG @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "Geeetech PETG X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-petg",
+            "file": "filament/Geeetech PETG X2D 0.6.json",
+            "flow": "10",
+            "inherits": "Generic PETG @BBL X2D",
+            "kind": "filament",
+            "name": "Geeetech PETG X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
             "status": "baseline"
         },
         {
@@ -1961,6 +2609,42 @@
         {
             "abrasive": false,
             "filament": "geeetech-pla-matte",
+            "file": "filament/Geeetech PLA Matte H3C 0.2.json",
+            "flow": "1.8",
+            "inherits": "Generic PLA @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "Geeetech PLA Matte H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-pla-matte",
+            "file": "filament/Geeetech PLA Matte H3C 0.4.json",
+            "flow": "13.8",
+            "inherits": "Generic PLA @BBL H3C",
+            "kind": "filament",
+            "name": "Geeetech PLA Matte H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-pla-matte",
+            "file": "filament/Geeetech PLA Matte H3C 0.6.json",
+            "flow": "13.8",
+            "inherits": "Generic PLA @BBL H3C",
+            "kind": "filament",
+            "name": "Geeetech PLA Matte H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-pla-matte",
             "file": "filament/Geeetech PLA Matte P1P 0.2.json",
             "flow": "1.5",
             "inherits": "Generic PLA @BBL P1P 0.2 nozzle",
@@ -2068,6 +2752,42 @@
         },
         {
             "abrasive": false,
+            "filament": "geeetech-pla-matte",
+            "file": "filament/Geeetech PLA Matte X2D 0.2.json",
+            "flow": "1.6",
+            "inherits": "Generic PLA @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "Geeetech PLA Matte X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-pla-matte",
+            "file": "filament/Geeetech PLA Matte X2D 0.4.json",
+            "flow": "12",
+            "inherits": "Generic PLA @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "Geeetech PLA Matte X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-pla-matte",
+            "file": "filament/Geeetech PLA Matte X2D 0.6.json",
+            "flow": "12",
+            "inherits": "Generic PLA @BBL X2D",
+            "kind": "filament",
+            "name": "Geeetech PLA Matte X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
             "filament": "geeetech-pla-silk",
             "file": "filament/Geeetech PLA Silk A1 0.4.json",
             "flow": "6.8",
@@ -2141,6 +2861,30 @@
         {
             "abrasive": false,
             "filament": "geeetech-pla-silk",
+            "file": "filament/Geeetech PLA Silk H3C 0.4.json",
+            "flow": "8.6",
+            "inherits": "Generic PLA Silk @BBL H3C",
+            "kind": "filament",
+            "name": "Geeetech PLA Silk H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-pla-silk",
+            "file": "filament/Geeetech PLA Silk H3C 0.6.json",
+            "flow": "8.6",
+            "inherits": "Generic PLA Silk @BBL H3C",
+            "kind": "filament",
+            "name": "Geeetech PLA Silk H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-pla-silk",
             "file": "filament/Geeetech PLA Silk P1P 0.4.json",
             "flow": "7.1",
             "inherits": "Generic PLA Silk @BBL P1P",
@@ -2208,6 +2952,30 @@
             "name": "Geeetech PLA Silk X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-pla-silk",
+            "file": "filament/Geeetech PLA Silk X2D 0.4.json",
+            "flow": "7.5",
+            "inherits": "Generic PLA Silk @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "Geeetech PLA Silk X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-pla-silk",
+            "file": "filament/Geeetech PLA Silk X2D 0.6.json",
+            "flow": "7.5",
+            "inherits": "Generic PLA Silk @BBL X2D",
+            "kind": "filament",
+            "name": "Geeetech PLA Silk X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
             "status": "baseline"
         },
         {
@@ -2321,6 +3089,42 @@
         {
             "abrasive": false,
             "filament": "geeetech-pla-plus-2",
+            "file": "filament/Geeetech PLA+ 2.0 H3C 0.2.json",
+            "flow": "1.8",
+            "inherits": "Generic PLA @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "Geeetech PLA+ 2.0 H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-pla-plus-2",
+            "file": "filament/Geeetech PLA+ 2.0 H3C 0.4.json",
+            "flow": "13.8",
+            "inherits": "Generic PLA @BBL H3C",
+            "kind": "filament",
+            "name": "Geeetech PLA+ 2.0 H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-pla-plus-2",
+            "file": "filament/Geeetech PLA+ 2.0 H3C 0.6.json",
+            "flow": "13.8",
+            "inherits": "Generic PLA @BBL H3C",
+            "kind": "filament",
+            "name": "Geeetech PLA+ 2.0 H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-pla-plus-2",
             "file": "filament/Geeetech PLA+ 2.0 P1P 0.2.json",
             "flow": "1.5",
             "inherits": "Generic PLA @BBL P1P 0.2 nozzle",
@@ -2428,6 +3232,42 @@
         },
         {
             "abrasive": false,
+            "filament": "geeetech-pla-plus-2",
+            "file": "filament/Geeetech PLA+ 2.0 X2D 0.2.json",
+            "flow": "1.6",
+            "inherits": "Generic PLA @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "Geeetech PLA+ 2.0 X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-pla-plus-2",
+            "file": "filament/Geeetech PLA+ 2.0 X2D 0.4.json",
+            "flow": "12",
+            "inherits": "Generic PLA @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "Geeetech PLA+ 2.0 X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "geeetech-pla-plus-2",
+            "file": "filament/Geeetech PLA+ 2.0 X2D 0.6.json",
+            "flow": "12",
+            "inherits": "Generic PLA @BBL X2D",
+            "kind": "filament",
+            "name": "Geeetech PLA+ 2.0 X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
             "filament": "sunlu-abs",
             "file": "filament/SUNLU ABS A1 0.2.json",
             "flow": "1.8",
@@ -2496,6 +3336,42 @@
             "name": "SUNLU ABS H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-abs",
+            "file": "filament/SUNLU ABS H3C 0.2.json",
+            "flow": "2.3",
+            "inherits": "Generic ABS @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "SUNLU ABS H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-abs",
+            "file": "filament/SUNLU ABS H3C 0.4.json",
+            "flow": "17.2",
+            "inherits": "Generic ABS @BBL H3C 0.4 nozzle",
+            "kind": "filament",
+            "name": "SUNLU ABS H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-abs",
+            "file": "filament/SUNLU ABS H3C 0.6.json",
+            "flow": "17.2",
+            "inherits": "Generic ABS @BBL H3C 0.4 nozzle",
+            "kind": "filament",
+            "name": "SUNLU ABS H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "status": "baseline"
         },
         {
@@ -2604,6 +3480,42 @@
             "name": "SUNLU ABS X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-abs",
+            "file": "filament/SUNLU ABS X2D 0.2.json",
+            "flow": "2",
+            "inherits": "Generic ABS @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "SUNLU ABS X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-abs",
+            "file": "filament/SUNLU ABS X2D 0.4.json",
+            "flow": "15",
+            "inherits": "Generic ABS @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "SUNLU ABS X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-abs",
+            "file": "filament/SUNLU ABS X2D 0.6.json",
+            "flow": "15",
+            "inherits": "Generic ABS @BBL X2D",
+            "kind": "filament",
+            "name": "SUNLU ABS X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
             "status": "baseline"
         },
         {
@@ -2753,6 +3665,30 @@
         {
             "abrasive": true,
             "filament": "sunlu-petg-glow",
+            "file": "filament/SUNLU PETG Glow H3C 0.4.json",
+            "flow": "12.6",
+            "inherits": "Generic PETG @BBL H3C",
+            "kind": "filament",
+            "name": "SUNLU PETG Glow H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "validated-h2c-04"
+        },
+        {
+            "abrasive": true,
+            "filament": "sunlu-petg-glow",
+            "file": "filament/SUNLU PETG Glow H3C 0.6.json",
+            "flow": "16.7",
+            "inherits": "Generic PETG @BBL H3C",
+            "kind": "filament",
+            "name": "SUNLU PETG Glow H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "validated-h2c-04"
+        },
+        {
+            "abrasive": true,
+            "filament": "sunlu-petg-glow",
             "file": "filament/SUNLU PETG Glow P1P 0.4.json",
             "flow": "10.4",
             "inherits": "Generic PETG @BBL P1P",
@@ -2823,6 +3759,30 @@
             "status": "validated-h2c-04"
         },
         {
+            "abrasive": true,
+            "filament": "sunlu-petg-glow",
+            "file": "filament/SUNLU PETG Glow X2D 0.4.json",
+            "flow": "11",
+            "inherits": "Generic PETG @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "SUNLU PETG Glow X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "validated-h2c-04"
+        },
+        {
+            "abrasive": true,
+            "filament": "sunlu-petg-glow",
+            "file": "filament/SUNLU PETG Glow X2D 0.6.json",
+            "flow": "14.5",
+            "inherits": "Generic PETG @BBL X2D",
+            "kind": "filament",
+            "name": "SUNLU PETG Glow X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "status": "validated-h2c-04"
+        },
+        {
             "abrasive": false,
             "filament": "sunlu-petg",
             "file": "filament/SUNLU PETG H2C 0.2.json",
@@ -2856,6 +3816,42 @@
             "name": "SUNLU PETG H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-petg",
+            "file": "filament/SUNLU PETG H3C 0.2.json",
+            "flow": "1.1",
+            "inherits": "Generic PETG @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "SUNLU PETG H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-petg",
+            "file": "filament/SUNLU PETG H3C 0.4.json",
+            "flow": "16.1",
+            "inherits": "Generic PETG @BBL H3C",
+            "kind": "filament",
+            "name": "SUNLU PETG H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-petg",
+            "file": "filament/SUNLU PETG H3C 0.6.json",
+            "flow": "18.4",
+            "inherits": "Generic PETG @BBL H3C",
+            "kind": "filament",
+            "name": "SUNLU PETG H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "status": "baseline"
         },
         {
@@ -3041,6 +4037,42 @@
         {
             "abrasive": false,
             "filament": "sunlu-petg-transparent",
+            "file": "filament/SUNLU PETG Transparent H3C 0.2.json",
+            "flow": "1.1",
+            "inherits": "Generic PETG @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "SUNLU PETG Transparent H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-petg-transparent",
+            "file": "filament/SUNLU PETG Transparent H3C 0.4.json",
+            "flow": "13.7",
+            "inherits": "Generic PETG @BBL H3C",
+            "kind": "filament",
+            "name": "SUNLU PETG Transparent H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-petg-transparent",
+            "file": "filament/SUNLU PETG Transparent H3C 0.6.json",
+            "flow": "15.6",
+            "inherits": "Generic PETG @BBL H3C",
+            "kind": "filament",
+            "name": "SUNLU PETG Transparent H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-petg-transparent",
             "file": "filament/SUNLU PETG Transparent P1P 0.2.json",
             "flow": "0.9",
             "inherits": "Generic PETG @BBL P1P 0.2 nozzle",
@@ -3148,6 +4180,42 @@
         },
         {
             "abrasive": false,
+            "filament": "sunlu-petg-transparent",
+            "file": "filament/SUNLU PETG Transparent X2D 0.2.json",
+            "flow": "1",
+            "inherits": "Generic PETG @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "SUNLU PETG Transparent X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-petg-transparent",
+            "file": "filament/SUNLU PETG Transparent X2D 0.4.json",
+            "flow": "11.9",
+            "inherits": "Generic PETG @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "SUNLU PETG Transparent X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-petg-transparent",
+            "file": "filament/SUNLU PETG Transparent X2D 0.6.json",
+            "flow": "13.6",
+            "inherits": "Generic PETG @BBL X2D",
+            "kind": "filament",
+            "name": "SUNLU PETG Transparent X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
             "filament": "sunlu-petg",
             "file": "filament/SUNLU PETG X1C 0.2.json",
             "flow": "1",
@@ -3180,6 +4248,42 @@
             "name": "SUNLU PETG X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-petg",
+            "file": "filament/SUNLU PETG X2D 0.2.json",
+            "flow": "1",
+            "inherits": "Generic PETG @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "SUNLU PETG X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-petg",
+            "file": "filament/SUNLU PETG X2D 0.4.json",
+            "flow": "14",
+            "inherits": "Generic PETG @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "SUNLU PETG X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-petg",
+            "file": "filament/SUNLU PETG X2D 0.6.json",
+            "flow": "16",
+            "inherits": "Generic PETG @BBL X2D",
+            "kind": "filament",
+            "name": "SUNLU PETG X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
             "status": "baseline"
         },
         {
@@ -3329,6 +4433,30 @@
         {
             "abrasive": true,
             "filament": "sunlu-pla-glow",
+            "file": "filament/SUNLU PLA Glow H3C 0.4.json",
+            "flow": "12.1",
+            "inherits": "Generic PLA @BBL H3C",
+            "kind": "filament",
+            "name": "SUNLU PLA Glow H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "sunlu-pla-glow",
+            "file": "filament/SUNLU PLA Glow H3C 0.6.json",
+            "flow": "17.2",
+            "inherits": "Generic PLA @BBL H3C",
+            "kind": "filament",
+            "name": "SUNLU PLA Glow H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "sunlu-pla-glow",
             "file": "filament/SUNLU PLA Glow P1P 0.4.json",
             "flow": "10",
             "inherits": "Generic PLA @BBL P1P",
@@ -3399,6 +4527,30 @@
             "status": "baseline"
         },
         {
+            "abrasive": true,
+            "filament": "sunlu-pla-glow",
+            "file": "filament/SUNLU PLA Glow X2D 0.4.json",
+            "flow": "10.5",
+            "inherits": "Generic PLA @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "SUNLU PLA Glow X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "sunlu-pla-glow",
+            "file": "filament/SUNLU PLA Glow X2D 0.6.json",
+            "flow": "15",
+            "inherits": "Generic PLA @BBL X2D",
+            "kind": "filament",
+            "name": "SUNLU PLA Glow X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
             "abrasive": false,
             "filament": "sunlu-pla",
             "file": "filament/SUNLU PLA H2C 0.2.json",
@@ -3432,6 +4584,42 @@
             "name": "SUNLU PLA H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-pla",
+            "file": "filament/SUNLU PLA H3C 0.2.json",
+            "flow": "1.8",
+            "inherits": "Generic PLA @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "SUNLU PLA H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-pla",
+            "file": "filament/SUNLU PLA H3C 0.4.json",
+            "flow": "17.2",
+            "inherits": "Generic PLA @BBL H3C",
+            "kind": "filament",
+            "name": "SUNLU PLA H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-pla",
+            "file": "filament/SUNLU PLA H3C 0.6.json",
+            "flow": "24.1",
+            "inherits": "Generic PLA @BBL H3C",
+            "kind": "filament",
+            "name": "SUNLU PLA H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "status": "baseline"
         },
         {
@@ -3617,6 +4805,42 @@
         {
             "abrasive": false,
             "filament": "sunlu-pla-transparent",
+            "file": "filament/SUNLU PLA Transparent H3C 0.2.json",
+            "flow": "1.6",
+            "inherits": "Generic PLA @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "SUNLU PLA Transparent H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-pla-transparent",
+            "file": "filament/SUNLU PLA Transparent H3C 0.4.json",
+            "flow": "14.7",
+            "inherits": "Generic PLA @BBL H3C",
+            "kind": "filament",
+            "name": "SUNLU PLA Transparent H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-pla-transparent",
+            "file": "filament/SUNLU PLA Transparent H3C 0.6.json",
+            "flow": "20.6",
+            "inherits": "Generic PLA @BBL H3C",
+            "kind": "filament",
+            "name": "SUNLU PLA Transparent H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-pla-transparent",
             "file": "filament/SUNLU PLA Transparent P1P 0.2.json",
             "flow": "1.3",
             "inherits": "Generic PLA @BBL P1P 0.2 nozzle",
@@ -3724,6 +4948,42 @@
         },
         {
             "abrasive": false,
+            "filament": "sunlu-pla-transparent",
+            "file": "filament/SUNLU PLA Transparent X2D 0.2.json",
+            "flow": "1.4",
+            "inherits": "Generic PLA @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "SUNLU PLA Transparent X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-pla-transparent",
+            "file": "filament/SUNLU PLA Transparent X2D 0.4.json",
+            "flow": "12.8",
+            "inherits": "Generic PLA @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "SUNLU PLA Transparent X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-pla-transparent",
+            "file": "filament/SUNLU PLA Transparent X2D 0.6.json",
+            "flow": "17.9",
+            "inherits": "Generic PLA @BBL X2D",
+            "kind": "filament",
+            "name": "SUNLU PLA Transparent X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
             "filament": "sunlu-pla",
             "file": "filament/SUNLU PLA X1C 0.2.json",
             "flow": "1.6",
@@ -3756,6 +5016,42 @@
             "name": "SUNLU PLA X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-pla",
+            "file": "filament/SUNLU PLA X2D 0.2.json",
+            "flow": "1.6",
+            "inherits": "Generic PLA @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "SUNLU PLA X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-pla",
+            "file": "filament/SUNLU PLA X2D 0.4.json",
+            "flow": "15",
+            "inherits": "Generic PLA @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "SUNLU PLA X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-pla",
+            "file": "filament/SUNLU PLA X2D 0.6.json",
+            "flow": "21",
+            "inherits": "Generic PLA @BBL X2D",
+            "kind": "filament",
+            "name": "SUNLU PLA X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
             "status": "baseline"
         },
         {
@@ -3833,6 +5129,30 @@
         {
             "abrasive": false,
             "filament": "sunlu-tpu",
+            "file": "filament/SUNLU TPU H3C 0.4.json",
+            "flow": "3.7",
+            "inherits": "Generic TPU @BBL H3C",
+            "kind": "filament",
+            "name": "SUNLU TPU H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-tpu",
+            "file": "filament/SUNLU TPU H3C 0.6.json",
+            "flow": "3.7",
+            "inherits": "Generic TPU @BBL H3C 0.6 nozzle",
+            "kind": "filament",
+            "name": "SUNLU TPU H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-tpu",
             "file": "filament/SUNLU TPU P1P 0.4.json",
             "flow": "3",
             "inherits": "Generic TPU @BBL P1P",
@@ -3900,6 +5220,30 @@
             "name": "SUNLU TPU X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-tpu",
+            "file": "filament/SUNLU TPU X2D 0.4.json",
+            "flow": "3.2",
+            "inherits": "Generic TPU @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "SUNLU TPU X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "sunlu-tpu",
+            "file": "filament/SUNLU TPU X2D 0.6.json",
+            "flow": "3.2",
+            "inherits": "Generic TPU @BBL X2D",
+            "kind": "filament",
+            "name": "SUNLU TPU X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
             "status": "baseline"
         },
         {
@@ -3972,6 +5316,42 @@
             "name": "eSUN ABS+ H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-abs",
+            "file": "filament/eSUN ABS+ H3C 0.2.json",
+            "flow": "2.3",
+            "inherits": "Generic ABS @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "eSUN ABS+ H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-abs",
+            "file": "filament/eSUN ABS+ H3C 0.4.json",
+            "flow": "17.2",
+            "inherits": "Generic ABS @BBL H3C 0.4 nozzle",
+            "kind": "filament",
+            "name": "eSUN ABS+ H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-abs",
+            "file": "filament/eSUN ABS+ H3C 0.6.json",
+            "flow": "17.2",
+            "inherits": "Generic ABS @BBL H3C 0.4 nozzle",
+            "kind": "filament",
+            "name": "eSUN ABS+ H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "status": "baseline"
         },
         {
@@ -4084,6 +5464,42 @@
         },
         {
             "abrasive": false,
+            "filament": "esun-abs",
+            "file": "filament/eSUN ABS+ X2D 0.2.json",
+            "flow": "2",
+            "inherits": "Generic ABS @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "eSUN ABS+ X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-abs",
+            "file": "filament/eSUN ABS+ X2D 0.4.json",
+            "flow": "15",
+            "inherits": "Generic ABS @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "eSUN ABS+ X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-abs",
+            "file": "filament/eSUN ABS+ X2D 0.6.json",
+            "flow": "15",
+            "inherits": "Generic ABS @BBL X2D",
+            "kind": "filament",
+            "name": "eSUN ABS+ X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
             "filament": "esun-petg",
             "file": "filament/eSUN PETG A1 0.2.json",
             "flow": "1.1",
@@ -4188,6 +5604,42 @@
             "name": "eSUN PETG H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-petg",
+            "file": "filament/eSUN PETG H3C 0.2.json",
+            "flow": "1.4",
+            "inherits": "Generic PETG @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "eSUN PETG H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-petg",
+            "file": "filament/eSUN PETG H3C 0.4.json",
+            "flow": "14.9",
+            "inherits": "Generic PETG @BBL H3C",
+            "kind": "filament",
+            "name": "eSUN PETG H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-petg",
+            "file": "filament/eSUN PETG H3C 0.6.json",
+            "flow": "20.1",
+            "inherits": "Generic PETG @BBL H3C",
+            "kind": "filament",
+            "name": "eSUN PETG H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "status": "baseline"
         },
         {
@@ -4373,6 +5825,42 @@
         {
             "abrasive": false,
             "filament": "esun-petg-transparent",
+            "file": "filament/eSUN PETG Transparent H3C 0.2.json",
+            "flow": "1.1",
+            "inherits": "Generic PETG @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "eSUN PETG Transparent H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-petg-transparent",
+            "file": "filament/eSUN PETG Transparent H3C 0.4.json",
+            "flow": "12.6",
+            "inherits": "Generic PETG @BBL H3C",
+            "kind": "filament",
+            "name": "eSUN PETG Transparent H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-petg-transparent",
+            "file": "filament/eSUN PETG Transparent H3C 0.6.json",
+            "flow": "17.1",
+            "inherits": "Generic PETG @BBL H3C",
+            "kind": "filament",
+            "name": "eSUN PETG Transparent H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-petg-transparent",
             "file": "filament/eSUN PETG Transparent P1P 0.2.json",
             "flow": "0.9",
             "inherits": "Generic PETG @BBL P1P 0.2 nozzle",
@@ -4480,6 +5968,42 @@
         },
         {
             "abrasive": false,
+            "filament": "esun-petg-transparent",
+            "file": "filament/eSUN PETG Transparent X2D 0.2.json",
+            "flow": "1",
+            "inherits": "Generic PETG @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "eSUN PETG Transparent X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-petg-transparent",
+            "file": "filament/eSUN PETG Transparent X2D 0.4.json",
+            "flow": "11",
+            "inherits": "Generic PETG @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "eSUN PETG Transparent X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-petg-transparent",
+            "file": "filament/eSUN PETG Transparent X2D 0.6.json",
+            "flow": "14.9",
+            "inherits": "Generic PETG @BBL X2D",
+            "kind": "filament",
+            "name": "eSUN PETG Transparent X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
             "filament": "esun-petg",
             "file": "filament/eSUN PETG X1C 0.2.json",
             "flow": "1.2",
@@ -4512,6 +6036,42 @@
             "name": "eSUN PETG X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-petg",
+            "file": "filament/eSUN PETG X2D 0.2.json",
+            "flow": "1.2",
+            "inherits": "Generic PETG @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "eSUN PETG X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-petg",
+            "file": "filament/eSUN PETG X2D 0.4.json",
+            "flow": "13",
+            "inherits": "Generic PETG @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "eSUN PETG X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-petg",
+            "file": "filament/eSUN PETG X2D 0.6.json",
+            "flow": "17.5",
+            "inherits": "Generic PETG @BBL X2D",
+            "kind": "filament",
+            "name": "eSUN PETG X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
             "status": "baseline"
         },
         {
@@ -4589,6 +6149,30 @@
         {
             "abrasive": true,
             "filament": "esun-petg-cf",
+            "file": "filament/eSUN PETG-CF H3C 0.4.json",
+            "flow": "13.2",
+            "inherits": "Generic PETG-CF @BBL H3C",
+            "kind": "filament",
+            "name": "eSUN PETG-CF H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "esun-petg-cf",
+            "file": "filament/eSUN PETG-CF H3C 0.6.json",
+            "flow": "13.2",
+            "inherits": "Generic PETG-CF @BBL H3C",
+            "kind": "filament",
+            "name": "eSUN PETG-CF H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "esun-petg-cf",
             "file": "filament/eSUN PETG-CF P1P 0.4.json",
             "flow": "10.9",
             "inherits": "Generic PETG-CF @BBL P1P",
@@ -4656,6 +6240,30 @@
             "name": "eSUN PETG-CF X1C 0.6",
             "nozzle": "0.6",
             "printer": "x1c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "esun-petg-cf",
+            "file": "filament/eSUN PETG-CF X2D 0.4.json",
+            "flow": "11.5",
+            "inherits": "Generic PETG-CF @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "eSUN PETG-CF X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "esun-petg-cf",
+            "file": "filament/eSUN PETG-CF X2D 0.6.json",
+            "flow": "11.5",
+            "inherits": "Generic PETG-CF @BBL X2D",
+            "kind": "filament",
+            "name": "eSUN PETG-CF X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
             "status": "baseline"
         },
         {
@@ -4805,6 +6413,30 @@
         {
             "abrasive": true,
             "filament": "esun-pla-plus-glow",
+            "file": "filament/eSUN PLA+ Glow H3C 0.4.json",
+            "flow": "11.5",
+            "inherits": "Generic PLA @BBL H3C",
+            "kind": "filament",
+            "name": "eSUN PLA+ Glow H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "esun-pla-plus-glow",
+            "file": "filament/eSUN PLA+ Glow H3C 0.6.json",
+            "flow": "16.1",
+            "inherits": "Generic PLA @BBL H3C",
+            "kind": "filament",
+            "name": "eSUN PLA+ Glow H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "esun-pla-plus-glow",
             "file": "filament/eSUN PLA+ Glow P1P 0.4.json",
             "flow": "9.5",
             "inherits": "Generic PLA @BBL P1P",
@@ -4875,6 +6507,30 @@
             "status": "baseline"
         },
         {
+            "abrasive": true,
+            "filament": "esun-pla-plus-glow",
+            "file": "filament/eSUN PLA+ Glow X2D 0.4.json",
+            "flow": "10",
+            "inherits": "Generic PLA @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "eSUN PLA+ Glow X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": true,
+            "filament": "esun-pla-plus-glow",
+            "file": "filament/eSUN PLA+ Glow X2D 0.6.json",
+            "flow": "14",
+            "inherits": "Generic PLA @BBL X2D",
+            "kind": "filament",
+            "name": "eSUN PLA+ Glow X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
             "abrasive": false,
             "filament": "esun-pla-plus",
             "file": "filament/eSUN PLA+ H2C 0.2.json",
@@ -4908,6 +6564,42 @@
             "name": "eSUN PLA+ H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-pla-plus",
+            "file": "filament/eSUN PLA+ H3C 0.2.json",
+            "flow": "2.1",
+            "inherits": "Generic PLA @BBL H3C 0.2 nozzle",
+            "kind": "filament",
+            "name": "eSUN PLA+ H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-pla-plus",
+            "file": "filament/eSUN PLA+ H3C 0.4.json",
+            "flow": "18.4",
+            "inherits": "Generic PLA @BBL H3C",
+            "kind": "filament",
+            "name": "eSUN PLA+ H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-pla-plus",
+            "file": "filament/eSUN PLA+ H3C 0.6.json",
+            "flow": "18.4",
+            "inherits": "Generic PLA @BBL H3C",
+            "kind": "filament",
+            "name": "eSUN PLA+ H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "status": "baseline"
         },
         {
@@ -5019,6 +6711,42 @@
             "status": "baseline"
         },
         {
+            "abrasive": false,
+            "filament": "esun-pla-plus",
+            "file": "filament/eSUN PLA+ X2D 0.2.json",
+            "flow": "1.8",
+            "inherits": "Generic PLA @BBL X2D 0.2 nozzle",
+            "kind": "filament",
+            "name": "eSUN PLA+ X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-pla-plus",
+            "file": "filament/eSUN PLA+ X2D 0.4.json",
+            "flow": "16",
+            "inherits": "Generic PLA @BBL X2D 0.4 nozzle",
+            "kind": "filament",
+            "name": "eSUN PLA+ X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
+            "abrasive": false,
+            "filament": "esun-pla-plus",
+            "file": "filament/eSUN PLA+ X2D 0.6.json",
+            "flow": "16",
+            "inherits": "Generic PLA @BBL X2D",
+            "kind": "filament",
+            "name": "eSUN PLA+ X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "status": "baseline"
+        },
+        {
             "file": "process/Normal + Stützen A1 0.2.json",
             "inherits": "0.12mm Draft @BBL A1 0.2 nozzle",
             "kind": "process",
@@ -5123,6 +6851,42 @@
             "name": "Normal + Stützen H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "support": true,
+            "target_layer_height": "0.3"
+        },
+        {
+            "file": "process/Normal + Stützen H3C 0.2.json",
+            "inherits": "0.12mm Balanced Quality @BBL H3C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "normal",
+            "name": "Normal + Stützen H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Normal + Stützen H3C 0.4.json",
+            "inherits": "0.20mm Standard @BBL H3C",
+            "kind": "process",
+            "layer_height": "0.2",
+            "level": "normal",
+            "name": "Normal + Stützen H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "support": true,
+            "target_layer_height": "0.2"
+        },
+        {
+            "file": "process/Normal + Stützen H3C 0.6.json",
+            "inherits": "0.30mm Standard @BBL H3C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "normal",
+            "name": "Normal + Stützen H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "support": true,
             "target_layer_height": "0.3"
         },
@@ -5235,6 +6999,42 @@
             "target_layer_height": "0.3"
         },
         {
+            "file": "process/Normal + Stützen X2D 0.2.json",
+            "inherits": "0.12mm Balanced Quality @BBL X2D 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "normal",
+            "name": "Normal + Stützen X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Normal + Stützen X2D 0.4.json",
+            "inherits": "0.20mm Standard @BBL X2D",
+            "kind": "process",
+            "layer_height": "0.2",
+            "level": "normal",
+            "name": "Normal + Stützen X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "support": true,
+            "target_layer_height": "0.2"
+        },
+        {
+            "file": "process/Normal + Stützen X2D 0.6.json",
+            "inherits": "0.30mm Standard @BBL X2D 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "normal",
+            "name": "Normal + Stützen X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "support": true,
+            "target_layer_height": "0.3"
+        },
+        {
             "file": "process/Normal A1 0.2.json",
             "inherits": "0.12mm Draft @BBL A1 0.2 nozzle",
             "kind": "process",
@@ -5339,6 +7139,42 @@
             "name": "Normal H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "support": false,
+            "target_layer_height": "0.3"
+        },
+        {
+            "file": "process/Normal H3C 0.2.json",
+            "inherits": "0.12mm Balanced Quality @BBL H3C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "normal",
+            "name": "Normal H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "support": false,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Normal H3C 0.4.json",
+            "inherits": "0.20mm Standard @BBL H3C",
+            "kind": "process",
+            "layer_height": "0.2",
+            "level": "normal",
+            "name": "Normal H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "support": false,
+            "target_layer_height": "0.2"
+        },
+        {
+            "file": "process/Normal H3C 0.6.json",
+            "inherits": "0.30mm Standard @BBL H3C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "normal",
+            "name": "Normal H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "support": false,
             "target_layer_height": "0.3"
         },
@@ -5451,6 +7287,42 @@
             "target_layer_height": "0.3"
         },
         {
+            "file": "process/Normal X2D 0.2.json",
+            "inherits": "0.12mm Balanced Quality @BBL X2D 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "normal",
+            "name": "Normal X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "support": false,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Normal X2D 0.4.json",
+            "inherits": "0.20mm Standard @BBL X2D",
+            "kind": "process",
+            "layer_height": "0.2",
+            "level": "normal",
+            "name": "Normal X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "support": false,
+            "target_layer_height": "0.2"
+        },
+        {
+            "file": "process/Normal X2D 0.6.json",
+            "inherits": "0.30mm Standard @BBL X2D 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "normal",
+            "name": "Normal X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "support": false,
+            "target_layer_height": "0.3"
+        },
+        {
             "file": "process/Qualität + Stützen A1 0.2.json",
             "inherits": "0.08mm High Quality @BBL A1 0.2 nozzle",
             "kind": "process",
@@ -5555,6 +7427,42 @@
             "name": "Qualität + Stützen H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "support": true,
+            "target_layer_height": "0.18"
+        },
+        {
+            "file": "process/Qualität + Stützen H3C 0.2.json",
+            "inherits": "0.08mm High Quality @BBL H3C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.08",
+            "level": "quality",
+            "name": "Qualität + Stützen H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "support": true,
+            "target_layer_height": "0.08"
+        },
+        {
+            "file": "process/Qualität + Stützen H3C 0.4.json",
+            "inherits": "0.12mm High Quality @BBL H3C",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "quality",
+            "name": "Qualität + Stützen H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Qualität + Stützen H3C 0.6.json",
+            "inherits": "0.18mm Balanced Quality @BBL H3C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.18",
+            "level": "quality",
+            "name": "Qualität + Stützen H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "support": true,
             "target_layer_height": "0.18"
         },
@@ -5667,6 +7575,42 @@
             "target_layer_height": "0.18"
         },
         {
+            "file": "process/Qualität + Stützen X2D 0.2.json",
+            "inherits": "0.08mm High Quality @BBL X2D 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.08",
+            "level": "quality",
+            "name": "Qualität + Stützen X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "support": true,
+            "target_layer_height": "0.08"
+        },
+        {
+            "file": "process/Qualität + Stützen X2D 0.4.json",
+            "inherits": "0.12mm High Quality @BBL X2D",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "quality",
+            "name": "Qualität + Stützen X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "support": true,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Qualität + Stützen X2D 0.6.json",
+            "inherits": "0.18mm Balanced Quality @BBL X2D 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.18",
+            "level": "quality",
+            "name": "Qualität + Stützen X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "support": true,
+            "target_layer_height": "0.18"
+        },
+        {
             "file": "process/Qualität A1 0.2.json",
             "inherits": "0.08mm High Quality @BBL A1 0.2 nozzle",
             "kind": "process",
@@ -5771,6 +7715,42 @@
             "name": "Qualität H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "support": false,
+            "target_layer_height": "0.18"
+        },
+        {
+            "file": "process/Qualität H3C 0.2.json",
+            "inherits": "0.08mm High Quality @BBL H3C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.08",
+            "level": "quality",
+            "name": "Qualität H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "support": false,
+            "target_layer_height": "0.08"
+        },
+        {
+            "file": "process/Qualität H3C 0.4.json",
+            "inherits": "0.12mm High Quality @BBL H3C",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "quality",
+            "name": "Qualität H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "support": false,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Qualität H3C 0.6.json",
+            "inherits": "0.18mm Balanced Quality @BBL H3C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.18",
+            "level": "quality",
+            "name": "Qualität H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "support": false,
             "target_layer_height": "0.18"
         },
@@ -5883,6 +7863,42 @@
             "target_layer_height": "0.18"
         },
         {
+            "file": "process/Qualität X2D 0.2.json",
+            "inherits": "0.08mm High Quality @BBL X2D 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.08",
+            "level": "quality",
+            "name": "Qualität X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "support": false,
+            "target_layer_height": "0.08"
+        },
+        {
+            "file": "process/Qualität X2D 0.4.json",
+            "inherits": "0.12mm High Quality @BBL X2D",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "quality",
+            "name": "Qualität X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "support": false,
+            "target_layer_height": "0.12"
+        },
+        {
+            "file": "process/Qualität X2D 0.6.json",
+            "inherits": "0.18mm Balanced Quality @BBL X2D 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.18",
+            "level": "quality",
+            "name": "Qualität X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "support": false,
+            "target_layer_height": "0.18"
+        },
+        {
             "file": "process/Schnell + Stützen A1 0.2.json",
             "inherits": "0.14mm Extra Draft @BBL A1 0.2 nozzle",
             "kind": "process",
@@ -5987,6 +8003,42 @@
             "name": "Schnell + Stützen H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "support": true,
+            "target_layer_height": "0.42"
+        },
+        {
+            "file": "process/Schnell + Stützen H3C 0.2.json",
+            "inherits": "0.12mm Balanced Quality @BBL H3C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "fast",
+            "name": "Schnell + Stützen H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "support": true,
+            "target_layer_height": "0.14"
+        },
+        {
+            "file": "process/Schnell + Stützen H3C 0.4.json",
+            "inherits": "0.24mm Standard @BBL H3C",
+            "kind": "process",
+            "layer_height": "0.24",
+            "level": "fast",
+            "name": "Schnell + Stützen H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "support": true,
+            "target_layer_height": "0.28"
+        },
+        {
+            "file": "process/Schnell + Stützen H3C 0.6.json",
+            "inherits": "0.30mm Standard @BBL H3C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "fast",
+            "name": "Schnell + Stützen H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "support": true,
             "target_layer_height": "0.42"
         },
@@ -6099,6 +8151,42 @@
             "target_layer_height": "0.42"
         },
         {
+            "file": "process/Schnell + Stützen X2D 0.2.json",
+            "inherits": "0.12mm Balanced Quality @BBL X2D 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "fast",
+            "name": "Schnell + Stützen X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "support": true,
+            "target_layer_height": "0.14"
+        },
+        {
+            "file": "process/Schnell + Stützen X2D 0.4.json",
+            "inherits": "0.24mm Standard @BBL X2D",
+            "kind": "process",
+            "layer_height": "0.24",
+            "level": "fast",
+            "name": "Schnell + Stützen X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "support": true,
+            "target_layer_height": "0.28"
+        },
+        {
+            "file": "process/Schnell + Stützen X2D 0.6.json",
+            "inherits": "0.30mm Standard @BBL X2D 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "fast",
+            "name": "Schnell + Stützen X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "support": true,
+            "target_layer_height": "0.42"
+        },
+        {
             "file": "process/Schnell A1 0.2.json",
             "inherits": "0.14mm Extra Draft @BBL A1 0.2 nozzle",
             "kind": "process",
@@ -6203,6 +8291,42 @@
             "name": "Schnell H2C 0.6",
             "nozzle": "0.6",
             "printer": "h2c",
+            "support": false,
+            "target_layer_height": "0.42"
+        },
+        {
+            "file": "process/Schnell H3C 0.2.json",
+            "inherits": "0.12mm Balanced Quality @BBL H3C 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "fast",
+            "name": "Schnell H3C 0.2",
+            "nozzle": "0.2",
+            "printer": "h3c",
+            "support": false,
+            "target_layer_height": "0.14"
+        },
+        {
+            "file": "process/Schnell H3C 0.4.json",
+            "inherits": "0.24mm Standard @BBL H3C",
+            "kind": "process",
+            "layer_height": "0.24",
+            "level": "fast",
+            "name": "Schnell H3C 0.4",
+            "nozzle": "0.4",
+            "printer": "h3c",
+            "support": false,
+            "target_layer_height": "0.28"
+        },
+        {
+            "file": "process/Schnell H3C 0.6.json",
+            "inherits": "0.30mm Standard @BBL H3C 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "fast",
+            "name": "Schnell H3C 0.6",
+            "nozzle": "0.6",
+            "printer": "h3c",
             "support": false,
             "target_layer_height": "0.42"
         },
@@ -6313,7 +8437,43 @@
             "printer": "x1c",
             "support": false,
             "target_layer_height": "0.42"
+        },
+        {
+            "file": "process/Schnell X2D 0.2.json",
+            "inherits": "0.12mm Balanced Quality @BBL X2D 0.2 nozzle",
+            "kind": "process",
+            "layer_height": "0.12",
+            "level": "fast",
+            "name": "Schnell X2D 0.2",
+            "nozzle": "0.2",
+            "printer": "x2d",
+            "support": false,
+            "target_layer_height": "0.14"
+        },
+        {
+            "file": "process/Schnell X2D 0.4.json",
+            "inherits": "0.24mm Standard @BBL X2D",
+            "kind": "process",
+            "layer_height": "0.24",
+            "level": "fast",
+            "name": "Schnell X2D 0.4",
+            "nozzle": "0.4",
+            "printer": "x2d",
+            "support": false,
+            "target_layer_height": "0.28"
+        },
+        {
+            "file": "process/Schnell X2D 0.6.json",
+            "inherits": "0.30mm Standard @BBL X2D 0.6 nozzle",
+            "kind": "process",
+            "layer_height": "0.3",
+            "level": "fast",
+            "name": "Schnell X2D 0.6",
+            "nozzle": "0.6",
+            "printer": "x2d",
+            "support": false,
+            "target_layer_height": "0.42"
         }
     ],
-    "process_presets": 108
+    "process_presets": 144
 }

@@ -27,7 +27,7 @@ src/*.toml   ──  tools/generate.py  ──▶  dist/*.json   ──▶  Bamb
 
 ```
 src/                 Quelldaten — hier wird bearbeitet
-├── printers.toml      6 Drucker: Maschinenname, Hotend-Grenze, Leistungsfaktor
+├── printers.toml      8 Drucker: Maschinenname, Hotend-Grenze, Leistungsfaktor
 ├── quality.toml       3 Stufen: Schichthöhen, Wände, Tempofaktoren
 ├── support.toml       Stützenvariante, die jede Stufe ein zweites Mal erzeugt
 └── filaments/        27 Materialien: Temperatur, Fluss, Kühlung
@@ -37,8 +37,8 @@ tools/               Generator und Prüfung
 ├── validate.py        prüft dist/ gegen die Bibliothek
 └── build_docs.py      erzeugt docs/matrix.md
 dist/                Ergebnis — hier wird importiert, nicht bearbeitet
-├── filament/         418 Presets
-├── process/          108 Presets
+├── filament/         562 Presets
+├── process/          144 Presets
 └── _index.json        Metadaten aller Presets
 docs/                Dokumentation — Deutsch, von Hand außer matrix.md
 tests/               Tests der Generatorlogik
@@ -115,7 +115,7 @@ Dazu kommen zwei optionale Einträge:
 | Feld | Bedeutung |
 |---|---|
 | `printers` | Liste der Druckerkürzel aus `src/printers.toml`, für die das Material erzeugt wird. Fehlt der Schlüssel, gilt es für alle. Nötig, wenn die Bambu-Bibliothek für ein Gerät kein Basisprofil führt — bei `esun-abs` die A1 mini. |
-| `[volumetric_flow_cap]` | Obergrenze je Druckerkürzel, in mm³/s. Der skalierte Wert wird damit nach unten begrenzt. Nötig, wenn das Basisprofil eines Geräts ausdrücklich weniger freigibt als der Durchsatzfaktor ergibt — bei beiden PETG-CF die A1 und die A1 mini. |
+| `[volumetric_flow_cap]` | Obergrenze je Druckerkürzel, in mm³/s. Der skalierte Wert wird damit nach unten begrenzt. Nötig, wenn das Basisprofil eines Geräts ausdrücklich weniger freigibt als der Durchsatzfaktor ergibt — bei beiden PETG-CF die A1 und die A1 mini, bei Bambu PETG-CF zusätzlich der H3C. |
 
 `test_printer_restrictions_match_the_library` prüft die `printers`-Liste in beide Richtungen
 gegen die Bibliothek: Sie muss **genau** die Geräte nennen, deren Basisprofil
@@ -161,14 +161,14 @@ nicht:
 |---|---|
 | Elternprofil existiert und ist für die Maschine freigegeben | Preset erscheint nicht |
 | Unbekannte Schlüssel | Einstellung wird kommentarlos verworfen |
-| Arraylängen passen zu den Extrudervarianten | falscher Extruder bekommt den Wert |
+| Arraylängen passen zu den Extrudervarianten und zum Basisprofil | falscher Extruder bekommt den Wert |
 | Schichthöhe innerhalb der Maschinengrenzen und ≤ 75 % des Düsendurchmessers | Druckabbruch oder Unterextrusion |
 | Temperaturfenster aufsteigend, Werte innerhalb des Fensters | Studio korrigiert stumm |
 | Temperatur unterhalb des Hotend-Limits | Profil nicht einsetzbar |
 | Volumenstrom 0.8 – 40 mm³/s, Flussrate 0.85 – 1.15 | Tippfehler bleiben unbemerkt |
 
 Der Lauf endet mit einer Zeile der Form
-`<n> checks, 0 errors, 526 presets.` und einem Exitcode ungleich null, sobald
+`<n> checks, 0 errors, 706 presets.` und einem Exitcode ungleich null, sobald
 etwas nicht stimmt.
 
 ---

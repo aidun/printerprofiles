@@ -1,0 +1,60 @@
+{
+    "bottom_shell_layers": "4",
+    "compatible_printers": [
+        "Bambu Lab H3C 0.4 nozzle"
+    ],
+    "enable_arc_fitting": "1",
+    "enable_support": "1",
+    "from": "User",
+    "gap_infill_speed": [
+        "138",
+        "138",
+        "138"
+    ],
+    "inherits": "0.12mm High Quality @BBL H3C",
+    "inner_wall_speed": [
+        "105",
+        "105",
+        "105"
+    ],
+    "layer_height": "0.12",
+    "name": "Qualität + Stützen H3C 0.4",
+    "outer_wall_speed": [
+        "36",
+        "36",
+        "36"
+    ],
+    "override_filament_scarf_seam_setting": "1",
+    "print_settings_id": "Qualität + Stützen H3C 0.4",
+    "reduce_crossing_wall": "1",
+    "seam_placement_away_from_overhangs": "1",
+    "seam_position": "aligned",
+    "seam_slope_type": "external",
+    "sparse_infill_density": "20%",
+    "sparse_infill_pattern": "grid",
+    "sparse_infill_speed": [
+        "144",
+        "144",
+        "144"
+    ],
+    "support_interface_spacing": "0.3",
+    "support_interface_speed": [
+        "50",
+        "50",
+        "50"
+    ],
+    "support_interface_top_layers": "3",
+    "support_object_xy_distance": "0.45",
+    "top_shell_layers": "5",
+    "top_surface_speed": [
+        "112",
+        "112",
+        "112"
+    ],
+    "tree_support_wall_count": "2",
+    "type": "process",
+    "version": "2.7.0.8",
+    "wall_generator": "arachne",
+    "wall_infill_order": "inner-outer-inner wall/infill",
+    "wall_loops": "3"
+}

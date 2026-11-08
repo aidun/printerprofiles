@@ -67,4 +67,4 @@ der Drucker nicht in der Zugluft steht.
 
 ---
 
-[← H2C](h2c.md) · [Druckerübersicht](README.md) · [P1S →](p1s.md)
+[← X2D](x2d.md) · [Druckerübersicht](README.md) · [P1S →](p1s.md)

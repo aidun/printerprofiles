@@ -6,7 +6,7 @@ Kurzfaserverstärktes PETG von eSUN. Die gemahlene Kohlenstofffaser bringt gegen
 ungefülltem PETG **84 % mehr Biegefestigkeit** und ein knapp dreifaches Biegemodul;
 die Wärmeformbeständigkeit bleibt bei 70 °C. Läuft rund 5 °C kühler als das
 [Bambu PETG-CF](bambu-petg-cf.md) und auf einem deutlich wärmeren Bett — und wie
-dieses auf **allen sechs Geräten**, ohne geschlossene Kammer.
+dieses auf **allen acht Geräten**, ohne geschlossene Kammer.
 
 ---
 
@@ -64,6 +64,8 @@ A1 und der A1 mini**, siehe unten.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
 | H2C | — | 13.2 | 13.2 |
+| H3C | — | 13.2 | 13.2 |
+| X2D | — | 11.5 | 11.5 |
 | X1 Carbon | — | 11.5 | 11.5 |
 | P1S | — | 10.9 | 10.9 |
 | P1P | — | 10.9 | 10.9 |

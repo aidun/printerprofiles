@@ -127,6 +127,13 @@ def check_filament(c, lib, short, d, machines, hotend):
         c.check(isinstance(value, list) and len(value) == len(variants),
                 f"{short}: {key} needs {len(variants)} entries, has {value}")
 
+    # A base with a single entry applies to every variant; one with several
+    # holds exactly one entry per variant.
+    base_flow = lib.value(lib.filaments, d.get("inherits", ""), "filament_max_volumetric_speed")
+    if isinstance(base_flow, list) and len(base_flow) > 1:
+        c.check(len(base_flow) == len(variants),
+                f"{short}: {len(variants)} extruder variants, the base profile has {len(base_flow)}")
+
     for key, value in d.items():
         if key.startswith(("nozzle_temp", "hot_plate", "eng_plate", "textured_plate",
                            "supertack_plate", "fan_", "overhang_fan", "slow_down_layer",

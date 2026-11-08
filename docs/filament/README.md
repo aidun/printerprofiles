@@ -217,9 +217,10 @@ Der Unterschied liegt in der Matrix — und bei gleicher Matrix im Hersteller:
 |---|---|---|---|
 | Glasübergang | 70 °C | 70 °C | **108 °C** |
 | Geschlossene Kammer | nicht nötig | nicht nötig | **zwingend** |
-| Verfügbar auf | allen sechs Geräten | allen sechs Geräten | fünf — ohne A1 mini |
+| Verfügbar auf | allen acht Geräten | allen acht Geräten | sieben — ohne A1 mini |
 | Volumenstrom 0.4 mm | 11.5 | 11.5 | **18.0** |
 | Deckel auf A1 / A1 mini | 9.0 | **8.0** | — |
+| Deckel auf H3C | **6.0** | — | — |
 | Bett | 70 °C | **80 °C** | 100 °C |
 | Trocknung | 70/8 h | **65/8 h** | 80/8 h |
 | UV-stabil | nein | nein | **ja** |

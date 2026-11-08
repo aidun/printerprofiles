@@ -49,6 +49,8 @@ Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
 | Drucker | 0.4 mm | 0.6 mm |
 |---|--:|--:|
 | H2C | 3.7 | 3.7 |
+| H3C | — | 3.7 | 3.7 |
+| X2D | — | 3.2 | 3.2 |
 | X1 Carbon | 3.2 | 3.2 |
 | P1S | 3 | 3 |
 | P1P | 3 | 3 |
@@ -70,7 +72,7 @@ das ist eine Eigenschaft des Materials, kein Konfigurationsfehler.
 ## Was beim Drucken anders ist
 
 **1 · Die 0.2-mm-Düse ist gesperrt.** Nicht aus Vorsicht: Für TPU liefert Bambu auf
-keinem der sechs Geräte ein 0.2-mm-Basisprofil. Dieses Repository erfindet keines,
+keinem der acht Geräte ein 0.2-mm-Basisprofil. Dieses Repository erfindet keines,
 deshalb führt `src/filaments/sunlu-tpu.toml` nur `0.4` und `0.6` —
 mehr dazu unter [Düsen](../nozzles.md).
 

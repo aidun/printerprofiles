@@ -12,6 +12,22 @@ flow_factor  = 1.15
 max_hotend   = 350
 nozzles      = ["0.2", "0.4", "0.6"]
 
+[h3c]
+label        = "Bambu Lab H3C"
+machine_name = "Bambu Lab H3C {n} nozzle"
+tag          = "H3C"
+flow_factor  = 1.15
+max_hotend   = 350
+nozzles      = ["0.2", "0.4", "0.6"]
+
+[x2d]
+label        = "Bambu Lab X2D"
+machine_name = "Bambu Lab X2D {n} nozzle"
+tag          = "X2D"
+flow_factor  = 1.00
+max_hotend   = 300
+nozzles      = ["0.2", "0.4", "0.6"]
+
 [x1c]
 label        = "Bambu Lab X1 Carbon"
 machine_name = "Bambu Lab X1 Carbon {n} nozzle"

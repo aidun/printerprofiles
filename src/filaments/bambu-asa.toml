@@ -14,7 +14,7 @@ drying                       = "80 °C / 8 h"
 storage                      = "trocken, Silikagel; wie ABS wenig hygroskopisch"
 nozzles                      = ["0.2", "0.4", "0.6"]
 # Like ABS, the library ships no ASA base profile for the A1 mini.
-printers                     = ["h2c", "x1c", "p1s", "p1p", "a1"]
+printers                     = ["h2c", "h3c", "x2d", "x1c", "p1s", "p1p", "a1"]
 description                  = "UV-stabiles ABS. Chemisch nahe am ABS, aber witterungsfest: ASA vergilbt und verkreidet im Freien nicht. Das richtige Material für Außenteile, die Wärme und Sonne sehen. Bett 100 °C und geschlossene Kammer sind Pflicht."
 
 [temperature]

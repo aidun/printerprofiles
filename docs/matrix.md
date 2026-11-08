@@ -3,7 +3,7 @@
 > **Generierte Datei.** Nicht von Hand bearbeiten — sie entsteht aus
 > `dist/_index.json` über `python3 tools/build_docs.py`.
 
-Das Repository enthält **418 Filamentprofile** und **108 Prozessprofile**.
+Das Repository enthält **562 Filamentprofile** und **144 Prozessprofile**.
 
 ---
 
@@ -24,6 +24,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **1.8** | **17.2** | **24.1** | 🔵 Startwerte |
+| Bambu Lab H3C | **1.8** | **17.2** | **24.1** | 🔵 Startwerte |
+| Bambu Lab X2D | **1.6** | **15** | **21** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **1.6** | **15** | **21** | 🔵 Startwerte |
 | Bambu Lab P1S | **1.5** | **14.2** | **19.9** | 🔵 Startwerte |
 | Bambu Lab P1P | **1.5** | **14.2** | **19.9** | 🔵 Startwerte |
@@ -35,6 +37,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | — | **12.1** | **17.2** | 🔵 Startwerte |
+| Bambu Lab H3C | — | **12.1** | **17.2** | 🔵 Startwerte |
+| Bambu Lab X2D | — | **10.5** | **15** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | — | **10.5** | **15** | 🔵 Startwerte |
 | Bambu Lab P1S | — | **10** | **14.2** | 🔵 Startwerte |
 | Bambu Lab P1P | — | **10** | **14.2** | 🔵 Startwerte |
@@ -48,6 +52,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **1.6** | **14.7** | **20.6** | 🔵 Startwerte |
+| Bambu Lab H3C | **1.6** | **14.7** | **20.6** | 🔵 Startwerte |
+| Bambu Lab X2D | **1.4** | **12.8** | **17.9** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **1.4** | **12.8** | **17.9** | 🔵 Startwerte |
 | Bambu Lab P1S | **1.3** | **12.2** | **17** | 🔵 Startwerte |
 | Bambu Lab P1P | **1.3** | **12.2** | **17** | 🔵 Startwerte |
@@ -61,6 +67,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **1.1** | **16.1** | **18.4** | 🔵 Startwerte |
+| Bambu Lab H3C | **1.1** | **16.1** | **18.4** | 🔵 Startwerte |
+| Bambu Lab X2D | **1** | **14** | **16** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **1** | **14** | **16** | 🔵 Startwerte |
 | Bambu Lab P1S | **0.9** | **13.3** | **15.2** | 🔵 Startwerte |
 | Bambu Lab P1P | **0.9** | **13.3** | **15.2** | 🔵 Startwerte |
@@ -72,6 +80,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | — | **12.6** | **16.7** | 🟢 0.4 mm am Gerät verifiziert |
+| Bambu Lab H3C | — | **12.6** | **16.7** | 🔵 Startwerte |
+| Bambu Lab X2D | — | **11** | **14.5** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | — | **11** | **14.5** | 🔵 Startwerte |
 | Bambu Lab P1S | — | **10.4** | **13.8** | 🔵 Startwerte |
 | Bambu Lab P1P | — | **10.4** | **13.8** | 🔵 Startwerte |
@@ -85,6 +95,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **1.1** | **13.7** | **15.6** | 🔵 Startwerte |
+| Bambu Lab H3C | **1.1** | **13.7** | **15.6** | 🔵 Startwerte |
+| Bambu Lab X2D | **1** | **11.9** | **13.6** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **1** | **11.9** | **13.6** | 🔵 Startwerte |
 | Bambu Lab P1S | **0.9** | **11.3** | **12.9** | 🔵 Startwerte |
 | Bambu Lab P1P | **0.9** | **11.3** | **12.9** | 🔵 Startwerte |
@@ -98,6 +110,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | — | **3.7** | **3.7** | 🔵 Startwerte |
+| Bambu Lab H3C | — | **3.7** | **3.7** | 🔵 Startwerte |
+| Bambu Lab X2D | — | **3.2** | **3.2** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | — | **3.2** | **3.2** | 🔵 Startwerte |
 | Bambu Lab P1S | — | **3** | **3** | 🔵 Startwerte |
 | Bambu Lab P1P | — | **3** | **3** | 🔵 Startwerte |
@@ -111,6 +125,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **2.3** | **17.2** | **17.2** | 🔵 Startwerte |
+| Bambu Lab H3C | **2.3** | **17.2** | **17.2** | 🔵 Startwerte |
+| Bambu Lab X2D | **2** | **15** | **15** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **2** | **15** | **15** | 🔵 Startwerte |
 | Bambu Lab P1S | **1.9** | **14.2** | **14.2** | 🔵 Startwerte |
 | Bambu Lab P1P | **1.9** | **14.2** | **14.2** | 🔵 Startwerte |
@@ -126,6 +142,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **2.1** | **18.4** | **18.4** | 🔵 Startwerte |
+| Bambu Lab H3C | **2.1** | **18.4** | **18.4** | 🔵 Startwerte |
+| Bambu Lab X2D | **1.8** | **16** | **16** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **1.8** | **16** | **16** | 🔵 Startwerte |
 | Bambu Lab P1S | **1.7** | **15.2** | **15.2** | 🔵 Startwerte |
 | Bambu Lab P1P | **1.7** | **15.2** | **15.2** | 🔵 Startwerte |
@@ -137,6 +155,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | — | **11.5** | **16.1** | 🔵 Startwerte |
+| Bambu Lab H3C | — | **11.5** | **16.1** | 🔵 Startwerte |
+| Bambu Lab X2D | — | **10** | **14** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | — | **10** | **14** | 🔵 Startwerte |
 | Bambu Lab P1S | — | **9.5** | **13.3** | 🔵 Startwerte |
 | Bambu Lab P1P | — | **9.5** | **13.3** | 🔵 Startwerte |
@@ -150,6 +170,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **1.4** | **14.9** | **20.1** | 🔵 Startwerte |
+| Bambu Lab H3C | **1.4** | **14.9** | **20.1** | 🔵 Startwerte |
+| Bambu Lab X2D | **1.2** | **13** | **17.5** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **1.2** | **13** | **17.5** | 🔵 Startwerte |
 | Bambu Lab P1S | **1.1** | **12.3** | **16.6** | 🔵 Startwerte |
 | Bambu Lab P1P | **1.1** | **12.3** | **16.6** | 🔵 Startwerte |
@@ -161,6 +183,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **1.1** | **12.6** | **17.1** | 🔵 Startwerte |
+| Bambu Lab H3C | **1.1** | **12.6** | **17.1** | 🔵 Startwerte |
+| Bambu Lab X2D | **1** | **11** | **14.9** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **1** | **11** | **14.9** | 🔵 Startwerte |
 | Bambu Lab P1S | **0.9** | **10.4** | **14.2** | 🔵 Startwerte |
 | Bambu Lab P1P | **0.9** | **10.4** | **14.2** | 🔵 Startwerte |
@@ -174,6 +198,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | — | **13.2** | **13.2** | 🔵 Startwerte |
+| Bambu Lab H3C | — | **13.2** | **13.2** | 🔵 Startwerte |
+| Bambu Lab X2D | — | **11.5** | **11.5** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | — | **11.5** | **11.5** | 🔵 Startwerte |
 | Bambu Lab P1S | — | **10.9** | **10.9** | 🔵 Startwerte |
 | Bambu Lab P1P | — | **10.9** | **10.9** | 🔵 Startwerte |
@@ -187,6 +213,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **2.3** | **17.2** | **17.2** | 🔵 Startwerte |
+| Bambu Lab H3C | **2.3** | **17.2** | **17.2** | 🔵 Startwerte |
+| Bambu Lab X2D | **2** | **15** | **15** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **2** | **15** | **15** | 🔵 Startwerte |
 | Bambu Lab P1S | **1.9** | **14.2** | **14.2** | 🔵 Startwerte |
 | Bambu Lab P1P | **1.9** | **14.2** | **14.2** | 🔵 Startwerte |
@@ -202,6 +230,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **1.8** | **13.8** | **13.8** | 🔵 Startwerte |
+| Bambu Lab H3C | **1.8** | **13.8** | **13.8** | 🔵 Startwerte |
+| Bambu Lab X2D | **1.6** | **12** | **12** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **1.6** | **12** | **12** | 🔵 Startwerte |
 | Bambu Lab P1S | **1.5** | **11.4** | **11.4** | 🔵 Startwerte |
 | Bambu Lab P1P | **1.5** | **11.4** | **11.4** | 🔵 Startwerte |
@@ -213,6 +243,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **1.8** | **13.8** | **13.8** | 🔵 Startwerte |
+| Bambu Lab H3C | **1.8** | **13.8** | **13.8** | 🔵 Startwerte |
+| Bambu Lab X2D | **1.6** | **12** | **12** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **1.6** | **12** | **12** | 🔵 Startwerte |
 | Bambu Lab P1S | **1.5** | **11.4** | **11.4** | 🔵 Startwerte |
 | Bambu Lab P1P | **1.5** | **11.4** | **11.4** | 🔵 Startwerte |
@@ -224,6 +256,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | — | **8.6** | **8.6** | 🔵 Startwerte |
+| Bambu Lab H3C | — | **8.6** | **8.6** | 🔵 Startwerte |
+| Bambu Lab X2D | — | **7.5** | **7.5** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | — | **7.5** | **7.5** | 🔵 Startwerte |
 | Bambu Lab P1S | — | **7.1** | **7.1** | 🔵 Startwerte |
 | Bambu Lab P1P | — | **7.1** | **7.1** | 🔵 Startwerte |
@@ -235,6 +269,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **1.1** | **11.5** | **11.5** | 🔵 Startwerte |
+| Bambu Lab H3C | **1.1** | **11.5** | **11.5** | 🔵 Startwerte |
+| Bambu Lab X2D | **1** | **10** | **10** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **1** | **10** | **10** | 🔵 Startwerte |
 | Bambu Lab P1S | **0.9** | **9.5** | **9.5** | 🔵 Startwerte |
 | Bambu Lab P1P | **0.9** | **9.5** | **9.5** | 🔵 Startwerte |
@@ -250,6 +286,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **2.3** | **24.1** | **28.7** | 🔵 Startwerte |
+| Bambu Lab H3C | **2.3** | **24.1** | **28.7** | 🔵 Startwerte |
+| Bambu Lab X2D | **2** | **21** | **25** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **2** | **21** | **25** | 🔵 Startwerte |
 | Bambu Lab P1S | **1.9** | **19.9** | **23.8** | 🔵 Startwerte |
 | Bambu Lab P1P | **1.9** | **19.9** | **23.8** | 🔵 Startwerte |
@@ -261,6 +299,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | — | **20.7** | **24.1** | 🔵 Startwerte |
+| Bambu Lab H3C | — | **20.7** | **24.1** | 🔵 Startwerte |
+| Bambu Lab X2D | — | **18** | **21** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | — | **18** | **21** | 🔵 Startwerte |
 | Bambu Lab P1S | — | **17.1** | **19.9** | 🔵 Startwerte |
 | Bambu Lab P1P | — | **17.1** | **19.9** | 🔵 Startwerte |
@@ -274,6 +314,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **1.8** | **13.8** | **16.1** | 🔵 Startwerte |
+| Bambu Lab H3C | **1.8** | **13.8** | **16.1** | 🔵 Startwerte |
+| Bambu Lab X2D | **1.6** | **12** | **14** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **1.6** | **12** | **14** | 🔵 Startwerte |
 | Bambu Lab P1S | **1.5** | **11.4** | **13.3** | 🔵 Startwerte |
 | Bambu Lab P1P | **1.5** | **11.4** | **13.3** | 🔵 Startwerte |
@@ -287,6 +329,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **1.1** | **24.1** | **28.7** | 🔵 Startwerte |
+| Bambu Lab H3C | **1.1** | **24.1** | **28.7** | 🔵 Startwerte |
+| Bambu Lab X2D | **1** | **21** | **25** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **1** | **21** | **25** | 🔵 Startwerte |
 | Bambu Lab P1S | **0.9** | **19.9** | **23.8** | 🔵 Startwerte |
 | Bambu Lab P1P | **0.9** | **19.9** | **23.8** | 🔵 Startwerte |
@@ -298,6 +342,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **1.1** | **6.9** | **9.2** | 🔵 Startwerte |
+| Bambu Lab H3C | **1.1** | **6.9** | **9.2** | 🔵 Startwerte |
+| Bambu Lab X2D | **1** | **6** | **8** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **1** | **6** | **8** | 🔵 Startwerte |
 | Bambu Lab P1S | **0.9** | **5.7** | **7.6** | 🔵 Startwerte |
 | Bambu Lab P1P | **0.9** | **5.7** | **7.6** | 🔵 Startwerte |
@@ -311,6 +357,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | — | **13.2** | **13.2** | 🔵 Startwerte |
+| Bambu Lab H3C | — | **6** | **6** | 🔵 Startwerte |
+| Bambu Lab X2D | — | **11.5** | **11.5** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | — | **11.5** | **11.5** | 🔵 Startwerte |
 | Bambu Lab P1S | — | **10.9** | **10.9** | 🔵 Startwerte |
 | Bambu Lab P1P | — | **10.9** | **10.9** | 🔵 Startwerte |
@@ -324,6 +372,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **2.3** | **18.4** | **18.4** | 🔵 Startwerte |
+| Bambu Lab H3C | **2.3** | **18.4** | **18.4** | 🔵 Startwerte |
+| Bambu Lab X2D | **2** | **16** | **16** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **2** | **16** | **16** | 🔵 Startwerte |
 | Bambu Lab P1S | **1.9** | **15.2** | **15.2** | 🔵 Startwerte |
 | Bambu Lab P1P | **1.9** | **15.2** | **15.2** | 🔵 Startwerte |
@@ -335,6 +385,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | **2.3** | **20.7** | **20.7** | 🔵 Startwerte |
+| Bambu Lab H3C | **2.3** | **20.7** | **20.7** | 🔵 Startwerte |
+| Bambu Lab X2D | **2** | **18** | **18** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | **2** | **18** | **18** | 🔵 Startwerte |
 | Bambu Lab P1S | **1.9** | **17.1** | **17.1** | 🔵 Startwerte |
 | Bambu Lab P1P | **1.9** | **17.1** | **17.1** | 🔵 Startwerte |
@@ -346,6 +398,8 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
 |---|---|---|---|---|
 | Bambu Lab H2C | — | **20.7** | **20.7** | 🔵 Startwerte |
+| Bambu Lab H3C | — | **20.7** | **20.7** | 🔵 Startwerte |
+| Bambu Lab X2D | — | **18** | **18** | 🔵 Startwerte |
 | Bambu Lab X1 Carbon | — | **18** | **18** | 🔵 Startwerte |
 | Bambu Lab P1S | — | **17.1** | **17.1** | 🔵 Startwerte |
 | Bambu Lab P1P | — | **17.1** | **17.1** | 🔵 Startwerte |
@@ -370,6 +424,12 @@ abgestimmt auf feste, aber sauber lösbare Stützen.
 | Bambu Lab H2C | 0.2 mm | **0.08** | **0.12** | **0.12** ⁽¹⁾ |
 | Bambu Lab H2C | 0.4 mm | **0.12** | **0.2** | **0.24** ⁽¹⁾ |
 | Bambu Lab H2C | 0.6 mm | **0.18** | **0.3** | **0.3** ⁽¹⁾ |
+| Bambu Lab H3C | 0.2 mm | **0.08** | **0.12** | **0.12** ⁽¹⁾ |
+| Bambu Lab H3C | 0.4 mm | **0.12** | **0.2** | **0.24** ⁽¹⁾ |
+| Bambu Lab H3C | 0.6 mm | **0.18** | **0.3** | **0.3** ⁽¹⁾ |
+| Bambu Lab X2D | 0.2 mm | **0.08** | **0.12** | **0.12** ⁽¹⁾ |
+| Bambu Lab X2D | 0.4 mm | **0.12** | **0.2** | **0.24** ⁽¹⁾ |
+| Bambu Lab X2D | 0.6 mm | **0.18** | **0.3** | **0.3** ⁽¹⁾ |
 | Bambu Lab X1 Carbon | 0.2 mm | **0.08** | **0.12** | **0.14** |
 | Bambu Lab X1 Carbon | 0.4 mm | **0.12** | **0.2** | **0.28** |
 | Bambu Lab X1 Carbon | 0.6 mm | **0.18** | **0.3** | **0.42** |
@@ -392,6 +452,12 @@ Profil rastet auf die nächstgelegene freigegebene Schichthöhe ein:
 - `Schnell H2C 0.2` — Ziel 0.14 mm, gesetzt 0.12 mm (Basis `0.12mm Balanced Quality @BBL H2C 0.2 nozzle`)
 - `Schnell H2C 0.4` — Ziel 0.28 mm, gesetzt 0.24 mm (Basis `0.24mm Standard @BBL H2C`)
 - `Schnell H2C 0.6` — Ziel 0.42 mm, gesetzt 0.3 mm (Basis `0.30mm Standard @BBL H2C 0.6 nozzle`)
+- `Schnell H3C 0.2` — Ziel 0.14 mm, gesetzt 0.12 mm (Basis `0.12mm Balanced Quality @BBL H3C 0.2 nozzle`)
+- `Schnell H3C 0.4` — Ziel 0.28 mm, gesetzt 0.24 mm (Basis `0.24mm Standard @BBL H3C`)
+- `Schnell H3C 0.6` — Ziel 0.42 mm, gesetzt 0.3 mm (Basis `0.30mm Standard @BBL H3C 0.6 nozzle`)
+- `Schnell X2D 0.2` — Ziel 0.14 mm, gesetzt 0.12 mm (Basis `0.12mm Balanced Quality @BBL X2D 0.2 nozzle`)
+- `Schnell X2D 0.4` — Ziel 0.28 mm, gesetzt 0.24 mm (Basis `0.24mm Standard @BBL X2D`)
+- `Schnell X2D 0.6` — Ziel 0.42 mm, gesetzt 0.3 mm (Basis `0.30mm Standard @BBL X2D 0.6 nozzle`)
 
 ---
 
@@ -412,6 +478,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Bambu ABS H2C 0.2` | `Bambu ABS @BBL H2C 0.2 nozzle` |
 | `Bambu ABS H2C 0.4` | `Bambu ABS @BBL H2C` |
 | `Bambu ABS H2C 0.6` | `Bambu ABS @BBL H2C 0.6 nozzle` |
+| `Bambu ABS H3C 0.2` | `Bambu ABS @BBL H3C 0.2 nozzle` |
+| `Bambu ABS H3C 0.4` | `Bambu ABS @BBL H3C` |
+| `Bambu ABS H3C 0.6` | `Bambu ABS @BBL H3C 0.6 nozzle` |
 | `Bambu ABS P1P 0.2` | `Bambu ABS @BBL P1P 0.2 nozzle` |
 | `Bambu ABS P1P 0.4` | `Bambu ABS @BBL P1P` |
 | `Bambu ABS P1P 0.6` | `Bambu ABS @BBL P1P 0.6 nozzle` |
@@ -421,12 +490,18 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Bambu ABS X1C 0.2` | `Bambu ABS @BBL X1C 0.2 nozzle` |
 | `Bambu ABS X1C 0.4` | `Bambu ABS @BBL X1C` |
 | `Bambu ABS X1C 0.6` | `Bambu ABS @BBL X1C 0.6 nozzle` |
+| `Bambu ABS X2D 0.2` | `Bambu ABS @BBL X2D 0.2 nozzle` |
+| `Bambu ABS X2D 0.4` | `Bambu ABS @BBL X2D 0.4 nozzle` |
+| `Bambu ABS X2D 0.6` | `Bambu ABS @BBL X2D` |
 | `Bambu ASA A1 0.2` | `Bambu ASA @BBL A1 0.2 nozzle` |
 | `Bambu ASA A1 0.4` | `Bambu ASA @BBL A1 0.4 nozzle` |
 | `Bambu ASA A1 0.6` | `Bambu ASA @BBL A1 0.6 nozzle` |
 | `Bambu ASA H2C 0.2` | `Bambu ASA @BBL H2C 0.2 nozzle` |
 | `Bambu ASA H2C 0.4` | `Bambu ASA @BBL H2C` |
 | `Bambu ASA H2C 0.6` | `Bambu ASA @BBL H2C 0.6 nozzle` |
+| `Bambu ASA H3C 0.2` | `Bambu ASA @BBL H3C 0.2 nozzle` |
+| `Bambu ASA H3C 0.4` | `Bambu ASA @BBL H3C` |
+| `Bambu ASA H3C 0.6` | `Bambu ASA @BBL H3C 0.6 nozzle` |
 | `Bambu ASA P1P 0.2` | `Bambu ASA @BBL X1C 0.2 nozzle` |
 | `Bambu ASA P1P 0.4` | `Bambu ASA @BBL X1C 0.4 nozzle` |
 | `Bambu ASA P1P 0.6` | `Bambu ASA @BBL X1C` |
@@ -436,16 +511,23 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Bambu ASA X1C 0.2` | `Bambu ASA @BBL X1C 0.2 nozzle` |
 | `Bambu ASA X1C 0.4` | `Bambu ASA @BBL X1C 0.4 nozzle` |
 | `Bambu ASA X1C 0.6` | `Bambu ASA @BBL X1C` |
+| `Bambu ASA X2D 0.2` | `Bambu ASA @BBL X2D 0.2 nozzle` |
+| `Bambu ASA X2D 0.4` | `Bambu ASA @BBL X2D 0.4 nozzle` |
+| `Bambu ASA X2D 0.6` | `Bambu ASA @BBL X2D` |
 | `Bambu ASA-CF A1 0.4` | `Bambu ASA-CF @BBL A1` |
 | `Bambu ASA-CF A1 0.6` | `Bambu ASA-CF @BBL A1 0.6 nozzle` |
 | `Bambu ASA-CF H2C 0.4` | `Bambu ASA-CF @BBL H2C 0.4 nozzle` |
 | `Bambu ASA-CF H2C 0.6` | `Bambu ASA-CF @BBL H2C` |
+| `Bambu ASA-CF H3C 0.4` | `Bambu ASA-CF @BBL H3C` |
+| `Bambu ASA-CF H3C 0.6` | `Bambu ASA-CF @BBL H3C` |
 | `Bambu ASA-CF P1P 0.4` | `Bambu ASA-CF @BBL P1P` |
 | `Bambu ASA-CF P1P 0.6` | `Bambu ASA-CF @BBL P1P 0.6 nozzle` |
 | `Bambu ASA-CF P1S 0.4` | `Bambu ASA-CF @BBL X1C` |
 | `Bambu ASA-CF P1S 0.6` | `Bambu ASA-CF @BBL X1C 0.6 nozzle` |
 | `Bambu ASA-CF X1C 0.4` | `Bambu ASA-CF @BBL X1C` |
 | `Bambu ASA-CF X1C 0.6` | `Bambu ASA-CF @BBL X1C 0.6 nozzle` |
+| `Bambu ASA-CF X2D 0.4` | `Bambu ASA-CF @BBL X2D 0.4 nozzle` |
+| `Bambu ASA-CF X2D 0.6` | `Bambu ASA-CF @BBL X2D` |
 | `Bambu PETG HF A1 0.2` | `Bambu PETG HF @BBL A1 0.2 nozzle` |
 | `Bambu PETG HF A1 0.4` | `Bambu PETG HF @BBL A1` |
 | `Bambu PETG HF A1 0.6` | `Bambu PETG HF @BBL A1 0.8 nozzle` |
@@ -455,6 +537,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Bambu PETG HF H2C 0.2` | `Bambu PETG HF @BBL H2C 0.2 nozzle` |
 | `Bambu PETG HF H2C 0.4` | `Bambu PETG HF @BBL H2C` |
 | `Bambu PETG HF H2C 0.6` | `Bambu PETG HF @BBL H2C 0.6 nozzle` |
+| `Bambu PETG HF H3C 0.2` | `Bambu PETG HF @BBL H3C 0.2 nozzle` |
+| `Bambu PETG HF H3C 0.4` | `Bambu PETG HF @BBL H3C` |
+| `Bambu PETG HF H3C 0.6` | `Bambu PETG HF @BBL H3C 0.6 nozzle` |
 | `Bambu PETG HF P1P 0.2` | `Bambu PETG HF @BBL X1C 0.2 nozzle` |
 | `Bambu PETG HF P1P 0.4` | `Bambu PETG HF @BBL P1P 0.4 nozzle` |
 | `Bambu PETG HF P1P 0.6` | `Bambu PETG HF @BBL X1C 0.8 nozzle` |
@@ -464,6 +549,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Bambu PETG HF X1C 0.2` | `Bambu PETG HF @BBL X1C 0.2 nozzle` |
 | `Bambu PETG HF X1C 0.4` | `Bambu PETG HF @BBL X1C` |
 | `Bambu PETG HF X1C 0.6` | `Bambu PETG HF @BBL X1C 0.6 nozzle` |
+| `Bambu PETG HF X2D 0.2` | `Bambu PETG HF @BBL X2D 0.2 nozzle` |
+| `Bambu PETG HF X2D 0.4` | `Bambu PETG HF @BBL X2D 0.4 nozzle` |
+| `Bambu PETG HF X2D 0.6` | `Bambu PETG HF @BBL X2D` |
 | `Bambu PETG Translucent A1 0.2` | `Bambu PETG Translucent @BBL A1 0.2 nozzle` |
 | `Bambu PETG Translucent A1 0.4` | `Bambu PETG Translucent @BBL A1` |
 | `Bambu PETG Translucent A1 0.6` | `Bambu PETG Translucent @BBL A1 0.8 nozzle` |
@@ -473,6 +561,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Bambu PETG Translucent H2C 0.2` | `Bambu PETG Translucent @BBL H2C 0.2 nozzle` |
 | `Bambu PETG Translucent H2C 0.4` | `Bambu PETG Translucent @BBL H2C 0.4 nozzle` |
 | `Bambu PETG Translucent H2C 0.6` | `Bambu PETG Translucent @BBL H2C` |
+| `Bambu PETG Translucent H3C 0.2` | `Bambu PETG Translucent @BBL H3C 0.2 nozzle` |
+| `Bambu PETG Translucent H3C 0.4` | `Bambu PETG Translucent @BBL H3C` |
+| `Bambu PETG Translucent H3C 0.6` | `Bambu PETG Translucent @BBL H3C` |
 | `Bambu PETG Translucent P1P 0.2` | `Bambu PETG Translucent @BBL X1C 0.2 nozzle` |
 | `Bambu PETG Translucent P1P 0.4` | `Bambu PETG Translucent @BBL X1C` |
 | `Bambu PETG Translucent P1P 0.6` | `Bambu PETG Translucent @BBL X1C 0.6 nozzle` |
@@ -482,18 +573,25 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Bambu PETG Translucent X1C 0.2` | `Bambu PETG Translucent @BBL X1C 0.2 nozzle` |
 | `Bambu PETG Translucent X1C 0.4` | `Bambu PETG Translucent @BBL X1C` |
 | `Bambu PETG Translucent X1C 0.6` | `Bambu PETG Translucent @BBL X1C 0.6 nozzle` |
+| `Bambu PETG Translucent X2D 0.2` | `Bambu PETG Translucent @BBL X2D 0.2 nozzle` |
+| `Bambu PETG Translucent X2D 0.4` | `Bambu PETG Translucent @BBL X2D 0.4 nozzle` |
+| `Bambu PETG Translucent X2D 0.6` | `Bambu PETG Translucent @BBL X2D` |
 | `Bambu PETG-CF A1 0.4` | `Bambu PETG-CF @BBL A1 0.4 nozzle` |
 | `Bambu PETG-CF A1 0.6` | `Bambu PETG-CF @BBL A1 0.8 nozzle` |
 | `Bambu PETG-CF A1M 0.4` | `Bambu PETG-CF @BBL A1M 0.4 nozzle` |
 | `Bambu PETG-CF A1M 0.6` | `Bambu PETG-CF @BBL A1M` |
 | `Bambu PETG-CF H2C 0.4` | `Bambu PETG-CF @BBL H2C 0.4 nozzle` |
 | `Bambu PETG-CF H2C 0.6` | `Bambu PETG-CF @BBL H2C` |
+| `Bambu PETG-CF H3C 0.4` | `Bambu PETG-CF @BBL H3C` |
+| `Bambu PETG-CF H3C 0.6` | `Bambu PETG-CF @BBL H3C` |
 | `Bambu PETG-CF P1P 0.4` | `Bambu PETG-CF @BBL P1P 0.4 nozzle` |
 | `Bambu PETG-CF P1P 0.6` | `Bambu PETG-CF @BBL P1P` |
 | `Bambu PETG-CF P1S 0.4` | `Bambu PETG-CF @BBL X1C 0.4 nozzle` |
 | `Bambu PETG-CF P1S 0.6` | `Bambu PETG-CF @BBL X1C` |
 | `Bambu PETG-CF X1C 0.4` | `Bambu PETG-CF @BBL X1C 0.4 nozzle` |
 | `Bambu PETG-CF X1C 0.6` | `Bambu PETG-CF @BBL X1C` |
+| `Bambu PETG-CF X2D 0.4` | `Bambu PETG-CF @BBL X2D 0.4 nozzle` |
+| `Bambu PETG-CF X2D 0.6` | `Bambu PETG-CF @BBL X2D` |
 | `Bambu PLA Basic A1 0.2` | `Bambu PLA Basic @BBL A1 0.2 nozzle` |
 | `Bambu PLA Basic A1 0.4` | `Bambu PLA Basic @BBL A1` |
 | `Bambu PLA Basic A1 0.6` | `Bambu PLA Basic @BBL A1` |
@@ -503,6 +601,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Bambu PLA Basic H2C 0.2` | `Bambu PLA Basic @BBL H2C 0.2 nozzle` |
 | `Bambu PLA Basic H2C 0.4` | `Bambu PLA Basic @BBL H2C` |
 | `Bambu PLA Basic H2C 0.6` | `Bambu PLA Basic @BBL H2C 0.6 nozzle` |
+| `Bambu PLA Basic H3C 0.2` | `Bambu PLA Basic @BBL H3C 0.2 nozzle` |
+| `Bambu PLA Basic H3C 0.4` | `Bambu PLA Basic @BBL H3C` |
+| `Bambu PLA Basic H3C 0.6` | `Bambu PLA Basic @BBL H3C 0.6 nozzle` |
 | `Bambu PLA Basic P1P 0.2` | `Bambu PLA Basic @BBL P1P 0.2 nozzle` |
 | `Bambu PLA Basic P1P 0.4` | `Bambu PLA Basic @BBL P1P` |
 | `Bambu PLA Basic P1P 0.6` | `Bambu PLA Basic @BBL P1P 0.6 nozzle` |
@@ -512,18 +613,25 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Bambu PLA Basic X1C 0.2` | `Bambu PLA Basic @BBL X1C 0.2 nozzle` |
 | `Bambu PLA Basic X1C 0.4` | `Bambu PLA Basic @BBL X1C` |
 | `Bambu PLA Basic X1C 0.6` | `Bambu PLA Basic @BBL X1C 0.6 nozzle` |
+| `Bambu PLA Basic X2D 0.2` | `Bambu PLA Basic @BBL X2D 0.2 nozzle` |
+| `Bambu PLA Basic X2D 0.4` | `Bambu PLA Basic @BBL X2D 0.4 nozzle` |
+| `Bambu PLA Basic X2D 0.6` | `Bambu PLA Basic @BBL X2D 0.6 nozzle` |
 | `Bambu PLA Glow A1 0.4` | `Bambu PLA Glow @BBL A1` |
 | `Bambu PLA Glow A1 0.6` | `Bambu PLA Glow @BBL A1` |
 | `Bambu PLA Glow A1M 0.4` | `Bambu PLA Glow @BBL A1M` |
 | `Bambu PLA Glow A1M 0.6` | `Bambu PLA Glow @BBL A1M` |
 | `Bambu PLA Glow H2C 0.4` | `Bambu PLA Glow @BBL H2C 0.4 nozzle` |
 | `Bambu PLA Glow H2C 0.6` | `Bambu PLA Glow @BBL H2C` |
+| `Bambu PLA Glow H3C 0.4` | `Bambu PLA Glow @BBL H3C` |
+| `Bambu PLA Glow H3C 0.6` | `Bambu PLA Glow @BBL H3C` |
 | `Bambu PLA Glow P1P 0.4` | `Bambu PLA Glow @BBL P1P` |
 | `Bambu PLA Glow P1P 0.6` | `Bambu PLA Glow @BBL P1P 0.6 nozzle` |
 | `Bambu PLA Glow P1S 0.4` | `Bambu PLA Glow @BBL X1C` |
 | `Bambu PLA Glow P1S 0.6` | `Bambu PLA Glow @BBL X1C 0.6 nozzle` |
 | `Bambu PLA Glow X1C 0.4` | `Bambu PLA Glow @BBL X1C` |
 | `Bambu PLA Glow X1C 0.6` | `Bambu PLA Glow @BBL X1C 0.6 nozzle` |
+| `Bambu PLA Glow X2D 0.4` | `Bambu PLA Glow @BBL X2D 0.4 nozzle` |
+| `Bambu PLA Glow X2D 0.6` | `Bambu PLA Glow @BBL X2D` |
 | `Bambu PLA Translucent A1 0.2` | `Bambu PLA Translucent @BBL A1 0.2 nozzle` |
 | `Bambu PLA Translucent A1 0.4` | `Bambu PLA Translucent @BBL A1` |
 | `Bambu PLA Translucent A1 0.6` | `Bambu PLA Translucent @BBL A1 0.8 nozzle` |
@@ -533,6 +641,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Bambu PLA Translucent H2C 0.2` | `Bambu PLA Translucent @BBL H2C 0.2 nozzle` |
 | `Bambu PLA Translucent H2C 0.4` | `Bambu PLA Translucent @BBL H2C` |
 | `Bambu PLA Translucent H2C 0.6` | `Bambu PLA Translucent @BBL H2C 0.6 nozzle` |
+| `Bambu PLA Translucent H3C 0.2` | `Bambu PLA Translucent @BBL H3C 0.2 nozzle` |
+| `Bambu PLA Translucent H3C 0.4` | `Bambu PLA Translucent @BBL H3C` |
+| `Bambu PLA Translucent H3C 0.6` | `Bambu PLA Translucent @BBL H3C` |
 | `Bambu PLA Translucent P1P 0.2` | `Bambu PLA Translucent @BBL P1P 0.2 nozzle` |
 | `Bambu PLA Translucent P1P 0.4` | `Bambu PLA Translucent @BBL P1P` |
 | `Bambu PLA Translucent P1P 0.6` | `Bambu PLA Translucent @BBL P1P 0.8 nozzle` |
@@ -542,6 +653,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Bambu PLA Translucent X1C 0.2` | `Bambu PLA Translucent @BBL X1C 0.2 nozzle` |
 | `Bambu PLA Translucent X1C 0.4` | `Bambu PLA Translucent @BBL X1C` |
 | `Bambu PLA Translucent X1C 0.6` | `Bambu PLA Translucent @BBL X1C 0.8 nozzle` |
+| `Bambu PLA Translucent X2D 0.2` | `Bambu PLA Translucent @BBL X2D 0.2 nozzle` |
+| `Bambu PLA Translucent X2D 0.4` | `Bambu PLA Translucent @BBL X2D 0.4 nozzle` |
+| `Bambu PLA Translucent X2D 0.6` | `Bambu PLA Translucent @BBL X2D 0.6 nozzle` |
 | `Geeetech PETG A1 0.2` | `Generic PETG @BBL A1 0.2 nozzle` |
 | `Geeetech PETG A1 0.4` | `Generic PETG @BBL A1` |
 | `Geeetech PETG A1 0.6` | `Generic PETG @BBL A1` |
@@ -551,6 +665,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Geeetech PETG H2C 0.2` | `Generic PETG @BBL H2C 0.2 nozzle` |
 | `Geeetech PETG H2C 0.4` | `Generic PETG @BBL H2C 0.4 nozzle` |
 | `Geeetech PETG H2C 0.6` | `Generic PETG @BBL H2C` |
+| `Geeetech PETG H3C 0.2` | `Generic PETG @BBL H3C 0.2 nozzle` |
+| `Geeetech PETG H3C 0.4` | `Generic PETG @BBL H3C` |
+| `Geeetech PETG H3C 0.6` | `Generic PETG @BBL H3C` |
 | `Geeetech PETG P1P 0.2` | `Generic PETG @BBL P1P 0.2 nozzle` |
 | `Geeetech PETG P1P 0.4` | `Generic PETG @BBL P1P` |
 | `Geeetech PETG P1P 0.6` | `Generic PETG @BBL P1P` |
@@ -560,6 +677,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Geeetech PETG X1C 0.2` | `Generic PETG @0.2 nozzle` |
 | `Geeetech PETG X1C 0.4` | `Generic PETG` |
 | `Geeetech PETG X1C 0.6` | `Generic PETG` |
+| `Geeetech PETG X2D 0.2` | `Generic PETG @BBL X2D 0.2 nozzle` |
+| `Geeetech PETG X2D 0.4` | `Generic PETG @BBL X2D 0.4 nozzle` |
+| `Geeetech PETG X2D 0.6` | `Generic PETG @BBL X2D` |
 | `Geeetech PLA Matte A1 0.2` | `Generic PLA @BBL A1 0.2 nozzle` |
 | `Geeetech PLA Matte A1 0.4` | `Generic PLA @BBL A1` |
 | `Geeetech PLA Matte A1 0.6` | `Generic PLA @BBL A1` |
@@ -569,6 +689,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Geeetech PLA Matte H2C 0.2` | `Generic PLA @BBL H2C 0.2 nozzle` |
 | `Geeetech PLA Matte H2C 0.4` | `Generic PLA @BBL H2C 0.4 nozzle` |
 | `Geeetech PLA Matte H2C 0.6` | `Generic PLA @BBL H2C` |
+| `Geeetech PLA Matte H3C 0.2` | `Generic PLA @BBL H3C 0.2 nozzle` |
+| `Geeetech PLA Matte H3C 0.4` | `Generic PLA @BBL H3C` |
+| `Geeetech PLA Matte H3C 0.6` | `Generic PLA @BBL H3C` |
 | `Geeetech PLA Matte P1P 0.2` | `Generic PLA @BBL P1P 0.2 nozzle` |
 | `Geeetech PLA Matte P1P 0.4` | `Generic PLA @BBL P1P` |
 | `Geeetech PLA Matte P1P 0.6` | `Generic PLA @BBL P1P` |
@@ -578,18 +701,25 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Geeetech PLA Matte X1C 0.2` | `Generic PLA @0.2 nozzle` |
 | `Geeetech PLA Matte X1C 0.4` | `Generic PLA` |
 | `Geeetech PLA Matte X1C 0.6` | `Generic PLA` |
+| `Geeetech PLA Matte X2D 0.2` | `Generic PLA @BBL X2D 0.2 nozzle` |
+| `Geeetech PLA Matte X2D 0.4` | `Generic PLA @BBL X2D 0.4 nozzle` |
+| `Geeetech PLA Matte X2D 0.6` | `Generic PLA @BBL X2D` |
 | `Geeetech PLA Silk A1 0.4` | `Generic PLA Silk @BBL A1` |
 | `Geeetech PLA Silk A1 0.6` | `Generic PLA Silk @BBL A1` |
 | `Geeetech PLA Silk A1M 0.4` | `Generic PLA Silk @BBL A1M` |
 | `Geeetech PLA Silk A1M 0.6` | `Generic PLA Silk @BBL A1M` |
 | `Geeetech PLA Silk H2C 0.4` | `Generic PLA Silk @BBL H2C 0.4 nozzle` |
 | `Geeetech PLA Silk H2C 0.6` | `Generic PLA Silk @BBL H2C` |
+| `Geeetech PLA Silk H3C 0.4` | `Generic PLA Silk @BBL H3C` |
+| `Geeetech PLA Silk H3C 0.6` | `Generic PLA Silk @BBL H3C` |
 | `Geeetech PLA Silk P1P 0.4` | `Generic PLA Silk @BBL P1P` |
 | `Geeetech PLA Silk P1P 0.6` | `Generic PLA Silk @BBL P1P` |
 | `Geeetech PLA Silk P1S 0.4` | `Generic PLA Silk` |
 | `Geeetech PLA Silk P1S 0.6` | `Generic PLA Silk` |
 | `Geeetech PLA Silk X1C 0.4` | `Generic PLA Silk` |
 | `Geeetech PLA Silk X1C 0.6` | `Generic PLA Silk` |
+| `Geeetech PLA Silk X2D 0.4` | `Generic PLA Silk @BBL X2D 0.4 nozzle` |
+| `Geeetech PLA Silk X2D 0.6` | `Generic PLA Silk @BBL X2D` |
 | `Geeetech PLA+ 2.0 A1 0.2` | `Generic PLA @BBL A1 0.2 nozzle` |
 | `Geeetech PLA+ 2.0 A1 0.4` | `Generic PLA @BBL A1` |
 | `Geeetech PLA+ 2.0 A1 0.6` | `Generic PLA @BBL A1` |
@@ -599,6 +729,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Geeetech PLA+ 2.0 H2C 0.2` | `Generic PLA @BBL H2C 0.2 nozzle` |
 | `Geeetech PLA+ 2.0 H2C 0.4` | `Generic PLA @BBL H2C 0.4 nozzle` |
 | `Geeetech PLA+ 2.0 H2C 0.6` | `Generic PLA @BBL H2C` |
+| `Geeetech PLA+ 2.0 H3C 0.2` | `Generic PLA @BBL H3C 0.2 nozzle` |
+| `Geeetech PLA+ 2.0 H3C 0.4` | `Generic PLA @BBL H3C` |
+| `Geeetech PLA+ 2.0 H3C 0.6` | `Generic PLA @BBL H3C` |
 | `Geeetech PLA+ 2.0 P1P 0.2` | `Generic PLA @BBL P1P 0.2 nozzle` |
 | `Geeetech PLA+ 2.0 P1P 0.4` | `Generic PLA @BBL P1P` |
 | `Geeetech PLA+ 2.0 P1P 0.6` | `Generic PLA @BBL P1P` |
@@ -608,12 +741,18 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Geeetech PLA+ 2.0 X1C 0.2` | `Generic PLA @0.2 nozzle` |
 | `Geeetech PLA+ 2.0 X1C 0.4` | `Generic PLA` |
 | `Geeetech PLA+ 2.0 X1C 0.6` | `Generic PLA` |
+| `Geeetech PLA+ 2.0 X2D 0.2` | `Generic PLA @BBL X2D 0.2 nozzle` |
+| `Geeetech PLA+ 2.0 X2D 0.4` | `Generic PLA @BBL X2D 0.4 nozzle` |
+| `Geeetech PLA+ 2.0 X2D 0.6` | `Generic PLA @BBL X2D` |
 | `SUNLU ABS A1 0.2` | `Generic ABS @BBL A1 0.2 nozzle` |
 | `SUNLU ABS A1 0.4` | `Generic ABS @BBL A1` |
 | `SUNLU ABS A1 0.6` | `Generic ABS @BBL A1` |
 | `SUNLU ABS H2C 0.2` | `Generic ABS @BBL H2C 0.2 nozzle` |
 | `SUNLU ABS H2C 0.4` | `Generic ABS @BBL H2C 0.4 nozzle` |
 | `SUNLU ABS H2C 0.6` | `Generic ABS @BBL H2C` |
+| `SUNLU ABS H3C 0.2` | `Generic ABS @BBL H3C 0.2 nozzle` |
+| `SUNLU ABS H3C 0.4` | `Generic ABS @BBL H3C 0.4 nozzle` |
+| `SUNLU ABS H3C 0.6` | `Generic ABS @BBL H3C 0.4 nozzle` |
 | `SUNLU ABS P1P 0.2` | `Generic ABS @BBL P1P 0.2 nozzle` |
 | `SUNLU ABS P1P 0.4` | `Generic ABS @BBL P1P` |
 | `SUNLU ABS P1P 0.6` | `Generic ABS @BBL P1P` |
@@ -623,6 +762,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `SUNLU ABS X1C 0.2` | `Generic ABS @0.2 nozzle` |
 | `SUNLU ABS X1C 0.4` | `Generic ABS` |
 | `SUNLU ABS X1C 0.6` | `Generic ABS` |
+| `SUNLU ABS X2D 0.2` | `Generic ABS @BBL X2D 0.2 nozzle` |
+| `SUNLU ABS X2D 0.4` | `Generic ABS @BBL X2D 0.4 nozzle` |
+| `SUNLU ABS X2D 0.6` | `Generic ABS @BBL X2D` |
 | `SUNLU PETG A1 0.2` | `Generic PETG @BBL A1 0.2 nozzle` |
 | `SUNLU PETG A1 0.4` | `Generic PETG @BBL A1` |
 | `SUNLU PETG A1 0.6` | `Generic PETG @BBL A1` |
@@ -635,15 +777,22 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `SUNLU PETG Glow A1M 0.6` | `Generic PETG @BBL A1M` |
 | `SUNLU PETG Glow H2C 0.4` | `Generic PETG @BBL H2C 0.4 nozzle` |
 | `SUNLU PETG Glow H2C 0.6` | `Generic PETG @BBL H2C` |
+| `SUNLU PETG Glow H3C 0.4` | `Generic PETG @BBL H3C` |
+| `SUNLU PETG Glow H3C 0.6` | `Generic PETG @BBL H3C` |
 | `SUNLU PETG Glow P1P 0.4` | `Generic PETG @BBL P1P` |
 | `SUNLU PETG Glow P1P 0.6` | `Generic PETG @BBL P1P` |
 | `SUNLU PETG Glow P1S 0.4` | `Generic PETG` |
 | `SUNLU PETG Glow P1S 0.6` | `Generic PETG` |
 | `SUNLU PETG Glow X1C 0.4` | `Generic PETG` |
 | `SUNLU PETG Glow X1C 0.6` | `Generic PETG` |
+| `SUNLU PETG Glow X2D 0.4` | `Generic PETG @BBL X2D 0.4 nozzle` |
+| `SUNLU PETG Glow X2D 0.6` | `Generic PETG @BBL X2D` |
 | `SUNLU PETG H2C 0.2` | `Generic PETG @BBL H2C 0.2 nozzle` |
 | `SUNLU PETG H2C 0.4` | `Generic PETG @BBL H2C 0.4 nozzle` |
 | `SUNLU PETG H2C 0.6` | `Generic PETG @BBL H2C` |
+| `SUNLU PETG H3C 0.2` | `Generic PETG @BBL H3C 0.2 nozzle` |
+| `SUNLU PETG H3C 0.4` | `Generic PETG @BBL H3C` |
+| `SUNLU PETG H3C 0.6` | `Generic PETG @BBL H3C` |
 | `SUNLU PETG P1P 0.2` | `Generic PETG @BBL P1P 0.2 nozzle` |
 | `SUNLU PETG P1P 0.4` | `Generic PETG @BBL P1P` |
 | `SUNLU PETG P1P 0.6` | `Generic PETG @BBL P1P` |
@@ -659,6 +808,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `SUNLU PETG Transparent H2C 0.2` | `Generic PETG @BBL H2C 0.2 nozzle` |
 | `SUNLU PETG Transparent H2C 0.4` | `Generic PETG @BBL H2C 0.4 nozzle` |
 | `SUNLU PETG Transparent H2C 0.6` | `Generic PETG @BBL H2C` |
+| `SUNLU PETG Transparent H3C 0.2` | `Generic PETG @BBL H3C 0.2 nozzle` |
+| `SUNLU PETG Transparent H3C 0.4` | `Generic PETG @BBL H3C` |
+| `SUNLU PETG Transparent H3C 0.6` | `Generic PETG @BBL H3C` |
 | `SUNLU PETG Transparent P1P 0.2` | `Generic PETG @BBL P1P 0.2 nozzle` |
 | `SUNLU PETG Transparent P1P 0.4` | `Generic PETG @BBL P1P` |
 | `SUNLU PETG Transparent P1P 0.6` | `Generic PETG @BBL P1P` |
@@ -668,9 +820,15 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `SUNLU PETG Transparent X1C 0.2` | `Generic PETG @0.2 nozzle` |
 | `SUNLU PETG Transparent X1C 0.4` | `Generic PETG` |
 | `SUNLU PETG Transparent X1C 0.6` | `Generic PETG` |
+| `SUNLU PETG Transparent X2D 0.2` | `Generic PETG @BBL X2D 0.2 nozzle` |
+| `SUNLU PETG Transparent X2D 0.4` | `Generic PETG @BBL X2D 0.4 nozzle` |
+| `SUNLU PETG Transparent X2D 0.6` | `Generic PETG @BBL X2D` |
 | `SUNLU PETG X1C 0.2` | `Generic PETG @0.2 nozzle` |
 | `SUNLU PETG X1C 0.4` | `Generic PETG` |
 | `SUNLU PETG X1C 0.6` | `Generic PETG` |
+| `SUNLU PETG X2D 0.2` | `Generic PETG @BBL X2D 0.2 nozzle` |
+| `SUNLU PETG X2D 0.4` | `Generic PETG @BBL X2D 0.4 nozzle` |
+| `SUNLU PETG X2D 0.6` | `Generic PETG @BBL X2D` |
 | `SUNLU PLA A1 0.2` | `Generic PLA @BBL A1 0.2 nozzle` |
 | `SUNLU PLA A1 0.4` | `Generic PLA @BBL A1` |
 | `SUNLU PLA A1 0.6` | `Generic PLA @BBL A1` |
@@ -683,15 +841,22 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `SUNLU PLA Glow A1M 0.6` | `Generic PLA @BBL A1M` |
 | `SUNLU PLA Glow H2C 0.4` | `Generic PLA @BBL H2C 0.4 nozzle` |
 | `SUNLU PLA Glow H2C 0.6` | `Generic PLA @BBL H2C` |
+| `SUNLU PLA Glow H3C 0.4` | `Generic PLA @BBL H3C` |
+| `SUNLU PLA Glow H3C 0.6` | `Generic PLA @BBL H3C` |
 | `SUNLU PLA Glow P1P 0.4` | `Generic PLA @BBL P1P` |
 | `SUNLU PLA Glow P1P 0.6` | `Generic PLA @BBL P1P` |
 | `SUNLU PLA Glow P1S 0.4` | `Generic PLA` |
 | `SUNLU PLA Glow P1S 0.6` | `Generic PLA` |
 | `SUNLU PLA Glow X1C 0.4` | `Generic PLA` |
 | `SUNLU PLA Glow X1C 0.6` | `Generic PLA` |
+| `SUNLU PLA Glow X2D 0.4` | `Generic PLA @BBL X2D 0.4 nozzle` |
+| `SUNLU PLA Glow X2D 0.6` | `Generic PLA @BBL X2D` |
 | `SUNLU PLA H2C 0.2` | `Generic PLA @BBL H2C 0.2 nozzle` |
 | `SUNLU PLA H2C 0.4` | `Generic PLA @BBL H2C 0.4 nozzle` |
 | `SUNLU PLA H2C 0.6` | `Generic PLA @BBL H2C` |
+| `SUNLU PLA H3C 0.2` | `Generic PLA @BBL H3C 0.2 nozzle` |
+| `SUNLU PLA H3C 0.4` | `Generic PLA @BBL H3C` |
+| `SUNLU PLA H3C 0.6` | `Generic PLA @BBL H3C` |
 | `SUNLU PLA P1P 0.2` | `Generic PLA @BBL P1P 0.2 nozzle` |
 | `SUNLU PLA P1P 0.4` | `Generic PLA @BBL P1P` |
 | `SUNLU PLA P1P 0.6` | `Generic PLA @BBL P1P` |
@@ -707,6 +872,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `SUNLU PLA Transparent H2C 0.2` | `Generic PLA @BBL H2C 0.2 nozzle` |
 | `SUNLU PLA Transparent H2C 0.4` | `Generic PLA @BBL H2C 0.4 nozzle` |
 | `SUNLU PLA Transparent H2C 0.6` | `Generic PLA @BBL H2C` |
+| `SUNLU PLA Transparent H3C 0.2` | `Generic PLA @BBL H3C 0.2 nozzle` |
+| `SUNLU PLA Transparent H3C 0.4` | `Generic PLA @BBL H3C` |
+| `SUNLU PLA Transparent H3C 0.6` | `Generic PLA @BBL H3C` |
 | `SUNLU PLA Transparent P1P 0.2` | `Generic PLA @BBL P1P 0.2 nozzle` |
 | `SUNLU PLA Transparent P1P 0.4` | `Generic PLA @BBL P1P` |
 | `SUNLU PLA Transparent P1P 0.6` | `Generic PLA @BBL P1P` |
@@ -716,27 +884,40 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `SUNLU PLA Transparent X1C 0.2` | `Generic PLA @0.2 nozzle` |
 | `SUNLU PLA Transparent X1C 0.4` | `Generic PLA` |
 | `SUNLU PLA Transparent X1C 0.6` | `Generic PLA` |
+| `SUNLU PLA Transparent X2D 0.2` | `Generic PLA @BBL X2D 0.2 nozzle` |
+| `SUNLU PLA Transparent X2D 0.4` | `Generic PLA @BBL X2D 0.4 nozzle` |
+| `SUNLU PLA Transparent X2D 0.6` | `Generic PLA @BBL X2D` |
 | `SUNLU PLA X1C 0.2` | `Generic PLA @0.2 nozzle` |
 | `SUNLU PLA X1C 0.4` | `Generic PLA` |
 | `SUNLU PLA X1C 0.6` | `Generic PLA` |
+| `SUNLU PLA X2D 0.2` | `Generic PLA @BBL X2D 0.2 nozzle` |
+| `SUNLU PLA X2D 0.4` | `Generic PLA @BBL X2D 0.4 nozzle` |
+| `SUNLU PLA X2D 0.6` | `Generic PLA @BBL X2D` |
 | `SUNLU TPU A1 0.4` | `Generic TPU @BBL A1` |
 | `SUNLU TPU A1 0.6` | `Generic TPU @BBL A1` |
 | `SUNLU TPU A1M 0.4` | `Generic TPU @BBL A1M` |
 | `SUNLU TPU A1M 0.6` | `Generic TPU @BBL A1M` |
 | `SUNLU TPU H2C 0.4` | `Generic TPU @BBL H2C 0.4 nozzle` |
 | `SUNLU TPU H2C 0.6` | `Generic TPU @BBL H2C` |
+| `SUNLU TPU H3C 0.4` | `Generic TPU @BBL H3C` |
+| `SUNLU TPU H3C 0.6` | `Generic TPU @BBL H3C 0.6 nozzle` |
 | `SUNLU TPU P1P 0.4` | `Generic TPU @BBL P1P` |
 | `SUNLU TPU P1P 0.6` | `Generic TPU @BBL P1P` |
 | `SUNLU TPU P1S 0.4` | `Generic TPU` |
 | `SUNLU TPU P1S 0.6` | `Generic TPU` |
 | `SUNLU TPU X1C 0.4` | `Generic TPU` |
 | `SUNLU TPU X1C 0.6` | `Generic TPU` |
+| `SUNLU TPU X2D 0.4` | `Generic TPU @BBL X2D 0.4 nozzle` |
+| `SUNLU TPU X2D 0.6` | `Generic TPU @BBL X2D` |
 | `eSUN ABS+ A1 0.2` | `Generic ABS @BBL A1 0.2 nozzle` |
 | `eSUN ABS+ A1 0.4` | `Generic ABS @BBL A1` |
 | `eSUN ABS+ A1 0.6` | `Generic ABS @BBL A1` |
 | `eSUN ABS+ H2C 0.2` | `Generic ABS @BBL H2C 0.2 nozzle` |
 | `eSUN ABS+ H2C 0.4` | `Generic ABS @BBL H2C 0.4 nozzle` |
 | `eSUN ABS+ H2C 0.6` | `Generic ABS @BBL H2C` |
+| `eSUN ABS+ H3C 0.2` | `Generic ABS @BBL H3C 0.2 nozzle` |
+| `eSUN ABS+ H3C 0.4` | `Generic ABS @BBL H3C 0.4 nozzle` |
+| `eSUN ABS+ H3C 0.6` | `Generic ABS @BBL H3C 0.4 nozzle` |
 | `eSUN ABS+ P1P 0.2` | `Generic ABS @BBL P1P 0.2 nozzle` |
 | `eSUN ABS+ P1P 0.4` | `Generic ABS @BBL P1P` |
 | `eSUN ABS+ P1P 0.6` | `Generic ABS @BBL P1P` |
@@ -746,6 +927,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `eSUN ABS+ X1C 0.2` | `Generic ABS @0.2 nozzle` |
 | `eSUN ABS+ X1C 0.4` | `Generic ABS` |
 | `eSUN ABS+ X1C 0.6` | `Generic ABS` |
+| `eSUN ABS+ X2D 0.2` | `Generic ABS @BBL X2D 0.2 nozzle` |
+| `eSUN ABS+ X2D 0.4` | `Generic ABS @BBL X2D 0.4 nozzle` |
+| `eSUN ABS+ X2D 0.6` | `Generic ABS @BBL X2D` |
 | `eSUN PETG A1 0.2` | `Generic PETG @BBL A1 0.2 nozzle` |
 | `eSUN PETG A1 0.4` | `Generic PETG @BBL A1` |
 | `eSUN PETG A1 0.6` | `Generic PETG @BBL A1` |
@@ -755,6 +939,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `eSUN PETG H2C 0.2` | `Generic PETG @BBL H2C 0.2 nozzle` |
 | `eSUN PETG H2C 0.4` | `Generic PETG @BBL H2C 0.4 nozzle` |
 | `eSUN PETG H2C 0.6` | `Generic PETG @BBL H2C` |
+| `eSUN PETG H3C 0.2` | `Generic PETG @BBL H3C 0.2 nozzle` |
+| `eSUN PETG H3C 0.4` | `Generic PETG @BBL H3C` |
+| `eSUN PETG H3C 0.6` | `Generic PETG @BBL H3C` |
 | `eSUN PETG P1P 0.2` | `Generic PETG @BBL P1P 0.2 nozzle` |
 | `eSUN PETG P1P 0.4` | `Generic PETG @BBL P1P` |
 | `eSUN PETG P1P 0.6` | `Generic PETG @BBL P1P` |
@@ -770,6 +957,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `eSUN PETG Transparent H2C 0.2` | `Generic PETG @BBL H2C 0.2 nozzle` |
 | `eSUN PETG Transparent H2C 0.4` | `Generic PETG @BBL H2C 0.4 nozzle` |
 | `eSUN PETG Transparent H2C 0.6` | `Generic PETG @BBL H2C` |
+| `eSUN PETG Transparent H3C 0.2` | `Generic PETG @BBL H3C 0.2 nozzle` |
+| `eSUN PETG Transparent H3C 0.4` | `Generic PETG @BBL H3C` |
+| `eSUN PETG Transparent H3C 0.6` | `Generic PETG @BBL H3C` |
 | `eSUN PETG Transparent P1P 0.2` | `Generic PETG @BBL P1P 0.2 nozzle` |
 | `eSUN PETG Transparent P1P 0.4` | `Generic PETG @BBL P1P` |
 | `eSUN PETG Transparent P1P 0.6` | `Generic PETG @BBL P1P` |
@@ -779,21 +969,31 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `eSUN PETG Transparent X1C 0.2` | `Generic PETG @0.2 nozzle` |
 | `eSUN PETG Transparent X1C 0.4` | `Generic PETG` |
 | `eSUN PETG Transparent X1C 0.6` | `Generic PETG` |
+| `eSUN PETG Transparent X2D 0.2` | `Generic PETG @BBL X2D 0.2 nozzle` |
+| `eSUN PETG Transparent X2D 0.4` | `Generic PETG @BBL X2D 0.4 nozzle` |
+| `eSUN PETG Transparent X2D 0.6` | `Generic PETG @BBL X2D` |
 | `eSUN PETG X1C 0.2` | `Generic PETG @0.2 nozzle` |
 | `eSUN PETG X1C 0.4` | `Generic PETG` |
 | `eSUN PETG X1C 0.6` | `Generic PETG` |
+| `eSUN PETG X2D 0.2` | `Generic PETG @BBL X2D 0.2 nozzle` |
+| `eSUN PETG X2D 0.4` | `Generic PETG @BBL X2D 0.4 nozzle` |
+| `eSUN PETG X2D 0.6` | `Generic PETG @BBL X2D` |
 | `eSUN PETG-CF A1 0.4` | `Generic PETG-CF @BBL A1` |
 | `eSUN PETG-CF A1 0.6` | `Generic PETG-CF @BBL A1` |
 | `eSUN PETG-CF A1M 0.4` | `Generic PETG-CF @BBL A1M` |
 | `eSUN PETG-CF A1M 0.6` | `Generic PETG-CF @BBL A1M` |
 | `eSUN PETG-CF H2C 0.4` | `Generic PETG-CF @BBL H2C 0.4 nozzle` |
 | `eSUN PETG-CF H2C 0.6` | `Generic PETG-CF @BBL H2C` |
+| `eSUN PETG-CF H3C 0.4` | `Generic PETG-CF @BBL H3C` |
+| `eSUN PETG-CF H3C 0.6` | `Generic PETG-CF @BBL H3C` |
 | `eSUN PETG-CF P1P 0.4` | `Generic PETG-CF @BBL P1P` |
 | `eSUN PETG-CF P1P 0.6` | `Generic PETG-CF @BBL P1P` |
 | `eSUN PETG-CF P1S 0.4` | `Generic PETG-CF @BBL X1C` |
 | `eSUN PETG-CF P1S 0.6` | `Generic PETG-CF @BBL X1C` |
 | `eSUN PETG-CF X1C 0.4` | `Generic PETG-CF @BBL X1C` |
 | `eSUN PETG-CF X1C 0.6` | `Generic PETG-CF @BBL X1C` |
+| `eSUN PETG-CF X2D 0.4` | `Generic PETG-CF @BBL X2D 0.4 nozzle` |
+| `eSUN PETG-CF X2D 0.6` | `Generic PETG-CF @BBL X2D` |
 | `eSUN PLA+ A1 0.2` | `Generic PLA @BBL A1 0.2 nozzle` |
 | `eSUN PLA+ A1 0.4` | `Generic PLA @BBL A1` |
 | `eSUN PLA+ A1 0.6` | `Generic PLA @BBL A1` |
@@ -806,15 +1006,22 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `eSUN PLA+ Glow A1M 0.6` | `Generic PLA @BBL A1M` |
 | `eSUN PLA+ Glow H2C 0.4` | `Generic PLA @BBL H2C 0.4 nozzle` |
 | `eSUN PLA+ Glow H2C 0.6` | `Generic PLA @BBL H2C` |
+| `eSUN PLA+ Glow H3C 0.4` | `Generic PLA @BBL H3C` |
+| `eSUN PLA+ Glow H3C 0.6` | `Generic PLA @BBL H3C` |
 | `eSUN PLA+ Glow P1P 0.4` | `Generic PLA @BBL P1P` |
 | `eSUN PLA+ Glow P1P 0.6` | `Generic PLA @BBL P1P` |
 | `eSUN PLA+ Glow P1S 0.4` | `Generic PLA` |
 | `eSUN PLA+ Glow P1S 0.6` | `Generic PLA` |
 | `eSUN PLA+ Glow X1C 0.4` | `Generic PLA` |
 | `eSUN PLA+ Glow X1C 0.6` | `Generic PLA` |
+| `eSUN PLA+ Glow X2D 0.4` | `Generic PLA @BBL X2D 0.4 nozzle` |
+| `eSUN PLA+ Glow X2D 0.6` | `Generic PLA @BBL X2D` |
 | `eSUN PLA+ H2C 0.2` | `Generic PLA @BBL H2C 0.2 nozzle` |
 | `eSUN PLA+ H2C 0.4` | `Generic PLA @BBL H2C 0.4 nozzle` |
 | `eSUN PLA+ H2C 0.6` | `Generic PLA @BBL H2C` |
+| `eSUN PLA+ H3C 0.2` | `Generic PLA @BBL H3C 0.2 nozzle` |
+| `eSUN PLA+ H3C 0.4` | `Generic PLA @BBL H3C` |
+| `eSUN PLA+ H3C 0.6` | `Generic PLA @BBL H3C` |
 | `eSUN PLA+ P1P 0.2` | `Generic PLA @BBL P1P 0.2 nozzle` |
 | `eSUN PLA+ P1P 0.4` | `Generic PLA @BBL P1P` |
 | `eSUN PLA+ P1P 0.6` | `Generic PLA @BBL P1P` |
@@ -824,6 +1031,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `eSUN PLA+ X1C 0.2` | `Generic PLA @0.2 nozzle` |
 | `eSUN PLA+ X1C 0.4` | `Generic PLA` |
 | `eSUN PLA+ X1C 0.6` | `Generic PLA` |
+| `eSUN PLA+ X2D 0.2` | `Generic PLA @BBL X2D 0.2 nozzle` |
+| `eSUN PLA+ X2D 0.4` | `Generic PLA @BBL X2D 0.4 nozzle` |
+| `eSUN PLA+ X2D 0.6` | `Generic PLA @BBL X2D` |
 | `Normal + Stützen A1 0.2` | `0.12mm Draft @BBL A1 0.2 nozzle` |
 | `Normal + Stützen A1 0.4` | `0.20mm Standard @BBL A1` |
 | `Normal + Stützen A1 0.6` | `0.30mm Standard @BBL A1 0.6 nozzle` |
@@ -833,6 +1043,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Normal + Stützen H2C 0.2` | `0.12mm Balanced Quality @BBL H2C 0.2 nozzle` |
 | `Normal + Stützen H2C 0.4` | `0.20mm Standard @BBL H2C` |
 | `Normal + Stützen H2C 0.6` | `0.30mm Standard @BBL H2C 0.6 nozzle` |
+| `Normal + Stützen H3C 0.2` | `0.12mm Balanced Quality @BBL H3C 0.2 nozzle` |
+| `Normal + Stützen H3C 0.4` | `0.20mm Standard @BBL H3C` |
+| `Normal + Stützen H3C 0.6` | `0.30mm Standard @BBL H3C 0.6 nozzle` |
 | `Normal + Stützen P1P 0.2` | `0.12mm Draft @BBL P1P 0.2 nozzle` |
 | `Normal + Stützen P1P 0.4` | `0.20mm Standard @BBL P1P` |
 | `Normal + Stützen P1P 0.6` | `0.30mm Standard @BBL P1P 0.6 nozzle` |
@@ -842,6 +1055,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Normal + Stützen X1C 0.2` | `0.12mm Standard @BBL X1C 0.2 nozzle` |
 | `Normal + Stützen X1C 0.4` | `0.20mm Standard @BBL X1C` |
 | `Normal + Stützen X1C 0.6` | `0.30mm Standard @BBL X1C 0.6 nozzle` |
+| `Normal + Stützen X2D 0.2` | `0.12mm Balanced Quality @BBL X2D 0.2 nozzle` |
+| `Normal + Stützen X2D 0.4` | `0.20mm Standard @BBL X2D` |
+| `Normal + Stützen X2D 0.6` | `0.30mm Standard @BBL X2D 0.6 nozzle` |
 | `Normal A1 0.2` | `0.12mm Draft @BBL A1 0.2 nozzle` |
 | `Normal A1 0.4` | `0.20mm Standard @BBL A1` |
 | `Normal A1 0.6` | `0.30mm Standard @BBL A1 0.6 nozzle` |
@@ -851,6 +1067,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Normal H2C 0.2` | `0.12mm Balanced Quality @BBL H2C 0.2 nozzle` |
 | `Normal H2C 0.4` | `0.20mm Standard @BBL H2C` |
 | `Normal H2C 0.6` | `0.30mm Standard @BBL H2C 0.6 nozzle` |
+| `Normal H3C 0.2` | `0.12mm Balanced Quality @BBL H3C 0.2 nozzle` |
+| `Normal H3C 0.4` | `0.20mm Standard @BBL H3C` |
+| `Normal H3C 0.6` | `0.30mm Standard @BBL H3C 0.6 nozzle` |
 | `Normal P1P 0.2` | `0.12mm Draft @BBL P1P 0.2 nozzle` |
 | `Normal P1P 0.4` | `0.20mm Standard @BBL P1P` |
 | `Normal P1P 0.6` | `0.30mm Standard @BBL P1P 0.6 nozzle` |
@@ -860,6 +1079,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Normal X1C 0.2` | `0.12mm Standard @BBL X1C 0.2 nozzle` |
 | `Normal X1C 0.4` | `0.20mm Standard @BBL X1C` |
 | `Normal X1C 0.6` | `0.30mm Standard @BBL X1C 0.6 nozzle` |
+| `Normal X2D 0.2` | `0.12mm Balanced Quality @BBL X2D 0.2 nozzle` |
+| `Normal X2D 0.4` | `0.20mm Standard @BBL X2D` |
+| `Normal X2D 0.6` | `0.30mm Standard @BBL X2D 0.6 nozzle` |
 | `Qualität + Stützen A1 0.2` | `0.08mm High Quality @BBL A1 0.2 nozzle` |
 | `Qualität + Stützen A1 0.4` | `0.12mm High Quality @BBL A1` |
 | `Qualität + Stützen A1 0.6` | `0.18mm Fine @BBL A1 0.6 nozzle` |
@@ -869,6 +1091,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Qualität + Stützen H2C 0.2` | `0.08mm High Quality @BBL H2C 0.2 nozzle` |
 | `Qualität + Stützen H2C 0.4` | `0.12mm High Quality @BBL H2C` |
 | `Qualität + Stützen H2C 0.6` | `0.18mm Balanced Quality @BBL H2C 0.6 nozzle` |
+| `Qualität + Stützen H3C 0.2` | `0.08mm High Quality @BBL H3C 0.2 nozzle` |
+| `Qualität + Stützen H3C 0.4` | `0.12mm High Quality @BBL H3C` |
+| `Qualität + Stützen H3C 0.6` | `0.18mm Balanced Quality @BBL H3C 0.6 nozzle` |
 | `Qualität + Stützen P1P 0.2` | `0.08mm High Quality @BBL P1P 0.2 nozzle` |
 | `Qualität + Stützen P1P 0.4` | `0.12mm High Quality @BBL P1P` |
 | `Qualität + Stützen P1P 0.6` | `0.18mm Fine @BBL P1P 0.6 nozzle` |
@@ -878,6 +1103,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Qualität + Stützen X1C 0.2` | `0.08mm High Quality @BBL X1C 0.2 nozzle` |
 | `Qualität + Stützen X1C 0.4` | `0.12mm High Quality @BBL X1C` |
 | `Qualität + Stützen X1C 0.6` | `0.18mm Standard @BBL X1C 0.6 nozzle` |
+| `Qualität + Stützen X2D 0.2` | `0.08mm High Quality @BBL X2D 0.2 nozzle` |
+| `Qualität + Stützen X2D 0.4` | `0.12mm High Quality @BBL X2D` |
+| `Qualität + Stützen X2D 0.6` | `0.18mm Balanced Quality @BBL X2D 0.6 nozzle` |
 | `Qualität A1 0.2` | `0.08mm High Quality @BBL A1 0.2 nozzle` |
 | `Qualität A1 0.4` | `0.12mm High Quality @BBL A1` |
 | `Qualität A1 0.6` | `0.18mm Fine @BBL A1 0.6 nozzle` |
@@ -887,6 +1115,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Qualität H2C 0.2` | `0.08mm High Quality @BBL H2C 0.2 nozzle` |
 | `Qualität H2C 0.4` | `0.12mm High Quality @BBL H2C` |
 | `Qualität H2C 0.6` | `0.18mm Balanced Quality @BBL H2C 0.6 nozzle` |
+| `Qualität H3C 0.2` | `0.08mm High Quality @BBL H3C 0.2 nozzle` |
+| `Qualität H3C 0.4` | `0.12mm High Quality @BBL H3C` |
+| `Qualität H3C 0.6` | `0.18mm Balanced Quality @BBL H3C 0.6 nozzle` |
 | `Qualität P1P 0.2` | `0.08mm High Quality @BBL P1P 0.2 nozzle` |
 | `Qualität P1P 0.4` | `0.12mm High Quality @BBL P1P` |
 | `Qualität P1P 0.6` | `0.18mm Fine @BBL P1P 0.6 nozzle` |
@@ -896,6 +1127,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Qualität X1C 0.2` | `0.08mm High Quality @BBL X1C 0.2 nozzle` |
 | `Qualität X1C 0.4` | `0.12mm High Quality @BBL X1C` |
 | `Qualität X1C 0.6` | `0.18mm Standard @BBL X1C 0.6 nozzle` |
+| `Qualität X2D 0.2` | `0.08mm High Quality @BBL X2D 0.2 nozzle` |
+| `Qualität X2D 0.4` | `0.12mm High Quality @BBL X2D` |
+| `Qualität X2D 0.6` | `0.18mm Balanced Quality @BBL X2D 0.6 nozzle` |
 | `Schnell + Stützen A1 0.2` | `0.14mm Extra Draft @BBL A1 0.2 nozzle` |
 | `Schnell + Stützen A1 0.4` | `0.28mm Extra Draft @BBL A1` |
 | `Schnell + Stützen A1 0.6` | `0.42mm Extra Draft @BBL A1 0.6 nozzle` |
@@ -905,6 +1139,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Schnell + Stützen H2C 0.2` | `0.12mm Balanced Quality @BBL H2C 0.2 nozzle` |
 | `Schnell + Stützen H2C 0.4` | `0.24mm Standard @BBL H2C` |
 | `Schnell + Stützen H2C 0.6` | `0.30mm Standard @BBL H2C 0.6 nozzle` |
+| `Schnell + Stützen H3C 0.2` | `0.12mm Balanced Quality @BBL H3C 0.2 nozzle` |
+| `Schnell + Stützen H3C 0.4` | `0.24mm Standard @BBL H3C` |
+| `Schnell + Stützen H3C 0.6` | `0.30mm Standard @BBL H3C 0.6 nozzle` |
 | `Schnell + Stützen P1P 0.2` | `0.14mm Extra Draft @BBL P1P 0.2 nozzle` |
 | `Schnell + Stützen P1P 0.4` | `0.28mm Extra Draft @BBL P1P` |
 | `Schnell + Stützen P1P 0.6` | `0.42mm Extra Draft @BBL P1P 0.6 nozzle` |
@@ -914,6 +1151,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Schnell + Stützen X1C 0.2` | `0.14mm Standard @BBL X1C 0.2 nozzle` |
 | `Schnell + Stützen X1C 0.4` | `0.28mm Extra Draft @BBL X1C` |
 | `Schnell + Stützen X1C 0.6` | `0.42mm Standard @BBL X1C 0.6 nozzle` |
+| `Schnell + Stützen X2D 0.2` | `0.12mm Balanced Quality @BBL X2D 0.2 nozzle` |
+| `Schnell + Stützen X2D 0.4` | `0.24mm Standard @BBL X2D` |
+| `Schnell + Stützen X2D 0.6` | `0.30mm Standard @BBL X2D 0.6 nozzle` |
 | `Schnell A1 0.2` | `0.14mm Extra Draft @BBL A1 0.2 nozzle` |
 | `Schnell A1 0.4` | `0.28mm Extra Draft @BBL A1` |
 | `Schnell A1 0.6` | `0.42mm Extra Draft @BBL A1 0.6 nozzle` |
@@ -923,6 +1163,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Schnell H2C 0.2` | `0.12mm Balanced Quality @BBL H2C 0.2 nozzle` |
 | `Schnell H2C 0.4` | `0.24mm Standard @BBL H2C` |
 | `Schnell H2C 0.6` | `0.30mm Standard @BBL H2C 0.6 nozzle` |
+| `Schnell H3C 0.2` | `0.12mm Balanced Quality @BBL H3C 0.2 nozzle` |
+| `Schnell H3C 0.4` | `0.24mm Standard @BBL H3C` |
+| `Schnell H3C 0.6` | `0.30mm Standard @BBL H3C 0.6 nozzle` |
 | `Schnell P1P 0.2` | `0.14mm Extra Draft @BBL P1P 0.2 nozzle` |
 | `Schnell P1P 0.4` | `0.28mm Extra Draft @BBL P1P` |
 | `Schnell P1P 0.6` | `0.42mm Extra Draft @BBL P1P 0.6 nozzle` |
@@ -932,6 +1175,9 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `Schnell X1C 0.2` | `0.14mm Standard @BBL X1C 0.2 nozzle` |
 | `Schnell X1C 0.4` | `0.28mm Extra Draft @BBL X1C` |
 | `Schnell X1C 0.6` | `0.42mm Standard @BBL X1C 0.6 nozzle` |
+| `Schnell X2D 0.2` | `0.12mm Balanced Quality @BBL X2D 0.2 nozzle` |
+| `Schnell X2D 0.4` | `0.24mm Standard @BBL X2D` |
+| `Schnell X2D 0.6` | `0.30mm Standard @BBL X2D 0.6 nozzle` |
 
 </details>
 

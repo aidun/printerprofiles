@@ -51,9 +51,10 @@ def machine_name(printer: dict, nozzle: str) -> str:
 def variants(lib: Library, machine: str) -> list[str]:
     """The machine's extruder variants, without duplicates.
 
-    Bambu lists the variants per extruder, which is why the H2C names them
-    twice. Filament presets address the variant, not the extruder — their
-    arrays hold only two entries even on the H2C.
+    Bambu lists the variants per extruder, which is why the H2C names some of
+    them twice. Filament presets address the variant, not the extruder. The
+    H3C's 'Direct Drive TPU285' is left out: only 2.85 mm profiles hold values
+    for it, and every material here is 1.75 mm.
     """
     listed = lib.machine(machine).get("extruder_variant_list")
     if not listed:
@@ -62,7 +63,7 @@ def variants(lib: Library, machine: str) -> list[str]:
     for entry in listed:
         for part in entry.split(","):
             part = part.strip()
-            if part and part not in unique:
+            if part and part != "Direct Drive TPU285" and part not in unique:
                 unique.append(part)
     return unique
 

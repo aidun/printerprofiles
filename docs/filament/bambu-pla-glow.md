@@ -46,6 +46,8 @@ Temperatur** als das Basismaterial. Der Unterschied steckt allein im Volumenstro
 | Drucker | 0.4 mm | 0.6 mm |
 |---|--:|--:|
 | H2C | 20.7 | 24.1 |
+| H3C | — | 20.7 | 24.1 |
+| X2D | — | 18 | 21 |
 | X1 Carbon | 18 | 21 |
 | P1S | 17.1 | 19.9 |
 | P1P | 17.1 | 19.9 |

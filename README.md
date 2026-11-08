@@ -2,13 +2,13 @@
 
 # Bambu Lab Druckprofile
 
-**526 fertige Presets für Bambu Studio — 27 Materialien von SUNLU, eSUN,
-Geeetech und Bambu Lab, abgestimmt auf sechs Drucker, drei Düsen und drei
+**706 fertige Presets für Bambu Studio — 27 Materialien von SUNLU, eSUN,
+Geeetech und Bambu Lab, abgestimmt auf acht Drucker, drei Düsen und drei
 Qualitätsstufen. Herunterladen, importieren, drucken.**
 
-[![Presets](https://img.shields.io/badge/Presets-526-2d7ff9)](docs/matrix.md)
+[![Presets](https://img.shields.io/badge/Presets-706-2d7ff9)](docs/matrix.md)
 [![Materialien](https://img.shields.io/badge/Materialien-27-2d7ff9)](docs/filament/README.md)
-[![Drucker](https://img.shields.io/badge/Drucker-6-2d7ff9)](docs/drucker/README.md)
+[![Drucker](https://img.shields.io/badge/Drucker-8-2d7ff9)](docs/drucker/README.md)
 [![Slicer](https://img.shields.io/badge/Bambu%20Studio-2.7%2B-00a76f)](https://bambulab.com/en/download/studio)
 
 [Loslegen](#in-drei-schritten-loslegen) · [Passendes Profil finden](#das-passende-profil-finden) · [Materialien](docs/filament/README.md) · [Fehlerbilder](docs/troubleshooting.md) · [Rückmeldung geben](#rückmeldung-geben)
@@ -30,7 +30,7 @@ Leistung des jeweiligen Hotends passt.
 
 | | |
 |---|---|
-| **6 Drucker** | H2C · X1 Carbon · P1S · P1P · A1 · A1 mini |
+| **8 Drucker** | H2C · H3C · X2D · X1 Carbon · P1S · P1P · A1 · A1 mini |
 | **27 Materialien** | 8 × SUNLU · 6 × eSUN · 4 × Geeetech · 9 × Bambu Lab — PLA, PETG, PETG-CF, TPU, ABS, ASA und ASA-CF, darunter 4 Glow, 5 transparente, 3 faserverstärkte, 1 mattes und 1 seidenglänzendes |
 | **3 Düsen** | 0.2 mm · 0.4 mm · 0.6 mm |
 | **3 Stufen** | Qualität · Normal · Schnell — jede auch als „+ Stützen“ |
@@ -213,7 +213,7 @@ Wer die Änderung gleich selbst einreichen möchte, findet den Weg in
 |---|---|
 | [Installation](docs/install.md) | Import in Bambu Studio, Aktualisierung, Entfernen |
 | [Materialien](docs/filament/README.md) | 27 Datenblätter: Kennwerte, Volumenströme, Fallstricke |
-| [Drucker](docs/drucker/README.md) | Eigenheiten der sechs Maschinen |
+| [Drucker](docs/drucker/README.md) | Eigenheiten der acht Maschinen |
 | [Düsenkunde](docs/nozzles.md) | Wann 0.2, wann 0.4, wann 0.6 — und warum Glow die 0.2 sperrt |
 | [Profilmatrix](docs/matrix.md) | Welche Kombination existiert, mit welchen Werten, in welchem Zustand |
 | [Kalibrierung](docs/calibration.md) | Temperatur, Flussrate, Volumenstrom: der Weg von 🔵 nach 🟢 |

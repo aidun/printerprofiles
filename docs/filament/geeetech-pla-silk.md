@@ -48,6 +48,8 @@ Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
 | H2C | — | 8.6 | 8.6 |
+| H3C | — | 8.6 | 8.6 |
+| X2D | — | 7.5 | 7.5 |
 | X1 Carbon | — | 7.5 | 7.5 |
 | P1S | — | 7.1 | 7.1 |
 | P1P | — | 7.1 | 7.1 |
@@ -56,7 +58,7 @@ Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
 
 > **Warum 0.2 mm fehlt.** `Generic PLA Silk` ist das **einzige** Basisprofil der
 > Bibliothek für Silk-PLA, und für die 0.2-mm-Düse existiert es auf **keinem** der
-> sechs Geräte. Das ist keine Entscheidung dieses Repositories, sondern eine Lücke der
+> acht Geräte. Das ist keine Entscheidung dieses Repositories, sondern eine Lücke der
 > Bibliothek: `src/filaments/geeetech-pla-silk.toml` führt deshalb nur
 > `["0.4", "0.6"]`, und `test_silk_pla_has_no_02_profile_in_the_library` prüft gegen
 > die installierte Bibliothek, dass die Lücke noch besteht. Kommt irgendwann ein

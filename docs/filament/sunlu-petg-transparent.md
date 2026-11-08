@@ -44,6 +44,8 @@ Feuchtigkeit, Fädenbildung und die Empfindlichkeit gegen Kühlung.
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
 | H2C | 1.1 | 13.7 | 15.6 |
+| H3C | 1.1 | 13.7 | 15.6 |
+| X2D | 1 | 11.9 | 13.6 |
 | X1 Carbon | 1 | 11.9 | 13.6 |
 | P1S | 0.9 | 11.3 | 12.9 |
 | P1P | 0.9 | 11.3 | 12.9 |

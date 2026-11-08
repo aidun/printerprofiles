@@ -46,6 +46,8 @@ die leicht reduzierte Flussrate den Volumenanteil der Feststoffpartikel.
 | Drucker | 0.4 mm | 0.6 mm |
 |---|--:|--:|
 | H2C | 12.1 | 17.2 |
+| H3C | — | 12.1 | 17.2 |
+| X2D | — | 10.5 | 15 |
 | X1 Carbon | 10.5 | 15 |
 | P1S | 10 | 14.2 |
 | P1P | 10 | 14.2 |

@@ -5,7 +5,7 @@
 Kurzfaserverstärktes PETG. Rund 15 % der Masse sind gemahlene Kohlenstofffasern, und
 die ändern das Material grundlegend: deutlich steifer, maßhaltiger und ohne
 Fädenbildung, dafür spröder und nur noch halb so schnell. Das einzige
-Bambu-Material im Sortiment, das faserverstärkt ist, auf **allen sechs Geräten**
+Bambu-Material im Sortiment, das faserverstärkt ist, auf **allen acht Geräten**
 läuft und ohne geschlossene Kammer auskommt. Daneben steht das
 [eSUN PETG-CF](esun-petg-cf.md) mit derselben Matrix und denselben Durchsätzen.
 
@@ -40,12 +40,14 @@ lassen, wie sie sind.
 ## Volumenstrom je Drucker und Düse
 
 Werte in mm³/s. Basis ist der X1C; die übrigen Drucker werden über den
-[Durchsatzfaktor](../drucker/README.md#durchsatzfaktoren) skaliert — **außer auf der
-A1 und der A1 mini**, siehe unten.
+[Durchsatzfaktor](../drucker/README.md#durchsatzfaktoren) skaliert — **außer auf dem
+H3C, der A1 und der A1 mini**, siehe unten.
 
 | Drucker | 0.2 mm | 0.4 mm | 0.6 mm |
 |---|--:|--:|--:|
 | H2C | — | 13.2 | 13.2 |
+| H3C | — | **6** | **6** |
+| X2D | — | 11.5 | 11.5 |
 | X1 Carbon | — | 11.5 | 11.5 |
 | P1S | — | 10.9 | 10.9 |
 | P1P | — | 10.9 | 10.9 |
@@ -65,6 +67,10 @@ A1 und der A1 mini**, siehe unten.
 > aufschmelzen kann, druckt nicht schneller, sondern unterextrudiert.
 > `src/filaments/bambu-petg-cf.toml` trägt die Deckel deshalb in einer eigenen Tabelle
 > `[volumetric_flow_cap]`, und ein Test prüft jeden einzelnen gegen das Basisprofil.
+
+> **Warum der H3C bei 6 mm³/s stehen bleibt.** `Bambu PETG-CF @BBL H3C` nennt 6 mm³/s
+> ausdrücklich, der Durchsatzfaktor ergäbe 13.2. Auch hier gewinnt die Bibliothek,
+> der Deckel steht in derselben Tabelle `[volumetric_flow_cap]`.
 
 > **Warum 0.2 mm fehlt.** Für **kein** faserverstärktes Material der Bibliothek
 > existiert ein 0.2-mm-Profil. Die Faserlänge liegt in der Größenordnung der

@@ -16,7 +16,7 @@ PETG; das High-Flow-Hotend erlaubt die höchsten Volumenströme.
 | Kammer | aktiv beheizt |
 | Hotend-Limit | 350 °C |
 | Extruder | 2, gleichzeitig aktiv (Vortek-Werkzeugwechsler) |
-| Extrudervarianten | Direct Drive Standard · Direct Drive High Flow |
+| Extrudervarianten | Direct Drive Standard · High Flow · E3D High Flow |
 | Düsen | 0.2 · 0.4 · 0.6 mm |
 
 ## Volumenstrom
@@ -61,18 +61,18 @@ nicht angebotenes Profil wäre eine ungültige Einstellung.
 **Zwei Düsen, eine Größe.** Die Profile setzen für beide Werkzeuge denselben
 Düsendurchmesser voraus. Gemischte Durchmesser werden nicht abgebildet.
 
-**Vier Geschwindigkeitswerte je Parameter.** Bambu hinterlegt Geschwindigkeiten als
-Array mit einem Eintrag je Extrudervariante — beim H2C sind das vier
-(2 Extruder × Standard/High Flow). Die Profile dieses Repositories arbeiten deshalb
+**Fünf Geschwindigkeitswerte je Parameter.** Bambu hinterlegt Geschwindigkeiten als
+Array mit einem Eintrag je Extrudervariante — beim H2C sind das fünf, mit der
+0.2-mm-Düse vier. Die Profile dieses Repositories arbeiten deshalb
 mit Tempofaktoren statt absoluten Werten, damit Bambus Abstimmung zwischen Standard-
 und High-Flow-Extruder erhalten bleibt. Hintergrund in `src/quality.toml`.
 
-**Filamentwerte werden dedupliziert.** Materialwerte kennen nur zwei Varianten
-(Standard, High Flow), nicht vier. Die erzeugten Presets bilden das so ab.
+**Filamentwerte werden dedupliziert.** Materialwerte kennen drei Varianten
+(Standard, High Flow, E3D High Flow), mit der 0.2-mm-Düse zwei. Die erzeugten Presets bilden das so ab.
 
 **Beheizte Kammer.** PETG und PETG Glow drucken hier am problemlosesten. Warping ist
 praktisch kein Thema, solange die Tür geschlossen bleibt.
 
 ---
 
-[Druckerübersicht](README.md) · [X1 Carbon →](x1c.md)
+[Druckerübersicht](README.md) · [H3C →](h3c.md)

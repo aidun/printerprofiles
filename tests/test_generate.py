@@ -69,6 +69,8 @@ class TestLibrary(unittest.TestCase):
                                     "Direct Drive E3D High Flow"])
         self.assertEqual(generate.variants(self.lib, "Bambu Lab A1 0.4 nozzle"),
                          ["Direct Drive Standard"])
+        self.assertEqual(generate.variants(self.lib, "Bambu Lab H3C 0.4 nozzle"),
+                         ["Direct Drive Standard", "Direct Drive High Flow"])
 
 
 class TestSources(unittest.TestCase):
@@ -79,7 +81,7 @@ class TestSources(unittest.TestCase):
 
     def test_all_printers_and_nozzles_present(self):
         self.assertEqual(set(self.printers),
-                         {"h2c", "x1c", "p1s", "p1p", "a1", "a1mini"})
+                         {"h2c", "h3c", "x2d", "x1c", "p1s", "p1p", "a1", "a1mini"})
         for printer in self.printers.values():
             self.assertEqual(printer["nozzles"], ["0.2", "0.4", "0.6"])
 
@@ -251,7 +253,7 @@ class TestGeneratedPresets(unittest.TestCase):
                        for f in self.filaments.values())
         # Every level exists twice: plain and with supports.
         process = len(self.printers) * 3 * len(self.levels) * 2
-        self.assertEqual((filament, process), (418, 108))
+        self.assertEqual((filament, process), (562, 144))
 
     def test_verified_reference_preset_is_reproduced(self):
         # Values confirmed on the machine for SUNLU PETG Glow, H2C, 0.4 mm.
