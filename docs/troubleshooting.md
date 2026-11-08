@@ -251,9 +251,39 @@ Schichthöhe und deckelt ihn bei 0.2 mm — genau das, was die Ablösbarkeit bra
 Die Werte sind auf PLA abgestimmt. Ein Prozessprofil kennt das Material nicht, und
 Bambu Studio verwirft Stützenwerte in einem Filamentprofil. **PETG** haftet stärker
 an sich selbst und löst sich mit mehr Kraft. Abhilfe schafft eine Kontaktschicht
-aus PLA über das AMS: In den Stützeneinstellungen das Filament der Kontaktfläche
-(`support_interface_filament`) auf den PLA-Slot stellen — die beiden Materialien
-verbinden sich kaum. Das hängt vom AMS-Slot ab und gehört deshalb nicht ins Preset.
+aus dem jeweils anderen Material, siehe unten. Das hängt vom AMS-Slot ab und gehört
+deshalb nicht ins Preset.
+
+#### Kontaktschicht aus Stützfilament
+
+PLA und PETG verbinden sich kaum. PETG als Kontaktschicht unter PLA und PLA unter
+PETG ergibt deshalb eine Unterseite, die sich sauber löst. Nur die Kontaktschichten
+kommen aus dem zweiten Material, der Stützenkörper bleibt aus dem Hauptmaterial. Das
+spart Filamentwechsel und Spülmaterial.
+
+1. **Bauplatte** auf Textured PEI stellen. Auf der Cool Plate lehnt Bambu Studio die
+   Kombination aus PLA und PETG ab.
+2. **Beide Filamente** in das Projekt laden, jeweils das Preset für Drucker und Düse,
+   und das Teil dem Hauptmaterial zuweisen.
+3. **Prozess** wählen: die Stufe mit „+ Stützen“, etwa `Normal + Stützen X1C 0.4`.
+4. **In den Stützeneinstellungen** diese Werte setzen:
+
+| Parameter | Wert |
+|---|---|
+| `support_interface_filament` | Slot des zweiten Materials |
+| `support_top_z_distance` | 0 |
+| `support_interface_spacing` | 0 |
+| `support_interface_pattern` | Rectilinear Interlaced |
+| `independent_support_layer_height` | aus |
+
+> ⚠️ **Luftspalt 0 nur mit zweitem Material.** Bleibt das Filament der Kontaktfläche
+> auf dem Hauptmaterial oder fehlt der Slot, sliced Bambu Studio ohne Warnung, und die
+> Kontaktschicht verschweißt mit dem Teil. Vor dem Druck in der Vorschau prüfen, ob die
+> Kontaktschichten die Farbe des zweiten Materials haben.
+
+Löst sich die Kontaktschicht schon während des Drucks vom Teil, hilft als Erfahrungswert
+ein Luftspalt von 0.1 mm statt 0. Die Einstellungen folgen Bambus Empfehlung für
+Stützfilament; am Gerät gedruckt ist diese Kombination hier noch nicht.
 
 Stützen wachsen nicht nur vom Bett aus. Wo ein Ast das Bett nicht erreicht, steht er
 auf dem Teil selbst und hinterlässt dort eine Spur. `support_on_build_plate_only`
