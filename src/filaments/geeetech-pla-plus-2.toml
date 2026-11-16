@@ -1,6 +1,6 @@
 id                           = "geeetech-pla-plus-2"
 label                        = "Geeetech PLA+ 2.0"
-order                        = 15
+order                        = 17
 short                        = "PLA+"
 brand                        = "Geeetech"
 material                     = "PLA"

@@ -1,6 +1,6 @@
 id                           = "sunlu-tpu"
 label                        = "SUNLU TPU"
-order                        = 7
+order                        = 9
 short                        = "TPU"
 brand                        = "SUNLU"
 material                     = "TPU"

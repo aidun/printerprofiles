@@ -1,6 +1,6 @@
 id                           = "esun-abs"
 label                        = "eSUN ABS+"
-order                        = 14
+order                        = 16
 short                        = "ABS+"
 brand                        = "eSUN"
 material                     = "ABS"

@@ -2,7 +2,7 @@
 
 [← Zurück zur Übersicht](../../README.md)
 
-27 Materialien von vier Herstellern, jeweils als eigenes Datenblatt mit Kennwerten,
+29 Materialien von vier Herstellern, jeweils als eigenes Datenblatt mit Kennwerten,
 Volumenströmen je Drucker und den materialtypischen Fallstricken. Sieben
 Materialklassen: PLA, PETG, PETG-CF, TPU, ABS, ASA und ASA-CF.
 
@@ -14,6 +14,8 @@ Materialklassen: PLA, PETG, PETG-CF, TPU, ABS, ASA und ASA-CF.
 | **SUNLU PETG** | 0.2 · 0.4 · 0.6 | | 🔵 Startwert | [öffnen](sunlu-petg.md) |
 | **SUNLU PETG Glow** | 0.4 · 0.6 | ⚠️ abrasiv | 🟢 H2C · 0.4 mm verifiziert | [öffnen](sunlu-petg-glow.md) |
 | **SUNLU PETG Transparent** | 0.2 · 0.4 · 0.6 | 💧 klar | 🔵 Startwert | [öffnen](sunlu-petg-transparent.md) |
+| **SUNLU PETG 2.0** | 0.2 · 0.4 · 0.6 | | 🔵 Startwert | [öffnen](sunlu-petg-2.md) |
+| **SUNLU PETG Matte** | 0.2 · 0.4 · 0.6 | matt | 🔵 Startwert | [öffnen](sunlu-petg-matte.md) |
 | **SUNLU TPU** | 0.4 · 0.6 | 🧵 flexibel | 🔵 Startwert | [öffnen](sunlu-tpu.md) |
 | **SUNLU ABS** | 0.2 · 0.4 · 0.6 | 🔥 Kammer nötig | 🔵 Startwert | [öffnen](sunlu-abs.md) |
 | **eSUN PLA+** | 0.2 · 0.4 · 0.6 | zäh | 🔵 Startwert | [öffnen](esun-pla-plus.md) |
@@ -53,15 +55,15 @@ Volumenstrom bezogen auf den X1 Carbon mit 0.4-mm-Düse; die übrigen Drucker we
 
 ### SUNLU
 
-| | PLA | PLA Glow | PLA Transp. | PETG | PETG Glow | PETG Transp. | TPU | ABS |
-|---|--:|--:|--:|--:|--:|--:|--:|--:|
-| Düse | 215 °C | 225 °C | 223 °C | 245 °C | 248 °C | 252 °C | 225 °C | 260 °C |
-| Bett | 55 °C | 55 °C | 55 °C | 70 °C | 70 °C | 70 °C | 35 °C | 95 °C |
-| Glasübergang | 55 °C | 55 °C | 55 °C | 71 °C | 71 °C | 71 °C | 30 °C | **108 °C** |
-| Flussrate | 0.98 | 0.96 | 0.98 | 0.95 | 0.98 | 0.95 | 1.00 | 0.95 |
-| Lüfter | 60–100 % | 60–100 % | 30–60 % | 30–40 % | 20–30 % | 15–25 % | 100 % | 10–30 % |
-| Volumenstrom | 15.0 | 10.5 | 12.8 | 14.0 | 11.0 | 11.9 | 3.2 | 15.0 |
-| Trocknung | 45/6 h | 45/6 h | 45/6 h | 65/8 h | 65/8 h | 65/8 h | 50/8 h | 80/6 h |
+| | PLA | PLA Glow | PLA Transp. | PETG | PETG Glow | PETG Transp. | PETG 2.0 | PETG Matte | TPU | ABS |
+|---|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| Düse | 215 °C | 225 °C | 223 °C | 245 °C | 248 °C | 252 °C | 245 °C | 245 °C | 225 °C | 260 °C |
+| Bett | 55 °C | 55 °C | 55 °C | 70 °C | 70 °C | 70 °C | 70 °C | 70 °C | 35 °C | 95 °C |
+| Glasübergang | 55 °C | 55 °C | 55 °C | 71 °C | 71 °C | 71 °C | 71 °C | 71 °C | 30 °C | **108 °C** |
+| Flussrate | 0.98 | 0.96 | 0.98 | 0.95 | 0.98 | 0.95 | 0.95 | 0.95 | 1.00 | 0.95 |
+| Lüfter | 60–100 % | 60–100 % | 30–60 % | 30–40 % | 20–30 % | 15–25 % | 30–40 % | 30–40 % | 100 % | 10–30 % |
+| Volumenstrom | 15.0 | 10.5 | 12.8 | 14.0 | 11.0 | 11.9 | 14.0 | 12.0 | 3.2 | 15.0 |
+| Trocknung | 45/6 h | 45/6 h | 45/6 h | 65/8 h | 65/8 h | 65/8 h | 65/8 h | 65/8 h | 50/8 h | 80/6 h |
 
 ### eSUN
 
@@ -131,7 +133,7 @@ führt — und diese Bibliothek kennt für Silk **keine 0.2-mm-Variante**.
 | Anforderung | Material |
 |---|---|
 | Sichtteile, Modelle, schnelle Prototypen | SUNLU PLA · Bambu PLA Basic |
-| Matte Sichtflächen, versteckte Schichtlinien | **Geeetech PLA Matte** |
+| Matte Sichtflächen, versteckte Schichtlinien | **Geeetech PLA Matte** · SUNLU PETG Matte |
 | Seidenglanz, Dekorteile, Vasen | **Geeetech PLA Silk** |
 | Schonender PETG-Einstieg, wenig Fäden | **Geeetech PETG** — 230 statt 245 °C |
 | Kürzeste Druckzeit | **Bambu PLA Basic** · **Bambu PETG HF** |

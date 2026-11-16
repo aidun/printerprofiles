@@ -3,7 +3,7 @@
 > **Generierte Datei.** Nicht von Hand bearbeiten — sie entsteht aus
 > `dist/_index.json` über `python3 tools/build_docs.py`.
 
-Das Repository enthält **562 Filamentprofile** und **144 Prozessprofile**.
+Das Repository enthält **610 Filamentprofile** und **144 Prozessprofile**.
 
 ---
 
@@ -17,7 +17,7 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 
 ### SUNLU
 
-8 Materialien.
+10 Materialien.
 
 #### SUNLU PLA
 
@@ -104,6 +104,32 @@ bestimmt, wie schnell der Drucker das Material überhaupt fördern kann.
 | Bambu Lab A1 mini | **0.8** | **10.1** | **11.6** | 🔵 Startwerte |
 
 > 💧 **Auf Klarheit optimiert.** Höhere Düsentemperatur, bewusst abgesenkter Volumenstrom und stark zurückgenommene Kühlung — Klarheit geht hier vor Druckzeit.
+
+#### SUNLU PETG 2.0
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | **1.1** | **16.1** | **18.4** | 🔵 Startwerte |
+| Bambu Lab H3C | **1.1** | **16.1** | **18.4** | 🔵 Startwerte |
+| Bambu Lab X2D | **1** | **14** | **16** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **1** | **14** | **16** | 🔵 Startwerte |
+| Bambu Lab P1S | **0.9** | **13.3** | **15.2** | 🔵 Startwerte |
+| Bambu Lab P1P | **0.9** | **13.3** | **15.2** | 🔵 Startwerte |
+| Bambu Lab A1 | **0.9** | **12.6** | **14.4** | 🔵 Startwerte |
+| Bambu Lab A1 mini | **0.8** | **11.9** | **13.6** | 🔵 Startwerte |
+
+#### SUNLU PETG Matte
+
+| Drucker | 0.2 mm | 0.4 mm | 0.6 mm | Status |
+|---|---|---|---|---|
+| Bambu Lab H2C | **1** | **13.8** | **15.5** | 🔵 Startwerte |
+| Bambu Lab H3C | **1** | **13.8** | **15.5** | 🔵 Startwerte |
+| Bambu Lab X2D | **0.9** | **12** | **13.5** | 🔵 Startwerte |
+| Bambu Lab X1 Carbon | **0.9** | **12** | **13.5** | 🔵 Startwerte |
+| Bambu Lab P1S | **0.9** | **11.4** | **12.8** | 🔵 Startwerte |
+| Bambu Lab P1P | **0.9** | **11.4** | **12.8** | 🔵 Startwerte |
+| Bambu Lab A1 | **0.8** | **10.8** | **12.2** | 🔵 Startwerte |
+| Bambu Lab A1 mini | **0.8** | **10.2** | **11.5** | 🔵 Startwerte |
 
 #### SUNLU TPU
 
@@ -765,6 +791,30 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `SUNLU ABS X2D 0.2` | `Generic ABS @BBL X2D 0.2 nozzle` |
 | `SUNLU ABS X2D 0.4` | `Generic ABS @BBL X2D 0.4 nozzle` |
 | `SUNLU ABS X2D 0.6` | `Generic ABS @BBL X2D` |
+| `SUNLU PETG 2.0 A1 0.2` | `Generic PETG @BBL A1 0.2 nozzle` |
+| `SUNLU PETG 2.0 A1 0.4` | `Generic PETG @BBL A1` |
+| `SUNLU PETG 2.0 A1 0.6` | `Generic PETG @BBL A1` |
+| `SUNLU PETG 2.0 A1M 0.2` | `Generic PETG @BBL A1M 0.2 nozzle` |
+| `SUNLU PETG 2.0 A1M 0.4` | `Generic PETG @BBL A1M` |
+| `SUNLU PETG 2.0 A1M 0.6` | `Generic PETG @BBL A1M` |
+| `SUNLU PETG 2.0 H2C 0.2` | `Generic PETG @BBL H2C 0.2 nozzle` |
+| `SUNLU PETG 2.0 H2C 0.4` | `Generic PETG @BBL H2C 0.4 nozzle` |
+| `SUNLU PETG 2.0 H2C 0.6` | `Generic PETG @BBL H2C` |
+| `SUNLU PETG 2.0 H3C 0.2` | `Generic PETG @BBL H3C 0.2 nozzle` |
+| `SUNLU PETG 2.0 H3C 0.4` | `Generic PETG @BBL H3C` |
+| `SUNLU PETG 2.0 H3C 0.6` | `Generic PETG @BBL H3C` |
+| `SUNLU PETG 2.0 P1P 0.2` | `Generic PETG @BBL P1P 0.2 nozzle` |
+| `SUNLU PETG 2.0 P1P 0.4` | `Generic PETG @BBL P1P` |
+| `SUNLU PETG 2.0 P1P 0.6` | `Generic PETG @BBL P1P` |
+| `SUNLU PETG 2.0 P1S 0.2` | `Generic PETG @0.2 nozzle` |
+| `SUNLU PETG 2.0 P1S 0.4` | `Generic PETG` |
+| `SUNLU PETG 2.0 P1S 0.6` | `Generic PETG` |
+| `SUNLU PETG 2.0 X1C 0.2` | `Generic PETG @0.2 nozzle` |
+| `SUNLU PETG 2.0 X1C 0.4` | `Generic PETG` |
+| `SUNLU PETG 2.0 X1C 0.6` | `Generic PETG` |
+| `SUNLU PETG 2.0 X2D 0.2` | `Generic PETG @BBL X2D 0.2 nozzle` |
+| `SUNLU PETG 2.0 X2D 0.4` | `Generic PETG @BBL X2D 0.4 nozzle` |
+| `SUNLU PETG 2.0 X2D 0.6` | `Generic PETG @BBL X2D` |
 | `SUNLU PETG A1 0.2` | `Generic PETG @BBL A1 0.2 nozzle` |
 | `SUNLU PETG A1 0.4` | `Generic PETG @BBL A1` |
 | `SUNLU PETG A1 0.6` | `Generic PETG @BBL A1` |
@@ -793,6 +843,30 @@ abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
 | `SUNLU PETG H3C 0.2` | `Generic PETG @BBL H3C 0.2 nozzle` |
 | `SUNLU PETG H3C 0.4` | `Generic PETG @BBL H3C` |
 | `SUNLU PETG H3C 0.6` | `Generic PETG @BBL H3C` |
+| `SUNLU PETG Matte A1 0.2` | `Generic PETG @BBL A1 0.2 nozzle` |
+| `SUNLU PETG Matte A1 0.4` | `Generic PETG @BBL A1` |
+| `SUNLU PETG Matte A1 0.6` | `Generic PETG @BBL A1` |
+| `SUNLU PETG Matte A1M 0.2` | `Generic PETG @BBL A1M 0.2 nozzle` |
+| `SUNLU PETG Matte A1M 0.4` | `Generic PETG @BBL A1M` |
+| `SUNLU PETG Matte A1M 0.6` | `Generic PETG @BBL A1M` |
+| `SUNLU PETG Matte H2C 0.2` | `Generic PETG @BBL H2C 0.2 nozzle` |
+| `SUNLU PETG Matte H2C 0.4` | `Generic PETG @BBL H2C 0.4 nozzle` |
+| `SUNLU PETG Matte H2C 0.6` | `Generic PETG @BBL H2C` |
+| `SUNLU PETG Matte H3C 0.2` | `Generic PETG @BBL H3C 0.2 nozzle` |
+| `SUNLU PETG Matte H3C 0.4` | `Generic PETG @BBL H3C` |
+| `SUNLU PETG Matte H3C 0.6` | `Generic PETG @BBL H3C` |
+| `SUNLU PETG Matte P1P 0.2` | `Generic PETG @BBL P1P 0.2 nozzle` |
+| `SUNLU PETG Matte P1P 0.4` | `Generic PETG @BBL P1P` |
+| `SUNLU PETG Matte P1P 0.6` | `Generic PETG @BBL P1P` |
+| `SUNLU PETG Matte P1S 0.2` | `Generic PETG @0.2 nozzle` |
+| `SUNLU PETG Matte P1S 0.4` | `Generic PETG` |
+| `SUNLU PETG Matte P1S 0.6` | `Generic PETG` |
+| `SUNLU PETG Matte X1C 0.2` | `Generic PETG @0.2 nozzle` |
+| `SUNLU PETG Matte X1C 0.4` | `Generic PETG` |
+| `SUNLU PETG Matte X1C 0.6` | `Generic PETG` |
+| `SUNLU PETG Matte X2D 0.2` | `Generic PETG @BBL X2D 0.2 nozzle` |
+| `SUNLU PETG Matte X2D 0.4` | `Generic PETG @BBL X2D 0.4 nozzle` |
+| `SUNLU PETG Matte X2D 0.6` | `Generic PETG @BBL X2D` |
 | `SUNLU PETG P1P 0.2` | `Generic PETG @BBL P1P 0.2 nozzle` |
 | `SUNLU PETG P1P 0.4` | `Generic PETG @BBL P1P` |
 | `SUNLU PETG P1P 0.6` | `Generic PETG @BBL P1P` |

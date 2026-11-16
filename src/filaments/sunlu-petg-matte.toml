@@ -1,0 +1,50 @@
+id                           = "sunlu-petg-matte"
+label                        = "SUNLU PETG Matte"
+order                        = 8
+short                        = "PETG Matte"
+brand                        = "SUNLU"
+material                     = "PETG"
+base                         = "Generic PETG"
+abrasive                     = false
+hardened                     = false
+transparent                  = false
+flexible                     = false
+status                       = "baseline"
+drying                       = "65 °C / 8 h — PETG ist stark hygroskopisch"
+storage                      = "zwingend trocken; feuchtes PETG fädelt und knackt beim Druck"
+nozzles                      = ["0.2", "0.4", "0.6"]
+description                  = "PETG mit matter Oberfläche. Die Mattierung kommt von Füllstoffen, die den Schmelzfluss bremsen; der Volumenstrom liegt deshalb unter dem von SUNLU PETG."
+
+[temperature]
+nozzle                       = 245
+nozzle_initial               = 250
+range_low                    = 230
+range_high                   = 260
+vitrification                = 71
+bed                          = 70
+bed_initial                  = 75
+
+[flow]
+ratio                        = 0.95
+
+# The Bambu library has no profile for matte PETG. The fillers that make the
+# surface matte also slow the melt, so the flow sits about 15 % below the
+# values of 'SUNLU PETG @BBL X1C'. Derived, not measured.
+[volumetric_flow]
+"0.2" = 0.9
+"0.4" = 12.0
+"0.6" = 13.5
+
+[cooling]
+fan_min_speed                = 30
+fan_max_speed                = 40
+overhang_fan_speed           = 60
+slow_down_layer_time         = 6
+fan_cooling_layer_time       = 20
+close_fan_the_first_x_layers = 2
+# Short layers slow down the inner walls only: a slower outer wall changes
+# width and gloss from layer to layer, which is what shows as layer lines.
+no_slow_down_for_cooling_on_outwalls = true
+
+[retraction]
+z_hop                        = 0.6

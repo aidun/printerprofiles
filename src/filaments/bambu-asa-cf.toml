@@ -1,6 +1,6 @@
 id                           = "bambu-asa-cf"
 label                        = "Bambu ASA-CF"
-order                        = 27
+order                        = 29
 short                        = "ASA-CF"
 brand                        = "Bambu Lab"
 material                     = "ASA-CF"

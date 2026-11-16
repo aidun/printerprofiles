@@ -137,7 +137,7 @@ class TestSources(unittest.TestCase):
         # unfilled PETG also holds the fan within 10 points. Fibre-filled PETG
         # keeps the vendor fan range, its matte surface hides the gloss.
         petg = [k for k, f in self.filaments.items() if f["material"].startswith("PETG")]
-        self.assertEqual(len(petg), 10)
+        self.assertEqual(len(petg), 12)
         for key in petg:
             cooling = self.filaments[key]["cooling"]
             self.assertIs(cooling.get("no_slow_down_for_cooling_on_outwalls"), True, key)
@@ -253,7 +253,7 @@ class TestGeneratedPresets(unittest.TestCase):
                        for f in self.filaments.values())
         # Every level exists twice: plain and with supports.
         process = len(self.printers) * 3 * len(self.levels) * 2
-        self.assertEqual((filament, process), (562, 144))
+        self.assertEqual((filament, process), (610, 144))
 
     def test_verified_reference_preset_is_reproduced(self):
         # Values confirmed on the machine for SUNLU PETG Glow, H2C, 0.4 mm.

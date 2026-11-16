@@ -188,7 +188,7 @@ Fädenbildung bei unveränderten Einstellungen.
 | ABS | 70 – 80 °C / 4 – 8 h | gering |
 | ASA und ASA-CF | 80 °C / 8 h | gering |
 
-Die Werte gelten herstellerübergreifend für alle 27 Materialien; die
+Die Werte gelten herstellerübergreifend für alle 29 Materialien; die
 [Datenblätter](filament/README.md) führen sie je Material einzeln. Bei ABS hängt die
 Dauer vom Hersteller ab: [eSUN ABS+](filament/esun-abs.md) 70 °C / 4 h,
 [SUNLU ABS](filament/sunlu-abs.md) 80 °C / 6 h, [Bambu ABS](filament/bambu-abs.md)

@@ -1,6 +1,6 @@
 id                           = "esun-petg-transparent"
 label                        = "eSUN PETG Transparent"
-order                        = 12
+order                        = 14
 short                        = "PETG Transparent"
 brand                        = "eSUN"
 material                     = "PETG"

@@ -80,7 +80,7 @@ hundert Gramm sichtbar aufgeweitet.
 | eSUN PLA+ Glow · Bambu PLA Glow | **gehärtet zwingend** | Strontiumaluminat |
 | Bambu PETG-CF · eSUN PETG-CF · Bambu ASA-CF | **gehärtet zwingend** | Kohlenstofffaser |
 
-Von den 27 Materialien dieses Repositories brauchen also genau sieben eine gehärtete
+Von den 29 Materialien dieses Repositories brauchen also genau sieben eine gehärtete
 Düse: die vier Glow-Varianten und die drei faserverstärkten. Welches welches ist,
 steht in der [Materialübersicht](filament/README.md) — dort trägt jedes betroffene
 Datenblatt die Kennzeichnung ⚠️.

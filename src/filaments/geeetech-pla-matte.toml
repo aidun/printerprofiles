@@ -1,6 +1,6 @@
 id                           = "geeetech-pla-matte"
 label                        = "Geeetech PLA Matte"
-order                        = 16
+order                        = 18
 short                        = "PLA Matte"
 brand                        = "Geeetech"
 material                     = "PLA"

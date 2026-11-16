@@ -1,6 +1,6 @@
 id                           = "geeetech-pla-silk"
 label                        = "Geeetech PLA Silk"
-order                        = 17
+order                        = 19
 short                        = "PLA Silk"
 brand                        = "Geeetech"
 material                     = "PLA"

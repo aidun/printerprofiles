@@ -1,6 +1,6 @@
 id                           = "sunlu-abs"
 label                        = "SUNLU ABS"
-order                        = 8
+order                        = 10
 short                        = "ABS"
 brand                        = "SUNLU"
 material                     = "ABS"

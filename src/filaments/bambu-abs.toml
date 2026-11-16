@@ -1,6 +1,6 @@
 id                           = "bambu-abs"
 label                        = "Bambu ABS"
-order                        = 25
+order                        = 27
 short                        = "ABS"
 brand                        = "Bambu Lab"
 material                     = "ABS"

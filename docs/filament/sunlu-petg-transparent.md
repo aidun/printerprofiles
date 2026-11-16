@@ -90,4 +90,4 @@ Oberflächenriefen und bringt optisch mehr als jede weitere Parameteränderung.
 
 ---
 
-[← SUNLU PETG Glow](sunlu-petg-glow.md) · [Materialübersicht](README.md) · [SUNLU TPU →](sunlu-tpu.md)
+[← SUNLU PETG Glow](sunlu-petg-glow.md) · [Materialübersicht](README.md) · [SUNLU PETG 2.0 →](sunlu-petg-2.md)

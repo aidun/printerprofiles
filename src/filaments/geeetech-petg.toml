@@ -1,6 +1,6 @@
 id                           = "geeetech-petg"
 label                        = "Geeetech PETG"
-order                        = 18
+order                        = 20
 short                        = "PETG"
 brand                        = "Geeetech"
 material                     = "PETG"

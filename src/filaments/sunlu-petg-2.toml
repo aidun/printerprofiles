@@ -1,0 +1,49 @@
+id                           = "sunlu-petg-2"
+label                        = "SUNLU PETG 2.0"
+order                        = 7
+short                        = "PETG 2.0"
+brand                        = "SUNLU"
+material                     = "PETG"
+base                         = "Generic PETG"
+abrasive                     = false
+hardened                     = false
+transparent                  = false
+flexible                     = false
+status                       = "baseline"
+drying                       = "65 °C / 8 h — PETG ist stark hygroskopisch"
+storage                      = "zwingend trocken; feuchtes PETG fädelt und knackt beim Druck"
+nozzles                      = ["0.2", "0.4", "0.6"]
+description                  = "Weiterentwicklung von SUNLU PETG. Die Werte entsprechen vorerst denen von SUNLU PETG, weil Bambu für die 2.0-Variante kein eigenes Profil mitbringt."
+
+[temperature]
+nozzle                       = 245
+nozzle_initial               = 250
+range_low                    = 230
+range_high                   = 260
+vitrification                = 71
+bed                          = 70
+bed_initial                  = 75
+
+[flow]
+ratio                        = 0.95
+
+# The Bambu library has no profile for PETG 2.0. Until a measurement says
+# otherwise it takes the values of 'SUNLU PETG @BBL X1C', see sunlu-petg.toml.
+[volumetric_flow]
+"0.2" = 1.0
+"0.4" = 14.0
+"0.6" = 16.0
+
+[cooling]
+fan_min_speed                = 30
+fan_max_speed                = 40
+overhang_fan_speed           = 60
+slow_down_layer_time         = 6
+fan_cooling_layer_time       = 20
+close_fan_the_first_x_layers = 2
+# Short layers slow down the inner walls only: a slower outer wall changes
+# width and gloss from layer to layer, which is what shows as layer lines.
+no_slow_down_for_cooling_on_outwalls = true
+
+[retraction]
+z_hop                        = 0.6

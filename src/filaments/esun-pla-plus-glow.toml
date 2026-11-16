@@ -1,6 +1,6 @@
 id                           = "esun-pla-plus-glow"
 label                        = "eSUN PLA+ Glow"
-order                        = 10
+order                        = 12
 short                        = "PLA+ Glow"
 brand                        = "eSUN"
 material                     = "PLA"

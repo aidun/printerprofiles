@@ -108,4 +108,4 @@ Details unter [Feuchtigkeit](../troubleshooting.md#feuchtigkeit).
 
 ---
 
-[← SUNLU PETG Transparent](sunlu-petg-transparent.md) · [Materialübersicht](README.md) · [SUNLU ABS →](sunlu-abs.md)
+[← SUNLU PETG Matte](sunlu-petg-matte.md) · [Materialübersicht](README.md) · [SUNLU ABS →](sunlu-abs.md)
