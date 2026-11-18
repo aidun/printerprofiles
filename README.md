@@ -35,9 +35,12 @@ Leistung des jeweiligen Hotends passt.
 | **3 Düsen** | 0.2 mm · 0.4 mm · 0.6 mm |
 | **3 Stufen** | Qualität · Normal · Schnell — jede auch als „+ Stützen“ |
 
-Alle Profile **erben** von den Originalprofilen aus Bambu Studio. Überschrieben wird
-nur, was tatsächlich material- oder stufenspezifisch ist — alles andere bleibt auf
-den vom Hersteller abgestimmten Werten und wandert bei einem Studio-Update mit.
+Alle Profile sind von den Originalprofilen aus Bambu Studio **abgeleitet**. Geändert
+wird nur, was tatsächlich material- oder stufenspezifisch ist — alles andere steht auf
+den vom Hersteller abgestimmten Werten. Jedes Preset ist dabei **in sich vollständig**:
+Es erbt nicht, sondern trägt alle Werte seines Basisprofils mit und lässt sich deshalb
+auch über die [Kommandozeile](docs/install.md#kommandozeile) von Bambu Studio nutzen.
+Neue Herstellerwerte kommen mit dem nächsten Generatorlauf, nicht mit einem Studio-Update.
 
 ---
 

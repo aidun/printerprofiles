@@ -4,7 +4,8 @@
 
 Bambu Studio kennt zwei Wege, fremde Presets aufzunehmen: den Import über das Menü
 und das direkte Ablegen im Benutzerordner. Der erste Weg ist der empfohlene — er
-prüft die Dateien und ordnet sie richtig ein.
+prüft die Dateien und ordnet sie richtig ein. Für automatisiertes Slicen lassen sich
+die Dateien außerdem direkt an die [Kommandozeile](#kommandozeile) übergeben.
 
 ---
 
@@ -93,6 +94,31 @@ Beim nächsten Start liest Studio die Dateien ein.
 > Werden Presets auf diesem Weg kopiert, fehlt sie — Studio erzeugt sie selbst.
 > Die Cloud-Synchronisation überträgt solche Presets allerdings **nicht** auf andere
 > Geräte. Wer die Profile auf mehreren Rechnern braucht, nimmt Weg 1.
+
+---
+
+## Kommandozeile
+
+Jedes Preset ist in sich vollständig — es erbt nicht, sondern trägt alle Werte
+seines Bambu-Basisprofils mit. Damit lässt es sich direkt an die Kommandozeile von
+Bambu Studio übergeben, die keine Vererbung auflöst:
+
+```bash
+BambuStudio --slice 0 \
+  --load-settings "drucker.json;dist/process/Normal X1C 0.4.json" \
+  --load-filaments "dist/filament/SUNLU PETG X1C 0.4.json" \
+  --outputdir "$PWD/out" teil.stl
+```
+
+Zwei Dinge erwartet die Kommandozeile vom Druckerprofil `drucker.json`, das nicht
+aus diesem Repository stammt:
+
+| Schlüssel | Wert | Ohne ihn |
+|---|---|---|
+| `inherits` | Name des Bambu-Druckers, etwa `Bambu Lab X1 Carbon 0.4 nozzle` | Abbruch mit *process not compatible with printer* |
+| `curr_bed_type` | Druckplatte, etwa `Textured PEI Plate` | Abbruch, sobald das Material keine Cool-Plate-Temperatur hat |
+
+Ein aus Studio exportiertes eigenes Druckerprofil bringt `inherits` bereits mit.
 
 ---
 

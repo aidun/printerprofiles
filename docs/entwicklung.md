@@ -23,6 +23,15 @@ src/*.toml   ──  tools/generate.py  ──▶  dist/*.json   ──▶  Bamb
 
 **Eine Bearbeitung direkt in `dist/` überlebt den nächsten Lauf nicht.**
 
+Der Generator beschreibt jedes Preset zunächst als Abweichung von einem
+Bambu-Basisprofil. Beim Schreiben löst er die komplette Vererbungskette dieses
+Basisprofils auf und legt die eigenen Werte darüber (`flatten` in
+`tools/generate.py`). Die Dateien in `dist/` sind dadurch eigenständig:
+`inherits` ist leer, ein `nil` in einem Array ist durch den Basiswert derselben
+Extrudervariante ersetzt. Welches Basisprofil zugrunde liegt, steht als `base` in
+`dist/_index.json`. Nach einem Studio-Update mit neuen Herstellerwerten genügt ein
+neuer Lauf.
+
 ## Aufbau des Repositories
 
 ```
@@ -132,8 +141,8 @@ Dazu kommen fünf Tabellen, die alle gezeigten Schlüssel brauchen:
 | `[retraction]` | `z_hop` |
 
 Optional ist `no_slow_down_for_cooling_on_outwalls` in `[cooling]`: `true` nimmt die
-Außenwand von der Verzögerung für kurze Schichten aus. Fehlt der Schlüssel, erbt das
-Preset den Wert des Basisprofils. `test_petg_keeps_layer_lines_even` verlangt ihn für
+Außenwand von der Verzögerung für kurze Schichten aus. Fehlt der Schlüssel, übernimmt
+das Preset den Wert des Basisprofils. `test_petg_keeps_layer_lines_even` verlangt ihn für
 jedes PETG und verbietet ihn für alle anderen Materialien — Hintergrund unter
 [Sichtbare Schichtlinien](troubleshooting.md#sichtbare-schichtlinien).
 
@@ -144,7 +153,7 @@ ein Gerät ein Eintrag in `[volumetric_flow_cap]`, gewinnt der kleinere der beid
 `filament_max_volumetric_speed` des Basisprofils und schlägt auch dann an, wenn ein
 Deckel gar nicht mehr greift.
 
-> **Bambu-eigene Materialien** erben von ihrem Herstellerprofil, nicht von
+> **Bambu-eigene Materialien** leiten sich von ihrem Herstellerprofil ab, nicht von
 > `Generic …` — `base` ist dort identisch mit `label`. Ein Test wacht darüber.
 
 Danach die Pipeline durchlaufen lassen und ein Datenblatt unter `docs/filament/`
@@ -159,7 +168,8 @@ nicht:
 
 | Prüfung | Fehlerbild in Studio ohne Prüfung |
 |---|---|
-| Elternprofil existiert und ist für die Maschine freigegeben | Preset erscheint nicht |
+| Basisprofil existiert und ist für die Maschine freigegeben | Preset erscheint nicht |
+| `inherits` leer, alle Schlüssel des Basisprofils vorhanden | Kommandozeile fällt auf Programmstandards zurück |
 | Unbekannte Schlüssel | Einstellung wird kommentarlos verworfen |
 | Arraylängen passen zu den Extrudervarianten und zum Basisprofil | falscher Extruder bekommt den Wert |
 | Schichthöhe innerhalb der Maschinengrenzen und ≤ 75 % des Düsendurchmessers | Druckabbruch oder Unterextrusion |

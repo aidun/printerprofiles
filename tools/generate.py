@@ -111,6 +111,37 @@ def _is_number(value) -> bool:
         return False
 
 
+# Keys that only describe an entry of the library itself. A standalone preset
+# must not carry them: 'setting_id' would claim to be that system profile,
+# 'instantiation' marks a library entry as selectable.
+SYSTEM_ONLY = ("instantiation", "setting_id")
+
+
+def flatten(lib: Library, collection: dict[str, dict], delta: dict) -> dict:
+    """Turns a delta preset into a standalone one.
+
+    'build_filament' and 'build_process' describe a preset as the overrides on
+    top of a library profile, named in 'inherits'. Bambu Studio's command line
+    does not resolve that chain, so every written preset carries the complete,
+    resolved base with the overrides applied, and 'inherits' stays empty.
+
+    A 'nil' entry in an override array means "this variant keeps the base
+    value"; it is replaced by the base entry at the same position. A base with
+    a single entry applies to every variant.
+    """
+    preset = lib.resolved(collection, delta["inherits"])
+    for key in SYSTEM_ONLY:
+        preset.pop(key, None)
+    for key, value in delta.items():
+        inherited = preset.get(key)
+        if isinstance(value, list) and isinstance(inherited, list) and inherited:
+            value = [inherited[min(i, len(inherited) - 1)] if entry == "nil" else entry
+                     for i, entry in enumerate(value)]
+        preset[key] = value
+    preset["inherits"] = ""
+    return preset
+
+
 def write(path: Path, data: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     text = json.dumps(data, indent=4, ensure_ascii=False, sort_keys=True)
@@ -192,7 +223,7 @@ def build_filament(lib, printer_id, printer, filament, nozzle):
         "printer": printer_id,
         "filament": filament["id"],
         "nozzle": nozzle,
-        "inherits": base,
+        "base": base,
         "flow": fmt(flow),
         "status": filament["status"],
         "abrasive": filament["abrasive"],
@@ -241,7 +272,7 @@ def build_process(lib, printer_id, printer, nozzle, level_id, level, support=Non
         "nozzle": nozzle,
         "level": level_id,
         "support": support is not None,
-        "inherits": base,
+        "base": base,
         "layer_height": fmt(height, 2),
         "target_layer_height": fmt(target, 2),
     }
@@ -271,13 +302,15 @@ def main() -> int:
                 if printer_id not in released_for(filament, printers):
                     continue
                 name, preset, meta = build_filament(lib, printer_id, printer, filament, nozzle)
-                write(TARGET / "filament" / f"{name}.json", preset)
+                write(TARGET / "filament" / f"{name}.json",
+                      flatten(lib, lib.filaments, preset))
                 index.append(meta)
             for level_id, level in levels.items():
                 for variant in (None, support):
                     name, preset, meta = build_process(
                         lib, printer_id, printer, nozzle, level_id, level, variant)
-                    write(TARGET / "process" / f"{name}.json", preset)
+                    write(TARGET / "process" / f"{name}.json",
+                          flatten(lib, lib.processes, preset))
                     index.append(meta)
 
     filament_count = sum(1 for e in index if e["kind"] == "filament")

@@ -487,16 +487,17 @@ Profil rastet auf die nächstgelegene freigegebene Schichthöhe ein:
 
 ---
 
-## Vererbung
+## Basisprofile
 
-Jedes Profil erbt von einem Originalprofil aus Bambu Studio. Dadurch bleiben
-alle Einstellungen, die dieses Repository nicht setzt, auf den vom Hersteller
-abgestimmten Werten — und wandern bei einem Studio-Update automatisch mit.
+Jedes Profil ist von einem Originalprofil aus Bambu Studio abgeleitet und
+enthält dessen vollständig aufgelöste Werte. Alles, was dieses Repository nicht
+setzt, steht auf den vom Hersteller abgestimmten Werten. Die Profile erben nicht
+— jedes ist für sich vollständig und läuft auch über die Kommandozeile.
 
 <details>
-<summary>Vollständige Liste der Elternprofile</summary>
+<summary>Vollständige Liste der Basisprofile</summary>
 
-| Profil | erbt von |
+| Profil | abgeleitet von |
 |---|---|
 | `Bambu ABS A1 0.2` | `Bambu ABS @BBL A1 0.2 nozzle` |
 | `Bambu ABS A1 0.4` | `Bambu ABS @BBL A1` |

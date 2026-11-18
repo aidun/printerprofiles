@@ -453,6 +453,57 @@ class TestSupportPresets(unittest.TestCase):
                                                msg=f"{preset['name']} {key}")
 
 
+class TestStandalonePresets(unittest.TestCase):
+    """Written presets carry the resolved base, so the CLI needs no library."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.lib = Library()
+        cls.printers, cls.filaments, cls.levels = generate.load_sources()
+
+    def test_filament_is_resolved_and_detached(self):
+        _, delta, _ = generate.build_filament(
+            self.lib, "h2c", self.printers["h2c"], self.filaments["sunlu-petg-glow"], "0.4")
+        preset = generate.flatten(self.lib, self.lib.filaments, delta)
+        base = self.lib.resolved(self.lib.filaments, delta["inherits"])
+        self.assertEqual(preset["inherits"], "")
+        self.assertEqual(preset["from"], "User")
+        for key in generate.SYSTEM_ONLY:
+            self.assertNotIn(key, preset)
+        self.assertLessEqual(set(base) - set(generate.SYSTEM_ONLY), set(preset))
+        # Values this repository does not set come from the base unchanged.
+        self.assertEqual(preset["filament_vendor"], base["filament_vendor"])
+        self.assertEqual(preset["filament_id"], base["filament_id"])
+        # Own values win; 'nil' keeps the base entry of that variant.
+        self.assertEqual(preset["nozzle_temperature"], ["248"])
+        self.assertEqual(preset["filament_flow_ratio"], ["0.98", "0.97", "0.97"])
+        self.assertEqual(preset["filament_max_volumetric_speed"], ["12.6", "12", "12"])
+        self.assertEqual(preset["compatible_printers"], ["Bambu Lab H2C 0.4 nozzle"])
+
+    def test_nil_falls_back_to_a_single_base_entry(self):
+        lib = self.lib
+        delta = {"inherits": "Generic PLA", "filament_flow_ratio": ["0.9", "nil"]}
+        preset = generate.flatten(lib, lib.filaments, delta)
+        single = lib.resolved(lib.filaments, "Generic PLA")["filament_flow_ratio"]
+        self.assertEqual(preset["filament_flow_ratio"], ["0.9", single[0]])
+
+    def test_process_is_resolved_and_detached(self):
+        _, delta, _ = generate.build_process(
+            self.lib, "x1c", self.printers["x1c"], "0.4", "normal", self.levels["normal"])
+        preset = generate.flatten(self.lib, self.lib.processes, delta)
+        base = self.lib.resolved(self.lib.processes, delta["inherits"])
+        self.assertEqual(preset["inherits"], "")
+        self.assertEqual(preset["support_type"], base["support_type"])
+        self.assertEqual(preset["wall_loops"], delta["wall_loops"])
+
+    def test_dist_holds_no_inheritance(self):
+        for path in (ROOT / "dist").rglob("*.json"):
+            if path.name == "_index.json":
+                continue
+            data = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(data["inherits"], "", path.name)
+
+
 class TestDistIsCurrent(unittest.TestCase):
     def test_index_describes_every_file(self):
         index = json.loads((ROOT / "dist" / "_index.json").read_text(encoding="utf-8"))

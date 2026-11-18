@@ -14,6 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from bambulib import Library, _number  # noqa: E402
+from generate import SYSTEM_ONLY  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 TARGET = ROOT / "dist"
@@ -53,6 +54,15 @@ def main() -> int:
     files = sorted(TARGET.rglob("*.json"))
     c.check(bool(files), "dist/ holds no presets — run tools/generate.py first.")
     names: dict[str, str] = {}
+    # The presets are standalone; the library profile each one is derived
+    # from is recorded in the index only.
+    bases = {}
+    if (TARGET / "_index.json").is_file():
+        try:
+            listed = json.loads((TARGET / "_index.json").read_text(encoding="utf-8"))
+            bases = {e["name"]: e.get("base") for e in listed.get("presets", [])}
+        except (json.JSONDecodeError, KeyError, TypeError):
+            pass
 
     for file in files:
         if file.name == "_index.json":
@@ -71,10 +81,18 @@ def main() -> int:
         c.check(d.get("name") not in names, f"{short}: name used twice")
         names[d.get("name", str(short))] = str(short)
 
-        # The parent profile must exist
+        # Standalone: nothing to resolve, the CLI reads the file as it is
+        c.check(d.get("inherits") == "", f"{short}: 'inherits' must be empty, is {d.get('inherits')!r}")
+
+        # The base profile must exist, and every key of it must be present
         collection = lib.filaments if kind == "filament" else lib.processes
-        parent = d.get("inherits")
-        c.check(parent in collection, f"{short}: parent profile {parent!r} missing from the library")
+        parent = bases.get(d.get("name"))
+        c.check(parent in collection, f"{short}: base profile {parent!r} missing from the library")
+        if parent in collection:
+            missing = sorted(set(lib.resolved(collection, parent)) - set(d) - set(SYSTEM_ONLY))
+            c.check(not missing, f"{short}: not standalone, keys of the base missing: {missing[:5]}")
+        for key in SYSTEM_ONLY:
+            c.check(key not in d, f"{short}: system-only key {key!r} present")
 
         # The machine must exist and the parent profile must apply to it
         machines = d.get("compatible_printers") or []
@@ -84,7 +102,7 @@ def main() -> int:
             if parent in collection and machine in lib.machines:
                 allowed = lib.resolved(collection, parent).get("compatible_printers") or []
                 c.check(machine in allowed,
-                        f"{short}: parent profile {parent!r} is not released for {machine!r}")
+                        f"{short}: base profile {parent!r} is not released for {machine!r}")
 
         # Unknown keys would be silently discarded by Bambu Studio
         allowed_keys = filament_keys if kind == "filament" else process_keys
@@ -94,9 +112,9 @@ def main() -> int:
             c.check(key in allowed_keys, f"{short}: Bambu Studio does not know the key {key!r}")
 
         if kind == "filament":
-            check_filament(c, lib, short, d, machines, hotend)
+            check_filament(c, lib, short, d, machines, hotend, parent or "")
         elif kind == "process":
-            check_process(c, lib, short, d, machines)
+            check_process(c, lib, short, d, machines, parent or "")
 
     index = TARGET / "_index.json"
     c.check(index.is_file(), "dist/_index.json is missing")
@@ -117,7 +135,7 @@ def main() -> int:
     return 1 if c.errors else 0
 
 
-def check_filament(c, lib, short, d, machines, hotend):
+def check_filament(c, lib, short, d, machines, hotend, parent):
     variants = d.get("filament_extruder_variant") or []
     c.check(bool(variants), f"{short}: filament_extruder_variant missing")
     c.check(len(variants) == len(set(variants)), f"{short}: duplicate extruder variants")
@@ -129,12 +147,15 @@ def check_filament(c, lib, short, d, machines, hotend):
 
     # A base with a single entry applies to every variant; one with several
     # holds exactly one entry per variant.
-    base_flow = lib.value(lib.filaments, d.get("inherits", ""), "filament_max_volumetric_speed")
+    base_flow = lib.value(lib.filaments, parent, "filament_max_volumetric_speed")
     if isinstance(base_flow, list) and len(base_flow) > 1:
         c.check(len(base_flow) == len(variants),
                 f"{short}: {len(variants)} extruder variants, the base profile has {len(base_flow)}")
 
+    base_values = lib.resolved(lib.filaments, parent)
     for key, value in d.items():
+        if value == base_values.get(key):
+            continue  # Bambu's own value, not set by this repository
         if key.startswith(("nozzle_temp", "hot_plate", "eng_plate", "textured_plate",
                            "supertack_plate", "fan_", "overhang_fan", "slow_down_layer",
                            "close_fan", "temperature_vit", "filament_z_hop")):
@@ -170,7 +191,7 @@ def check_filament(c, lib, short, d, machines, hotend):
             f"{short}: flow ratio {ratio} lies outside 0.85–1.15")
 
 
-def check_process(c, lib, short, d, machines):
+def check_process(c, lib, short, d, machines, parent):
     height = _number(d.get("layer_height"))
     c.check(height is not None, f"{short}: layer_height missing")
     for machine in machines:
@@ -186,15 +207,15 @@ def check_process(c, lib, short, d, machines):
             c.check(height <= nozzle * 0.75 + 1e-9,
                     f"{short}: layer height {height} above 75 % of the nozzle diameter {nozzle}")
 
-    base_values = lib.resolved(lib.processes, d.get("inherits", ""))
+    base_values = lib.resolved(lib.processes, parent)
     # Bambu Studio crashes on startup when an active preset breaks this rule.
-    merged = {**base_values, **d}
-    if merged.get("enable_support_ironing") == "1":
-        c.check(_number(merged.get("support_interface_spacing")) == 0
-                and merged.get("support_interface_pattern") != "grid",
+    if d.get("enable_support_ironing") == "1":
+        c.check(_number(d.get("support_interface_spacing")) == 0
+                and d.get("support_interface_pattern") != "grid",
                 f"{short}: support ironing needs a solid interface (spacing 0, pattern not grid)")
     for key, value in d.items():
-        if isinstance(value, list) and key.endswith("_speed"):
+        # Only the values this repository sets; the rest is Bambu's own.
+        if isinstance(value, list) and key.endswith("_speed") and value != base_values.get(key):
             base = base_values.get(key)
             c.check(isinstance(base, list) and len(base) == len(value),
                     f"{short}: {key} has {len(value)} entries, the base profile {base}")
